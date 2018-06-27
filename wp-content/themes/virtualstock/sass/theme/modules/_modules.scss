@@ -1,0 +1,188 @@
+
+//Insert or rewrite allready defined HTML modules.
+
+
+//Rewrite background color of the header navbar with custom color.
+@include bg-variant('.bg-custom', $white);
+
+//Top navigation bar with the primary menu.
+.navbar-light {
+    .navbar-nav {
+        padding: 0 40px;
+        .nav-link {
+            font-size: 1.4rem;
+            color: $light-gray;
+        }
+    } 
+    @include moduled-btn( '#header-btn.pink-btn', 0, 10px, 30px, $pink ) {
+        font-size: 1.4rem;
+        color: $white;
+    }
+}
+
+//Footer
+#wrapper-footer {
+    .site- {
+        &footer {
+            .site-info {
+                font-size: 1.4rem;
+                color: $white;
+            }
+        }
+        &footer-menu {
+            font-size: 1.4rem;
+            ul {
+                li {
+                    a {
+                        padding: 0 1rem;
+                        font-weight: 300;
+                        text-align: center;
+                        color:$white;
+                        &:hover, &:active {
+                            color:darken($white, 20%);
+                        }
+                    }
+                }
+            }
+        }
+        &socials {
+            text-align: center;
+            .socials-menu {
+                &#footer-socials.menu {
+                    margin-top: 0.5rem;
+                    padding: 0;
+                    list-style: none;
+                }
+                li {
+                    display: inline-block;
+                    padding: 0 15px;
+                }
+                span {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    position: absolute !important;
+                    height: 1px;
+                    width: 1px;
+                    overflow: hidden;
+                }
+                li:first-child {
+                    padding-left: 0;
+                }
+                li:last-child {
+                    padding-right: 0;
+                }
+                a {
+                    color: lighten($light-gray, 40%);;
+                    font: normal normal normal 22px/1 FontAwesome;
+                    display: inline-block;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: relative;
+                    &:hover {
+                        color: lighten($light-gray, 20%);
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.socials-menu a[href*="facebook.com"]:before {
+	content: "\f09a";
+}
+
+.socials-menu a[href*="twitter.com"]:before {
+	content: "\f099";
+}
+
+.socials-menu a[href*="plus.google.com"]:before {
+	content: "\f0d5";
+}
+
+.socials-menu a[href*="linkedin.com"]:before {
+	content: "\f0e1";
+}
+
+.socials-menu a[href*="instagram.com"]:before {
+	content: "\f16d";
+}
+
+.socials-menu a[href*="yelp.com"]:before {
+	content: "\f1e9";
+}
+
+.socials-menu a[href*="youtube.com"]:before {
+	content: "\f167";
+}
+
+.socials-menu a[href*="flickr.com"]:before {
+	content: "\f16e";
+}
+
+.socials-menu a[href*="pinterest.com"]:before {
+	content: "\f0d2";
+}
+
+.socials-menu a[href*="github.com"]:before {
+	content: "\f09b";
+}
+
+.socials-menu a[href*="vimeo.com"]:before {
+	content: "\f27d";
+}
+
+.socials-menu a[href*="dribbble.com"]:before {
+	content: "\f17d";
+}
+
+.socials-menu a[href*="wordpress.com"]:before {
+	content: "\f19a";
+}
+
+.socials-menu a[href*="tumblr.com"]:before {
+	content: "\f173";
+}
+
+.socials-menu a[href*="codepen.io"]:before {
+	content: "\f1cb";
+}
+
+.socials-menu a[href*="skype.com"]:before {
+	content: "\f17e";
+}
+
+.socials-menu a[href*="reddit.com"]:before {
+	content: "\f1a1";
+}
+
+.socials-menu a[href*="stumbleupon.com"]:before {
+	content: "\f1a4";
+}
+
+.socials-menu a[href*="pocket.com"]:before {
+	content: "\f265";
+}
+
+.socials-menu a[href*="foursquare.com"]:before {
+	content: "\f180";
+}
+
+.socials-menu a[href*="vk.com"]:before {
+	content: "\f189";
+}
+
+.socials-menu a[href*="weibo.com"]:before {
+	content: "\f18a";
+}
+
+.socials-menu a[href*="wechat.com"]:before {
+	content: "\f1d7";
+}
+
+.socials-menu a[href*="behance.net"]:before {
+	content: "\f1b4";
+}
+
+        

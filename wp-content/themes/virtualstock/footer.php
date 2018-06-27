@@ -22,23 +22,62 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
+					<div class="row">
+						<div class="site-info col-md-3">
+							<?php _e('© 2018 by Virtualstock') ?>
+						</div><!-- .site-info -->
 
-					<div class="site-info">
+						<div class="site-footer-menu col-md-6">
+							<div class="row">
+								<div class="col-md-6">
+									<!-- The WordPress Menu goes here -->
+									<?php wp_nav_menu(
+										array(
+											'theme_location'  => 'footer#1',
+											'container_id'    => 'footer-menu footer-menu-left',
+											'menu_class'      => 'navbar-nav',
+											'fallback_cb'     => '',
+											'menu_id'         => 'footer-menu-1',
+											'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+										)
+									); ?>
+								</div>
+								<div class="col-md-6">
+									<!-- The WordPress Menu goes here -->
+									<?php wp_nav_menu(
+										array(
+											'theme_location'  => 'footer#2',
+											'container_id'    => 'footer-menu footer-menu-right',
+											'menu_class'      => 'navbar-nav',
+											'fallback_cb'     => '',
+											'menu_id'         => 'footer-menu-2',
+											'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+										)
+									); ?>
+								</div>
+							</div>
+						</div>
 
-							<a href="<?php  echo esc_url( __( 'http://wordpress.org/','understrap' ) ); ?>"><?php printf( 
-							/* translators:*/
-							esc_html__( 'Proudly powered by %s', 'understrap' ),'WordPress' ); ?></a>
-								<span class="sep"> | </span>
-					
-							<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Theme: %1$s by %2$s.', 'understrap' ), $the_theme->get( 'Name' ),  '<a href="'.esc_url( __('http://understrap.com', 'understrap')).'">understrap.com</a>' ); ?> 
-				
-							(<?php printf( // WPCS: XSS ok.
-							/* translators:*/
-								esc_html__( 'Version: %1$s', 'understrap' ), $the_theme->get( 'Version' ) ); ?>)
-					</div><!-- .site-info -->
-
+						<div class="site-socials col-md-3">	
+						<ul id="footer-socials" class="menu socials-menu">
+							<li class="menu-item menu-item-type-custom menu-item-object-custom">
+								<a href="https://twitter.com/uix">
+									<span>Twitter</span>
+								</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom">
+								<a href="https://facebook.com/uix">
+									<span>Facebook</span>
+								</a>
+							</li>
+							<li class="menu-item menu-item-type-custom menu-item-object-custom">
+								<a href="https://plus.google.com/uix">
+									<span>Google</span>	
+								</a>
+							</li>
+						</ul>
+						</div>
+					</div>
 				</footer><!-- #colophon -->
 
 			</div><!--col end -->

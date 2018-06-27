@@ -32,7 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+		<nav class="navbar navbar-expand-md navbar-light bg-custom">
 
 		<?php if ( 'container' == $container ) : ?>
 			<div class="container" >
@@ -72,6 +72,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 					)
 				); ?>
+
+				<button id="header-btn" class="moduled-btn pink-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
+				
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

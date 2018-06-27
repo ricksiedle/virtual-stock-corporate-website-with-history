@@ -1,0 +1,19 @@
+
+//Define custom mixins here. Just for brevity...
+
+@mixin moduled-btn ( $parent, $border-radius, $padding-top-bottom, $padding-left-right, $background-color ) {
+    //Allow for content inside mixin
+    @content;
+
+    #{$parent} {
+        //Reset default button styles 
+        @extend %reset-Button;
+        //..than define custom styles
+        border-radius: $border-radius;
+        padding: $padding-top-bottom $padding-left-right;
+        background-color: $background-color;
+    }
+    #{$parent}:hover, #{$parent}:focus {
+        background-color: darken($background-color, 10%) !important;
+    }
+}
