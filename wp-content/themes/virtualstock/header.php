@@ -20,6 +20,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 	<meta name="apple-mobile-web-app-title" content="<?php bloginfo( 'name' ); ?> - <?php bloginfo( 'description' ); ?>">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<!-- Insert google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+
 	<?php wp_head(); ?>
 </head>
 
@@ -34,9 +38,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<nav class="navbar navbar-expand-md navbar-light bg-custom">
 
-		<?php if ( 'container' == $container ) : ?>
+		
 			<div class="container" >
-		<?php endif; ?>
+		
 
 					<!-- Your site title as branding in the menu -->
 					<?php if ( ! has_custom_logo() ) { ?>
@@ -75,9 +79,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<button id="header-btn" class="moduled-btn pink-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
 				
-			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
-			<?php endif; ?>
+			
 
 		</nav><!-- .site-navigation -->
 

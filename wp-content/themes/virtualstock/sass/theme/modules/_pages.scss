@@ -1,0 +1,140 @@
+
+
+
+/**
+ *
+ * Home
+ *
+ */
+
+.home {
+    .entry-content {
+        margin-top: 50px;
+        margin-bottom: 80px;
+        &-inside {
+            margin-left: 20%;
+            margin-right: 20%;
+            width: 60%;
+            p {
+                font-size: 1.2rem;
+                line-height: 1.4rem;
+                color: $light-gray;
+                &:last-child {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        h2.v-section-heading {
+            margin-bottom: 60px;
+            font-size: 2.8rem;
+            color: $light-gray;
+            span{
+                color: $pink;
+            }
+        }
+        .v-box-wrapper {
+            .v-box {
+                position:relative;
+                &[ref='retailers']:before {
+                    background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+                }
+                &[ref='providers']:before {
+                    background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+                }
+                &[ref='supliers']:before {
+                    background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+                }
+                &:before {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-position: center center;
+
+                    content: ' ';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: -2;
+                }
+                &:after {
+                    content: ' ';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    z-index: -1;
+                }
+                padding-top: 75px;
+                height: 330px;
+                &-icon {
+                    margin: 0px auto 35px;
+                    height: 58px;
+                    width: 71px;
+                    i {
+                        font-size: 4rem;
+                    }
+                }
+                h3 {
+                    margin: 20px 0 55px;
+                    color: $white;
+                    font-size: 1.25rem;
+                }
+                @include moduled-btn( '.v-box-button', 0, 10px, 30px, $pink ) {
+                    font-size: 1.4rem;
+                    color: $white;
+                    a {
+                        color:$white;
+                        &:hover, &:active {
+                            text-decoration: none;
+                            color:$white;
+                        }
+                    }
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .entry-footer {
+        margin-top: 60px;
+        margin-bottom: 100px;
+    }
+    .owl-theme {
+        .owl-nav {
+            position: absolute;
+            margin-top: 5px;
+            top: 0;
+            width: 100%;
+            i {
+                font-size: 3rem;
+                color: white;
+            }
+            .owl-prev {
+                position: absolute;
+                left: 0;
+                margin-top: -15px;
+            }
+            .owl-next {
+                position: absolute;
+                right: 0;
+                margin-top: -15px;
+            }
+        }
+        &.owl-carousel {
+            .owl-item {
+                img {
+                    height: 30px;
+                    width: auto;
+                    margin: 0 auto; 
+                }
+            }
+        }
+    }   
+}
+

@@ -27,6 +27,27 @@
 		<?php the_content(); ?>
 
 		<?php
+
+		// check if the repeater field has rows of data
+		if( have_rows('the_repeater') ):
+
+			// loop through the rows of data
+			while ( have_rows('the_repeater') ) : the_row();
+
+				// display a sub field value
+				the_sub_field('some_subfield');
+
+			endwhile;
+
+		else :
+
+			// no rows found
+
+		endif;
+
+		?>
+
+		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
 			'after'  => '</div>',

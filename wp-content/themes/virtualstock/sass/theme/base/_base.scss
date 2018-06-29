@@ -4,6 +4,7 @@
 body {
     // Body font size assigned to decade multiplier for clear and intuitive rem values.
     font-size: 10px;
+    font-family: 'Roboto', Helvetica, Arial, serif;
 }
 
 a {
@@ -12,6 +13,24 @@ a {
     color: #23232c;
     text-decoration: none;
     cursor: pointer;
+}
+
+h1 {
+    font-size: 2.4rem;
+}
+
+.text-{
+    &align- {
+        &center {
+            text-align: center;
+        }
+        &left {
+            text-align: left;
+        }
+        &right {
+            text-align: right;
+        }
+    }
 }
 
 

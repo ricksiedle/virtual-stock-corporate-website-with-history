@@ -1,6 +1,8 @@
 
 //Insert or rewrite allready defined HTML modules.
 
+@import "./pages";  // <--------- Loads pages specific styles...
+
 
 //Rewrite background color of the header navbar with custom color.
 @include bg-variant('.bg-custom', $white);
@@ -17,6 +19,51 @@
     @include moduled-btn( '#header-btn.pink-btn', 0, 10px, 30px, $pink ) {
         font-size: 1.4rem;
         color: $white;
+    }
+}
+
+//Header
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            img {
+                display: block !important;
+                width:100% !important;
+            }
+        }
+    }
+    .v-static {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        .v-carousel-wrapper {
+            position: absolute;
+            top: calc(50% - 105px);
+            width: 50%;
+            max-width:620px;
+            height: 210px;
+            background-color: rgba(255,255,255,0.6);
+            color: $light-gray;
+            h1.v-carousel-heading {
+                padding: 18px 25px 0;
+                font-weight: bold;
+                span {
+                    color: $pink;
+                }
+            }
+            .v-carousel-content {
+                padding: 5px 25px 34px;
+                font-size: 1.6rem;
+                font-weight: 500;
+                line-height: 2.4rem;
+            }
+        }
+        .v-owl-carousel {
+            position: absolute;
+            bottom: 50px;
+        }
     }
 }
 

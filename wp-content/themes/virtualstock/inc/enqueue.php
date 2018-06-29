@@ -19,6 +19,11 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		// Owl-carousel 2.0
+		wp_enqueue_style( 'owl-carousel-styles', get_stylesheet_directory_uri() . '/css/owl.carousel.min.css', array(), $the_theme->get( 'Version' ) );
+		wp_enqueue_style( 'owl-carousel-theme', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css', array(), $the_theme->get( 'Version' ) );
+
+		wp_enqueue_script( 'owl-carousel-scripts', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), true);
 	}
 } // endif function_exists( 'understrap_scripts' ).
 
