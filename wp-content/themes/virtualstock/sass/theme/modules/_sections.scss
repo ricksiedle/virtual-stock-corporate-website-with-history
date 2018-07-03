@@ -1,0 +1,164 @@
+.v-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    //Heading styles
+    h2.v-section-heading {
+        margin-bottom: 60px;
+        font-size: 2.8rem;
+        color: $light-gray;
+        span{
+            color: $pink;
+        }
+    }
+
+    // Styles for different types of sections 
+    .v-large-logo {
+
+        &-content {
+            p {
+                font-size: 1.4rem;	
+                font-weight: 300;	
+                line-height: 1.6rem;
+            }
+        }
+    }
+    .v-box-wrapper {
+        //this section is valid if the boxes are rectangles
+        &.col-md-4 {
+            .v-box {
+                &-rectangles {
+                    height:330px;
+                }
+            }
+        }
+        &.col-md-6 {
+            .v-box {
+                &-rectangles {
+                    height:540px;
+                    padding-top: 195px;
+                    h3 {
+                        font-size: 1.75rem;
+                    }
+                }
+            }
+        }
+        //this sections are valid even if the boxes are not rectangles
+        .v-box {
+            position:relative;
+            margin-bottom: 30px;
+            &[ref='retailers']:before {
+                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+            }
+            &[ref='providers']:before {
+                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+            }
+            &[ref='supliers']:before {
+                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
+            }
+            &:before {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                z-index: -2;
+            }
+            &:after {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.4);
+                z-index: -1;
+            }
+            padding-top: 65px;
+            &-icon {
+                margin: 0px auto 25px;
+                height: 100px;
+                width: 100px;
+                i {
+                    font-size: 4rem;
+                }
+            }
+            h3 {
+                margin: 20px 0 35px;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                color: $white;
+                
+            }
+            @include moduled-btn( '.v-box-button', 0, 10px, 30px, $pink ) {
+                font-size: 1.4rem;
+                color: $white;
+                a {
+                    color:$white;
+                    &:hover, &:active {
+                        text-decoration: none;
+                        color:$white;
+                    }
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            .v-box-icon {
+                background-position: center center;
+                background-size: 80%;
+                background-repeat: no-repeat;                   
+            }
+        }
+    }
+    .v-testimonials {
+        margin-top: 100px;
+        margin-bottom: 100px;
+        .v-testimonial {
+            padding-left: 80px;
+            padding-right: 80px;
+            .image_wrapper {
+                @extend %clearfix;
+                img {
+                    display: block;
+                    width: auto;
+                    float: left;
+                    @extend %clearfix;
+                }
+            }
+            .v_testimonial_content {
+                margin-top: 50px;
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+                font-weight: 300;
+                color: $light-gray;
+                p {
+                    text-align: left;
+                    line-height: 2rem;
+                }
+            }
+            .v_testimonial_profession {
+                margin-top: 50px;
+                margin-bottom: 30px;
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: $light-gray;
+                float: right;
+            }
+        }
+    }
+    .v-plain {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        color:$white;
+        p {
+            font-size: 1.4rem;
+            font-weight: 300;
+        }
+    }
+}

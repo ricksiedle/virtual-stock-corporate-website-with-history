@@ -109,3 +109,7 @@ function understrap_category_transient_flusher() {
 add_action( 'edit_category', 'understrap_category_transient_flusher' );
 add_action( 'save_post',     'understrap_category_transient_flusher' );
 
+/**
+ * Custom template tags
+ */
+require_once( __DIR__ . './v_template_tags.php' ); 

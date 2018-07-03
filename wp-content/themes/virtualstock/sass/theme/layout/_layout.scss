@@ -1,6 +1,12 @@
 
 //Eeeeh, you know... just lay out your layout here
 
+.v-wrapper {
+    @extend %clearfix;
+    margin-top: 80px;
+    padding-top: 200px;
+    padding-bottom: 200px;  
+}
 
 /**
  * Footer

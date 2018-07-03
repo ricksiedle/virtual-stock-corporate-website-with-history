@@ -2,6 +2,7 @@
 //Insert or rewrite allready defined HTML modules.
 
 @import "./pages";  // <--------- Loads pages specific styles...
+@import "./sections";  // <--------- Loads sections specific styles...
 
 
 //Rewrite background color of the header navbar with custom color.
@@ -18,7 +19,6 @@
     } 
     @include moduled-btn( '#header-btn.pink-btn', 0, 10px, 30px, $pink ) {
         font-size: 1.4rem;
-        color: $white;
     }
 }
 
@@ -64,6 +64,39 @@
             position: absolute;
             bottom: 50px;
         }
+    }
+}
+
+//Stats counter
+.v-wrapper-counter {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.v-counter-wrapper {
+    border-right: 3px solid $pink;
+    padding-right: 20px;
+    color: $white;
+    &:last-child{
+        border: none;
+    } 
+    .v-counter{
+        font-size: 5.5rem;	
+        font-weight: 400;	
+        letter-spacing: 4px;	
+        line-height: 3rem;	
+        text-align: center;
+    }
+    .v-counter-label {
+        font-size: 1rem;	
+        line-height: 3rem;	
+        text-align: center;
+    }
+    .v-counter-unit {
+        font-size: 4.5rem;	
+        font-weight: 400;	
+        letter-spacing: 4px;	
+        line-height: 3rem;
     }
 }
 

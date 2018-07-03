@@ -19,6 +19,10 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+		//Waypoints
+		wp_enqueue_script( 'waypoints', '//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js');
+		//Counter-up jQuery plugin
+		wp_enqueue_script( 'counter-up-script', get_template_directory_uri() . '/js/jquery.counterup.min.js', array(), true ); 
 		// Owl-carousel 2.0
 		wp_enqueue_style( 'owl-carousel-styles', get_stylesheet_directory_uri() . '/css/owl.carousel.min.css', array(), $the_theme->get( 'Version' ) );
 		wp_enqueue_style( 'owl-carousel-theme', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css', array(), $the_theme->get( 'Version' ) );

@@ -9,19 +9,24 @@ $primary: #6f31cd; // Thats a sample how you could change a BootStrap variable.
 
 //Define color variables here, please
 //Define every color you want to use in a mixin
-$white: #fff;
-$pink: #E64097;
+    $white: #fff;
+    $pink: #E64097;
 //Header navbar anchors primary color
-$light-gray: #455160;
+    $light-gray: #455160;
+    $light-blue: #31AFDB;
 
 /* Media devices  */
 
-$smaller-than-17-inch: "only screen and (max-width : 1366px)";
-$smaller-than-15-inch: "only screen and (max-width : 1280px)";
-$larger-than-lg: "only screen and (min-width : 1200px)";
-$larger-than-md: "only screen and (min-width : 992px)";
-$larger-than-sm: "only screen and (min-width : 768px)";
-$larger-than-xs: "only screen and (min-width : 576px)";
-$ipad-landscape: "only screen and (max-width : 1024px)";
-$ipad-portrait: "only screen and (max-width : 768px)";
-$handheld: "only screen and (max-width : 480px)";
+    $smaller-than-17-inch: "only screen and (max-width : 1366px)";
+    $smaller-than-15-inch: "only screen and (max-width : 1280px)";
+    $larger-than-lg: "only screen and (min-width : 1200px)";
+    $larger-than-md: "only screen and (min-width : 992px)";
+    $larger-than-sm: "only screen and (min-width : 768px)";
+    $larger-than-xs: "only screen and (min-width : 576px)";
+    $ipad-landscape: "only screen and (max-width : 1024px)";
+    $ipad-portrait: "only screen and (max-width : 768px)";
+    $handheld: "only screen and (max-width : 480px)";
+
+/* Page mapping - so we can remember them easier for using in the styles ;) */
+
+    $providers: "page-id-16";
