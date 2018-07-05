@@ -21,14 +21,6 @@ global $post;
 			
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
-				<div class="v-carousel-wrapper">
-					<h1 class="v-carousel-heading">
-						Connect <span>Control</span> Compete
-					</h1>
-					<div class="v-carousel-content">
-						<?php _e( 'Discover the power of your agility with the ultimate supply chain solution', 'virtual' ) ?>
-					</div>
-				</div>
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
 						<div class="item"><img src="http://virtual.local/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
@@ -115,201 +107,200 @@ global $post;
 			$i = 0;
 
 
-		// check if the repeater field has rows of data
-		if( have_rows('page_sections') ):
+			// check if the repeater field has rows of data
+			if( have_rows('page_sections') ):
 
-			// loop through the rows of data
-			while ( have_rows('page_sections') ) : the_row(); $section_type = get_sub_field('section_type');
+					// loop through the rows of data
+					while ( have_rows('page_sections') ) : the_row(); $section_type = get_sub_field('section_type');
 
-			// Show the stats counter on the retail page
-			if($i == 2 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
-			// Show partners section for providers or suppliers
-			if($i == 1 && ( get_page_by_path('providers')->post_name == $post->post_name) ) : v_partners(); endif;
-			//...increase the sections counter
-			$i++;
+					// Show the stats counter on the retail page
+					if($i == 2 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
+					// Show partners section for providers or suppliers
+					if($i == 1 && ( get_page_by_path('providers')->post_name == $post->post_name) ) : v_partners(); endif;
+					//...increase the sections counter
+					$i++;
 
+						// Check if the section has heading
+						$v_section_heading = get_sub_field('section_heading');
 
-			// Check if the section has heading
-			$v_section_heading = get_sub_field('section_heading');
-
-			if($v_section_heading) :
-		?>
-			<div class="row">
-				<h2 class="v-section-heading text-align-center">
-					<?php echo $v_section_heading; ?>		
-				</h2>
-			</div>
-
-		<?php
-
-			endif;
-		?>
-				<div class="row">
-		<?php
-				//Start check the type of the sections, dude
-
-				// SECTION WITH BOXES
-				if ( $section_type == 'v-box-section' ): 
-
-					while ( have_rows('section_with_boxes') ) : the_row(); 
-				
-						$v_box_background_image = get_sub_field('background_image');
-						$v_box_icon_image = get_sub_field('icon_image');
-						$v_box_title = get_sub_field('title');
-						$v_box_hyperlink = get_sub_field('button_hyperlink');
-						$v_box_size = get_sub_field('v_box_type');
-						$v_boxes_are_rectangles = get_sub_field('v_boxes_are_rectangles');
-
-						//Purge the v_box_title variable, for css usage
-						$v_box_title_hashed = hash('sha256', $v_box_title);
-					?>
-						
-						<style>
-							.v-box-<?php echo $v_box_title_hashed ?>:before {
-								background-image:url( <?php echo $v_box_background_image; ?> );
-							}
-						</style>
-
-						<?php 
-
-							if($v_box_size == 'small'){
-								//small box takes third of the real estate
-								 $v_box_size_col = 'col-md-4';
-							} elseif($v_box_size == 'medium') {
-								//meium box takes half of the real estate
-								$v_box_size_col = 'col-md-6';
-							} elseif($v_box_size == 'large') {
-								//large box takes two-thirds of the real estate
-								$v_box_size_col = 'col-md-8';
-							} else {
-								$v_box_size_col = '';
-							}
-
-							//Here check if the user wants rectangular boxes
-							if($v_boxes_are_rectangles == 'yes') {
-								//insert this class in the level of the v-box class
-								$rect_box = 'v-box-rectangles';
-							} else {
-								$rect_box = '';
-							}
-						
-						?>
-
-						<div class="v-box-wrapper <?php echo $v_box_size_col ?>  col-md-4 text-align-center">
-							<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> <?php echo $rect_box; ?> v-col-md-12">
-								<div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
-									<!-- no content within this div -->
-								</div>
-								<h3 class="v-box-caption">
-									<span> <?php echo $v_box_title; ?> </span>
-								</h3>
-								<button class="v-box-button">
-									<a href="<?php echo $v_box_hyperlink ?>"> <?php _e('Learn more', 'virtual') ?> </a>
-								</button>
-							</div>
-						</div>
-
-						<?php 
-						endwhile;
-				
-				// SECTION WITH LARGE LOGO
-				elseif ( $section_type == 'v-large-logo' ):
-
-						while ( have_rows('section_with_large_logo') ) : the_row(); 
-				
-						$v_large_logo_image = get_sub_field('large_logo_image');
-						$v_large_logo_image_content = get_sub_field('large_logo_content');
-
-					?>
-						
-						<div class="v-large-logo col-md-6">
-							<img src="<?php echo $v_large_logo_image ?>" />
-						</div>
-						<div class="div col-md-6 v-large-logo-content text-align-left">
-							<?php echo $v_large_logo_image_content ?>
-						</div>
-
-					<?php 
-
-						endwhile;
-
-				// SECTION WITH TESTIMONIALS
-				elseif ( $section_type == 'v-testimonials' ):
-
-						while ( have_rows('section_with_testimonials') ) : the_row(); 
-
-						$testimonials_tag = get_sub_field('testimonials_tag');
-						$tag = get_tag( $testimonials_tag );
-						
-						$args = array(
-							'post_type' => 'testimonials',
-							array(
-								'terms' => $tag->name,
-							),
-						);
-						// The Query -- testimonials tagged with the custom tag
-						$testimonials_query = new WP_Query( $args );
-
-						// The Loop
-						if ( $testimonials_query->have_posts() ) {
-							echo '<div class="v-testimonials owl-carousel owl-theme">';
-							while ( $testimonials_query->have_posts() ) {  $testimonials_query->the_post();
-								echo '<div class="v-testimonial">';
-									echo '<div class="image_wrapper"><img src="' . get_field('testimonial_icon') . '"></div>';
-									echo '<div class="v_testimonial_content">';
-										the_content();
-									echo '</div>';
-									echo '<div class="v_testimonial_profession">' . get_field('profession') . '</div>';
-								echo '</div>';
-							}
-							echo '</div>';
-							/* Restore original Post Data */
-							wp_reset_postdata();
-						} else {
-							// no posts found
-						}
-
-
-					?>
-
-					<?php 
-
-						endwhile;
-
-				// PLAIN TEXT SECTION
-				elseif ( $section_type == 'v-plain' ):
-
-						while ( have_rows('section_with_plain_text') ) : the_row(); 
-					?>
-		
-						<div class="v-plain v-full-width" style="background-color:<?php echo get_sub_field('bg_color'); ?>">
-							<div class="container">
-								<?php echo get_sub_field('v_content'); ?>
-							</div>
-						</div>
-
-					<?php 
-
-						endwhile;
-
-				endif;
+						if($v_section_heading) :
 			
-				?>
-				</div><!-- end row -->
-				<? 
-					endwhile;
+			?>
 
-				else :
+							
+							<h2 class="v-section-heading text-align-center">
+								<?php echo $v_section_heading; ?>		
+							</h2>
+							
 
-					// no rows found
+			<?php
 
-				endif;
+						endif;
 
-				?>
+						//Start check the type of the sections, dude
+
+						// SECTION WITH BOXES
+						if ( $section_type == 'v-box-section' ):
+
+			?>
+					
+						<div class="row">
+			<?php
+
+							while ( have_rows('section_with_boxes') ) : the_row(); 
+
+								$v_box_background_image = get_sub_field('background_image');
+								$v_box_icon_image = get_sub_field('icon_image');
+								$v_box_title = get_sub_field('title');
+								$v_box_hyperlink = get_sub_field('button_hyperlink');
+								$v_box_size = get_sub_field('v_box_type');
+								$v_boxes_are_rectangles = get_sub_field('v_boxes_are_rectangles');
+
+								//Purge the v_box_title variable, for css usage
+								$v_box_title_hashed = hash('sha256', $v_box_title);
+
+			?>
+								<style>
+									.v-box-<?php echo $v_box_title_hashed ?>:before {
+										background-image:url( <?php echo $v_box_background_image; ?> );
+									}
+								</style>
+
+			<?php 
+
+								if($v_box_size == 'small'){
+									//small box takes third of the real estate
+									 $v_box_size_col = 'col-md-4';
+								} elseif($v_box_size == 'medium') {
+									//meium box takes half of the real estate
+									$v_box_size_col = 'col-md-6';
+								} elseif($v_box_size == 'large') {
+									//large box takes two-thirds of the real estate
+									$v_box_size_col = 'col-md-8';
+								} else {
+									$v_box_size_col = '';
+								}
+
+								//Here check if the user wants rectangular boxes
+								if($v_boxes_are_rectangles == 'yes') {
+									//insert this class in the level of the v-box class
+									$rect_box = 'v-box-rectangles';
+								} else {
+									$rect_box = '';
+								}
+
+			?>
+
+								<div class="v-box-wrapper <?php echo $v_box_size_col ?> text-align-center">
+									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> <?php echo $rect_box; ?> v-col-md-12">
+										<div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
+											<!-- no content within this div -->
+										</div>
+										<h3 class="v-box-caption">
+											<span> <?php echo $v_box_title; ?> </span>
+										</h3>
+										<button class="v-box-button">
+											<a href="<?php echo $v_box_hyperlink ?>"> <?php _e('Learn more', 'virtual') ?> </a>
+										</button>
+									</div>
+								</div>
+
+			<?php
+
+							endwhile;
+
+			?>
+						</div><!-- end row -->
+
+			<?php
+
+						
+
+						// SECTION WITH LARGE LOGO
+						elseif ( $section_type == 'v-large-logo' ):
+
+								while ( have_rows('section_with_large_logo') ) : the_row(); 
+						
+									$v_large_logo_image = get_sub_field('large_logo_image');
+									$v_large_logo_image_content = get_sub_field('large_logo_content');
+
+			?>
+									<div class="row">				
+										<div class="v-large-logo col-md-6">
+											<img src="<?php echo $v_large_logo_image ?>" />
+										</div>
+										<div class="div col-md-6 v-large-logo-content text-align-left">
+											<?php echo $v_large_logo_image_content ?>
+										</div>
+									</div>
+
+			<?php 
+
+								endwhile;
 
 
-			</div><!-- end container -->
 
+								// SECTION WITH TESTIMONIALS
+								elseif ( $section_type == 'v-testimonials' ):
+
+									while ( have_rows('section_with_testimonials') ) : the_row(); 
+
+										$testimonials_tag = get_sub_field('testimonials_tag');
+										$tag = get_tag( $testimonials_tag );
+										
+										$args = array(
+											'post_type' => 'testimonials',
+											array(
+												'terms' => $tag->name,
+											),
+										);
+										// The Query -- testimonials tagged with the custom tag
+										$testimonials_query = new WP_Query( $args );
+
+										// The Loop
+										if ( $testimonials_query->have_posts() ) {
+											echo '<div class="v-testimonials owl-carousel owl-theme">';
+											while ( $testimonials_query->have_posts() ) {  $testimonials_query->the_post();
+												echo '<div class="v-testimonial">';
+													echo '<div class="image_wrapper"><img src="' . get_field('testimonial_icon') . '"></div>';
+													echo '<div class="v_testimonial_content">';
+														the_content();
+													echo '</div>';
+													echo '<div class="v_testimonial_profession">' . get_field('profession') . '</div>';
+												echo '</div>';
+											}
+											echo '</div>';
+											/* Restore original Post Data */
+											wp_reset_postdata();
+										}
+
+									endwhile;
+
+
+									// PLAIN TEXT SECTION
+									elseif ( $section_type == 'v-plain' ):
+
+											while ( have_rows('section_with_plain_text') ) : the_row(); 
+										?>
+							
+											<div class="v-plain v-full-width" style="background-color:<?php echo get_sub_field('bg_color'); ?>">
+												<div class="container">
+													<?php echo get_sub_field('v_content'); ?>
+												</div>
+											</div>
+			<?php								
+											endwhile;
+			
+
+						
+						endif;
+							
+					endwhile; //have_rows page_sections	
+
+				endif; //have_rows page_sections 
+
+			?>
+		</div><!-- end container -->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
