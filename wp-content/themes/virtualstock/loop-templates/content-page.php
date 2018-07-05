@@ -5,7 +5,10 @@
  * @package understrap
  */
 
+global $post;
+
 ?>
+
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
@@ -13,30 +16,8 @@
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
 			<?php 
-
-			$images = get_field('images_header_carousel');
-			$size = 'full';
-
-			if( $images ): ?>
-				<!-- Carousel slides -->
-				<div class="carousel-inner">
-					<?php foreach( $images as $key=>$image ): ?>
-						<div class="carousel-item <?php if($key == 0): echo ' active'; endif;?>">
-							<?php echo wp_get_attachment_image( $image['ID'], $size ); ?>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			<?php endif; ?>
-
-			<!-- carousel controls -->
-			<a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only"><?php _e('Previous', 'virtual') ?></span>
-			</a>
-			<a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only"><?php _e('Next', 'virtual') ?></span>
-			</a>
+			echo do_shortcode('[smartslider3 slider=2]');
+			?>
 			
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
@@ -129,8 +110,9 @@
 		?>
 		
 		<?php
-		//counter for the position of the Stats counter
-		$i = 0;
+		//counter initializer
+		//for positioning elements between sections
+			$i = 0;
 
 
 		// check if the repeater field has rows of data
@@ -139,13 +121,16 @@
 			// loop through the rows of data
 			while ( have_rows('page_sections') ) : the_row(); $section_type = get_sub_field('section_type');
 
-			//Show the stats counter
-			if($i == 2) : v_stats_counter(); endif;
+			// Show the stats counter on the retail page
+			if($i == 2 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
+			// Show partners section for providers or suppliers
+			if($i == 1 && ( get_page_by_path('providers')->post_name == $post->post_name) ) : v_partners(); endif;
 			//...increase the sections counter
 			$i++;
 
-			$v_section_heading = get_sub_field('section_heading');
 
+			// Check if the section has heading
+			$v_section_heading = get_sub_field('section_heading');
 
 			if($v_section_heading) :
 		?>
@@ -162,6 +147,8 @@
 				<div class="row">
 		<?php
 				//Start check the type of the sections, dude
+
+				// SECTION WITH BOXES
 				if ( $section_type == 'v-box-section' ): 
 
 					while ( have_rows('section_with_boxes') ) : the_row(); 
@@ -224,7 +211,8 @@
 
 						<?php 
 						endwhile;
-
+				
+				// SECTION WITH LARGE LOGO
 				elseif ( $section_type == 'v-large-logo' ):
 
 						while ( have_rows('section_with_large_logo') ) : the_row(); 
@@ -245,6 +233,7 @@
 
 						endwhile;
 
+				// SECTION WITH TESTIMONIALS
 				elseif ( $section_type == 'v-testimonials' ):
 
 						while ( have_rows('section_with_testimonials') ) : the_row(); 
@@ -287,6 +276,7 @@
 
 						endwhile;
 
+				// PLAIN TEXT SECTION
 				elseif ( $section_type == 'v-plain' ):
 
 						while ( have_rows('section_with_plain_text') ) : the_row(); 
@@ -316,6 +306,8 @@
 				endif;
 
 				?>
+
+
 			</div><!-- end container -->
 
 	</div><!-- .entry-content -->

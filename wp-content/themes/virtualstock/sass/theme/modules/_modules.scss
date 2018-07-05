@@ -67,11 +67,34 @@
     }
 }
 
-//Stats counter
-.v-wrapper-counter {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+//Stats counter && providers-suppliers section
+.v-wrapper {
+    
+    &-counter {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    &-ret-sup {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        &-heading {
+            position: absolute;
+            top: -50px;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: $light-blue;
+            color: $white;
+            h2 {
+                font-size: 1.3rem;
+                margin-top: 0;
+                margin-bottom: 0;
+                line-height: 55px;
+            }
+        }
+    }
 }
 .v-counter-wrapper {
     border-right: 3px solid $pink;
@@ -97,6 +120,28 @@
         font-weight: 400;	
         letter-spacing: 4px;	
         line-height: 3rem;
+    }
+}
+
+
+.v-ret-sup-wrapper {
+    border-right: 3px solid $light-blue;
+    padding-right: 20px;
+    color: $white;
+    &:last-child{
+        border: none;
+    } 
+    .v-img{
+        
+    }
+    p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+        margin-bottom: 0;
+        &:last-child {
+            font-size: 1rem;
+            margin-top:0;
+        }
     }
 }
 
