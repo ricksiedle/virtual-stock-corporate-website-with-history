@@ -65,6 +65,16 @@
             bottom: 50px;
         }
     }
+    div[class^="n2-font-"], div[class*=" n2-font-"] {
+        font-family: 'Serenity Bold' !important;
+        font-size: 2.8rem !important; 
+    }
+    p[class^="n2-font-"], p[class*=" n2-font-"] {
+        font-family: 'Serenity Demi Bold' !important;
+        font-size: 1.8rem !important;
+        color: $light-gray !important;
+        line-height: 1.8rem !important;
+    }
 }
 
 //Stats counter && providers-suppliers section
