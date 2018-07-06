@@ -110,15 +110,17 @@ global $post;
 			// check if the repeater field has rows of data
 			if( have_rows('page_sections') ):
 
-					// loop through the rows of data
-					while ( have_rows('page_sections') ) : the_row(); $section_type = get_sub_field('section_type');
+				// loop through the rows of data
+					do { 
+						
+					the_row(); $section_type = get_sub_field('section_type');
 
-					// Show the stats counter on the retail page
-					if($i == 2 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
-					// Show partners section for providers or suppliers
-					if($i == 1 && ( get_page_by_path('providers')->post_name == $post->post_name) ) : v_partners(); endif;
 					//...increase the sections counter
 					$i++;
+
+					// Show the stats counter on the retail page
+					if($i == 3 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
+					
 
 						// Check if the section has heading
 						$v_section_heading = get_sub_field('section_heading');
@@ -276,6 +278,32 @@ global $post;
 
 									endwhile;
 
+									// PARTNERS AND SUPPLIERS
+									elseif ( $section_type == 'v-partners' ):
+
+										while ( have_rows('section_with_partner_logos') ) : the_row(); 
+			?>
+						
+											<div class="container-fluid v-wrapper v-wrapper-ret-sup v-full-width" style="background-image:url('<?php echo get_sub_field('p_bg_image'); ?>')">
+												<div class="v-wrapper-ret-sup-heading">
+													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
+												</div>
+												<div class="container">
+													<div class="row">
+														<?php while ( have_rows('partner') ) : the_row(); ?>
+															<div class="v-ret-sup-wrapper col-md-3 text-align-center">
+																<img class="v-img" src="<?php echo get_sub_field('logo_image'); ?>"/>
+																<div>
+																<?php echo get_sub_field('under_logo_text'); ?>
+																</div>
+															</div>
+														<?php endwhile; ?>
+													</div>
+												</div>
+											</div>
+
+			<?php							
+										endwhile;
 
 									// PLAIN TEXT SECTION
 									elseif ( $section_type == 'v-plain' ):
@@ -292,10 +320,9 @@ global $post;
 											endwhile;
 			
 
-						
 						endif;
 							
-					endwhile; //have_rows page_sections	
+					} while ( have_rows('page_sections') ); //have_rows page_sections	
 
 				endif; //have_rows page_sections 
 

@@ -41,28 +41,3 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
 <?php
     }
 endif;
-
-if ( ! function_exists( 'v_partners' ) ) :
-    function v_partners() {
-    ?>
-<div class="container-fluid v-wrapper v-wrapper-ret-sup v-full-width" style="background-image:url('<?php echo get_field('p_bg_image'); ?>')">
-	<div class="v-wrapper-ret-sup-heading">
-		<h2 class="text-align-center"><?php echo get_field('p_heading'); ?></h2>
-	</div>
-	<div class="container">
-		<div class="row">
-			<?php while ( have_rows('partner') ) : the_row(); ?>
-				<div class="v-ret-sup-wrapper col-md-3 text-align-center">
-					<img class="v-img" src="<?php echo get_sub_field('logo_image'); ?>"/>
-					<div>
-					<?php echo get_sub_field('under_logo_text'); ?>
-					</div>
-				</div>
-			<?php endwhile; ?>
-		</div>
-	</div>
-</div>
-
-<?php
-    }
-endif;

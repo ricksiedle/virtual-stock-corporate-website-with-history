@@ -85,6 +85,9 @@ wp-content/plugins/
 # ignore all uploads
 wp-content/uploads/
 
+# ignore All in One Backups
+wp-content/ai1wm-backups/
+
 
 # ignore node/grunt dependency directories
 node_modules/
