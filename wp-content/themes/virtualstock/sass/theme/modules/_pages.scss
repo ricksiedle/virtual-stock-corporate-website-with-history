@@ -199,7 +199,7 @@
                 transform: translate(0%, -50%);
                 width: 60%;
                 h2 {
-                    font-size: 4rem;
+                    font-size: 3rem;
                     font-family: 'Serenity Light';
                     color: $light-gray;
                     text-transform: uppercase;
@@ -217,6 +217,28 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    &-contact {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        h2 {
+            margin-bottom: 3rem;
+            font-size: 3rem;
+            font-family: 'Serenity Light';
+            color: $light-gray;
+            text-transform: uppercase;
+        }
+        h3 {
+            font-size: 1.6rem;
+            font-family: 'Serenity Bold';
+            color: $light-gray;
+        }
+        p {
+            font-size: 1.2rem;
+            font-family: 'Serenity Demi Bold';
+            line-height: 1.2rem;
+            color: $light-gray;
         }
     }
 }

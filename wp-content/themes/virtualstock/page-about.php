@@ -103,6 +103,36 @@ get_header();
             </div>
         </div>
     </div>
+
+    <div class="row section-contact v-full-width">
+        <div class="col-md-7 text-align-center">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5913.035932674735!2d-0.973429797835869!3d51.455854771644425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4880b4de64a44765!2sVirtualstock!5e0!3m2!1sen!2smk!4v1531130351239" 
+                width="600" 
+                height="450" 
+                frameborder="0" 
+                style="border:0" 
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="col-md-5">
+            <h2> <?php _e('Our Location', 'virtual') ?></h2>
+
+            <h3> Headquarters: </h3>
+            <p> Reading, UK, One Valpy, 20 Valpy Street, Reading, </p>
+            <p> United Kingdom, RG1 1AR </p>
+            <p> +44(0)1183150950 </p>
+
+            <h3> Satellite Locations: </h3>
+            <p> Lviv, Ukraine </p>
+            <p> Skopje, Macedonia </p>
+            <p> Rzeszow, Poland </p>
+            <p> Cape Town, South Africa </p>
+
+
+            <p> <?php _e('', 'virtual') ?></p>    
+        </div>
+    </div>
 </div>
 
 
