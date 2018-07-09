@@ -20,3 +20,9 @@
         background-color: darken($background-color, 10%) !important;
     }
 }
+
+@mixin tranz($duration, $property) {
+    -webkit-transition: $duration, $property;
+    -moz-transition: $duration, $property;
+    transition: $duration, $property;
+}

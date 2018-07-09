@@ -4178,9 +4178,9 @@ tbody.collapse.show {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -10614,6 +10614,79 @@ h1 {
  */
 #wrapper-footer {
   background-color: #455160; }
+
+.wrapper-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  -webkit-transition: .5s all;
+  transition: .5s all; }
+  .wrapper-navbar .navbar.navbar-expand-md.navbar-light.bg-custom {
+    min-height: 80px;
+    height: auto;
+    background-color: #fff;
+    padding-bottom: 0; }
+    .wrapper-navbar .navbar.navbar-expand-md.navbar-light.bg-custom #header-btn.moduled-btn.pink-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 50px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+      cursor: pointer; }
+    .wrapper-navbar .navbar.navbar-expand-md.navbar-light.bg-custom .navbar-nav .dropdown-menu {
+      position: static;
+      border: none;
+      padding-top: 0;
+      padding-bottom: 1rem; }
+      .wrapper-navbar .navbar.navbar-expand-md.navbar-light.bg-custom .navbar-nav .dropdown-menu a {
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 2px 20px; }
+    .wrapper-navbar .navbar.navbar-expand-md.navbar-light.bg-custom .container {
+      position: relative; }
+
+.logged-in .wrapper-navbar {
+  top: 30px; }
+
+.logged-in #main {
+  margin-top: 45px; }
+
+.custom-logo-link {
+  display: block;
+  position: absolute;
+  top: 5px;
+  margin-top: 14px;
+  padding-bottom: 0; }
+
+#navbarNavDropdown {
+  margin-top: 23px;
+  -webkit-transition: 1s all;
+  transition: 1s all; }
+
+#main-menu {
+  margin-left: 226px; }
+  #main-menu > li {
+    position: relative;
+    display: inline-block; }
+    #main-menu > li > a {
+      font-family: 'Serenity', Helvetica, Arial, serif;
+      font-weight: 500;
+      padding-left: 1rem;
+      padding-right: 1rem; }
+      #main-menu > li > a:after {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        margin-bottom: -10px;
+        margin-left: 0; }
+
+.show > a {
+  text-transform: uppercase;
+  font-weight: 500 !important; }
 
 /**
  *

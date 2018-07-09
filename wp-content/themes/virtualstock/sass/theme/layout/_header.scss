@@ -3,8 +3,9 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #fff;
     z-index: 99;
+    -webkit-transition: .5s all;
+    transition: .5s all;
     .navbar.navbar-expand-md.navbar-light.bg-custom {
         min-height: 80px;
         height: auto;
@@ -58,6 +59,7 @@
 
 #navbarNavDropdown {
     margin-top: 23px;
+    transition: 1s all;
 }
 
 #main-menu {
@@ -84,8 +86,9 @@
 .show {
     > a {
         text-transform: uppercase;
-        font-weight: 700 !important;
-        font-size: 1.4rem !important;
+        font-weight: 500 !important;
     }
-    
+    .dropdown-menu {
+        
+    }
 }
