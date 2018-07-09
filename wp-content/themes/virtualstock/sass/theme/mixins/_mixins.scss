@@ -21,8 +21,8 @@
     }
 }
 
-@mixin tranz($duration, $property) {
-    -webkit-transition: $duration, $property;
-    -moz-transition: $duration, $property;
-    transition: $duration, $property;
+@mixin tranz($property, $duration) {
+    -webkit-transition:$property $duration;
+    -moz-transition: $property $duration;
+    transition: $property $duration;
 }
