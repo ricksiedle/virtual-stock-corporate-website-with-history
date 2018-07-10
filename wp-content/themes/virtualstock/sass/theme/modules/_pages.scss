@@ -242,6 +242,93 @@
         }
     }
 }
+
+/**
+*
+* Blog
+*
+*/
+.blog {
+    .grid {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        &:after {
+            @extend %clearfix;
+        }
+        .grid-item { 
+            float: left;
+            width: 50%;
+            height: 460px;
+            .category_name_wrapper {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                font-size: 1.2rem;
+                font-family: 'Serenity Demi Bold';
+                background-color: $light-gray;
+                padding: 10px;
+                a {
+                    color: $white;
+                    &:hover, &:active {
+                        color: darker($white);
+                    }
+                }
+            }
+            a.v-img-expose {
+                display: block;
+                width: calc(100% - 10px);
+                height: 450px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            &--width2 { 
+                height: 410px;
+                width: 100%;
+                a.v-img-expose {
+                    display: block;
+                    width: calc(100% - 10px);
+                    height: 400px;
+                }
+            }
+            &--height2 { 
+                height: 920px;
+                width:  50% ;
+                a.v-img-expose {
+                    width: calc(100% - 10px);
+                    height: 910px;
+                }
+            }
+        }
+    }
+    .header-title-wrapper {
+        position: absolute;
+        bottom: 110px;
+        left: 30px;
+        padding: 20px;
+        background-color: $white;
+        width: 50%;
+        height: auto;
+        .entry-title {
+            a {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                font-family: 'Serenity Demi Bold';
+                color: $light-gray;
+            }
+        }
+    }
+    a.read_more_hyperlink {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        @include moduled-btn( 'button', 0, 10px, 30px, $pink ) {
+            font-size: 1.4rem;
+        }
+    }
+}
  
 
 

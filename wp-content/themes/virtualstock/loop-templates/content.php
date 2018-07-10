@@ -5,46 +5,59 @@
  * @package understrap
  */
 
+if( get_the_post_thumbnail( $post->ID ) ) {
+
+	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
+	$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
+	/**
+	 * Check if the feature image of the post
+	 * is horizontal and than
+	 * set $v_img_position accordingly
+	 */
+	if ($imgmeta['width'] > $imgmeta['height']) {
+		$v_img_position = 'grid-item--width2';
+	} elseif ( $imgmeta['width'] < $imgmeta['height'] ) {
+		$v_img_position = 'grid-item--height2';
+	} else {
+		$v_img_position = '';
+	}
+}
+
+
 ?>
 
-<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+
+<article <?php post_class(['grid-item', $v_img_position]); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
-		'</a></h2>' ); ?>
+		<?php 
+			if( get_the_post_thumbnail( $post->ID, 'full' ) ) {
+		?>		
+		
+			<a class="v-img-expose" style="background-image: url('<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>') "></a>
 
-		<?php if ( 'post' == get_post_type() ) : ?>
+		<?php
 
-			<div class="entry-meta">
-				<?php understrap_posted_on(); ?>
-			</div><!-- .entry-meta -->
+			}
+			else {
+		?>
+				<a class="v-img-expose" style="background-image: url('<?php get_bloginfo( "stylesheet_directory" ) . '/images/thumbnail-default.jpg'; ?>') "></a>
+		<?php
+			}
+		?>
+		<div class="header-title-wrapper">
+			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ),
+			'</a></h2>' ); ?>
+		</div>
 
-		<?php endif; ?>
+		<a class="read_more_hyperlink" href="<?php the_permalink(); ?>"><button> <?php _e('Read More', 'virtual'); ?> </button></a>
 
+		<div class="category_name_wrapper">
+			<a href="<?php echo get_category_link( get_the_category( $id )[0]->cat_ID ); ?>"><?php echo get_the_category( $id )[0]->name; ?></a>
+		</div>
 	</header><!-- .entry-header -->
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
-
-	<div class="entry-content">
-
-		<?php
-		the_excerpt();
-		?>
-
-		<?php
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
-		) );
-		?>
-
-	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-
-		<?php understrap_entry_footer(); ?>
-
-	</footer><!-- .entry-footer -->
 
 </article><!-- #post-## -->
+
