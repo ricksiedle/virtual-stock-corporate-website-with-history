@@ -9,3 +9,6 @@
 @import "layout/header";// <-------- Loads Layout CSS rules for the big chunks, like Header, Footer, Sidebar... list goes on...
 @import "modules/modules";  // <--------- Loads modules... that's it...
 @import "modules/carousel"; // Load the carousel specific elements
+
+// Page specific elements
+@import "pages/retail";

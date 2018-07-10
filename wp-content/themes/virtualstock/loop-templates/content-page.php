@@ -130,7 +130,7 @@ global $post;
 			?>
 
 							
-							<h2 class="v-section-heading text-align-center">
+							<h2 class="v-section-heading margined-heading text-align-center">
 								<?php echo $v_section_heading; ?>		
 							</h2>
 							
