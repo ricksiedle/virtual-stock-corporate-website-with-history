@@ -287,6 +287,7 @@
             @extend %clearfix;
         }
         .grid-item { 
+            position: relative;
             float: left;
             width: 50%;
             height: 460px;
@@ -329,6 +330,99 @@
                     width: calc(100% - 10px);
                     height: 910px;
                 }
+            }
+        }
+    }
+    .header-title-wrapper {
+        position: absolute;
+        bottom: 110px;
+        left: 30px;
+        padding: 20px;
+        background-color: $white;
+        width: 50%;
+        height: auto;
+        .entry-title {
+            a {
+                font-size: 1.4rem;
+                line-height: 1.4rem;
+                font-family: 'Serenity Demi Bold';
+                color: $light-gray;
+            }
+        }
+    }
+    a.read_more_hyperlink {
+        display: block;
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+        @include moduled-btn( 'button', 0, 10px, 30px, $pink ) {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+.single-post {
+    .entry-header {
+        
+        background-color: lighten($light-gray, 60%);
+        width: 100%;
+        height: 40vh;
+        .header-inner {
+            width: 100%;
+            height: 100%;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    }
+    .entry-content {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        font-family: 'Serenity Light';
+        .entry-meta {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 3rem;
+            font-family: 'Serenity Demi Bold';
+            color: $light-gray;
+        }
+    }
+    .grid {
+        width: 80%;
+        margin-top: 40px;
+        margin-bottom: 100px;
+        &:after {
+            @extend %clearfix;
+        }
+        .grid-item { 
+            position: relative;
+            float: left;
+            width: 50%;
+            height: 460px;
+            .category_name_wrapper {
+                position: absolute;
+                top: 0;
+                right: 10px;
+                font-size: 1.2rem;
+                font-family: 'Serenity Demi Bold';
+                background-color: $light-gray;
+                padding: 10px;
+                a {
+                    color: $white;
+                    &:hover, &:active {
+                        color: darker($white);
+                    }
+                }
+            }
+            a.v-img-expose {
+                display: block;
+                width: calc(100% - 10px);
+                height: 450px;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
     }
