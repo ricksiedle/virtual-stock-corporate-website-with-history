@@ -11279,6 +11279,10 @@ button.bg-custom:focus {
 
 #carousel .owl-theme .owl-nav {
   margin-top: -20px; }
+  #carousel .owl-theme .owl-nav button:hover {
+    background-color: transparent; }
+  #carousel .owl-theme .owl-nav button:focus {
+    outline: none; }
 
 /*
 * Use existing Bootstrap 4 classes and
