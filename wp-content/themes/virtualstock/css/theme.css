@@ -10613,7 +10613,8 @@ h1 {
  * Footer
  */
 #wrapper-footer {
-  background-color: #455160; }
+  background-color: #455160;
+  margin-top: -60px; }
 
 .wrapper-navbar {
   position: fixed;
@@ -11175,7 +11176,7 @@ button.bg-custom:focus {
       color: #cccccc; }
 
 #wrapper-footer .site-socials {
-  text-align: center; }
+  text-align: right; }
   #wrapper-footer .site-socials .socials-menu#footer-socials.menu {
     margin-top: 0.5rem;
     padding: 0;
