@@ -13,6 +13,8 @@
 
 get_header();
 
+global $post;
+
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -22,6 +24,33 @@ get_header();
 <div class="wrapper" id="index-wrapper">
 
 	<div class="container" id="content" tabindex="-1">
+
+		<div class="row v-categories-menu">
+			<?php 
+				$categories = get_terms( array(
+					'taxonomy' => 'category',
+					'hide_empty' => true
+				) );
+				
+				$separator = ' ';
+				$all = 'All';
+				//var_dump($categories); die();
+				if ( ! empty( $categories ) ) {
+
+					
+
+					$output = '<a class="current-page" href="/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+					
+					foreach( $categories as $category ) {
+
+						$is_this_page = $post->post_name == $category->slug ? 'current_page' : '';
+
+						$output .= '<a class="' . $is_this_page . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'virtual' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+					}
+					echo trim( $output, $separator );
+				}
+			?>
+		</div>
 
 		<div class="row">
 
