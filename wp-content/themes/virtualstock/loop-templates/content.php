@@ -5,6 +5,8 @@
  * @package understrap
  */
 
+ $v_img_position = '';
+
 if( get_the_post_thumbnail( $post->ID ) ) {
 
 	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
