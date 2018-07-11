@@ -10591,7 +10591,7 @@ h1 {
     border: 0;
     padding: 0; }
 
-.v-wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
+.v-wrapper:after, .v-partners:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
   content: "";
   clear: both;
   display: table; }
@@ -10606,8 +10606,13 @@ h1 {
 
 .v-wrapper {
   margin-top: 80px;
-  padding-top: 200px;
-  padding-bottom: 200px; }
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.v-partners {
+  margin-top: 80px;
+  padding-top: 75px;
+  padding-bottom: 75px; }
 
 /**
  * Footer
@@ -10723,7 +10728,7 @@ h1 {
  */
 .entry-header .under-header-wrapper .under-header-logo img {
   display: block;
-  margin: 80px auto; }
+  margin: 80px auto 60px auto; }
 
 .entry-header .under-header-wrapper .under-header-section {
   font-size: 1.4rem; }
@@ -10733,13 +10738,13 @@ h1 {
     color: #455160; }
   .entry-header .under-header-wrapper .under-header-section p {
     margin-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     font-size: 1rem; }
   .entry-header .under-header-wrapper .under-header-section-content {
     border-top: 2px solid #979797;
     border-bottom: 2px solid #979797;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px; }
     .entry-header .under-header-wrapper .under-header-section-content p {
@@ -11113,7 +11118,8 @@ button.bg-custom:focus {
 .v-wrapper-ret-sup {
   background-size: cover;
   background-position: center center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  margin-top: 120px; }
   .v-wrapper-ret-sup-heading {
     position: absolute;
     top: -50px;
@@ -11293,6 +11299,9 @@ button.bg-custom:focus {
 
 .margined-heading {
   margin-top: 130px; }
+
+.margined-top40 {
+  margin-top: 40px; }
 
 /*
 * Use existing Bootstrap 4 classes and
