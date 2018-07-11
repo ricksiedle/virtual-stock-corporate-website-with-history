@@ -8,15 +8,51 @@
  */
 
 get_header();
+
+global $post;
+
 ?>
 
-<?php
-$container   = get_theme_mod( 'understrap_container_type' );
-?>
 
 <div class="wrapper" id="archive-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
+
+		<div class="row v-categories-menu">
+			<?php 
+				$categories = get_terms( array(
+					'taxonomy' => 'category',
+					'hide_empty' => true
+				) );
+				
+				$separator = ' ';
+				$all = 'All';
+
+
+				function get_cat_slug($cat_id) {
+					$cat_id = (int) $cat_id;
+					$category = get_category($cat_id);
+					return $category->slug;
+				}
+
+				$this_category = get_the_category();
+
+				$this_category_slug = get_cat_slug($this_category[0]->cat_ID);
+				
+				if ( ! empty( $categories ) ) {
+					 
+
+					$output = '<a href="/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+					
+					foreach( $categories as $category ) {
+						$is_this_page = $this_category_slug == $category->slug ? 'current-page' : '';
+
+						$output .= '<a class="' . $is_this_page . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'virtual' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+					}
+					echo trim( $output, $separator );
+				}
+			?>
+		</div>
 
 		<div class="row">
 
@@ -26,28 +62,22 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<main class="site-main" id="main">
 
 				<?php if ( have_posts() ) : ?>
+					<div class="grid">
+						<?php /* Start the Loop */ ?>
+						<?php while ( have_posts() ) : the_post(); ?>
 
-					<header class="page-header">
-						<?php
-						the_archive_title( '<h1 class="page-title">', '</h1>' );
-						the_archive_description( '<div class="taxonomy-description">', '</div>' );
-						?>
-					</header><!-- .page-header -->
+							<?php
 
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+							/*
+							* Include the Post-Format-specific template for the content.
+							* If you want to override this in a child theme, then include a file
+							* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+							*/
+							get_template_part( 'loop-templates/content', get_post_format() );
+							?>
 
-						<?php
-
-						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', get_post_format() );
-						?>
-
-					<?php endwhile; ?>
+						<?php endwhile; ?>
+					</div>
 
 				<?php else : ?>
 
@@ -70,5 +100,19 @@ $container   = get_theme_mod( 'understrap_container_type' );
 </div><!-- Container end -->
 
 </div><!-- Wrapper end -->
+
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/isotope.pkgd.js' ?>"></script>
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/packary-mode.pkgd.js' ?>"></script>
+
+<script>
+	jQuery('.grid').isotope({
+		
+		layoutMode: 'masonry',
+		itemSelector: '.grid-item',
+		masonry: {
+			gutterWidth: 10
+		}
+	});
+</script>
 
 <?php get_footer(); ?>

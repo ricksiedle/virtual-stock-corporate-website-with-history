@@ -226,6 +226,23 @@
     }
 }
 
+//Pagination
+
+.page-link {
+    background-color: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: $light-gray;
+}
+
+.page-item.active .page-link {
+    border-color: transparent;
+    background-color: transparent;
+    font-family: 'Serenity Bold';
+    font-size: 1.4rem;
+    color: $pink;
+}
+
 
 .socials-menu a[href*="facebook.com"]:before {
 	content: "\f09a";
