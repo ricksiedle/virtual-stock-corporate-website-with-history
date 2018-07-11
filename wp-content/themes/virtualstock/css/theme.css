@@ -10591,7 +10591,7 @@ h1 {
     border: 0;
     padding: 0; }
 
-.v-wrapper:after, .v-partners:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
+.v-wrapper:after, .v-partners:after, .v-suppliers:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
   content: "";
   clear: both;
   display: table; }
@@ -10611,8 +10611,16 @@ h1 {
 
 .v-partners {
   margin-top: 80px;
-  padding-top: 75px;
-  padding-bottom: 75px; }
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.v-suppliers {
+  margin-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.negative-margin-bottom70 {
+  margin-bottom: -70px; }
 
 /**
  * Footer

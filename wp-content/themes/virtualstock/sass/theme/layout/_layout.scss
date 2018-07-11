@@ -11,8 +11,19 @@
 .v-partners {
     @extend %clearfix;
     margin-top: 80px;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.v-suppliers {
+    @extend %clearfix;
+    margin-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.negative-margin-bottom70 {
+    margin-bottom: -70px;
 }
 
 /**
