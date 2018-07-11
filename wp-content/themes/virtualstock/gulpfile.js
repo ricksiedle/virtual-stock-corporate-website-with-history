@@ -21,6 +21,11 @@ var gulpSequence = require( 'gulp-sequence' );
 var replace = require( 'gulp-replace' );
 var autoprefixer = require( 'gulp-autoprefixer' );
 
+var browserify = require('browserify');
+var babelify    = require('babelify');
+var source      = require('vinyl-source-stream');
+var buffer      = require('vinyl-buffer')
+
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
@@ -178,7 +183,7 @@ gulp.task( 'watch-bs', ['browser-sync', 'watch', 'scripts'], function() {
 // Run: 
 // gulp scripts. 
 // Uglifies and concat all JS files into one
-gulp.task( 'scripts', function() {
+gulp.task( 'scripts', ['es2016'], function() {
     var scripts = [
 
         // Start - All BS4 stuff
@@ -186,7 +191,12 @@ gulp.task( 'scripts', function() {
 
         // End - All BS4 stuff
 
-        paths.dev + '/js/skip-link-focus-fix.js'
+        paths.dev + '/js/skip-link-focus-fix.js',
+
+        // Custom paths
+
+        paths.dev + '/js/custom_es5.js'
+
     ];
   gulp.src( scripts )
     .pipe( concat( 'theme.min.js' ) )
@@ -196,6 +206,24 @@ gulp.task( 'scripts', function() {
   gulp.src( scripts )
     .pipe( concat( 'theme.js' ) )
     .pipe( gulp.dest( paths.js ) );
+});
+
+gulp.task('es2016', function() {
+
+    
+    return  browserify({entries: paths.dev + '/js/custom.js', debug: true})
+            .transform("babelify", { presets: ["es2015"] })
+            .bundle()
+            .on('error', function (error) {            
+                console.log(error.stack);
+                this.emit('end');
+            })
+            .pipe(source('custom_es5.js'))
+            .pipe(buffer())
+            .pipe(sourcemaps.init())
+            .pipe(uglify())
+            .pipe(sourcemaps.write('./'))
+            .pipe(gulp.dest(paths.dev + '/js'))
 });
 
 // Deleting any file inside the /src folder
