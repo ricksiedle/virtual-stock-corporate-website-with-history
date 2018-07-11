@@ -16,7 +16,7 @@ global $post;
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
 			<?php 
-			echo do_shortcode('[smartslider3 slider=2]');
+				echo do_shortcode('[smartslider3 slider=2]');
 			?>
 			
 			<!-- Static content in the carousel area -->
@@ -126,11 +126,13 @@ global $post;
 						$v_section_heading = get_sub_field('section_heading');
 
 						if($v_section_heading) :
+							
+							$margin40 = (get_page_by_path('suppliers') || get_page_by_path('providers')) ? "margined-top40" : "";
 			
 			?>
 
 							
-							<h2 class="v-section-heading margined-heading text-align-center">
+							<h2 class="v-section-heading margined-heading <?php echo $margin40; ?> text-align-center">
 								<?php echo $v_section_heading; ?>		
 							</h2>
 							
