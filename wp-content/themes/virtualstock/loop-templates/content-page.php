@@ -21,6 +21,21 @@ global $post;
 			
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
+				<?php if(get_field('has_header')): ?>
+					<div class="v-carousel-wrapper">
+						<h1 class="v-carousel-heading">
+							<?php if(get_field('header_text_heading')) :
+								echo get_field('header_text_heading');
+							endif; ?>
+						</h1>
+						<div class="v-carousel-content">
+							<?php if(get_field('header_text_content')) :
+								echo get_field('header_text_content');
+							endif; ?>
+						</div>
+					</div>
+				<?php endif; ?>
+
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
 						<div class="item"><img src="/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>

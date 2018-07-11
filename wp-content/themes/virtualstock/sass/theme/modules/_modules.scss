@@ -41,14 +41,14 @@
         .v-carousel-wrapper {
             position: absolute;
             top: calc(50% - 105px);
-            width: 50%;
             max-width:620px;
-            height: 210px;
+            height: auto;
             background-color: rgba(255,255,255,0.6);
             color: $light-gray;
-            h1.v-carousel-heading {
+            h1 {
                 padding: 18px 25px 0;
-                font-weight: bold;
+                font-family: 'Serenity Bold';
+                font-size: 3.4rem;
                 span {
                     color: $pink;
                 }
