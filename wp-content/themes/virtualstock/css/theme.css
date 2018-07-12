@@ -10614,13 +10614,6 @@ h1 {
   padding-top: 75px;
   padding-bottom: 75px; }
 
-/**
- * Footer
- */
-#wrapper-footer {
-  background-color: #455160;
-  margin-top: -60px; }
-
 .wrapper-navbar {
   position: fixed;
   top: 0;
@@ -10719,6 +10712,75 @@ h1 {
         height: 65px;
         -webkit-transition-delay: .1s;
                 transition-delay: .1s; }
+
+#wrapper-footer {
+  background-color: #455160;
+  margin-top: -60px; }
+  #wrapper-footer .site-footer .site-info {
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 40px; }
+    @media screen and (min-width: 768px) {
+      #wrapper-footer .site-footer .site-info {
+        text-align: left;
+        margin-top: 15px;
+        font-size: 1.8em; } }
+  #wrapper-footer .site-footer-menu {
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-size: 1.8em; }
+    @media screen and (min-width: 768px) {
+      #wrapper-footer .site-footer-menu {
+        margin-top: 0; } }
+    #wrapper-footer .site-footer-menu ul li a {
+      padding: 0 1rem;
+      font-weight: 700;
+      text-align: center;
+      color: #fff;
+      line-height: 4rem; }
+      #wrapper-footer .site-footer-menu ul li a:hover, #wrapper-footer .site-footer-menu ul li a:active {
+        color: #cccccc; }
+      @media screen and (min-width: 768px) {
+        #wrapper-footer .site-footer-menu ul li a {
+          font-weight: 300;
+          text-align: left; } }
+  #wrapper-footer .site-socials {
+    margin-top: 40px;
+    text-align: center; }
+    @media screen and (min-width: 768px) {
+      #wrapper-footer .site-socials {
+        text-align: right;
+        margin-top: 10px; } }
+    #wrapper-footer .site-socials .socials-menu#footer-socials.menu {
+      margin-top: 0.5rem;
+      padding: 0;
+      list-style: none; }
+    #wrapper-footer .site-socials .socials-menu li {
+      display: inline-block;
+      padding: 0 15px; }
+    #wrapper-footer .site-socials .socials-menu span {
+      clip: rect(1px, 1px, 1px, 1px);
+      position: absolute !important;
+      height: 1px;
+      width: 1px;
+      overflow: hidden; }
+    #wrapper-footer .site-socials .socials-menu li:first-child {
+      padding-left: 0; }
+    #wrapper-footer .site-socials .socials-menu li:last-child {
+      padding-right: 0; }
+    #wrapper-footer .site-socials .socials-menu a {
+      color: #fff;
+      font: normal normal normal 22px/1 FontAwesome;
+      display: inline-block;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      position: relative;
+      font-size: 2.8em; }
+      #wrapper-footer .site-socials .socials-menu a:hover {
+        color: #728399;
+        text-decoration: none; }
 
 /**
  *
@@ -11272,51 +11334,6 @@ button.bg-custom:focus {
     .v-ret-sup-wrapper p:last-child {
       font-size: 1rem;
       margin-top: 0; }
-
-#wrapper-footer .site-footer .site-info {
-  font-size: 1.4rem;
-  color: #fff; }
-
-#wrapper-footer .site-footer-menu {
-  font-size: 1.4rem; }
-  #wrapper-footer .site-footer-menu ul li a {
-    padding: 0 1rem;
-    font-weight: 300;
-    text-align: center;
-    color: #fff; }
-    #wrapper-footer .site-footer-menu ul li a:hover, #wrapper-footer .site-footer-menu ul li a:active {
-      color: #cccccc; }
-
-#wrapper-footer .site-socials {
-  text-align: right; }
-  #wrapper-footer .site-socials .socials-menu#footer-socials.menu {
-    margin-top: 0.5rem;
-    padding: 0;
-    list-style: none; }
-  #wrapper-footer .site-socials .socials-menu li {
-    display: inline-block;
-    padding: 0 15px; }
-  #wrapper-footer .site-socials .socials-menu span {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden; }
-  #wrapper-footer .site-socials .socials-menu li:first-child {
-    padding-left: 0; }
-  #wrapper-footer .site-socials .socials-menu li:last-child {
-    padding-right: 0; }
-  #wrapper-footer .site-socials .socials-menu a {
-    color: #adb7c4;
-    font: normal normal normal 22px/1 FontAwesome;
-    display: inline-block;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative; }
-    #wrapper-footer .site-socials .socials-menu a:hover {
-      color: #728399;
-      text-decoration: none; }
 
 .page-link {
   background-color: transparent;
