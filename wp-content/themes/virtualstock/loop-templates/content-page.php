@@ -16,7 +16,8 @@ global $post;
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
 			<?php 
-				echo do_shortcode('[smartslider3 slider=2]');
+				$slider_id = get_field('slider_id');
+				echo do_shortcode('[smartslider3 slider=' . $slider_id . ']');
 			?>
 			
 			<!-- Static content in the carousel area -->
