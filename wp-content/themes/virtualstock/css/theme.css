@@ -10736,14 +10736,19 @@ h1 {
  */
 .entry-header .under-header-wrapper .under-header-logo img {
   display: block;
-  margin: 80px auto 60px auto; }
+  margin: 30px auto 50px auto; }
+  @media screen and (min-width: 768px) {
+    .entry-header .under-header-wrapper .under-header-logo img {
+      margin: 80px auto 60px auto; } }
 
 .entry-header .under-header-wrapper .under-header-section {
   font-size: 1.4rem; }
   .entry-header .under-header-wrapper .under-header-section h3 {
-    margin-bottom: 20px;
     font-size: 2.8rem;
     color: #455160; }
+    @media screen and (min-width: 768px) {
+      .entry-header .under-header-wrapper .under-header-section h3 {
+        margin-bottom: 20px; } }
   .entry-header .under-header-wrapper .under-header-section p {
     margin-top: 10px;
     margin-bottom: 8px;
@@ -10751,10 +10756,13 @@ h1 {
   .entry-header .under-header-wrapper .under-header-section-content {
     border-top: 2px solid #979797;
     border-bottom: 2px solid #979797;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .entry-header .under-header-wrapper .under-header-section-content {
+        margin-top: 10px; } }
     .entry-header .under-header-wrapper .under-header-section-content p {
       font-size: 1.2rem;
       line-height: 2rem; }
