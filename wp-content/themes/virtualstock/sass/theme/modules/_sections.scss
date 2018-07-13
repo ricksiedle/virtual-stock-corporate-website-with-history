@@ -4,11 +4,15 @@
 
     //Heading styles
     h2.v-section-heading {
-        margin-bottom: 50px;
-        font-size: 2.8rem;
+        margin-bottom: 30px;
+        font-size: 3.8rem;
         color: $light-gray;
         span{
             color: $pink;
+        }
+        @media screen and (min-width: 564px) {
+            margin-bottom: 60px;
+            font-size: 2.8rem;
         }
     }
 
@@ -117,11 +121,17 @@
         }
     }
     .v-testimonials {
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @media screen and (min-width: 768px) {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
         .v-testimonial {
-            padding-left: 80px;
-            padding-right: 80px;
+            @media screen and (min-width: 768px) {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
             .image_wrapper {
                 @extend %clearfix;
                 img {

@@ -301,7 +301,7 @@ global $post;
 
 										while ( have_rows('section_with_partner_logos') ) : the_row(); 
 			?>
-											<div class="container-fluid v-wrapper v-wrapper-ret-sup v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
+											<div class="container-fluid v-wrapper v-partners v-wrapper-ret-sup v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
 												<div class="v-wrapper-ret-sup-heading">
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>

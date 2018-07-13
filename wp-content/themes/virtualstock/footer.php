@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 					<div class="row">
-						<div class="site-info col-md-3">
+						<div class="site-info col-md-4">
 							<?php _e('© 2018 by Virtualstock') ?>
 						</div><!-- .site-info -->
 
-						<div class="site-footer-menu col-md-6">
+						<div class="site-footer-menu col-md-4">
 							<div class="row">
 								<div class="col-md-6">
 									<!-- The WordPress Menu goes here -->
@@ -58,24 +58,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 
-						<div class="site-socials col-md-3">	
-						<ul id="footer-socials" class="menu socials-menu">
-							<li class="menu-item menu-item-type-custom menu-item-object-custom">
-								<a href="https://twitter.com/uix">
-									<span>Twitter</span>
-								</a>
-							</li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom">
-								<a href="https://facebook.com/uix">
-									<span>Facebook</span>
-								</a>
-							</li>
-							<li class="menu-item menu-item-type-custom menu-item-object-custom">
-								<a href="https://plus.google.com/uix">
-									<span>Google</span>	
-								</a>
-							</li>
-						</ul>
+						<div class="site-socials col-md-4">	
+							<ul id="footer-socials" class="menu socials-menu">
+								<li class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="https://twitter.com/uix">
+										<span>Twitter</span>
+									</a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="https://facebook.com/uix">
+										<span>Facebook</span>
+									</a>
+								</li>
+								<li class="menu-item menu-item-type-custom menu-item-object-custom">
+									<a href="https://plus.google.com/uix">
+										<span>Google</span>	
+									</a>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</footer><!-- #colophon -->

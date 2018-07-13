@@ -145,7 +145,6 @@
     }
 }
 
-
 .v-ret-sup-wrapper {
     border-right: 3px solid $light-blue;
     padding-right: 20px;
@@ -153,9 +152,6 @@
     &:last-child{
         border: none;
     } 
-    .v-img{
-        
-    }
     p {
         font-size: 1.2rem;
         margin-top: 20px;
@@ -163,74 +159,6 @@
         &:last-child {
             font-size: 1rem;
             margin-top:0;
-        }
-    }
-}
-
-//Footer
-#wrapper-footer {
-    .site- {
-        &footer {
-            .site-info {
-                font-size: 1.4rem;
-                color: $white;
-            }
-        }
-        &footer-menu {
-            font-size: 1.4rem;
-            ul {
-                li {
-                    a {
-                        padding: 0 1rem;
-                        font-weight: 300;
-                        text-align: center;
-                        color:$white;
-                        &:hover, &:active {
-                            color:darken($white, 20%);
-                        }
-                    }
-                }
-            }
-        }
-        &socials {
-            text-align: right;
-            .socials-menu {
-                &#footer-socials.menu {
-                    margin-top: 0.5rem;
-                    padding: 0;
-                    list-style: none;
-                }
-                li {
-                    display: inline-block;
-                    padding: 0 15px;
-                }
-                span {
-                    clip: rect(1px, 1px, 1px, 1px);
-                    position: absolute !important;
-                    height: 1px;
-                    width: 1px;
-                    overflow: hidden;
-                }
-                li:first-child {
-                    padding-left: 0;
-                }
-                li:last-child {
-                    padding-right: 0;
-                }
-                a {
-                    color: lighten($light-gray, 40%);;
-                    font: normal normal normal 22px/1 FontAwesome;
-                    display: inline-block;
-                    text-rendering: auto;
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    position: relative;
-                    &:hover {
-                        color: lighten($light-gray, 20%);
-                        text-decoration: none;
-                    }
-                }
-            }
         }
     }
 }
