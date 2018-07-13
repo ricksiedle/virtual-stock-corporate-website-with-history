@@ -219,10 +219,18 @@ global $post;
 										<h3 class="v-box-caption">
 											<span> <?php echo $v_box_title; ?> </span>
 										</h3>
-										<button class="v-box-button">
-											<a href="<?php echo $v_box_hyperlink ?>"> <?php _e('Learn more', 'virtual') ?> </a>
-										</button>
+										<?php if(get_sub_field('has_button') == true) { ?>
+											<button class="v-box-button">
+												<a href="<?php echo $v_box_hyperlink ?>"> <?php _e('Learn more', 'virtual') ?> </a>
+											</button>
+										<?php } ?>
+										<?php if(get_sub_field('has_text_overlay') == true) { ?>
+											<div class="v-box-txt">
+												<?php echo  get_sub_field('overlay_text') ?>
+											</div>
+										<?php } ?>
 									</div>
+									
 								</div>
 
 			<?php
