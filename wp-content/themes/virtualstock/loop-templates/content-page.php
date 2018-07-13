@@ -16,11 +16,27 @@ global $post;
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
 			<?php 
-			echo do_shortcode('[smartslider3 slider=2]');
+				$slider_id = get_field('slider_id');
+				echo do_shortcode('[smartslider3 slider=' . $slider_id . ']');
 			?>
 			
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
+				<?php if(get_field('has_header')): ?>
+					<div class="v-carousel-wrapper">
+						<h1 class="v-carousel-heading">
+							<?php if(get_field('header_text_heading')) :
+								echo get_field('header_text_heading');
+							endif; ?>
+						</h1>
+						<div class="v-carousel-content">
+							<?php if(get_field('header_text_content')) :
+								echo get_field('header_text_content');
+							endif; ?>
+						</div>
+					</div>
+				<?php endif; ?>
+
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
 						<div class="item"><img src="/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
@@ -126,11 +142,13 @@ global $post;
 						$v_section_heading = get_sub_field('section_heading');
 
 						if($v_section_heading) :
+							
+							$margin40 = (get_page_by_path('suppliers') || get_page_by_path('providers')) ? "margined-top40" : "";
 			
 			?>
 
 							
-							<h2 class="v-section-heading margined-heading text-align-center">
+							<h2 class="v-section-heading margined-heading <?php echo $margin40; ?> text-align-center">
 								<?php echo $v_section_heading; ?>		
 							</h2>
 							
@@ -283,8 +301,7 @@ global $post;
 
 										while ( have_rows('section_with_partner_logos') ) : the_row(); 
 			?>
-						
-											<div class="container-fluid v-wrapper v-wrapper-ret-sup v-full-width" style="background-image:url('<?php echo get_sub_field('p_bg_image'); ?>')">
+											<div class="container-fluid v-wrapper v-wrapper-ret-sup v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
 												<div class="v-wrapper-ret-sup-heading">
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>

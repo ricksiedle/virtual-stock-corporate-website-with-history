@@ -92,6 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+
 </body>
 
 </html>

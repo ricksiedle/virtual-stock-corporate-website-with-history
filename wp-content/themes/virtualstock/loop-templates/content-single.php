@@ -10,42 +10,47 @@
 
 	<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php if( get_field('header_image') ): ?>
+			<div class="header-inner" style="background-image:url('<?php the_field('header_image'); ?>')">
 
-		<div class="entry-meta">
-
-			<?php understrap_posted_on(); ?>
-
-		</div><!-- .entry-meta -->
+			</div>
+		<?php endif; ?>
+		
 
 	</header><!-- .entry-header -->
+	<div class="container">
+		<div class="entry-content">
 
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
-	<div class="entry-content">
+			<div class="entry-meta">
 
-		<?php the_content(); ?>
+				<?php understrap_posted_on(); ?>
 
-		<?php
+			</div><!-- .entry-meta -->
 
-		// check if the repeater field has rows of data
-		if( have_rows('the_repeater') ):
+			<?php the_content(); ?>
 
-			// loop through the rows of data
-			while ( have_rows('the_repeater') ) : the_row();
+			<?php
 
-				// display a sub field value
-				the_sub_field('some_subfield');
+			// check if the repeater field has rows of data
+			if( have_rows('the_repeater') ):
 
-			endwhile;
+				// loop through the rows of data
+				while ( have_rows('the_repeater') ) : the_row();
 
-		else :
+					// display a sub field value
+					the_sub_field('some_subfield');
 
-			// no rows found
+				endwhile;
 
-		endif;
+			else :
 
-		?>
+				// no rows found
+
+			endif;
+
+			?>
 
 		<?php
 		wp_link_pages( array(
@@ -54,12 +59,14 @@
 		) );
 		?>
 
-	</div><!-- .entry-content -->
+		</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
+		<footer class="entry-footer">
 
 		<?php understrap_entry_footer(); ?>
 
-	</footer><!-- .entry-footer -->
+		</footer><!-- .entry-footer -->
+	</div>
+	
 
 </article><!-- #post-## -->
