@@ -9626,7 +9626,11 @@ h1 {
     border: 0;
     padding: 0; }
 
+<<<<<<< HEAD
 .v-wrapper:after, .v-partners:after, .blog .grid:after, .archive .grid:after, .single-post .grid:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
+=======
+.v-wrapper:after, .v-partners:after, .v-suppliers:after, .v-section .v-testimonials .v-testimonial .image_wrapper:after, .v-section .v-testimonials .v-testimonial .image_wrapper img:after {
+>>>>>>> e485275278b6f277e8c075cab85aa867429c8bf8
   content: "";
   clear: both;
   display: table; }
@@ -9646,8 +9650,16 @@ h1 {
 
 .v-partners {
   margin-top: 80px;
-  padding-top: 75px;
-  padding-bottom: 75px; }
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.v-suppliers {
+  margin-top: 80px;
+  padding-top: 120px;
+  padding-bottom: 120px; }
+
+.negative-margin-bottom70 {
+  margin-bottom: -70px; }
 
 /**
  * Footer
@@ -9757,14 +9769,19 @@ h1 {
  */
 .entry-header .under-header-wrapper .under-header-logo img {
   display: block;
-  margin: 80px auto 60px auto; }
+  margin: 30px auto 50px auto; }
+  @media screen and (min-width: 768px) {
+    .entry-header .under-header-wrapper .under-header-logo img {
+      margin: 80px auto 60px auto; } }
 
 .entry-header .under-header-wrapper .under-header-section {
   font-size: 1.4rem; }
   .entry-header .under-header-wrapper .under-header-section h3 {
-    margin-bottom: 20px;
     font-size: 2.8rem;
     color: #455160; }
+    @media screen and (min-width: 768px) {
+      .entry-header .under-header-wrapper .under-header-section h3 {
+        margin-bottom: 20px; } }
   .entry-header .under-header-wrapper .under-header-section p {
     margin-top: 10px;
     margin-bottom: 8px;
@@ -9772,10 +9789,13 @@ h1 {
   .entry-header .under-header-wrapper .under-header-section-content {
     border-top: 2px solid #979797;
     border-bottom: 2px solid #979797;
-    margin-top: 10px;
+    margin-top: 25px;
     margin-bottom: 20px;
     padding-top: 20px;
     padding-bottom: 20px; }
+    @media screen and (min-width: 768px) {
+      .entry-header .under-header-wrapper .under-header-section-content {
+        margin-top: 10px; } }
     .entry-header .under-header-wrapper .under-header-section-content p {
       font-size: 1.2rem;
       line-height: 2rem; }
