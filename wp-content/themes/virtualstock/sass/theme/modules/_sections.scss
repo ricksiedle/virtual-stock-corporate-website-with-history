@@ -4,14 +4,14 @@
 
     //Heading styles
     h2.v-section-heading {
-        margin-bottom: 20px;
-        font-size: 3.6em;
+        margin-bottom: 30px;
+        font-size: 3.8rem;
         color: $light-gray;
         span{
             color: $pink;
         }
-        @media screen and (min-width: 768px) {
-            margin-bottom: 50px;
+        @media screen and (min-width: 564px) {
+            margin-bottom: 60px;
             font-size: 2.8rem;
         }
     }
