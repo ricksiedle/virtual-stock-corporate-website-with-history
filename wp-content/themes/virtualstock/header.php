@@ -59,9 +59,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php } else {
 						if( wp_is_mobile() && get_theme_mod( 'm_logo' ) ) { ?>
 							
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" class="navbar-brand custom-logo-link" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
  
-								<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+								<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 						
 							</a>
 						<?php 
