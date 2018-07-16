@@ -35,6 +35,8 @@ global $post;
 							endif; ?>
 						</div>
 					</div>
+
+					<button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
 				<?php endif; ?>
 
 				<?php if( is_front_page() ) : ?>
