@@ -10695,12 +10695,6 @@ h1 {
     .wrapper-navbar .navbar.navbar-expand-md.navbar-light .container {
       position: relative; }
 
-.logged-in .wrapper-navbar {
-  top: 30px; }
-
-.logged-in #main {
-  margin-top: 45px; }
-
 .custom-logo-link {
   display: block;
   position: absolute;
@@ -10709,6 +10703,8 @@ h1 {
   padding-bottom: 0;
   max-width: 215px;
   z-index: 9999; }
+  .custom-logo-link img {
+    margin-bottom: -10px; }
 
 #navbarNavDropdown {
   margin-top: 23px; }
@@ -10782,8 +10778,6 @@ h1 {
       font-size: 20px;
       padding-bottom: 20px;
       cursor: pointer; }
-  .custom-logo-link {
-    padding-bottom: 0; }
   #main-menu {
     margin-left: 226px;
     margin-top: 0; }
@@ -10808,6 +10802,11 @@ h1 {
         #main-menu li.dropdown ul.dropdown-menu li a {
           font-size: .65em;
           font-weight: 700; } }
+
+.logged-in .wrapper-navbar {
+  top: 30px; }
+  .logged-in .wrapper-navbar .navbar-toggler {
+    top: 50px; }
 
 #wrapper-footer {
   background-color: #455160;
@@ -11524,11 +11523,11 @@ button.bg-custom:focus {
     height: auto;
     background-color: rgba(255, 255, 255, 0.6);
     color: #455160; }
-    .carousel .v-static .v-carousel-wrapper h1 {
+    .carousel .v-static .v-carousel-wrapper .v-carousel-heading, .carousel .v-static .v-carousel-wrapper h1 {
       padding: 18px 25px 0;
       font-family: 'Serenity Bold';
-      font-size: 3.4rem; }
-      .carousel .v-static .v-carousel-wrapper h1 span {
+      font-size: 3.2rem; }
+      .carousel .v-static .v-carousel-wrapper .v-carousel-heading span, .carousel .v-static .v-carousel-wrapper h1 span {
         color: #E64097; }
     .carousel .v-static .v-carousel-wrapper .v-carousel-content {
       padding: 5px 25px 34px;
@@ -11704,6 +11703,9 @@ button.bg-custom:focus {
   #carousel .owl-theme .owl-nav button:focus {
     outline: none; }
 
+.carousel-btn {
+  display: none; }
+
 @media screen and (max-width: 564px) {
   #carousel,
   .n2-ss-slider-3,
@@ -11715,15 +11717,16 @@ button.bg-custom:focus {
     display: none !important; }
   .carousel-btn {
     position: absolute;
+    display: block;
     left: 20px;
-    bottom: 20vh;
+    top: 75vh;
     color: #fff;
     background-color: #E64097;
-    padding: 10px 30px 16px;
+    padding: 6px 30px 10px;
     border: none;
     font-size: 2em; }
   .home .carousel-btn {
-    top: 70vh; }
+    top: 75vh; }
   .nextend-arrow {
     display: none !important; }
   #carousel .v-carousel-wrapper {
@@ -11736,10 +11739,9 @@ button.bg-custom:focus {
       text-align: left;
       padding: 10px 10px 10px 15px;
       line-height: 1em;
-      font-size: 2.4rem; }
+      font-size: 2.6rem; }
       #carousel .v-carousel-wrapper h1 span, #carousel .v-carousel-wrapper .v-carousel-heading span {
-        display: inline-block;
-        padding-right: 1em; }
+        display: block; }
     #carousel .v-carousel-wrapper .v-carousel-content {
       font-weight: 700;
       line-height: 2rem;

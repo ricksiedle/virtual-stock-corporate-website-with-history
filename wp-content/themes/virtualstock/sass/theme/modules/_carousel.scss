@@ -14,6 +14,10 @@
     }
 }
 
+.carousel-btn {
+    display: none;
+}
+
 
 @media screen and (max-width: 564px) {
     #carousel,
@@ -30,18 +34,19 @@
 
     .carousel-btn {
         position: absolute;
+        display: block;
         left: 20px;
-        bottom: 20vh;
+        top: 75vh;
         color: #fff;
         background-color: $pink;
-        padding: 10px 30px 16px;
+        padding: 6px 30px 10px;
         border: none;
         font-size: 2em;
     }
 
     .home {
         .carousel-btn {
-            top: 70vh;
+            top: 75vh;
         }
     }
 
@@ -60,10 +65,9 @@
                 text-align: left;
                 padding: 10px 10px 10px 15px;
                 line-height: 1em;
-                font-size: 2.4rem;
+                font-size: 2.6rem;
                 span {
-                    display: inline-block;
-                    padding-right: 1em;
+                    display: block;
                 }
             }
             .v-carousel-content {
