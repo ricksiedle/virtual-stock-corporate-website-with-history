@@ -80,7 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-				<button id="header-btn" class="moduled-btn pink-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
+				<button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
 				
 			</div><!-- .container -->
 			

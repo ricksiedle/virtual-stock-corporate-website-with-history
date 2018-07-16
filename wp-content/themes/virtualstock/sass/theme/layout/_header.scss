@@ -56,12 +56,10 @@
         }
     }
     .navbar.navbar-expand-md.navbar-light {
+        top: -8px;
         height: auto;
         background-color: rgba(69,81,96, .8);
         padding-bottom: 0;
-        #header-btn.moduled-btn.pink-btn {
-            display: none;
-        }
         .navbar-nav {
             .dropdown-menu {
                 position: static;

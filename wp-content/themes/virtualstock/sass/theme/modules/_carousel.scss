@@ -13,3 +13,72 @@
         }
     }
 }
+
+
+@media screen and (max-width: 564px) {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: 100vh !important;
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        left: 20px;
+        bottom: 20vh;
+        color: #fff;
+        background-color: $pink;
+        padding: 10px 30px 16px;
+        border: none;
+        font-size: 2em;
+    }
+
+    .home {
+        .carousel-btn {
+            top: 70vh;
+        }
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+
+    #carousel {
+        .v-carousel-wrapper {
+            margin-left: -17px;
+            width: 100%;
+            max-width: 305px;
+            top: calc(50% - 205px);
+            h1, .v-carousel-heading {
+                width: 100%;
+                text-align: left;
+                padding: 10px 10px 10px 15px;
+                line-height: 1em;
+                font-size: 2.4rem;
+                span {
+                    display: inline-block;
+                    padding-right: 1em;
+                }
+            }
+            .v-carousel-content {
+                font-weight: 700;
+                line-height: 2rem;
+                padding: 5px 30px 20px 20px;
+            }
+        }
+    }
+
+    .owl-theme {
+        .owl-nav {
+            .owl-prev {
+                margin-left: -20px !important;
+            }
+        }
+    }
+  }

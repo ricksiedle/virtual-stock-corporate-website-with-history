@@ -10679,11 +10679,10 @@ h1 {
       -webkit-transform-origin: 50% 50%;
               transform-origin: 50% 50%; }
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
+    top: -8px;
     height: auto;
     background-color: rgba(69, 81, 96, 0.8);
     padding-bottom: 0; }
-    .wrapper-navbar .navbar.navbar-expand-md.navbar-light #header-btn.moduled-btn.pink-btn {
-      display: none; }
     .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu {
       position: static;
       border: none;
@@ -11295,7 +11294,7 @@ h1 {
   margin-bottom: 40px; }
   .v-section h2.v-section-heading {
     margin-bottom: 30px;
-    font-size: 3.8rem;
+    font-size: 1.6rem;
     color: #455160; }
     .v-section h2.v-section-heading span {
       color: #E64097; }
@@ -11318,14 +11317,14 @@ h1 {
     position: relative;
     margin-bottom: 30px;
     padding-top: 65px;
+    border-radius: 3px;
+    overflow: hidden;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
     font-size: 1.4rem;
     color: #fff; }
-    .v-section .v-box-wrapper .v-box[ref='retailers']:before {
-      background-image: url("http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png"); }
-    .v-section .v-box-wrapper .v-box[ref='providers']:before {
-      background-image: url("http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png"); }
-    .v-section .v-box-wrapper .v-box[ref='supliers']:before {
-      background-image: url("http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png"); }
     .v-section .v-box-wrapper .v-box:before {
       background-size: cover;
       background-repeat: no-repeat;
@@ -11346,6 +11345,34 @@ h1 {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.4);
       z-index: -1; }
+    .v-section .v-box-wrapper .v-box:hover {
+      -webkit-transform: scale(1.15);
+              transform: scale(1.15);
+      -webkit-transition: -webkit-transform 0.5s;
+      transition: -webkit-transform 0.5s;
+      transition: transform 0.5s;
+      transition: transform 0.5s, -webkit-transform 0.5s;
+      -webkit-transition-delay: 0.3s;
+              transition-delay: 0.3s; }
+      .v-section .v-box-wrapper .v-box:hover .v-box-txt {
+        opacity: 1;
+        top: 0;
+        -webkit-transition: opacity 0.5s;
+        transition: opacity 0.5s;
+        -webkit-transition-delay: 0.3s;
+                transition-delay: 0.3s; }
+        .v-section .v-box-wrapper .v-box:hover .v-box-txt h2, .v-section .v-box-wrapper .v-box:hover .v-box-txt h3, .v-section .v-box-wrapper .v-box:hover .v-box-txt h4, .v-section .v-box-wrapper .v-box:hover .v-box-txt h5 {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+          -webkit-transition: all 0.8s;
+          transition: all 0.8s; }
+        .v-section .v-box-wrapper .v-box:hover .v-box-txt p {
+          -webkit-transform: translateY(0);
+                  transform: translateY(0);
+          opacity: 1;
+          -webkit-transition: all 0.8s;
+          transition: all 0.8s; }
     .v-section .v-box-wrapper .v-box-icon {
       margin: 0px auto 25px;
       height: 100px;
@@ -11374,10 +11401,37 @@ h1 {
       background-color: #d71c7e !important; }
     .v-section .v-box-wrapper .v-box:last-child {
       margin-right: 0; }
-    .v-section .v-box-wrapper .v-box .v-box-icon {
+    .v-section .v-box-wrapper .v-box-icon {
       background-position: center center;
       background-size: 80%;
       background-repeat: no-repeat; }
+    .v-section .v-box-wrapper .v-box-txt {
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.75);
+      -webkit-transition: opacity 0.5s;
+      transition: opacity 0.5s; }
+      .v-section .v-box-wrapper .v-box-txt h2, .v-section .v-box-wrapper .v-box-txt h3, .v-section .v-box-wrapper .v-box-txt h4, .v-section .v-box-wrapper .v-box-txt h5 {
+        font-size: 1.6rem;
+        line-height: 1.8rem;
+        opacity: 0;
+        -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
+      .v-section .v-box-wrapper .v-box-txt p {
+        font-size: 1.3rem;
+        line-height: 1.5rem;
+        opacity: 0;
+        -webkit-transform: translateY(250%);
+                transform: translateY(250%);
+        -webkit-transition: all 0.5s;
+        transition: all 0.5s; }
   .v-section .v-testimonials {
     margin-top: 40px;
     margin-bottom: 40px; }
@@ -11649,6 +11703,49 @@ button.bg-custom:focus {
     background-color: transparent; }
   #carousel .owl-theme .owl-nav button:focus {
     outline: none; }
+
+@media screen and (max-width: 564px) {
+  #carousel,
+  .n2-ss-slider-3,
+  .n2-ss-slide-background-wrap,
+  .n2-ss-slide-backgrounds,
+  .n2-ss-align {
+    height: 100vh !important; }
+  .mobile-hidden {
+    display: none !important; }
+  .carousel-btn {
+    position: absolute;
+    left: 20px;
+    bottom: 20vh;
+    color: #fff;
+    background-color: #E64097;
+    padding: 10px 30px 16px;
+    border: none;
+    font-size: 2em; }
+  .home .carousel-btn {
+    top: 70vh; }
+  .nextend-arrow {
+    display: none !important; }
+  #carousel .v-carousel-wrapper {
+    margin-left: -17px;
+    width: 100%;
+    max-width: 305px;
+    top: calc(50% - 205px); }
+    #carousel .v-carousel-wrapper h1, #carousel .v-carousel-wrapper .v-carousel-heading {
+      width: 100%;
+      text-align: left;
+      padding: 10px 10px 10px 15px;
+      line-height: 1em;
+      font-size: 2.4rem; }
+      #carousel .v-carousel-wrapper h1 span, #carousel .v-carousel-wrapper .v-carousel-heading span {
+        display: inline-block;
+        padding-right: 1em; }
+    #carousel .v-carousel-wrapper .v-carousel-content {
+      font-weight: 700;
+      line-height: 2rem;
+      padding: 5px 30px 20px 20px; }
+  .owl-theme .owl-nav .owl-prev {
+    margin-left: -20px !important; } }
 
 .v-large-logo {
   margin-bottom: 50px; }

@@ -5,7 +5,7 @@
     //Heading styles
     h2.v-section-heading {
         margin-bottom: 30px;
-        font-size: 3.8rem;
+        font-size: 1.6rem;
         color: $light-gray;
         span{
             color: $pink;
@@ -51,15 +51,10 @@
         .v-box {
             position:relative;
             margin-bottom: 30px;
-            &[ref='retailers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
-            &[ref='providers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
-            &[ref='supliers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
+            padding-top: 65px;
+            border-radius: 3px;
+            overflow: hidden;
+            transition: transform 0.5s;
             &:before {
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -83,7 +78,27 @@
                 background-color: rgba(0, 0, 0, 0.4);
                 z-index: -1;
             }
-            padding-top: 65px;
+            &:hover {
+                transform: scale(1.15);
+                transition: transform 0.5s;
+                transition-delay: 0.3s;
+                .v-box-txt {
+                    opacity: 1;
+                    top: 0;
+                    transition: opacity 0.5s;
+                    transition-delay: 0.3s;
+                    h2, h3, h4, h5 {
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: all 0.8s;
+                    }
+                    p {
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: all 0.8s;
+                    }
+                }
+            }
             &-icon {
                 margin: 0px auto 25px;
                 height: 100px;
@@ -113,10 +128,35 @@
             &:last-child {
                 margin-right: 0;
             }
-            .v-box-icon {
+            &-icon {
                 background-position: center center;
                 background-size: 80%;
                 background-repeat: no-repeat;                   
+            }
+            &-txt {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.75);
+                transition: opacity 0.5s;
+                h2, h3, h4, h5 {
+                    font-size: 1.6rem;
+                    line-height: 1.8rem;
+                    opacity: 0;
+                    transform: translateY(200%);
+                    transition: all 0.5s;
+                }
+                p {
+                    font-size: 1.3rem;
+                    line-height: 1.5rem;
+                    opacity: 0;
+                    transform: translateY(250%);
+                    transition: all 0.5s;
+                }
             }
         }
     }
