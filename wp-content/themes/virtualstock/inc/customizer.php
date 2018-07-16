@@ -105,6 +105,16 @@ if ( ! function_exists( 'understrap_theme_customize_register' ) ) {
 					'priority'    => '20',
 				)
 			) );
+
+			// Add setting for logo uploader
+			$wp_customize->add_setting( 'm_logo' ); 
+         
+			// Add control for logo uploader (actual uploader)
+			$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'm_logo', array(
+				'label'    => __( 'Upload mobile version logo', 'm' ),
+				'section'  => 'title_tagline',
+				'settings' => 'm_logo',
+			) ) );
 	}
 } // endif function_exists( 'understrap_theme_customize_register' ).
 add_action( 'customize_register', 'understrap_theme_customize_register' );

@@ -57,7 +57,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 					
 					<?php } else {
-						the_custom_logo();
+						if( wp_is_mobile() && get_theme_mod( 'm_logo' ) ) { ?>
+							
+							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+ 
+								<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+						
+							</a>
+						<?php 
+						} else {
+								the_custom_logo();
+						}
+						
 					} ?><!-- end custom logo -->
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
