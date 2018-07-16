@@ -24,21 +24,21 @@ get_header();
                 <div class="row">
                     <div class="col-md-4">
                         <div class="section-people-content-holder upper first">
-                            <img src="/wp-content/uploads/2018/07/andrew_mills.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/andrew_mills.png" />
                             <h3 class="text-align-center"> <?php _e('Andrew Mills', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('CEO', 'virtual'); ?> </h4> 
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="section-people-content-holder upper">
-                            <img src="/wp-content/uploads/2018/07/tim_ingham.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/tim_ingham.png" />
                             <h3 class="text-align-center"> <?php _e('Tim Ingham', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="section-people-content-holder upper last">
-                            <img src="/wp-content/uploads/2018/07/ed_bradly.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/ed_bradly.png" />
                             <h3 class="text-align-center"> <?php _e('Ed Bradley', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
                         </div>
@@ -48,28 +48,28 @@ get_header();
                 <div class="row">
                 <div class="col-md-3">
                         <div class="section-people-content-holder lower">
-                            <img src="/wp-content/uploads/2018/07/carolyne_turnbull.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/carolyne_turnbull.png" />
                             <h3 class="text-align-center"> <?php _e('Carolyne Turnbull', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('CEO', 'virtual'); ?> </h4> 
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="section-people-content-holder lower">
-                            <img src="/wp-content/uploads/2018/07/rob_knott.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/rob_knott.png" />
                             <h3 class="text-align-center"> <?php _e('Rob Knott', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="section-people-content-holder lower">
-                            <img src="/wp-content/uploads/2018/07/james_thirkill.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/james_thirkill.png" />
                             <h3 class="text-align-center"> <?php _e('James Thirkill', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="section-people-content-holder lower">
-                            <img src="/wp-content/uploads/2018/07/dale_parkinson.png" />
+                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/dale_parkinson.png" />
                             <h3 class="text-align-center"> <?php _e('Dale Parkinson', 'virtual'); ?> </h3>
                             <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
                         </div>
@@ -86,13 +86,13 @@ get_header();
                 </div>
             </div>
             <div class="col-md-6 image-holder">
-                <img src="/wp-content/uploads/2018/07/section_purpose.png" />
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png" />
             </div>
         </div>
 
         <div class="row section-investors v-full-width">
             <div class="col-md-6 image-holder">
-                <img src="/wp-content/uploads/2018/07/section_purpose.png" />
+                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png" />
             </div>
             <div class="section-investors-content col-md-6">
                 <div class="section-investors-content-inside">
