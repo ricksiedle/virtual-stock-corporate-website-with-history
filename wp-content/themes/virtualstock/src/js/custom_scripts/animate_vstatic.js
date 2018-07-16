@@ -4,7 +4,7 @@ export default (function($) {
 
 
     let smart_slider_is_on_page = document.querySelector('.n2-ss-slider');
-    console.log('blh');
+    
     if( smart_slider_is_on_page != null ) {
 
         let slider_id = $('.n2-ss-slider').attr('id');
