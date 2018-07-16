@@ -5,7 +5,7 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
     function v_stats_counter() {
     ?>
 		<!-- NOT FINISHED - just FRONTEND just wait to see -->
-			<div class="container-fluid v-wrapper v-wrapper-counter v-full-width parallax-window" data-parallax="scroll" data-image-src="/wp-content/uploads/2018/06/slide_1.png" ;>
+			<div class="container-fluid v-wrapper v-wrapper-counter v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/slide_1.png" ;>
 				<div class="container">
 					<div class="row">
 						<div class="v-counter-wrapper col-md-3 text-align-center">	

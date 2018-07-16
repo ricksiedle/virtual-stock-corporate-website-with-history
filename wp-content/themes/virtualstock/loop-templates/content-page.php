@@ -41,12 +41,12 @@ global $post;
 
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
-						<div class="item"><img src="/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
-						<div class="item"><img src="/wp-content/uploads/2018/06/nhs.png" height="30" alt=""/></div>
-						<div class="item"><img src="/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
-						<div class="item"><img src="/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
-						<div class="item"><img src="/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/nhs.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
 					</div>
 				<?php endif; ?>
 			</div> <!-- end .container -->
