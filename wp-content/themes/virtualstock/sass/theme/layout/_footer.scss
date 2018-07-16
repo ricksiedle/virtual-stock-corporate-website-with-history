@@ -24,7 +24,10 @@
                 margin-top: 0;
             }
             ul {
+                -webkit-box-orient: horizontal;
+                display: inline-block;  
                 li {
+                    float: left;
                     a {
                         padding: 0 1rem;
                         font-weight: 700;
