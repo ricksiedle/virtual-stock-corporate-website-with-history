@@ -79,15 +79,6 @@
     }
 }
 
-.logged-in {
-    .wrapper-navbar {
-        top: 30px
-    }
-    #main {
-        margin-top: 45px;
-    }
-}
-
 .custom-logo-link {
     display: block;
     position: absolute;
@@ -96,6 +87,9 @@
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
+    img {
+        margin-bottom: -10px;
+    }
 }
 
 #navbarNavDropdown {
@@ -190,10 +184,6 @@
         }
     }
     
-    .custom-logo-link {
-        padding-bottom: 0;
-    }
-    
     #main-menu {
         margin-left: 226px;
         margin-top: 0;
@@ -227,6 +217,15 @@
                     }
                 }
             }
+        }
+    }
+}
+
+.logged-in {
+    .wrapper-navbar {
+        top: 30px;
+        .navbar-toggler {
+            top: 50px;
         }
     }
 }
