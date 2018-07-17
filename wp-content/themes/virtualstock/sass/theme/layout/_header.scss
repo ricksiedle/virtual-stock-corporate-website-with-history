@@ -120,6 +120,9 @@
                 margin-bottom: -10px;
                 margin-left: 0;
             }
+            &:hover {
+                text-transform: uppercase;
+            }
         }
     }
     .menu-item.dropdown {
@@ -179,7 +182,6 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
                 font-size: 20px;
-                padding-bottom: 20px;
                 cursor: pointer;
             }
         }
