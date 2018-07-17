@@ -11172,6 +11172,11 @@ h1 {
   margin-right: 10%;
   margin-top: 40px;
   margin-bottom: 100px; }
+  @media screen and (max-width: 564px) {
+    .blog .grid, .archive .grid {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%; } }
   .blog .grid .grid-item, .archive .grid .grid-item {
     position: relative;
     float: left;

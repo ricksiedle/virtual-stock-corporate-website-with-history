@@ -105,13 +105,23 @@ global $post;
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/packary-mode.pkgd.js' ?>"></script>
 
 <script>
-	jQuery('.grid').isotope({
-		
+	var $container = jQuery('.grid');
+	$container.isotope({
+		resizeable: false,
 		layoutMode: 'masonry',
 		itemSelector: '.grid-item',
 		masonry: {
+			columnWidth: $container.width() / 5,
 			gutterWidth: 10
 		}
+	});
+	$(window).smartresize(function(){
+		$container.isotope({
+		// update columnWidth to a percentage of container width
+			masonry: {
+				columnWidth: $container.width() / 1,
+			}
+		});
 	});
 </script>
 
