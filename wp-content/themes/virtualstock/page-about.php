@@ -106,16 +106,16 @@ get_header();
             <div class="col-md-5">
                 <h2> <?php _e('Our <span style="color:#E64097">Location</span>', 'virtual') ?></h2>
 
-                <h3> Headquarters: </h3>
-                <p> Reading, UK, One Valpy, 20 Valpy Street, Reading, </p>
-                <p> United Kingdom, RG1 1AR </p>
-                <p> +44(0)1183150950 </p>
+                <h3> <?php _e('Headquarters:', 'virtual'); ?> </h3>
+                <p> <?php _e('Reading, UK, One Valpy, 20 Valpy Street, Reading,', 'virtual'); ?> </p>
+                <p> <?php _e('United Kingdom, RG1 1AR', 'virtual'); ?> </p>
+                <p> <?php _e('+44(0)1183150950', 'virtual'); ?> </p>
 
-                <h3> Satellite Locations: </h3>
-                <p> Lviv, Ukraine </p>
-                <p> Skopje, Macedonia </p>
-                <p> Rzeszow, Poland </p>
-                <p> Cape Town, South Africa </p>
+                <h3> <?php _e('Satellite Locations:', 'virtual'); ?> </h3>
+                <p> <?php _e('Lviv, Ukraine', 'virtual'); ?> </p>
+                <p> <?php _e('Skopje, Macedonia', 'virtual'); ?> </p>
+                <p> <?php _e('Rzeszow, Poland', 'virtual'); ?> </p>
+                <p> <?php _e('Cape Town, South Africa', 'virtual'); ?> </p>
 
 
                 <p> <?php _e('', 'virtual') ?></p>    
