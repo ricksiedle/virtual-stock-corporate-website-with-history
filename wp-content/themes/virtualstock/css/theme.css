@@ -11843,24 +11843,24 @@ button.bg-custom:focus {
     display: none; }
   #partners-carousel .owl-nav {
     width: 100%;
-    margin-top: -160px;
-    z-index: 222; }
+    margin-top: -160px; }
+    @media screen and (min-width: 768px) {
+      #partners-carousel .owl-nav {
+        display: none; } }
     #partners-carousel .owl-nav .owl-prev {
-      float: left;
-      background: transparent;
-      border: none; }
-      #partners-carousel .owl-nav .owl-prev span {
-        color: #fff;
-        font-size: 68px; }
-      #partners-carousel .owl-nav .owl-prev:focus {
-        outline: none; }
+      float: left; }
     #partners-carousel .owl-nav .owl-next {
-      float: right;
+      float: right; }
+    #partners-carousel .owl-nav .owl-prev,
+    #partners-carousel .owl-nav .owl-next {
       background: transparent;
-      border: none; }
+      border: none;
+      z-index: 99; }
+      #partners-carousel .owl-nav .owl-prev span,
       #partners-carousel .owl-nav .owl-next span {
         color: #fff;
         font-size: 68px; }
+      #partners-carousel .owl-nav .owl-prev:focus,
       #partners-carousel .owl-nav .owl-next:focus {
         outline: none; }
   #partners-carousel .owl-item {
@@ -11870,7 +11870,7 @@ button.bg-custom:focus {
       content: '';
       position: absolute;
       top: -10px;
-      bottom: 20px;
+      height: 100px;
       left: 0;
       width: 3px;
       background-color: #31AFDB; }
