@@ -11475,11 +11475,11 @@ h1 {
         -webkit-transition: all 0.5s;
         transition: all 0.5s; }
   .v-section .v-testimonials {
-    margin-top: 40px;
+    margin-top: 110px;
     margin-bottom: 40px; }
     @media screen and (min-width: 768px) {
       .v-section .v-testimonials {
-        margin-top: 100px;
+        margin-top: 170px;
         margin-bottom: 100px; } }
     @media screen and (min-width: 768px) {
       .v-section .v-testimonials .v-testimonial {
