@@ -119,8 +119,69 @@
             top: -10px;
             bottom: 20px;
             left: 0;
-            width: 2px;
+            width: 3px;
             background-color: $pink;
+            @media screen and (max-width: 768px) {
+                content: none;
+            }
+        }
+        &:first-of-type {
+            &:after {
+                content: none;
+            }
+        }
+    }
+    .v-counter-wrapper {
+        position: relative;
+        
+    }
+}
+
+#partners-carousel {
+    overflow: hidden;
+    .owl-dots {
+        display: none;
+    }
+    .owl-nav {
+        width: 100%;
+        margin-top: -160px;
+        z-index: 222;
+        .owl-prev {
+            float: left;
+            background: transparent;
+            border: none;
+            span {
+                color: #fff;
+                font-size: 68px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        .owl-next {
+            float: right;
+            background: transparent;
+            border: none;
+            span {
+                color: #fff;
+                font-size: 68px;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    .owl-item  {
+        position: relative;
+        float: left;
+        &:after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            bottom: 20px;
+            left: 0;
+            width: 3px;
+            background-color: $light-blue;
             @media screen and (max-width: 768px) {
                 content: none;
             }
