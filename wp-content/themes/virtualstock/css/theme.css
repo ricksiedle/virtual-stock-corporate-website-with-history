@@ -10621,7 +10621,8 @@ h1 {
 .v-partners {
   margin-top: 80px;
   padding-top: 120px;
-  padding-bottom: 120px; }
+  padding-bottom: 120px;
+  margin-bottom: -70px; }
 
 .v-suppliers {
   margin-top: 80px;
