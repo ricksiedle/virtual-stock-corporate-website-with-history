@@ -22,59 +22,47 @@ get_header();
             <div class="container">
                 <h2 class="text-align-center"> <?php _e('Our <span style="color:#E64097">people</span>', 'virtual') ?></h2>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="section-people-content-holder upper first">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/andrew_mills.png" />
-                            <h3 class="text-align-center"> <?php _e('Andrew Mills', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('CEO', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="section-people-content-holder upper">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/tim_ingham.png" />
-                            <h3 class="text-align-center"> <?php _e('Tim Ingham', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="section-people-content-holder upper last">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/ed_bradly.png" />
-                            <h3 class="text-align-center"> <?php _e('Ed Bradley', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
+                <?php
+                if ($team_object_arr = get_field('team')):
+
+                    foreach ($team_object_arr as $i => $post): setup_postdata( $post );
+                        
+                        if ( 'founders' == get_field('group') ):
+                ?>
+                            <div class="col-md-4">
+                                <div class="section-people-content-holder upper <?php echo ( ($i == 0) ? 'first' : ($i == 2 ? 'last' : '') ); ?>">
+                                    <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
+                                    <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                    <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                </div>
+                            </div>
+                <?php
+                        endif;
+                    endforeach; wp_reset_postdata();
+                ?>
                 </div>
 
                 <div class="row">
-                <div class="col-md-3">
-                        <div class="section-people-content-holder lower">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/carolyne_turnbull.png" />
-                            <h3 class="text-align-center"> <?php _e('Carolyne Turnbull', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('CEO', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="section-people-content-holder lower">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/rob_knott.png" />
-                            <h3 class="text-align-center"> <?php _e('Rob Knott', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="section-people-content-holder lower">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/james_thirkill.png" />
-                            <h3 class="text-align-center"> <?php _e('James Thirkill', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="section-people-content-holder lower">
-                            <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/dale_parkinson.png" />
-                            <h3 class="text-align-center"> <?php _e('Dale Parkinson', 'virtual'); ?> </h3>
-                            <h4 class="text-align-center"> <?php _e('Co-Founder', 'virtual'); ?> </h4> 
-                        </div>
-                    </div>
+                <?php 
+                    foreach ($team_object_arr as $j => $post): setup_postdata( $post );
+
+                        if ( 'managers' == get_field('group') ):
+                ?>
+                            <div class="col-md-3">
+                                <div class="section-people-content-holder lower">
+                                    <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
+                                    <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                    <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                </div>
+                            </div>
+                <?php
+                        endif;
+                    endforeach; wp_reset_postdata();
+                ?>
                 </div>
+                <?php
+                    endif;
+                ?>
             </div>
         </div>
 
