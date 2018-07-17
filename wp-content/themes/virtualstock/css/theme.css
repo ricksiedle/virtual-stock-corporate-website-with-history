@@ -11791,6 +11791,43 @@ button.bg-custom:focus {
   .owl-theme .owl-nav .owl-prev {
     margin-left: -20px !important; } }
 
+#counter-wrapper {
+  overflow: hidden; }
+  #counter-wrapper .owl-nav {
+    display: none; }
+  #counter-wrapper .owl-dots {
+    width: 100%;
+    text-align: center; }
+    #counter-wrapper .owl-dots .owl-dot {
+      width: 15px;
+      height: 15px;
+      border: none;
+      border-radius: 20px;
+      background-color: #a0a0a0;
+      margin: 0 7.5px; }
+      #counter-wrapper .owl-dots .owl-dot:focus {
+        outline: none; }
+    #counter-wrapper .owl-dots .active {
+      background-color: #fff; }
+  #counter-wrapper .owl-item {
+    position: relative;
+    float: left; }
+    #counter-wrapper .owl-item:after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      bottom: 20px;
+      left: 0;
+      width: 2px;
+      background-color: #E64097; }
+      @media screen and (max-width: 768px) {
+        #counter-wrapper .owl-item:after {
+          content: none; } }
+    #counter-wrapper .owl-item:first-of-type:after {
+      content: none; }
+  #counter-wrapper .v-counter-wrapper {
+    position: relative; }
+
 .v-large-logo {
   margin-bottom: 50px; }
   @media screen and (min-width: 768px) {

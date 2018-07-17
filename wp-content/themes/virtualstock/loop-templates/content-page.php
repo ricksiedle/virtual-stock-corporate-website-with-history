@@ -413,5 +413,15 @@ global $post;
 				time: 1000
 			});
 		}
+		jQuery('#counter-wrapper').owlCarousel({
+			loop: false,
+			autoplay: true,
+			smartSpeed 	: 900,
+			responsive	: {
+				0	: { items:1 },
+				768	: { items:4 },
+				1200: { items:4 }
+			}
+		});
 	});
 </script>
