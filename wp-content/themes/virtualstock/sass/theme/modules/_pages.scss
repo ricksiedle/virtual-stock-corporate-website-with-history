@@ -290,16 +290,72 @@
         margin: 0 auto;
         margin-top: 10px;
         a {
+            position: relative;
             font-size: 1.2rem;
             font-family: 'Serenity Demi Bold';
             color: $light-gray;
             margin-right: 38px;
             text-decoration: none;
+            &:before,
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                width: 0;
+                height: 2px;
+                width: 0;
+                background-color: $pink;
+                @include tranz(.3s, all);
+            }
+            &:before {
+                left: 0;
+            }
+            &:after {
+                right: 0;
+            }
+
+            // &:before,
+            // &:after {
+            //     position: absolute;
+            //     content: '';
+            //     bottom: 0;
+            //     width: 0;
+            //     height: 2px;
+            //     width: 0;
+            //     background-color: $pink;
+            //     @include tranz(.3s, all);
+            // }
+            // &:before {
+            //     left: 50%;
+            // }
+            // &:after {
+            //     right: 50%;
+            // }
             &.current-page {
                 color: $pink;
+                &:before,
+                &:after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    height: 2px;
+                    background-color: $pink;
+                }
+                &:before {
+                    left: 0;
+                    width: 50%;
+                }
+                &:after {
+                    right: 0;
+                    width: 50%;
+                }
             }
             &:hover {
                 color: $pink;
+                &:before,
+                &:after {
+                    width: 50%;
+                }
             }
         }
     }
