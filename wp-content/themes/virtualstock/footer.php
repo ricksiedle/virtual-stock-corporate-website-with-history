@@ -49,18 +49,18 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="site-socials col-md-2">	
 							<ul id="footer-socials" class="menu socials-menu">
 								<li class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a href="https://twitter.com/uix">
-										<span>Twitter</span>
+									<a href="https://en-gb.facebook.com/Virtualstock-355636264860704/">
+										<span><?php _e('Facebook', 'virtual'); ?></span>
 									</a>
 								</li>
 								<li class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a href="https://facebook.com/uix">
-										<span>Facebook</span>
+									<a href="https://twitter.com/virtualstock?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+										<span><?php _e('Twitter', 'virtual'); ?></span>
 									</a>
 								</li>
 								<li class="menu-item menu-item-type-custom menu-item-object-custom">
-									<a href="https://plus.google.com/uix">
-										<span>Google</span>	
+									<a href="https://www.linkedin.com/company/virtualstock/">
+										<span><?php _e('LinkedIn', 'virtual'); ?></span>	
 									</a>
 								</li>
 							</ul>
