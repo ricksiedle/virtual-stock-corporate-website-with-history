@@ -168,11 +168,13 @@
             &-content {
                 position: relative;
                 &-inside {
-                    position: absolute;
-                    top: 50%;
-                    left: 15px;
-                    transform: translate(0%, -50%);
+                    position: relative;
+                    margin-top: 25%;
                     width: 90%;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        margin-top: 0;
+                    }
                 }
             }
             h2 {
@@ -180,11 +182,28 @@
                 font-family: 'Serenity Light';
                 color: $light-gray;
                 text-transform: uppercase;
+                @media screen and (max-width: 768px) {
+                    font-size: 2.4rem;
+                }
             }
             p {
                 font-size: 1.6rem;
                 font-family: 'Serenity Demi Bold';
                 color: $light-gray;
+            }
+        }
+        &-people.v-full-width {
+            @media screen and (max-width: 768px) {
+                width: calc(100% + 25px);
+                margin-right: -25px;
+                padding-bottom: 20px;
+                padding-top: 60px;
+                .col-sx-6 {
+                    width: 50%;
+                    img {
+                        max-width: 100%;
+                    }
+                }
             }
         }
         &-people {
@@ -197,22 +216,44 @@
                 font-family: 'Serenity Light';
                 color: $light-gray;
                 text-transform: uppercase;
+                @media screen and (max-width: 768px) {
+                    font-size: 2.2rem;
+                }
             }
             &-content-holder {
                 padding-bottom: 40px;
+                @media screen and (max-width: 768px) {
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+                    h4 {
+                        font-size: 1rem;
+                    }
+                }
                 &.upper {
                     width: 275px;
                     margin: 0 auto;
-                    &.first {
-                        transform: translateX(-10px);
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
                     }
-                    &.last {
-                        transform: translateX(10px);
+                    @media screen and (min-width: 769px) {
+                        &.first {
+                            transform: translateX(-10px);
+                        }
+                        &.last {
+                            transform: translateX(10px);
+                        }
                     }
                 }
                 &.lower {
                     width: 205px;
                     margin: 0 auto;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -220,18 +261,26 @@
             position: relative;
             &-content {
                 position: relative;
+                display: block;
                 &-inside {
-                    position: absolute;
-                    margin-left: 20%;
-                    top: 50%;
-                    left: 15px;
-                    transform: translate(0%, -50%);
-                    width: 60%;
+                    display: block;
+                    position: relative;
+                    padding: 10px 20%;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    @media screen and (max-width: 768px) {
+                        padding: 10px 0;
+                    }
                     h2 {
                         font-size: 3rem;
                         font-family: 'Serenity Light';
                         color: $light-gray;
                         text-transform: uppercase;
+                        @media screen and (max-width: 768px) {
+                            font-size: 2.2rem;
+                            margin-top: 40px;
+                        }
                     }
                     p {
                         font-size: 1.6rem;
@@ -243,9 +292,42 @@
             .image-holder {
                 padding-right: 0;
                 padding-left: 0;
+                height: 100%;
+                overflow-x: hidden;
                 img {
-                    width: 100%;
+                    min-width: 100%;
+                    height: 100%;
+                    width: auto;
                 }
+            }
+        }
+        &-partners {
+            .image-holder {
+                @media screen and (max-width: 768px) {
+                    height: auto;
+                    margin-bottom: 40px;
+                }
+            }
+            &-content {
+                &-inside {
+                    display: block;
+                    position: relative;
+                    padding: 10% 20%;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    @media screen and (max-width: 768px) {
+                        padding: 10px 0;
+                    }
+                }
+            }
+            
+        }
+        &-contact.v-full-width {
+            @media screen and (max-width: 768px) {
+                width: calc(100% + 25px);
+                margin-right: -25px;
+                padding-top: 0;
             }
         }
         &-contact {
@@ -258,6 +340,10 @@
                 font-family: 'Serenity Light';
                 color: $light-gray;
                 text-transform: uppercase;
+                @media screen and (max-width: 768px) {
+                    font-size: 2.2rem;
+                    margin-top: 40px;
+                }
             }
             h3 {
                 font-size: 1.6rem;
@@ -470,6 +556,9 @@
             font-size: 3rem;
             font-family: 'Serenity Demi Bold';
             color: $light-gray;
+            @media screen and (max-width: 768px) {
+                font-size: 2.2rem;
+            }
         }
     }
     .grid {

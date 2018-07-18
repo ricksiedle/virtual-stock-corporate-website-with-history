@@ -13,7 +13,7 @@ get_header();
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="/wp-content/uploads/2018/07/section_purpose.png" />
+                <img src="//virtualStock.local/wp-content/uploads/2018/07/section_purpose.png" />
             </div>
         </div>
 
@@ -29,7 +29,7 @@ get_header();
                         
                         if ( 'founders' == get_field('group') ):
                 ?>
-                            <div class="col-md-4">
+                            <div class="col-sx-6 col-md-4">
                                 <div class="section-people-content-holder upper <?php echo ( ($i == 0) ? 'first' : ($i == 2 ? 'last' : '') ); ?>">
                                     <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
                                     <h3 class="text-align-center"> <?php the_title(); ?> </h3>
@@ -48,7 +48,7 @@ get_header();
 
                         if ( 'managers' == get_field('group') ):
                 ?>
-                            <div class="col-md-3">
+                            <div class="col-sx-6 col-md-3">
                                 <div class="section-people-content-holder lower">
                                     <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
                                     <h3 class="text-align-center"> <?php the_title(); ?> </h3>
@@ -99,7 +99,7 @@ get_header();
                     width="600" 
                     height="450" 
                     frameborder="0" 
-                    style="border:0" 
+                    style="border:0; max-width: 100%" 
                     allowfullscreen>
                 </iframe>
             </div>
@@ -124,7 +124,16 @@ get_header();
     </div>
 </div>
 
-
+<script>
+jQuery('document').ready(function() {
+    var partnersContent = jQuery('.section-partners-content-inside');
+    var partnersImage = jQuery('.section-partners .image-holder')
+    jQuery(window).resize(function() {
+        // partnersImage.height();
+        partnersContent.height(partnersImage.height());
+    })
+});
+</script>
 
 
 

@@ -10601,14 +10601,12 @@ h1 {
   display: table; }
 
 .v-full-width {
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw; }
+  width: 100%;
+  position: relative; }
   @media screen and (min-width: 768px) {
     .v-full-width {
+      left: 50%;
+      right: 50%;
       width: calc(100vw - 30px);
       margin-left: calc(-50vw + 15px);
       margin-right: calc(-50vw + 15px); } }
@@ -11055,21 +11053,36 @@ h1 {
   .page-id-14 .section-purpose-content {
     position: relative; }
     .page-id-14 .section-purpose-content-inside {
-      position: absolute;
-      top: 50%;
-      left: 15px;
-      -webkit-transform: translate(0%, -50%);
-              transform: translate(0%, -50%);
+      position: relative;
+      margin-top: 25%;
       width: 90%; }
+      @media screen and (max-width: 768px) {
+        .page-id-14 .section-purpose-content-inside {
+          width: 100%;
+          margin-top: 0; } }
   .page-id-14 .section-purpose h2 {
     font-size: 4rem;
     font-family: 'Serenity Light';
     color: #455160;
     text-transform: uppercase; }
+    @media screen and (max-width: 768px) {
+      .page-id-14 .section-purpose h2 {
+        font-size: 2.4rem; } }
   .page-id-14 .section-purpose p {
     font-size: 1.6rem;
     font-family: 'Serenity Demi Bold';
     color: #455160; }
+
+@media screen and (max-width: 768px) {
+  .page-id-14 .section-people.v-full-width {
+    width: calc(100% + 25px);
+    margin-right: -25px;
+    padding-bottom: 20px;
+    padding-top: 60px; }
+    .page-id-14 .section-people.v-full-width .col-sx-6 {
+      width: 50%; }
+      .page-id-14 .section-people.v-full-width .col-sx-6 img {
+        max-width: 100%; } }
 
 .page-id-14 .section-people {
   padding-top: 100px;
@@ -11081,47 +11094,97 @@ h1 {
     font-family: 'Serenity Light';
     color: #455160;
     text-transform: uppercase; }
+    @media screen and (max-width: 768px) {
+      .page-id-14 .section-people h2 {
+        font-size: 2.2rem; } }
   .page-id-14 .section-people-content-holder {
     padding-bottom: 40px; }
+    @media screen and (max-width: 768px) {
+      .page-id-14 .section-people-content-holder h3 {
+        font-size: 1.4rem; }
+      .page-id-14 .section-people-content-holder h4 {
+        font-size: 1rem; } }
     .page-id-14 .section-people-content-holder.upper {
       width: 275px;
       margin: 0 auto; }
-      .page-id-14 .section-people-content-holder.upper.first {
-        -webkit-transform: translateX(-10px);
-                transform: translateX(-10px); }
-      .page-id-14 .section-people-content-holder.upper.last {
-        -webkit-transform: translateX(10px);
-                transform: translateX(10px); }
+      @media screen and (max-width: 768px) {
+        .page-id-14 .section-people-content-holder.upper {
+          width: 100%; }
+          .page-id-14 .section-people-content-holder.upper img {
+            width: 100%; } }
+      @media screen and (min-width: 769px) {
+        .page-id-14 .section-people-content-holder.upper.first {
+          -webkit-transform: translateX(-10px);
+                  transform: translateX(-10px); }
+        .page-id-14 .section-people-content-holder.upper.last {
+          -webkit-transform: translateX(10px);
+                  transform: translateX(10px); } }
     .page-id-14 .section-people-content-holder.lower {
       width: 205px;
       margin: 0 auto; }
+      @media screen and (max-width: 768px) {
+        .page-id-14 .section-people-content-holder.lower {
+          width: 100%; } }
 
 .page-id-14 .section-partners, .page-id-14 .section-investors {
   position: relative; }
   .page-id-14 .section-partners-content, .page-id-14 .section-investors-content {
-    position: relative; }
+    position: relative;
+    display: block; }
     .page-id-14 .section-partners-content-inside, .page-id-14 .section-investors-content-inside {
-      position: absolute;
-      margin-left: 20%;
-      top: 50%;
-      left: 15px;
-      -webkit-transform: translate(0%, -50%);
-              transform: translate(0%, -50%);
-      width: 60%; }
+      display: block;
+      position: relative;
+      padding: 10px 20%;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      @media screen and (max-width: 768px) {
+        .page-id-14 .section-partners-content-inside, .page-id-14 .section-investors-content-inside {
+          padding: 10px 0; } }
       .page-id-14 .section-partners-content-inside h2, .page-id-14 .section-investors-content-inside h2 {
         font-size: 3rem;
         font-family: 'Serenity Light';
         color: #455160;
         text-transform: uppercase; }
+        @media screen and (max-width: 768px) {
+          .page-id-14 .section-partners-content-inside h2, .page-id-14 .section-investors-content-inside h2 {
+            font-size: 2.2rem;
+            margin-top: 40px; } }
       .page-id-14 .section-partners-content-inside p, .page-id-14 .section-investors-content-inside p {
         font-size: 1.6rem;
         font-family: 'Serenity Demi Bold';
         color: #455160; }
   .page-id-14 .section-partners .image-holder, .page-id-14 .section-investors .image-holder {
     padding-right: 0;
-    padding-left: 0; }
+    padding-left: 0;
+    height: 100%;
+    overflow-x: hidden; }
     .page-id-14 .section-partners .image-holder img, .page-id-14 .section-investors .image-holder img {
-      width: 100%; }
+      min-width: 100%;
+      height: 100%;
+      width: auto; }
+
+@media screen and (max-width: 768px) {
+  .page-id-14 .section-partners .image-holder {
+    height: auto;
+    margin-bottom: 40px; } }
+
+.page-id-14 .section-partners-content-inside {
+  display: block;
+  position: relative;
+  padding: 10% 20%;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; }
+  @media screen and (max-width: 768px) {
+    .page-id-14 .section-partners-content-inside {
+      padding: 10px 0; } }
+
+@media screen and (max-width: 768px) {
+  .page-id-14 .section-contact.v-full-width {
+    width: calc(100% + 25px);
+    margin-right: -25px;
+    padding-top: 0; } }
 
 .page-id-14 .section-contact {
   padding-top: 100px;
@@ -11133,6 +11196,10 @@ h1 {
     font-family: 'Serenity Light';
     color: #455160;
     text-transform: uppercase; }
+    @media screen and (max-width: 768px) {
+      .page-id-14 .section-contact h2 {
+        font-size: 2.2rem;
+        margin-top: 40px; } }
   .page-id-14 .section-contact h3 {
     font-size: 1.6rem;
     font-family: 'Serenity Bold';
@@ -11293,6 +11360,9 @@ h1 {
     font-size: 3rem;
     font-family: 'Serenity Demi Bold';
     color: #455160; }
+    @media screen and (max-width: 768px) {
+      .single-post .entry-content h1 {
+        font-size: 2.2rem; } }
 
 .single-post .grid {
   width: 80%;

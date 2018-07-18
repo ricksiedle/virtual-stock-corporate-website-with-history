@@ -76,13 +76,11 @@ h1 {
 }
 
 .v-full-width {
-    width: 100vw;
+    width: 100%;
     position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
     @media screen and (min-width: 768px) {
+        left: 50%;
+        right: 50%;
         width: calc(100vw - 30px);
         margin-left: calc(-50vw + 15px);
         margin-right: calc(-50vw + 15px);
