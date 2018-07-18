@@ -73,14 +73,12 @@ get_header();
                     <p> <?php _e('We’ve developed partnerships with world-renowned businesses and industry leaders who, like us, are dedicated to addressing today’s challenges in new and different ways.', 'virtual') ?></p>
                 </div>
             </div>
-            <div class="col-md-6 image-holder">
-                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png" />
+            <div class="col-md-6 image-holder" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png')">
             </div>
         </div>
 
         <div class="row section-investors v-full-width">
-            <div class="col-md-6 image-holder">
-                <img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png" />
+            <div class="col-md-6 image-holder" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png')">
             </div>
             <div class="section-investors-content col-md-6">
                 <div class="section-investors-content-inside">
@@ -123,19 +121,6 @@ get_header();
         </div>
     </div>
 </div>
-
-<script>
-jQuery('document').ready(function() {
-    var partnersContent = jQuery('.section-partners-content-inside');
-    var partnersImage = jQuery('.section-partners .image-holder')
-    jQuery(window).resize(function() {
-        // partnersImage.height();
-        partnersContent.height(partnersImage.height());
-    })
-});
-</script>
-
-
 
 
 <?php
