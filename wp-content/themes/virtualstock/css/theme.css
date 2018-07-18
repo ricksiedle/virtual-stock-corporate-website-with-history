@@ -9866,6 +9866,9 @@ h1 {
       display: inline-block; }
       #wrapper-footer .site-footer-menu ul li {
         float: left; }
+        @media screen and (max-width: 768px) {
+          #wrapper-footer .site-footer-menu ul li {
+            width: 100%; } }
         #wrapper-footer .site-footer-menu ul li a {
           padding: 0 1rem;
           font-weight: 700;
@@ -9878,6 +9881,32 @@ h1 {
             #wrapper-footer .site-footer-menu ul li a {
               font-weight: 300;
               text-align: left; } }
+          #wrapper-footer .site-footer-menu ul li a:after {
+            display: none !important; }
+        #wrapper-footer .site-footer-menu ul li .dropdown-menu {
+          position: relative;
+          float: left;
+          display: block;
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+          border: none;
+          min-width: 0;
+          width: 100%;
+          -webkit-padding-start: 0; }
+          #wrapper-footer .site-footer-menu ul li .dropdown-menu li {
+            display: block;
+            clear: both; }
+            #wrapper-footer .site-footer-menu ul li .dropdown-menu li a {
+              position: relative;
+              float: left;
+              display: block;
+              line-height: 1.4em;
+              text-transform: none; }
+              @media screen and (max-width: 768px) {
+                #wrapper-footer .site-footer-menu ul li .dropdown-menu li a {
+                  width: 100%;
+                  text-align: center; } }
   #wrapper-footer .site-socials {
     margin-top: 40px;
     text-align: center; }

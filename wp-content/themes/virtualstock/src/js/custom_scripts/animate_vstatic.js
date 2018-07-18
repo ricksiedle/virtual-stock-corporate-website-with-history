@@ -31,11 +31,3 @@ export default (function($) {
         });
     }
 })(jQuery);
-
-
-
-
-
-
-    
-
