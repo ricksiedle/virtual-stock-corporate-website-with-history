@@ -66,29 +66,91 @@ get_header();
             </div>
         </div>
 
-        <div class="row section-partners v-full-width">
-            <div class="section-partners-content col-md-6">
-                <div class="section-partners-content-inside">
-                    <h2> <?php _e('Our <span style="color:#E64097">Partners</span>', 'virtual') ?></h2>
-                    <p> <?php _e('We’ve developed partnerships with world-renowned businesses and industry leaders who, like us, are dedicated to addressing today’s challenges in new and different ways.', 'virtual') ?></p>
-                </div>
-            </div>
-            <div class="col-md-6 image-holder" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png')">
-            </div>
-        </div>
+        <!-- OUR PARTNERS SECTION -->
 
-        <div class="row section-investors v-full-width">
-            <div class="col-md-6 image-holder" style="background-image: url('<?php echo home_url(); ?>/wp-content/uploads/2018/07/section_purpose.png')">
-            </div>
-            <div class="section-investors-content col-md-6">
-                <div class="section-investors-content-inside">
-                    <h2> <?php _e('Our <span style="color:#E64097">Investors</span>', 'virtual') ?></h2>
-                    <p> <?php _e('Stephen Chandler', 'virtual') ?> </p>
-                    <p> <?php _e('Managing Partner at Notion Capital:', 'virtual') ?> </p>
-                    <p> <?php _e('“Digital supply chain is a hot topic, and for good reason. Virtualstock delivers an agile supply chain technology platform that allows its clients to quickly adapt to the challenges of digitisation without turning to traditional systems integration, thereby reducing cost and risk while accelerating benefits. Virtualstock has already demonstrated this in two important sectors and has accumulated an impressive portfolio of clients. They are now superbly placed to scale rapidly, and we believe that they will become another UK technology success story.”', 'virtual') ?></p>
+        <?php if( have_rows('our_partners_section') ): ?>
+
+            <?php while( have_rows('our_partners_section') ): the_row(); 
+
+                // vars
+                $our_partners_heading = get_sub_field('our_partners_heading');
+                $our_partners_bg_image = get_sub_field('our_partners_section_background_image');
+                $our_partners_content = get_sub_field('our_partners_section_content');
+
+                ?>
+
+                <div class="row section-partners v-full-width">
+                    <div class="section-partners-content col-md-6">
+                        <div class="section-partners-content-inside">
+                            <h2> <?php echo $our_partners_heading; ?></h2>
+                            <p> <?php echo $our_partners_content; ?></p>
+
+                            <?php if( have_rows('our_partners_section_images') ): ?>
+                                
+                                <div class="images-partners owl-carousel owl-theme">
+                                    <?php while( have_rows('our_partners_section_images') ): the_row();
+                                        // vars
+                                        $partner_logo_image = get_sub_field('partner_logo_image');
+                                    ?>
+                                        <div class="item"><img src="<?php echo $partner_logo_image; ?>" height="`30" alt=""/></div>
+                                    <?php endwhile; ?>
+                                </div>
+
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                    <div class="col-md-6 image-holder">
+                        <img src="<?php echo $our_partners_bg_image ?>" />
+                    </div>
                 </div>
-            </div>
-        </div>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+
+        <!-- OUR INVESTORS SECTION -->
+
+        <?php if( have_rows('our_investors_section') ): ?>
+
+            <?php while( have_rows('our_investors_section') ): the_row(); 
+
+                // vars
+                $our_investors_heading = get_sub_field('our_investors_heading');
+                $our_investors_bg_image = get_sub_field('our_investors_section_background_image');
+                $our_investors_content = get_sub_field('our_investors_section_content');
+
+                ?>
+
+                <div class="row section-investors v-full-width">
+                    <div class="col-md-6 image-holder">
+                        <img src="<?php echo $our_investors_bg_image ?>" />
+                    </div>
+                    <div class="section-investors-content col-md-6">
+                        <div class="section-investors-content-inside">
+                            <h2> <?php echo $our_investors_heading; ?></h2>
+                            <p> <?php echo $our_investors_content; ?></p>
+
+                            <?php if( have_rows('our_investors_section_images') ): ?>
+                                
+                                <div class="images-partners owl-carousel owl-theme">
+                                    <?php while( have_rows('our_investors_section_images') ): the_row();
+                                        // vars
+                                        $investor_logo_image = get_sub_field('investor_logo_image');
+                                    ?>
+                                        <div class="item"><img src="<?php echo $investor_logo_image; ?>" height="`30" alt=""/></div>
+                                    <?php endwhile; ?>
+                                </div>
+
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+
+            <?php endwhile; ?>
+
+        <?php endif; ?>
+
+        <!-- CONTACT INFO SECTION -->
 
         <div class="row section-contact v-full-width">
             <div class="col-md-7 text-align-center">
@@ -119,8 +181,9 @@ get_header();
                 <p> <?php _e('', 'virtual') ?></p>    
             </div>
         </div>
-    </div>
-</div>
+
+    </div><!-- end .container -->
+</div><!-- end .wrapper -->
 
 
 <?php
