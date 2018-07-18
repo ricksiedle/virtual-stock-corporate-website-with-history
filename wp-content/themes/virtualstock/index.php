@@ -106,17 +106,14 @@ global $post;
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/packary-mode.pkgd.js' ?>"></script>
 
 <script>
-	var $container = jQuery('.grid');
-	$container.isotope({
-		resizeable: true,
+	jQuery('.grid').isotope({
+		
 		layoutMode: 'masonry',
 		itemSelector: '.grid-item',
 		masonry: {
-			columnWidth: $container.width() / 2,
 			gutterWidth: 10
 		}
 	});
-
 </script>
 
 <?php get_footer(); ?>

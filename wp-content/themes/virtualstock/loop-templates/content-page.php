@@ -316,9 +316,9 @@ global $post;
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>
 												<div class="container">
-													<div class="row" id="partners-carousel">
+													<div class="row">
 														<?php while ( have_rows('partner') ) : the_row(); ?>
-															<div class="v-ret-sup-wrapper col-md-12 text-align-center">
+															<div class="v-ret-sup-wrapper col-md-3 text-align-center">
 																<img class="v-img" src="<?php echo get_sub_field('logo_image'); ?>"/>
 																<div>
 																<?php echo get_sub_field('under_logo_text'); ?>
@@ -413,30 +413,5 @@ global $post;
 				time: 1000
 			});
 		}
-		jQuery('#counter-wrapper').owlCarousel({
-			loop: false,
-			autoplay: true,
-			smartSpeed 	: 900,
-			responsive	: {
-				0	: { items:1 },
-				768	: { items:4 },
-				1200: { items:4 }
-			}
-		});
 	});
-</script>
-
-<script>
-	jQuery('#partners-carousel').owlCarousel({
-		loop: false,
-		nav    		: true,
-		autoplay: true,
-		smartSpeed 	: 900,
-		responsive	: {
-			0	: { items:1 },
-			768	: { items:4 },
-			1200: { items:4 }
-		}
-	})
-	
 </script>

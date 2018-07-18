@@ -16,19 +16,13 @@ if( get_the_post_thumbnail( $post->ID ) ) {
 	 * is horizontal and than
 	 * set $v_img_position accordingly
 	 */
-
-	if (wp_is_mobile()) {
+	if ($imgmeta['width'] > $imgmeta['height']) {
 		$v_img_position = 'grid-item--width2';
+	} elseif ( $imgmeta['width'] < $imgmeta['height'] ) {
+		$v_img_position = 'grid-item--height2';
 	} else {
-		if ($imgmeta['width'] > $imgmeta['height']) {
-			$v_img_position = 'grid-item--width2';
-		} elseif ( $imgmeta['width'] < $imgmeta['height'] ) {
-			$v_img_position = 'grid-item--height2';
-		} else {
-			$v_img_position = '';
-		}
+		$v_img_position = '';
 	}
-	
 }
 
 

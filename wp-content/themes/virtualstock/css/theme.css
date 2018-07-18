@@ -10621,8 +10621,7 @@ h1 {
 .v-partners {
   margin-top: 80px;
   padding-top: 120px;
-  padding-bottom: 120px;
-  margin-bottom: -70px; }
+  padding-bottom: 120px; }
 
 .v-suppliers {
   margin-top: 80px;
@@ -10836,6 +10835,9 @@ h1 {
       display: inline-block; }
       #wrapper-footer .site-footer-menu ul li {
         float: left; }
+        @media screen and (max-width: 768px) {
+          #wrapper-footer .site-footer-menu ul li {
+            width: 100%; } }
         #wrapper-footer .site-footer-menu ul li a {
           padding: 0 1rem;
           font-weight: 700;
@@ -10848,6 +10850,32 @@ h1 {
             #wrapper-footer .site-footer-menu ul li a {
               font-weight: 300;
               text-align: left; } }
+          #wrapper-footer .site-footer-menu ul li a:after {
+            display: none !important; }
+        #wrapper-footer .site-footer-menu ul li .dropdown-menu {
+          position: relative;
+          float: left;
+          display: block;
+          background-color: transparent;
+          padding: 0;
+          margin: 0;
+          border: none;
+          min-width: 0;
+          width: 100%;
+          -webkit-padding-start: 0; }
+          #wrapper-footer .site-footer-menu ul li .dropdown-menu li {
+            display: block;
+            clear: both; }
+            #wrapper-footer .site-footer-menu ul li .dropdown-menu li a {
+              position: relative;
+              float: left;
+              display: block;
+              line-height: 1.4em;
+              text-transform: none; }
+              @media screen and (max-width: 768px) {
+                #wrapper-footer .site-footer-menu ul li .dropdown-menu li a {
+                  width: 100%;
+                  text-align: center; } }
   #wrapper-footer .site-socials {
     margin-top: 40px;
     text-align: center; }
@@ -11173,11 +11201,6 @@ h1 {
   margin-right: 10%;
   margin-top: 40px;
   margin-bottom: 100px; }
-  @media screen and (max-width: 564px) {
-    .blog .grid, .archive .grid {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%; } }
   .blog .grid .grid-item, .archive .grid .grid-item {
     position: relative;
     float: left;
@@ -11475,11 +11498,11 @@ h1 {
         -webkit-transition: all 0.5s;
         transition: all 0.5s; }
   .v-section .v-testimonials {
-    margin-top: 110px;
+    margin-top: 40px;
     margin-bottom: 40px; }
     @media screen and (min-width: 768px) {
       .v-section .v-testimonials {
-        margin-top: 170px;
+        margin-top: 100px;
         margin-bottom: 100px; } }
     @media screen and (min-width: 768px) {
       .v-section .v-testimonials .v-testimonial {
@@ -11641,20 +11664,11 @@ button.bg-custom:focus {
     line-height: 3rem; }
 
 .v-ret-sup-wrapper {
-  position: relative;
+  border-right: 3px solid #31AFDB;
   padding-right: 20px;
-  margin-top: 20px;
   color: #fff; }
-  .v-ret-sup-wrapper:after {
-    position: absolute;
-    content: '';
-    top: 0;
-    bottom: 20px;
-    width: 3px;
-    left: 0;
-    background-color: #31AFDB; }
-  .v-ret-sup-wrapper:first-of-type:after {
-    content: none; }
+  .v-ret-sup-wrapper:last-child {
+    border: none; }
   .v-ret-sup-wrapper p {
     font-size: 1.2rem;
     margin-top: 20px;
@@ -11801,88 +11815,6 @@ button.bg-custom:focus {
   .owl-theme .owl-nav .owl-prev {
     margin-left: -20px !important; } }
 
-#counter-wrapper {
-  overflow: hidden; }
-  #counter-wrapper .owl-nav {
-    display: none; }
-  #counter-wrapper .owl-dots {
-    width: 100%;
-    text-align: center; }
-    #counter-wrapper .owl-dots .owl-dot {
-      width: 15px;
-      height: 15px;
-      border: none;
-      border-radius: 20px;
-      background-color: #a0a0a0;
-      margin: 0 7.5px; }
-      #counter-wrapper .owl-dots .owl-dot:focus {
-        outline: none; }
-    #counter-wrapper .owl-dots .active {
-      background-color: #fff; }
-  #counter-wrapper .owl-item {
-    position: relative;
-    float: left; }
-    #counter-wrapper .owl-item:after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      bottom: 20px;
-      left: 0;
-      width: 3px;
-      background-color: #E64097; }
-      @media screen and (max-width: 768px) {
-        #counter-wrapper .owl-item:after {
-          content: none; } }
-    #counter-wrapper .owl-item:first-of-type:after {
-      content: none; }
-  #counter-wrapper .v-counter-wrapper {
-    position: relative; }
-
-#partners-carousel {
-  overflow: hidden; }
-  #partners-carousel .owl-dots {
-    display: none; }
-  #partners-carousel .owl-nav {
-    width: 100%;
-    margin-top: -160px; }
-    @media screen and (min-width: 768px) {
-      #partners-carousel .owl-nav {
-        display: none; } }
-    #partners-carousel .owl-nav .owl-prev {
-      float: left; }
-    #partners-carousel .owl-nav .owl-next {
-      float: right; }
-    #partners-carousel .owl-nav .owl-prev,
-    #partners-carousel .owl-nav .owl-next {
-      background: transparent;
-      border: none;
-      z-index: 99; }
-      #partners-carousel .owl-nav .owl-prev span,
-      #partners-carousel .owl-nav .owl-next span {
-        color: #fff;
-        font-size: 68px; }
-      #partners-carousel .owl-nav .owl-prev:focus,
-      #partners-carousel .owl-nav .owl-next:focus {
-        outline: none; }
-  #partners-carousel .owl-item {
-    position: relative;
-    float: left; }
-    #partners-carousel .owl-item:after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      height: 100px;
-      left: 0;
-      width: 3px;
-      background-color: #31AFDB; }
-      @media screen and (max-width: 768px) {
-        #partners-carousel .owl-item:after {
-          content: none; } }
-    #partners-carousel .owl-item:first-of-type:after {
-      content: none; }
-  #partners-carousel .v-counter-wrapper {
-    position: relative; }
-
 .v-large-logo {
   margin-bottom: 50px; }
   @media screen and (min-width: 768px) {
@@ -11899,8 +11831,7 @@ button.bg-custom:focus {
   margin-top: 40px; }
 
 .v-wrapper-ret-sup-heading {
-  padding: 0 0 16px;
-  overflow: hidden; }
+  padding: 0 0 16px; }
   .v-wrapper-ret-sup-heading h2 {
     line-height: 46px; }
 

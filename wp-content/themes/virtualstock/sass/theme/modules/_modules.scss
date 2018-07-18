@@ -145,24 +145,12 @@
 }
 
 .v-ret-sup-wrapper {
-    position: relative;
+    border-right: 3px solid $light-blue;
     padding-right: 20px;
-    margin-top: 20px;
     color: $white;
-    &:after {
-        position: absolute;
-        content: '';
-        top: 0;
-        bottom: 20px;
-        width: 3px;
-        left: 0;
-        background-color: $light-blue;
-    }
-    &:first-of-type {
-        &:after {
-            content: none;
-        }
-    }
+    &:last-child{
+        border: none;
+    } 
     p {
         font-size: 1.2rem;
         margin-top: 20px;
