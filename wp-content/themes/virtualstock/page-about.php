@@ -76,10 +76,11 @@ get_header();
                         endif;
                     endforeach; wp_reset_postdata();
                 ?>
-                </div>
+                
                 <?php
-                    endif;
+                endif;
                 ?>
+                </div>
             </div>
         </div>
 
