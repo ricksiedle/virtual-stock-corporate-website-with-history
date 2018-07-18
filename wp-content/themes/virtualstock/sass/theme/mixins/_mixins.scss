@@ -15,6 +15,7 @@
             background-color: $background-color;
             color: $white;
             cursor: pointer;
+            padding-top: 5px;
     }
     #{$parent}:hover, #{$parent}:focus {
         background-color: darken($background-color, 10%) !important;

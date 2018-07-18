@@ -99,7 +99,7 @@
 #main-menu {
     margin-left: 0;
     margin-top: 60px;
-    font-family: 'Serenity', Helvetica, Arial, serif;
+    font-family: 'Serenity Medium', Helvetica, Arial, serif;
     > li {
         position: relative;
         float: left;
@@ -110,7 +110,7 @@
         > a {
             position: relative;
             display: block;
-            font-family: 'Serenity', Helvetica, Arial, serif;
+            font-family: 'Serenity Medium', Helvetica, Arial, serif;
             font-weight: 500;
             color: #fff;
             &:after {
@@ -120,9 +120,6 @@
                 margin-bottom: -10px;
                 margin-left: 0;
             }
-            &:hover {
-                text-transform: uppercase;
-            }
         }
     }
     .menu-item.dropdown {
@@ -130,8 +127,6 @@
     }
     li.show {
         > a {
-            text-transform: uppercase;
-            font-weight: 500;
             &:after {
                 transform: rotate(180deg);
                 margin-bottom: -5px;
@@ -198,8 +193,18 @@
                 color: #333;
                 padding-bottom: 2px;
                 padding-top: 0;
+                font-family: 'Serenity Medium';
+                &:hover, &:active {
+                    color: $pink !important;
+                }
+            }
+            &.current-menu-item {
+                a {
+                    color: $pink !important;
+                }
             }
         }
+        
         li.dropdown {
             text-align: left;
             a {
@@ -216,7 +221,9 @@
                 li {
                     a {
                         font-size: .65em;
-                        font-weight: 700;
+                        &:hover, &:active {
+                            color: $pink !important;
+                        }
                     }
                 }
             }
