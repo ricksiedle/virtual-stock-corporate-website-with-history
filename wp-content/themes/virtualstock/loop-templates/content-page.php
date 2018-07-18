@@ -182,7 +182,7 @@ global $post;
 								$v_box_title_hashed = hash('sha256', $v_box_title);
 
 			?>
-								<style>
+								<style type="text/css">
 									.v-box-<?php echo $v_box_title_hashed ?>:before {
 										background-image:url( <?php echo $v_box_background_image; ?> );
 									}

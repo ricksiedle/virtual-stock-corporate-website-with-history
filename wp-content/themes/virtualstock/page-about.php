@@ -71,6 +71,12 @@ get_header();
                 <div class="section-partners-content-inside">
                     <h2> <?php _e('Our <span style="color:#E64097">Partners</span>', 'virtual') ?></h2>
                     <p> <?php _e('We’ve developed partnerships with world-renowned businesses and industry leaders who, like us, are dedicated to addressing today’s challenges in new and different ways.', 'virtual') ?></p>
+                    <div class="images-partners owl-carousel owl-theme">
+                        <div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/ibmpos_blue.jpg" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/previse-logo_1_orig.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/wincanton-logo.jpg" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" height="30" alt=""/></div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-6 image-holder">
@@ -88,6 +94,9 @@ get_header();
                     <p> <?php _e('Stephen Chandler', 'virtual') ?> </p>
                     <p> <?php _e('Managing Partner at Notion Capital:', 'virtual') ?> </p>
                     <p> <?php _e('“Digital supply chain is a hot topic, and for good reason. Virtualstock delivers an agile supply chain technology platform that allows its clients to quickly adapt to the challenges of digitisation without turning to traditional systems integration, thereby reducing cost and risk while accelerating benefits. Virtualstock has already demonstrated this in two important sectors and has accumulated an impressive portfolio of clients. They are now superbly placed to scale rapidly, and we believe that they will become another UK technology success story.”', 'virtual') ?></p>
+                    <div class="images-partners owl-carousel owl-theme">
+                        <div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/Notion_Capital_Logo_CMYK.jpg" height="30" alt=""/></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,7 +134,22 @@ get_header();
 </div>
 
 
-
+<script>
+	if(jQuery('.images-partners').length > 0) {
+		jQuery('.images-partners').owlCarousel({
+			loop		: false,
+			margin		: 10,
+			dots		: true,
+			smartSpeed 	: 900,
+			responsive	: {
+					0	: { items:1 },
+					768	: { items:1 },
+					1200: { items:4 }
+			}
+		})
+	}
+	
+</script>
 
 
 
