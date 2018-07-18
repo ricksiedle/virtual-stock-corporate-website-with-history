@@ -453,6 +453,12 @@
             float: left;
             width: 50%;
             height: 460px;
+            h2 {
+                @media #{$handheld} {
+                    font-size: 1.2rem;
+                    line-height: 1.5 !important;
+                }
+            }
             .category_name_wrapper {
                 position: absolute;
                 top: 0;

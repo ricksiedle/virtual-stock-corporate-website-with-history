@@ -148,6 +148,9 @@
     border-right: 3px solid $light-blue;
     padding-right: 20px;
     color: $white;
+    @media #{$handheld} {
+        padding-right: 0;
+    }
     &:last-child{
         border: none;
     } 
