@@ -5,17 +5,34 @@ get_header();
 ?>
 <div class="wrapper">
     <div class="container">
-        <div class="row section-purpose">
-            <div class="section-purpose-content col-md-6">
-                <div class="section-purpose-content-inside">
-                    <h2> <?php _e('Our <span style="color:#E64097">purpose</span>', 'virtual') ?></h2>
-                    <p> <?php _e('We provide the platform to connect, the power to control, the edge to compete and a better experience for your colleagues and customers.', 'virtual') ?></p>
+
+    <!-- OUR PURPOSE SECTION -->
+    <?php if( have_rows('our_purpose_section') ): ?>
+
+        <?php while( have_rows('our_purpose_section') ): the_row();
+
+            // vars
+            $our_purpose_heading = get_sub_field('our_purpose_heading');
+            $our_purpose_image = get_sub_field('our_purpose_section_image');
+            $our_purpose_content = get_sub_field('our_purpose_section_content');
+
+        ?>
+
+            <div class="row section-purpose">
+                <div class="section-purpose-content col-md-6">
+                    <div class="section-purpose-content-inside">
+                        <h2> <?php echo $our_purpose_heading ?></h2>
+                        <p> <?php echo $our_purpose_content ?></p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="<?php echo $our_purpose_image; ?>" />
                 </div>
             </div>
-            <div class="col-md-6">
-                <img src="//virtualStock.local/wp-content/uploads/2018/07/section_purpose.png" />
-            </div>
-        </div>
+        
+        <?php endwhile; ?>
+
+    <?php endif; ?>
 
         <div class="row section-people v-full-width">
                 
@@ -99,8 +116,7 @@ get_header();
                             <?php endif; ?>
                         </div>
                     </div>
-                    <div class="col-md-6 image-holder">
-                        <img src="<?php echo $our_partners_bg_image ?>" />
+                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_partners_bg_image ?>')">
                     </div>
                 </div>
 
@@ -122,8 +138,7 @@ get_header();
                 ?>
 
                 <div class="row section-investors v-full-width">
-                    <div class="col-md-6 image-holder">
-                        <img src="<?php echo $our_investors_bg_image ?>" />
+                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_investors_bg_image ?>')" >
                     </div>
                     <div class="section-investors-content col-md-6">
                         <div class="section-investors-content-inside">
@@ -166,16 +181,15 @@ get_header();
             <div class="col-md-5">
                 <h2> <?php _e('Our <span style="color:#E64097">Location</span>', 'virtual') ?></h2>
 
-                <h3> Headquarters: </h3>
-                <p> Reading, UK, One Valpy, 20 Valpy Street, Reading, </p>
-                <p> United Kingdom, RG1 1AR </p>
-                <p> +44(0)1183150950 </p>
+                    <?php if( have_rows('contact_section') ): ?> 
 
-                <h3> Satellite Locations: </h3>
-                <p> Lviv, Ukraine </p>
-                <p> Skopje, Macedonia </p>
-                <p> Rzeszow, Poland </p>
-                <p> Cape Town, South Africa </p>
+                        <?php while( have_rows('contact_section') ): the_row(); ?>
+
+                            <?php echo get_sub_field('contact_info'); ?>
+
+                        <?php endwhile; ?>
+
+                    <?php endif; ?>
 
 
                 <p> <?php _e('', 'virtual') ?></p>    
@@ -184,6 +198,22 @@ get_header();
 
     </div><!-- end .container -->
 </div><!-- end .wrapper -->
+
+<script>
+	if(jQuery('.images-partners').length > 0) {
+		jQuery('.images-partners').owlCarousel({
+			loop		: false,
+			margin		: 10,
+			dots		: true,
+			smartSpeed 	: 900,
+			responsive	: {
+					0	: { items:1 },
+					768	: { items:1 },
+					1200: { items:4 }
+			}
+		})
+	}
+</script>
 
 
 <?php
