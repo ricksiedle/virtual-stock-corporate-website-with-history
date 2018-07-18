@@ -1,3 +1,6 @@
 export default (function ($) {
-    $('a[href="#contact_form_pop"]').addClass('fancybox');
+
+    // Add fancybox class for Easy Fancy box 
+    // plugin functionality
+    //$('a[href="#contact_form_pop"]').addClass('fancybox');
 })(jQuery);
