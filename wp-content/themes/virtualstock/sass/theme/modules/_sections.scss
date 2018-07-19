@@ -138,11 +138,18 @@
                 p {
                     margin: 0 auto;
                     max-width: 650px;
-                    font-size: 1.3rem;
+                    font-size: 1.2rem;
                     line-height: 1.5rem;
                     opacity: 0;
                     transform: translateY(250%);
                     transition: all 0.5s;
+                    @media #{$handheld} {
+                        font-size: 0.9rem;
+                        line-height: 1.1rem;
+                    }
+                    strong > span {
+                        margin-bottom:20px;
+                    }
                 }
             }
         }

@@ -131,6 +131,15 @@
             }
         }
     }
+    .v-testimonials {
+        .owl-item {
+            img {
+                width: 100px !important;
+                height: auto;
+                margin: 0 auto; 
+            }
+        }
+    }
 }   
 
 
@@ -527,9 +536,9 @@
     }
     a.read_more_hyperlink {
         display: block;
-        position: absolute;
+        position: relative;
         bottom: 10px;
-        left: 30px;
+        left: 110px;
         @include moduled-btn( 'button', 0, 10px, 30px, $pink ) {
             font-size: 1.4rem;
         }
@@ -623,9 +632,9 @@
     }
     a.read_more_hyperlink {
         display: block;
-        position: absolute;
+        position: relative;
         bottom: 10px;
-        left: 30px;
+        left: 110px;
         @include moduled-btn( 'button', 0, 10px, 30px, $pink ) {
             font-size: 1.4rem;
         }

@@ -277,9 +277,7 @@ global $post;
 										
 										$args = array(
 											'post_type' => 'testimonials',
-											array(
-												'terms' => $tag->name,
-											),
+											'tag' => $tag->name,
 										);
 										// The Query -- testimonials tagged with the custom tag
 										$testimonials_query = new WP_Query( $args );

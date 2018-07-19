@@ -10,8 +10,8 @@
         //..than define custom styles
             position: absolute;
             bottom: 0;
-            -ms-transform: translate(50px, 100px);
-            -webkit-transform: translate(50px, 100px);
+            -ms-transform: translate(-50%, 0px);
+            -webkit-transform: translate(-50%, 0px);
             transform: translate(-50%, 0px);
             border-radius: $border-radius;
             margin-top: 10px;
@@ -21,6 +21,9 @@
             color: $white;
             cursor: pointer;
             padding-top: 5px;
+            @media #{$handheld} {
+                font-size: 14px;
+            }
     }
     #{$parent}:hover, #{$parent}:focus {
         background-color: darken($background-color, 10%) !important;
