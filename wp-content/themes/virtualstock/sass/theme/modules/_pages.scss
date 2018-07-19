@@ -47,8 +47,14 @@
                 width: 100%;
 
             }
-            @include moduled-btn('.under_header_btn.blue-btn', 0, 10px, 30px, $light-blue) {
-                font-size: 1.4rem;
+            .button_wrapper {
+                position:relative;
+                height: 80px;
+                width: 100%;
+                text-align: center;
+                @include moduled-btn('.under_header_btn.blue-btn', 0, 10px, 30px, $light-blue) {
+                    font-size: 1.4rem;
+                }
             }
         }
     }

@@ -8,6 +8,11 @@
         //Reset default button styles 
         @extend %reset-Button;
         //..than define custom styles
+            position: absolute;
+            bottom: 0;
+            -ms-transform: translate(50px, 100px);
+            -webkit-transform: translate(50px, 100px);
+            transform: translate(-50%, 0px);
             border-radius: $border-radius;
             margin-top: 10px;
             margin-bottom: 30px;

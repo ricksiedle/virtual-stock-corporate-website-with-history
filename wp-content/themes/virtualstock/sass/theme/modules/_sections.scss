@@ -28,30 +28,14 @@
         }
     }
     .v-box-wrapper {
-        //this section is valid if the boxes are rectangles
-        &.col-md-4 {
-            .v-box {
-                &-rectangles {
-                    height:330px;
-                }
-            }
-        }
-        &.col-md-6 {
-            .v-box {
-                &-rectangles {
-                    height:540px;
-                    padding-top: 195px;
-                    h3 {
-                        font-size: 1.75rem;
-                    }
-                }
-            }
-        }
-        //this sections are valid even if the boxes are not rectangles
+        
         .v-box {
             position:relative;
             margin-bottom: 30px;
             padding-top: 65px;
+            padding-left: 30px;
+            padding-right: 30px;
+            height:330px;
             border-radius: 3px;
             overflow: hidden;
             transition: transform 0.5s;
@@ -109,9 +93,10 @@
             }
             h3 {
                 margin: 20px 0 35px;
-                font-size: 1.25rem;
+                font-size: 1.65rem;
+                font-family: 'Serenity Demi Bold';
                 text-transform: uppercase;
-                color: $white;
+                color: #fff;
                 
             }
             @include moduled-btn( '.v-box-button', 0, 10px, 30px, $pink ) {
@@ -151,6 +136,8 @@
                     transition: all 0.5s;
                 }
                 p {
+                    margin: 0 auto;
+                    max-width: 650px;
                     font-size: 1.3rem;
                     line-height: 1.5rem;
                     opacity: 0;

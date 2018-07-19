@@ -86,9 +86,12 @@ global $post;
 							<?php _e('Our platform is both GS1 & PEPPOL certified, </br>	
 							giving you peace of mind');  ?>
 						</p>
-						<button class="under_header_btn blue-btn text-align-center">
-							<?php _e('Take me to the Edge4Health'); ?> 
-						</button>
+						<div class="button_wrapper">
+							<button class="under_header_btn blue-btn text-align-center">
+								<?php _e('Take me to the Edge4Health'); ?> 
+							</button>
+						</div>
+						
 					</div>
 				</div>
 			<?php 
@@ -176,7 +179,6 @@ global $post;
 								$v_box_title = get_sub_field('title');
 								$v_box_hyperlink = get_sub_field('button_hyperlink');
 								$v_box_size = get_sub_field('v_box_type');
-								$v_boxes_are_rectangles = get_sub_field('v_boxes_are_rectangles');
 
 								//Purge the v_box_title variable, for css usage
 								$v_box_title_hashed = hash('sha256', $v_box_title);
@@ -199,22 +201,17 @@ global $post;
 								} elseif($v_box_size == 'large') {
 									//large box takes two-thirds of the real estate
 									$v_box_size_col = 'col-md-8';
+								} elseif($v_box_size == 'full') {
+									//full box takes whole row
+									$v_box_size_col = 'col-md-12';
 								} else {
 									$v_box_size_col = '';
-								}
-
-								//Here check if the user wants rectangular boxes
-								if($v_boxes_are_rectangles == 'yes') {
-									//insert this class in the level of the v-box class
-									$rect_box = 'v-box-rectangles';
-								} else {
-									$rect_box = '';
 								}
 
 			?>
 
 								<div class="v-box-wrapper <?php echo $v_box_size_col ?> text-align-center">
-									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> <?php echo $rect_box; ?> v-col-md-12">
+									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12">
 										<div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
 											<!-- no content within this div -->
 										</div>
