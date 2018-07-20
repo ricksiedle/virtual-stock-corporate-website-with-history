@@ -29,7 +29,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						<div class="site-footer-menu col-md-7">
 							<div class="row">
-								<div class="col-md-12">
+								<div class="col-md-12 text-align-center">
 									<!-- The WordPress Menu goes here -->
 									<?php wp_nav_menu(
 										array(
@@ -39,6 +39,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 											'fallback_cb'     => '',
 											'menu_id'         => 'footer-menu-1',
 											'depth'           => 2, 
+											'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+										)
+									); ?>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-md-12 text-align-center">
+									<!-- The WordPress Menu goes here -->
+									<?php wp_nav_menu(
+										array(
+											'theme_location'  => 'footer#2',
+											'container_id'    => 'footer-menu footer-menu-right',
+											'menu_class'      => 'navbar-nav',
+											'fallback_cb'     => '',
+											'menu_id'         => 'footer-menu-2',
+											'depth'           => 1, 
 											'walker'          => new understrap_WP_Bootstrap_Navwalker(),
 										)
 									); ?>
