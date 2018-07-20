@@ -37,46 +37,40 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
 		<nav class="navbar navbar-expand-md navbar-light">
-
-		
 			<div class="container" >
-		
+							<!-- Your site title as branding in the menu -->
+							<?php if ( ! has_custom_logo() ) { ?>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
+								<?php if ( is_front_page() && is_home() ) : ?>
 
-						<?php if ( is_front_page() && is_home() ) : ?>
+									<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+									
+								<?php else : ?>
 
-							<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a></h1>
+									<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
+								
+								<?php endif; ?>
+								
 							
-						<?php else : ?>
+							<?php } else {
+								if( wp_is_mobile() && get_theme_mod( 'm_logo' ) ) { ?>
+									
+									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" class="navbar-brand custom-logo-link" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
+										<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+									</a>
+								<?php 
+								} else {
+										the_custom_logo();
+								}
+								
+							} ?><!-- end custom logo -->
 
-							<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url"><?php bloginfo( 'name' ); ?></a>
-						
-						<?php endif; ?>
-						
-					
-					<?php } else {
-						if( wp_is_mobile() && get_theme_mod( 'm_logo' ) ) { ?>
-							
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" class="navbar-brand custom-logo-link" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
- 
-								<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-						
-							</a>
-						<?php 
-						} else {
-								the_custom_logo();
-						}
-						
-					} ?><!-- end custom logo -->
-
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-					<!-- <span class="navbar-toggler-icon"></span> -->
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+							<!-- <span class="navbar-toggler-icon"></span> -->
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
 
 				<!-- The WordPress Menu goes here -->
 				<?php wp_nav_menu(

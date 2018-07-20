@@ -36,6 +36,9 @@
                         width: 1px;
                         height: 5px;
                         background-color:$white;
+                        @media #{$handheld} {
+                            content:none;
+                        }
                     }
                     &:last-child {
                         &:after {
@@ -172,7 +175,7 @@
                     position: relative;
                     font-size: 2.2em;
                     &:hover {
-                        color: lighten($light-gray, 20%);
+                        color: $pink;
                         text-decoration: none;
                     }
                 }

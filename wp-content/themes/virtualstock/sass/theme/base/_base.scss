@@ -1,5 +1,9 @@
-// As I promised here you can find the base CSS rules... and very naturally we start with the body...
-
+// As I promised here you can find the base CSS rules... and very naturally we start with the html...
+@media #{$handheld} {
+    html {
+        overflow-x: hidden;
+    }
+}
 body {
     // Body font size assigned to decade multiplier for clear and intuitive rem values.
     font-size: 10px;

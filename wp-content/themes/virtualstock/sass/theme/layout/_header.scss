@@ -4,7 +4,10 @@
     left: 0;
     right: 0;
     z-index: 99;
-
+    width: 100vw;
+    #responsive-menu {
+        @extend %clearfix;
+    }
     .navbar-collapse.collapse.show {
         height: 100vh;
         .navbar.navbar-expand-md.navbar-light {
@@ -13,7 +16,7 @@
     }
 
     .navbar-toggler {
-        position: fixed;
+        position: absolute;
         right: 20px;
         top: 30px;
         width: 40px;
@@ -74,14 +77,14 @@
             }
         }
         .container {
-            position: relative;
+            @extend %clearfix;
         }
     }
 }
 
 .custom-logo-link {
     display: block;
-    position: absolute;
+    position: relative;
     top: 5px;
     margin-top: 14px;
     padding-bottom: 0;
@@ -235,7 +238,7 @@
     .wrapper-navbar {
         top: 30px;
         .navbar-toggler {
-            top: 50px;
+            top: 30px;
         }
     }
 }
