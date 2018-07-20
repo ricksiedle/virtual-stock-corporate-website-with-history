@@ -46,11 +46,16 @@ get_header();
                         
                         if ( 'founders' == get_field('group') ):
                 ?>
-                            <div class="col-sx-6 col-md-4">
+                            <div class="col-sx-12 col-md-4">
                                 <div class="section-people-content-holder upper <?php echo ( ($i == 0) ? 'first' : ($i == 2 ? 'last' : '') ); ?>">
                                     <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                                    <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                    <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                    <div class="content-wrapper">
+                                        <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                        <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                        <p class="people-content text-align-center">
+                                            <?php the_field('team_content'); ?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                 <?php
@@ -68,8 +73,13 @@ get_header();
                             <div class="col-sx-6 col-md-3">
                                 <div class="section-people-content-holder lower">
                                     <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                                    <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                    <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                    <div class="content-wrapper">
+                                        <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                        <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                        <p class="people-content text-align-center">
+                                            <?php the_field('team_content'); ?>
+                                        </p>
+                                    </div> 
                                 </div>
                             </div>
                 <?php
@@ -102,19 +112,17 @@ get_header();
                         <div class="section-partners-content-inside">
                             <h2> <?php echo $our_partners_heading; ?></h2>
                             <p> <?php echo $our_partners_content; ?></p>
-
-                            <?php if( have_rows('our_partners_section_images') ): ?>
                                 
-                                <div class="images-partners owl-carousel owl-theme">
-                                    <?php while( have_rows('our_partners_section_images') ): the_row();
-                                        // vars
-                                        $partner_logo_image = get_sub_field('partner_logo_image');
-                                    ?>
-                                        <div class="item"><img src="<?php echo $partner_logo_image; ?>" height="`30" alt=""/></div>
-                                    <?php endwhile; ?>
+                            <div class="images-partners">
+                                <div class="partner-logo-holder">
+                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibmpos_blue.jpg" alt=""/></div>
+                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" alt=""/></div>
                                 </div>
-
-                            <?php endif; ?>
+                                <div class="partner-logo-holder">
+                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/wincanton-logo.jpg" alt=""/></div>
+                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/previse-logo_1_orig.png" alt=""/></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_partners_bg_image ?>')">
@@ -146,18 +154,11 @@ get_header();
                             <h2> <?php echo $our_investors_heading; ?></h2>
                             <p> <?php echo $our_investors_content; ?></p>
 
-                            <?php if( have_rows('our_investors_section_images') ): ?>
-                                
-                                <div class="images-partners owl-carousel owl-theme">
-                                    <?php while( have_rows('our_investors_section_images') ): the_row();
-                                        // vars
-                                        $investor_logo_image = get_sub_field('investor_logo_image');
-                                    ?>
-                                        <div class="item"><img src="<?php echo $investor_logo_image; ?>" height="`30" alt=""/></div>
-                                    <?php endwhile; ?>
+                            <div class="images-partners">
+                                <div class="investor-logo-holder">
+                                    <div class="investor-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/Notion_Capital_Logo_CMYK.jpg" alt=""/></div>
                                 </div>
-
-                            <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -199,22 +200,6 @@ get_header();
 
     </div><!-- end .container -->
 </div><!-- end .wrapper -->
-
-<script>
-	if(jQuery('.images-partners').length > 0) {
-		jQuery('.images-partners').owlCarousel({
-			loop		: false,
-			margin		: 10,
-			dots		: true,
-			smartSpeed 	: 900,
-			responsive	: {
-					0	: { items:1 },
-					768	: { items:1 },
-					1200: { items:4 }
-			}
-		})
-	}
-</script>
 
 
 <?php
