@@ -24,6 +24,30 @@
             @media screen and (min-width: 768px) {
                 margin-top: 0;
             }
+            .menu-footer-2-container {
+                li {
+                    position: relative;
+                    padding: 0px;
+                    &:after {
+                        content:'';
+                        position: absolute;
+                        top: 32px;
+                        right: 0;
+                        width: 1px;
+                        height: 5px;
+                        background-color:$white;
+                    }
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+                a {
+                    text-transform: capitalize;
+                    font-size: 0.9rem;
+                }
+            }
             ul {
                 -webkit-box-orient: horizontal;
                 display: inline-block;
@@ -45,33 +69,48 @@
                             font-weight: 300;
                             text-align: left;
                         }
-                        &:after {
-                            display: none !important;
-                        }
                     }
-                    .dropdown-menu {
-                        position: relative;
-                        float: left;
-                        display: block;
-                        background-color: transparent;
-                        padding: 0;
-                        margin: 0;
-                        border: none;
-                        min-width: 0;
-                        width: 100%;
-                        -webkit-padding-start: 0;
-                        li {
-                            display: block;
-                            clear: both;
+                    &.dropdown {
+                        &:hover {
                             a {
-                                position: relative;
-                                float: left;
+                                &:after {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            .dropdown-menu {
+                                height: 65px;
+                                opacity: 1;
+                                transition: all 0.5s;
+                            }
+                        }
+                        .dropdown-menu {
+                            position: absolute;
+                            top: 45px;
+                            float: left;
+                            display: block;
+                            background-color: transparent;
+                            padding: 0;
+                            margin: 0;
+                            border: none;
+                            min-width: 0;
+                            width: 100%;
+                            -webkit-padding-start: 0;
+                            height: 0;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            li {
                                 display: block;
-                                line-height: 1.4em;
-                                text-transform: none;
-                                @media screen and (max-width: 768px) {
-                                    width: 100%;
-                                    text-align: center;
+                                clear: both;
+                                a {
+                                    position: relative;
+                                    float: left;
+                                    display: block;
+                                    line-height: 1.4em;
+                                    text-transform: none;
+                                    @media screen and (max-width: 768px) {
+                                        width: 100%;
+                                        text-align: center;
+                                    }
                                 }
                             }
                         }
