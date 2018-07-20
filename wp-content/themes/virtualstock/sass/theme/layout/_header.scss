@@ -77,19 +77,23 @@
             }
         }
         .container {
-            @extend %clearfix;
+            position: relative;
+            
         }
     }
 }
 
 .custom-logo-link {
     display: block;
-    position: relative;
+    position: absolute;
     top: 5px;
     margin-top: 14px;
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
+    @media #{$handheld} {
+        position: relative;
+    }
     img {
         margin-bottom: -10px;
     }
@@ -186,7 +190,7 @@
     }
     
     #main-menu {
-        margin-left: 226px;
+        margin-left: 220px;
         margin-top: 0;
         > li {
             width: auto;
