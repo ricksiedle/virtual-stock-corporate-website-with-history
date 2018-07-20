@@ -4,7 +4,10 @@
     left: 0;
     right: 0;
     z-index: 99;
-
+    width: 100vw;
+    #responsive-menu {
+        @extend %clearfix;
+    }
     .navbar-collapse.collapse.show {
         height: 100vh;
         .navbar.navbar-expand-md.navbar-light {
@@ -13,7 +16,7 @@
     }
 
     .navbar-toggler {
-        position: fixed;
+        position: absolute;
         right: 20px;
         top: 30px;
         width: 40px;
@@ -75,6 +78,7 @@
         }
         .container {
             position: relative;
+            
         }
     }
 }
@@ -87,6 +91,9 @@
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
+    @media #{$handheld} {
+        position: relative;
+    }
     img {
         margin-bottom: -10px;
     }
@@ -183,7 +190,7 @@
     }
     
     #main-menu {
-        margin-left: 226px;
+        margin-left: 220px;
         margin-top: 0;
         > li {
             width: auto;
@@ -235,7 +242,7 @@
     .wrapper-navbar {
         top: 30px;
         .navbar-toggler {
-            top: 50px;
+            top: 30px;
         }
     }
 }

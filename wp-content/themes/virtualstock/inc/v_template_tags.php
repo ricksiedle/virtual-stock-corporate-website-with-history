@@ -8,7 +8,7 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
 		<?php if(get_field('counter_background_image')) : ?>
 			<div class="container-fluid v-wrapper v-wrapper-counter v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_field('counter_background_image'); ?>" ;>
 				<div class="container">
-					<div class="row">
+					<div id="counter-owl" class="owl-carousel owl-theme">
 
 					<?php if(get_field('stats_counter')) :
 
@@ -20,7 +20,7 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
 									$v_stock = get_sub_field('the_stock');
 								?>
 
-								<div class="v-counter-wrapper col-md-3 text-align-center">	
+								<div class="v-counter-wrapper text-align-center">	
 									<span class="counter v-counter"><?php echo $v_statistic_figure; ?></span> <span class="v-counter-unit"><?php echo $v_unit; ?></span>
 									<div class="v-counter-label">
 										<?php echo $v_stock; ?>
@@ -40,3 +40,4 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
 <?php
     }
 endif;
+?>

@@ -415,6 +415,25 @@ global $post;
 	
 </script>
 
+<script>
+	if(jQuery('#counter-owl').length > 0) {
+		jQuery('#counter-owl').owlCarousel({
+			loop		: true,
+			margin		: 10,
+			dots		: true,
+			smartSpeed 	: 2000,
+			autoplay   	: true,
+			autoplayTimeout: 6000,
+			autoplayHoverPause:true,
+			responsive	: {
+					0	: { items:1 },
+					768	: { items:2 },
+					1200: { items:4 }
+			}
+		})
+	}
+</script>
+
 
 <script>
 	jQuery(document).ready(function($) {
