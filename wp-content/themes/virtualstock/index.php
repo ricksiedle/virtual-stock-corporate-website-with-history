@@ -37,7 +37,7 @@ global $post;
 					//var_dump($categories); die();
 					if ( ! empty( $categories ) ) {
 
-						$output = '<a class="current-page" href="<?php echo home_url(); ?>/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+						$output = '<a class="current-page" href="' . home_url() . '/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
 						
 						foreach( $categories as $category ) {
 
@@ -74,9 +74,13 @@ global $post;
 
 				<?php if ( have_posts() ) : ?>
 
+					
+
 					<?php /* Start the Loop */ ?>
 
 					<div class="grid">
+						<div class="gutter-sizer"></div>
+						<div class="grid-sizer"></div>
 						<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
@@ -118,18 +122,18 @@ global $post;
 </div><!-- Wrapper end -->
 
 <script src="<?php echo get_stylesheet_directory_uri() . '/js/isotope.pkgd.js' ?>"></script>
-<script src="<?php echo get_stylesheet_directory_uri() . '/js/packary-mode.pkgd.js' ?>"></script>
 
 <script>
+	// Isotope settings
 	jQuery('.grid').isotope({
-		
-		layoutMode: 'masonry',
 		itemSelector: '.grid-item',
+		percentPosition: true,
 		masonry: {
-			columnWidth: 50%,
-			gutterWidth: 10
+			columnWidth: '.grid-sizer',
+			gutter: '.gutter-sizer'
 		}
 	});
 </script>
 
 <?php get_footer(); ?>
+

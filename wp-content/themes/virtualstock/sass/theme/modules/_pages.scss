@@ -318,7 +318,7 @@
                         }
                         @media #{$handheld} {
                             position: relative;
-                            background-color: rgba(69, 81, 96, 0.35);
+                            background-color: rgba(69, 81, 96, 0.8);
                             transform: translate(0, 10px);
                         }
                     }
@@ -610,6 +610,12 @@
         &:after {
             @extend %clearfix;
         }
+        .gutter-sizer {
+            width: 10px;
+        }
+        .grid-sizer {
+            width: calc(50% - 10px);
+        }
         .grid-item { 
             position: relative;
             float: left;
@@ -674,6 +680,9 @@
         height: auto;
         @media #{$handheld} {
             width: 75%;
+        }
+        h2 {
+            line-height: 1;
         }
         .entry-title {
             a {
