@@ -11,15 +11,17 @@ if( get_the_post_thumbnail( $post->ID ) ) {
 
 	$post_thumbnail_id = get_post_thumbnail_id( $post->ID );
 	$imgmeta = wp_get_attachment_metadata( $post_thumbnail_id );
+	
 	/**
 	 * Check if the feature image of the post
-	 * is horizontal and than
-	 * set $v_img_position accordingly
+	 * is portrait or landscape  or some
+	 * kind of it :) and than set 
+	 * $v_img_position class
 	 */
 	if(wp_is_mobile()) {
 		$v_img_position = 'grid-item--width2';
 	} else {
-		if ($imgmeta['width'] > $imgmeta['height']) {
+		if ($imgmeta['width'] > 1.5 * $imgmeta['height']) {
 			$v_img_position = 'grid-item--width2';
 		} elseif ( $imgmeta['width'] < $imgmeta['height'] ) {
 			$v_img_position = 'grid-item--height2';
