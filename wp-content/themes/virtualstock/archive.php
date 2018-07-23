@@ -124,6 +124,7 @@ global $post;
 		layoutMode: 'masonry',
 		itemSelector: '.grid-item',
 		masonry: {
+			columnWidth: 50%,
 			gutterWidth: 10
 		}
 	});
