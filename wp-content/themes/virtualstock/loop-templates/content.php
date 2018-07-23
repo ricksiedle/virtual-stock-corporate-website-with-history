@@ -23,7 +23,7 @@ if( get_the_post_thumbnail( $post->ID ) ) {
 	} else {
 		if ($imgmeta['width'] > 1.5 * $imgmeta['height']) {
 			$v_img_position = 'grid-item--width2';
-		} elseif ( $imgmeta['width'] < $imgmeta['height'] ) {
+		} elseif ( $imgmeta['width'] < 1.5 * $imgmeta['height'] ) {
 			$v_img_position = 'grid-item--height2';
 		} else {
 			$v_img_position = '';

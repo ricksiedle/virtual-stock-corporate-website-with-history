@@ -29,10 +29,18 @@
                 font-size: 1rem;    
             }
             &-content {
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
                 margin-top: 25px;
                 margin-bottom: 20px;
                 padding-top: 20px;
                 padding-bottom: 20px;
+                @media #{$handheld} {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-left: 0;
+                }
                 @media screen and (min-width: 768px) {
                     margin-top: 10px;
                 }
