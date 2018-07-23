@@ -500,6 +500,10 @@
 *
 */
 .blog, .archive {
+    #primary {
+        @extend %clearfix;
+        margin-bottom: 100px;
+    }
     .wrapper {
         // Dodge the fixed header
             margin-top: 120px;
