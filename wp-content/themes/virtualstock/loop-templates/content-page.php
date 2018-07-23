@@ -74,11 +74,8 @@ global $post;
 					<h3 class="text-align-center"> <?php echo $v_under_header_title; ?> </h3>
 					<p class="text-align-center"> <?php _e( 'The Edge4Health is a partnership between NHS SBS and Virtualstock' ); ?> </p>
 					<div class="row under-header-section-content">
-						<div class="col-sm-6">
+						<div class="col-sm-12 text-align-center">
 							<?php echo $v_under_header_left; ?>
-						</div>
-						<div class="col-sm-6">
-							<?php echo $v_under_header_right; ?>
 						</div>
 					</div>
 					<div class="row">
@@ -282,12 +279,20 @@ global $post;
 										// The Query -- testimonials tagged with the custom tag
 										$testimonials_query = new WP_Query( $args );
 
+										//check the format of the image icon
+										$img_icon = get_field('testimonial_icon');
+										$img_icon_width = $img_icon['width'];
+										$img_icon_height = $img_icon['height'];
+
+										$img_icon_class = ($img_icon_width > $img_icon_height) ? 'img-landscape' : 'img-portrait';
+											
+
 										// The Loop
 										if ( $testimonials_query->have_posts() ) {
 											echo '<div class="v-testimonials owl-carousel owl-theme">';
 											while ( $testimonials_query->have_posts() ) {  $testimonials_query->the_post();
 												echo '<div class="v-testimonial">';
-													echo '<div class="image_wrapper"><img src="' . get_field('testimonial_icon') . '"></div>';
+													echo '<div class="image_wrapper"><img class="'. $img_icon_class . '" src="' . get_field('testimonial_icon') . '"></div>';
 													echo '<div class="v_testimonial_content">';
 														the_content();
 													echo '</div>';
