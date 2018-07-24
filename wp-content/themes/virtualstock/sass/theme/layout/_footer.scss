@@ -14,6 +14,9 @@
                     margin-top: 15px;
                     font-size: 1.8em;
                 }
+                @media #{$ipad-portrait} {
+                    text-align: center;
+                }
             }
         }
 
@@ -28,6 +31,7 @@
                 li {
                     position: relative;
                     padding: 0px;
+                    display: inline-block;
                     &:after {
                         content:'';
                         position: absolute;
@@ -36,7 +40,7 @@
                         width: 1px;
                         height: 5px;
                         background-color:$white;
-                        @media #{$handheld} {
+                        @media #{$handheld}, #{$ipad-portrait} {
                             content:none;
                         }
                     }
@@ -49,6 +53,9 @@
                 a {
                     text-transform: capitalize;
                     font-size: 0.9rem;
+                    @media #{$ipad-portrait} {
+                        text-align: center;
+                    }
                 }
             }
             ul {
@@ -71,6 +78,9 @@
                         @media screen and (min-width: 768px) {
                             font-weight: 300;
                             text-align: left;
+                        }
+                        @media #{$ipad-portrait} {
+                            text-align: center;
                         }
                     }
                     &.dropdown {
@@ -101,6 +111,11 @@
                             height: 0;
                             opacity: 0;
                             transition: all 0.5s;
+                            @media #{$handheld}, #{$ipad-portrait} {
+                                position: relative !important;
+                                transform: translate3D(0, 0, 0) !important; 
+
+                            }
                             li {
                                 display: block;
                                 clear: both;
@@ -127,6 +142,9 @@
             @media screen and (min-width: 768px) {
                 text-align: right;
                 margin-top: 10px;
+            }
+            @media #{$ipad-portrait} {
+                text-align: center;
             }
             .socials-menu {
                 &#footer-socials.menu {

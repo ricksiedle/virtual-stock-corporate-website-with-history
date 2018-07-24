@@ -23,11 +23,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 				<footer class="site-footer" id="colophon">
 					<div class="row">
-						<div class="site-info col-md-3">
+						<div class="site-info col-lg-3 col-md-12">
 							<?php _e('© 2018 by Virtualstock') ?>
 						</div><!-- .site-info -->
 
-						<div class="site-footer-menu col-md-7">
+						<div class="site-footer-menu col-lg-7 col-md-12">
 							<div class="row">
 								<div class="col-md-12 text-align-center">
 									<!-- The WordPress Menu goes here -->
@@ -51,7 +51,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 										array(
 											'theme_location'  => 'footer#2',
 											'container_id'    => 'footer-menu footer-menu-right',
-											'menu_class'      => 'navbar-nav',
+											'menu_class'      => 'navbar-nav col-lg-12 col-md-12',
 											'fallback_cb'     => '',
 											'menu_id'         => 'footer-menu-2',
 											'depth'           => 1, 
@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 
-						<div class="site-socials col-md-2">	
+						<div class="site-socials col-lg-2 col-md-12">	
 							<ul id="footer-socials" class="menu socials-menu">
 								<li class="menu-item menu-item-type-custom menu-item-object-custom">
 									<a href="https://en-gb.facebook.com/Virtualstock-355636264860704/" class="no_icon">

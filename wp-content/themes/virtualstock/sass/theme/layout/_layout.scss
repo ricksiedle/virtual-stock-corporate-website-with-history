@@ -7,6 +7,13 @@
     padding-bottom: 75px;  
 }
 
+//Reset wrapper from understrap without padding on ipad-portrait
+@media #{$between-mobile-and-ipad-portrait} {
+    .wrapper {
+        padding-top: 0 !important;
+    }
+}
+
 .v-partners {
     @extend %clearfix;
     margin-top: 80px;

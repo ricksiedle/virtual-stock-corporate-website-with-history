@@ -64,6 +64,12 @@
         height: auto;
         background-color: rgba(69,81,96, .8);
         padding-bottom: 25px;
+        @media #{$ipad-portrait} {
+            padding-bottom: 5px;
+        }
+        @media #{$handheld} {
+            padding-bottom: 25px;
+        }
         .navbar-nav {
             .dropdown-menu {
                 position: static;
@@ -108,6 +114,12 @@
     margin-left: 0;
     margin-top: 60px;
     font-family: 'Serenity Medium', Helvetica, Arial, serif;
+    @media #{$ipad-portrait} {
+        margin-top: 40px;
+    }
+    @media #{$handheld} {
+        margin-top: 60px;
+    }
     > li {
         position: relative;
         float: left;
@@ -172,7 +184,7 @@
     }
 }
 
-@media screen and (min-width: 564px) {
+@media screen and (min-width: 769px) {
     .wrapper-navbar {
         .navbar.navbar-expand-md.navbar-light {
             background-color: #fff;
@@ -236,6 +248,14 @@
                 }
             }
         }
+    }
+}
+// Ready to meet btn fix on ipad-portrait
+.navbar-light #header-btn.pink-btn {
+    @media #{$ipad-portrait} {
+        position: relative !important;
+        bottom: -45px !important;
+        right: -100px;
     }
 }
 

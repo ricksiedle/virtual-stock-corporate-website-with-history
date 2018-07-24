@@ -47,6 +47,10 @@ global $post;
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
+
+						<!-- <div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div> -->
 					</div>
 				<?php endif; ?>
 			</div> <!-- end .container -->
@@ -84,9 +88,11 @@ global $post;
 							giving you peace of mind');  ?>
 						</p>
 						<div class="button_wrapper">
-							<button class="under_header_btn blue-btn text-align-center">
-								<?php _e('Take me to the Edge4Health'); ?> 
-							</button>
+							<a href="https://market.edge4health.co.uk/" class="no_icon" target="_blank">
+								<button class="under_header_btn blue-btn text-align-center">
+									<?php _e('Take me to The Edge4Health'); ?> 
+								</button>
+							</a>
 						</div>
 						
 					</div>
@@ -191,13 +197,13 @@ global $post;
 
 								if($v_box_size == 'small'){
 									//small box takes third of the real estate
-									 $v_box_size_col = 'col-md-4';
+									 $v_box_size_col = 'col-lg-4 col-md-8 col-md-offset-2';
 								} elseif($v_box_size == 'medium') {
 									//meium box takes half of the real estate
-									$v_box_size_col = 'col-md-6';
+									$v_box_size_col = 'col-lg-6 col-md-8 col-md-offset-2';
 								} elseif($v_box_size == 'large') {
 									//large box takes two-thirds of the real estate
-									$v_box_size_col = 'col-md-8';
+									$v_box_size_col = 'col-lg-8 col-md-8 col-md-offset-2';
 								} elseif($v_box_size == 'full') {
 									//full box takes whole row
 									$v_box_size_col = 'col-md-12';
