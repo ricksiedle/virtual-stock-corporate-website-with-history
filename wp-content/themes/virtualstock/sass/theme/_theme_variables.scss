@@ -25,6 +25,7 @@ $primary: #6f31cd; // Thats a sample how you could change a BootStrap variable.
     $larger-than-xs: "only screen and (min-width : 576px)";
     $ipad-landscape: "only screen and (max-width : 1024px)";
     $ipad-portrait: "only screen and (max-width : 768px)";
+    $between-mobile-and-ipad-portrait: "only screen and (min-width : 564px) and (max-width : 768px)";
     $handheld: "only screen and (max-width : 480px)";
 
 /* Page mapping - so we can remember them easier for using in the styles ;) */

@@ -4,7 +4,6 @@
 if ( ! function_exists( 'v_stats_counter' ) ) :
     function v_stats_counter() {
     ?>
-		<!-- NOT FINISHED - just FRONTEND just wait to see -->
 		<?php if(get_field('counter_background_image')) : ?>
 			<div class="container-fluid v-wrapper v-wrapper-counter v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_field('counter_background_image'); ?>" ;>
 				<div class="container">

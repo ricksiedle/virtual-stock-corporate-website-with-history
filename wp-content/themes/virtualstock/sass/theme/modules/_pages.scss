@@ -284,8 +284,14 @@
                     &.lower {
                         .content-wrapper {
                             height: 190px;  
+                            @supports (-ms-ime-align: auto) {
+                                height: 205px;
+                            }
                             transform: translate(0, 196px);
                             transition-delay:2s;
+                            @media #{$handheld} {
+                                transform: translate(0, 5px);
+                            }
                         }
                     }
                     position: relative;
@@ -301,10 +307,15 @@
                     .content-wrapper {
                         padding: 20px 20px 20px;
                         height: 240px;
+                        @supports (-ms-ime-align: auto) {
+                            height: 275px;
+                        }
                         background-color: rgba(69, 81, 96, 1);
                         transform: translate(0, 266px);
-                        transition-property: background-color, transform, height;
-                        transition-duration:0.8s, 0.5s, 0.5s;
+                        -webkit-transition: background-color 0.8s, transform 0.5s, height 0.5s;
+                        -moz-transition: background-color 0.8s, transform 0.5s, height 0.5s;
+                        -o-transition: background-color 0.8s, transform 0.5s, height 0.5s;
+                        transition: background-color 0.8s, transform 0.5s, height 0.5s;
                         transition-delay:2s;
                         
                         h3 {
@@ -319,7 +330,7 @@
                         @media #{$handheld} {
                             position: relative;
                             background-color: rgba(69, 81, 96, 0.8);
-                            transform: translate(0, 10px);
+                            transform: translate(0, 5px);
                         }
                     }
                 }
@@ -336,7 +347,8 @@
                     transition: all 0.5s;
                     @media #{$handheld} {
                         position: relative;
-                        background-color: rgba(69, 81, 96, 0.35);
+                        min-height: 280px;
+                        background-color: rgba(69, 81, 96, 0.85);
                         transform: translate(0, 10px);
                     }
                     h3 {

@@ -115,12 +115,12 @@ get_header();
                                 
                             <div class="images-partners">
                                 <div class="partner-logo-holder">
-                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibmpos_blue.jpg" alt=""/></div>
-                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" alt=""/></div>
+                                    <div class="partner-logo-wrapper"><a href="https://www.ibm.com" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibmpos_blue.jpg" alt="IBM - link to corporate site"/></a></div>
+                                    <div class="partner-logo-wrapper"><a href="https://www.sbs.nhs.uk" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" alt="SBS - link to corporate site"/></a></div>
                                 </div>
                                 <div class="partner-logo-holder">
-                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/wincanton-logo.jpg" alt=""/></div>
-                                    <div class="partner-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/previse-logo_1_orig.png" alt=""/></div>
+                                    <div class="partner-logo-wrapper"><a href="https://www.wincanton.co.uk" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/wincanton-logo.jpg" alt="Wincaton - link to corporate site"/></div></a>
+                                    <div class="partner-logo-wrapper"><a href="https://previ.se" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/previse-logo_1_orig.png" alt="Previse - link to corporate site"/></div></a>
                                 </div>
                             </div>
                         </div>
