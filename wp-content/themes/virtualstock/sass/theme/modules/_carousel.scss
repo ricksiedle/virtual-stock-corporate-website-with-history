@@ -85,10 +85,45 @@
             }
         }
     }
-  }
+}
 
-  .owl-dot {
-      &:focus {
-          outline:none;
-      }
-  }
+.owl-dot {
+    &:focus {
+        outline:none;
+    }
+}
+
+
+// Set some of the images more centrally
+// in the Smart sliders
+@media #{$handheld} {
+    .n2-ss-slider-1 {
+        .n2-ss-slide-backgrounds {
+        
+            .n2-ss-slide-background.n2-ow:nth-child(1) {
+                div {
+                    .n2-ss-slide-background-image {
+                        background-position: 65%, 0 !important;
+                    }
+                }
+            }
+            .n2-ss-slide-background.n2-ow:nth-child(3) {
+                div {
+                    .n2-ss-slide-background-image {
+                        background-position: 44%, 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    .n2-ss-slider-3, .n2-ss-slider-4 {
+        .n2-ss-slide-background.n2-ow:nth-child(1) {
+            div {
+                .n2-ss-slide-background-image {
+                    background-position: 100%, 0 !important;
+                }
+            }
+        }
+    }
+}
