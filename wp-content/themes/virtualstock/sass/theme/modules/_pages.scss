@@ -131,7 +131,7 @@
     &.owl-carousel {
         .owl-item {
             img {
-                height: 30px;   
+                height: 40px;   
                 width: auto;
                 margin: 0 auto; 
             }
@@ -424,6 +424,7 @@
             .image-holder {
                 padding-right: 0;
                 padding-left: 0;
+                background-position: center center;
                 background-size: cover;
                 background-repeat: no-repeat;
                 max-height: 100%;
@@ -462,7 +463,9 @@
         }
         &-partners {
             .image-holder {
-                @media screen and (max-width: 768px) {
+                background-position: center center;
+                background-repeat: no-repeat;
+                @media #{$handheld} {
                     margin-bottom: 40px;
                 }
             }
@@ -472,6 +475,12 @@
                 width: calc(100% + 25px);
                 margin-right: -25px;
                 padding-top: 0;
+                @media #{$between-mobile-and-ipad-portrait} {
+                    padding-top: 40px;
+                    iframe {
+                        margin-top: 35px;
+                    }
+                }
             }
         }
         &-contact {

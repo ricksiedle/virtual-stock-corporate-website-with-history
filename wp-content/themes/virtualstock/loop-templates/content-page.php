@@ -42,15 +42,13 @@ global $post;
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/nhs.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
-
-						<!-- <div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div> -->
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-28.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-22.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-21.png" height="30" alt=""/></div>
 					</div>
 				<?php endif; ?>
 			</div> <!-- end .container -->
@@ -412,14 +410,17 @@ global $post;
 <script>
 	if(jQuery('#partners-carousel').length > 0) {
 		jQuery('#partners-carousel').owlCarousel({
-			loop		: false,
+			loop		: true,
 			margin		: 10,
-			dots		: true,
-			smartSpeed 	: 900,
+			dots		: false,
+			smartSpeed 	: 800,
+			autoplay   	: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause:true,
 			responsive	: {
 					0	: { items:1 },
 					768	: { items:2 },
-					1200: { items:4 }
+					1200	: { items:4 }
 			}
 		})
 	}

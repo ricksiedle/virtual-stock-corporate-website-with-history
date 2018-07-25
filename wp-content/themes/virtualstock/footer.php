@@ -45,13 +45,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 							<div class="row">
-								<div class="col-md-12 text-align-center">
+								<div class="col-md-12 col-sm-6 col-sm-offset-3 text-align-center">
 									<!-- The WordPress Menu goes here -->
 									<?php wp_nav_menu(
 										array(
 											'theme_location'  => 'footer#2',
 											'container_id'    => 'footer-menu footer-menu-right',
-											'menu_class'      => 'navbar-nav col-lg-12 col-md-12',
+											'menu_class'      => 'navbar-nav col-lg-7 col-md-12',
 											'fallback_cb'     => '',
 											'menu_id'         => 'footer-menu-2',
 											'depth'           => 1, 
