@@ -97,6 +97,9 @@
                 font-family: 'Serenity Demi Bold';
                 text-transform: uppercase;
                 color: #fff;
+                @media #{$ipad-landscape} {
+                    font-size: 1.25rem;
+                }
                 
             }
             @include moduled-btn( '.v-box-button', 0, 10px, 30px, $pink ) {
@@ -107,6 +110,9 @@
                     &:hover, &:active {
                         text-decoration: none;
                         color:$white;
+                    }
+                    @media #{$ipad-landscape} {
+                        font-size: 1rem;
                     }
                 }
             }
