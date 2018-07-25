@@ -91,3 +91,21 @@ function understrap_pagination() {
 }
 
 endif;
+
+/**
+ * Rewrite rule for custom category base with pagination conflict
+ * Credits to https://codex.wordpress.org/Rewrite_API/add_rewrite_rule
+ */
+
+if ( ! function_exists( 'wpa_fix_blog_pagination' ) ) :
+function wpa_fix_blog_pagination(){
+    add_rewrite_rule(
+        'resources/page/([0-9]+)/?$',
+        'index.php?page_id=12&paged=$matches[1]',
+        'top'
+    );
+}
+
+endif;
+
+add_action( 'init', 'wpa_fix_blog_pagination' );
