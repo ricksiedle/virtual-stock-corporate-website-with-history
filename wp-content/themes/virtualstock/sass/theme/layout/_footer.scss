@@ -80,6 +80,9 @@
                         &:hover, &:active {
                             color:darken($white, 20%);
                         }
+                        @media #{$ipad-landscape} {
+                            padding: 0 0.6rem;
+                        }
                         @media screen and (min-width: 768px) {
                             font-weight: 300;
                             text-align: left;
@@ -99,6 +102,13 @@
                                 height: 65px;
                                 opacity: 1;
                                 transition: all 0.5s;
+                                transform: translate3d(0px, 0px, 0px) !important;
+                                @media #{$ipad-landscape} {
+                                    transform: translate3d(0px, 45px, 0px) !important;
+                                }
+                                @media #{$ipad-portrait} {
+                                    transform: translate3d(0px, 0px, 0px) !important;
+                                }
                             }
                         }
                         .dropdown-menu {

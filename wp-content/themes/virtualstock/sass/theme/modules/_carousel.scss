@@ -1,7 +1,7 @@
 #carousel {
     .owl-theme {
         .owl-nav {
-            margin-top: -20px;
+            margin-top: -10px;
             button {
                 &:hover {
                     background-color: transparent;
@@ -18,6 +18,22 @@
     display: none;
 }
 
+@media #{$ipad-landscape} {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: calc(100vh - 30px) !important;
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+}
+
+
+
 
 @media #{$ipad-portrait} {
     #carousel,
@@ -26,6 +42,9 @@
     .n2-ss-slide-backgrounds,
     .n2-ss-align {
         height: calc(100vh - 30px) !important;
+        @media #{$ipad-landscape} {
+            height: calc(100vh - 30px) !important;
+        }
     }
 
     .mobile-hidden {
@@ -90,6 +109,24 @@
 .owl-dot {
     &:focus {
         outline:none;
+    }
+}
+
+@media #{$handheld-landscape} {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: calc(200vh - 30px) !important;
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+
+    .home .carousel-btn {
+        top: 140vh;
     }
 }
 

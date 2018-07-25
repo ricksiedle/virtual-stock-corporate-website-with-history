@@ -76,6 +76,12 @@
                 border: none;
                 padding-top: 0;
                 padding-bottom: 1rem;
+                @media #{$ipad-landscape} {
+                    min-width: 8rem;
+                }
+                @media #{$ipad-portrait}, #{$handheld-landscape} {
+                    min-width: 10rem;
+                }
                 a {
                     font-size: 1.2rem;
                     font-weight: 400;
@@ -114,7 +120,7 @@
     margin-left: 0;
     margin-top: 60px;
     font-family: 'Serenity Medium', Helvetica, Arial, serif;
-    @media #{$ipad-portrait} {
+    @media #{$ipad-portrait}, #{$handheld-landscape} {
         margin-top: 40px;
     }
     @media #{$handheld} {
@@ -135,9 +141,9 @@
             color: #fff;
             &:after {
                 display: inline-block;
-                width: 10px;
+                width: 8px;
                 height: 10px;
-                margin-bottom: -10px;
+                margin-bottom: -6px;
                 margin-left: 0;
             }
         }
@@ -184,7 +190,8 @@
     }
 }
 
-@media screen and (min-width: 769px) {
+
+@media screen and (min-width: 813px) {
     .wrapper-navbar {
         .navbar.navbar-expand-md.navbar-light {
             background-color: #fff;
@@ -214,6 +221,14 @@
                 padding-bottom: 2px;
                 padding-top: 0;
                 font-family: 'Serenity Medium';
+                @media #{$ipad-landscape} {
+                    padding-left: 0.5rem;
+                    padding-right: 0.5rem;
+                }
+                @media #{$ipad-portrait} {
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
                 &:hover, &:active {
                     color: $pink !important;
                 }
@@ -250,9 +265,33 @@
         }
     }
 }
+
+
+
+@media #{$ipad-landscape} {
+    .wrapper {
+        padding: 0 !important;
+    }
+    .navbar.navbar-expand-md.navbar-light {
+        background-color: rgba(69, 81, 96, 0.8) !important;
+    }
+    #main-menu > li {
+        & > a {
+            color: $white !important;
+        }
+        &.dropdown a {
+            color: $white !important;
+        }
+    }
+     
+}
+
+
+
+
 // Ready to meet btn fix on ipad-portrait
 .navbar-light #header-btn.pink-btn {
-    @media #{$ipad-portrait} {
+    @media #{$ipad-portrait}, #{$handheld-landscape} {
         position: relative !important;
         bottom: -45px !important;
         right: -100px;

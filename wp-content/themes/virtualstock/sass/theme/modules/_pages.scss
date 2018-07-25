@@ -345,9 +345,9 @@
                     color: #fff;
                     transform: translate(0, 0);
                     transition: all 0.5s;
-                    @media #{$handheld} {
+                    @media #{$ipad-landscape} {
                         position: relative;
-                        min-height: 280px;
+                        min-height: 290px;
                         background-color: rgba(69, 81, 96, 0.85);
                         transform: translate(0, 10px);
                     }
@@ -364,7 +364,7 @@
                         font-size: 1rem;
                         line-height: 1.2rem;
                         transition: all 0.5s;
-                        @media #{$handheld} {
+                        @media #{$ipad-landscape} {
                             opacity: 1;
                         }
                     }
