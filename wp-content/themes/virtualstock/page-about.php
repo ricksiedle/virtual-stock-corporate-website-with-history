@@ -46,18 +46,18 @@ get_header();
                         
                         if ( 'founders' == get_field('group') ):
                 ?>
-                            <div class="col-sx-12 col-md-4">
-                                <div class="section-people-content-holder upper <?php echo ( ($i == 0) ? 'first' : ($i == 2 ? 'last' : '') ); ?>">
-                                    <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                                    <div class="content-wrapper">
-                                        <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                        <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
-                                        <p class="people-content text-align-center">
-                                            <?php the_field('team_content'); ?>
-                                        </p>
-                                    </div>
-                                </div>
+                    <div class="col-sx-6 col-md-3">
+                        <div class="section-people-content-holder <?php echo ( ($i == 0) ? 'first' : ($i == 3 ? 'last' : '') ); ?>">
+                            <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
+                            <div class="content-wrapper">
+                                <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                <p class="people-content text-align-center">
+                                    <?php the_field('team_content'); ?>
+                                </p>
                             </div>
+                        </div>
+                    </div>
                 <?php
                         endif;
                     endforeach; wp_reset_postdata();
@@ -70,18 +70,18 @@ get_header();
 
                         if ( 'managers' == get_field('group') ):
                 ?>
-                            <div class="col-sx-6 col-md-3">
-                                <div class="section-people-content-holder lower">
-                                    <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                                    <div class="content-wrapper">
-                                        <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                        <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
-                                        <p class="people-content text-align-center">
-                                            <?php the_field('team_content'); ?>
-                                        </p>
-                                    </div> 
-                                </div>
-                            </div>
+                    <div class="col-sx-6 col-md-3">
+                        <div class="section-people-content-holder">
+                            <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
+                            <div class="content-wrapper">
+                                <h3 class="text-align-center"> <?php the_title(); ?> </h3>
+                                <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
+                                <p class="people-content text-align-center">
+                                    <?php the_field('team_content'); ?>
+                                </p>
+                            </div> 
+                        </div>
+                    </div>
                 <?php
                         endif;
                     endforeach; wp_reset_postdata();
