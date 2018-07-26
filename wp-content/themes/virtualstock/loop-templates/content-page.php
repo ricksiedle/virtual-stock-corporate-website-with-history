@@ -49,6 +49,8 @@ global $post;
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-22.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-21.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/nhs.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-17.png" height="30" alt=""/></div>
 					</div>
 				<?php endif; ?>
 			</div> <!-- end .container -->
@@ -220,9 +222,11 @@ global $post;
 											<span> <?php echo $v_box_title; ?> </span>
 										</h3>
 										<?php if(get_sub_field('has_button') == true) { ?>
-											<button class="v-box-button">
-												<a href="<?php echo $v_box_hyperlink ?>"> <?php _e('Learn more', 'virtual') ?> </a>
-											</button>
+											<a href="<?php echo $v_box_hyperlink ?>">
+												<button class="v-box-button">
+													<?php _e('Learn more', 'virtual') ?> 
+												</button>
+											</a>
 										<?php } ?>
 										<?php if(get_sub_field('has_text_overlay') == true) { ?>
 											<div class="v-box-txt">
@@ -375,7 +379,11 @@ global $post;
 			loop		: true,
 			margin		: 10,
 			dots		: false,
+			<?php if(!wp_is_mobile()): ?>
 			nav    		: true,
+			<?php else: ?>
+			nav    		: false,
+			<?php endif; ?>
 			smartSpeed 	: 900,
 			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 			responsive	: {
@@ -413,7 +421,13 @@ global $post;
 			loop		: true,
 			margin		: 10,
 			dots		: false,
+			<?php if(!wp_is_mobile()): ?>
+			nav    		: true,
+			<?php else: ?>
+			nav    		: false,
+			<?php endif; ?>
 			smartSpeed 	: 800,
+			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 			autoplay   	: true,
 			autoplayTimeout: 5000,
 			autoplayHoverPause:true,
@@ -432,8 +446,14 @@ global $post;
 		jQuery('#counter-owl').owlCarousel({
 			loop		: true,
 			margin		: 10,
-			dots		: true,
+			dots		: false,
+			<?php if(!wp_is_mobile()): ?>
+			nav    		: true,
+			<?php else: ?>
+			nav    		: false,
+			<?php endif; ?>
 			smartSpeed 	: 2000,
+			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 			autoplay   	: true,
 			autoplayTimeout: 6000,
 			autoplayHoverPause:true,

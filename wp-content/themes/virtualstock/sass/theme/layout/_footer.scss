@@ -102,18 +102,12 @@
                                 height: 65px;
                                 opacity: 1;
                                 transition: all 0.5s;
-                                transform: translate3d(0px, 0px, 0px) !important;
-                                @media #{$ipad-landscape} {
-                                    transform: translate3d(0px, 45px, 0px) !important;
-                                }
-                                @media #{$ipad-portrait} {
-                                    transform: translate3d(0px, 0px, 0px) !important;
-                                }
                             }
                         }
+                        
                         .dropdown-menu {
                             position: absolute;
-                            top: 45px;
+                            top: 0;
                             float: left;
                             display: block;
                             background-color: transparent;
@@ -126,10 +120,10 @@
                             height: 0;
                             opacity: 0;
                             transition: all 0.5s;
-                            @media #{$handheld}, #{$ipad-portrait} {
+                            transform: translate3d(0px, 45px, 0px) !important;
+                            @media #{$ipad-portrait}, #{$handheld-landscape} {
                                 position: relative !important;
-                                transform: translate3D(0, 0, 0) !important; 
-
+                                transform: translate3d(0px, 0px, 0px) !important;
                             }
                             li {
                                 display: block;
