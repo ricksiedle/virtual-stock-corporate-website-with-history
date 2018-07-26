@@ -200,6 +200,11 @@
                     }
                 }
             }
+            img {
+                @media #{$between-mobile-and-ipad-portrait} {
+                    margin-top: 25px;
+                }
+            }
             h2 {
                 font-size: 4rem;
                 font-family: 'Serenity Light';
@@ -276,7 +281,8 @@
                         }
                         transform: translate(0, 196px);
                         transition-delay:1s;
-                        @media #{$handheld} {
+                        @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                            height: auto;
                             transform: translate(0, 5px);
                         }
                         h3 {
@@ -315,7 +321,7 @@
                     color: #fff;
                     transform: translate(0, 0);
                     transition: all 0.5s;
-                    @media #{$ipad-landscape} {
+                    @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
                         position: relative;
                         height: auto;
                         background-color: rgba(69, 81, 96, 0.85);
@@ -334,7 +340,7 @@
                         font-size: 1rem;
                         line-height: 1.2rem;
                         transition: all 0.5s;
-                        @media #{$ipad-landscape} {
+                        @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
                             opacity: 1;
                         }
                     }
