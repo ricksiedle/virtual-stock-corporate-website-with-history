@@ -115,6 +115,10 @@
         width: 120%;
         margin-left: -10%;
         height: 100%;
+        @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+            width: 100%;
+            margin-left: 0;
+        }
         i {
             font-size: 3rem;
             color: white;
@@ -122,7 +126,7 @@
         .owl-prev {
             position: absolute;
             top: calc(50% - 29px);
-            left: -35px;
+            left: -20px;
         }
         .owl-next {
             position: absolute;
@@ -172,6 +176,12 @@
             }
         } 
     }
+    // Fix padding on the button for mobile landscape
+    @media #{$handheld-landscape} {
+        .entry-header .under-header-wrapper .under-header-section .button_wrapper .under_header_btn.blue-btn {
+            padding: 10px 10px !important;
+        }
+    } 
 }
 
 
@@ -198,6 +208,9 @@
                         width: 100%;
                         margin-top: 0;
                     }
+                    @media #{$iphone-x-landscape} {
+                        margin-top: 5%;
+                    }
                 }
             }
             img {
@@ -213,17 +226,23 @@
                 @media screen and (max-width: 768px) {
                     font-size: 2.4rem;
                 }
+                @media #{$iphone-x-landscape} {
+                    font-size: 3rem;
+                }
             }
             p {
                 font-size: 1.6rem;
                 font-family: 'Serenity Light';
                 font-weight: 500;
                 color: $light-gray;
+                @media #{$iphone-x-landscape} {
+                    font-size: 1.2rem;
+                }
             }
         }
         &-people.v-full-width {
             @media screen and (max-width: 768px) {
-                width: calc(100% + 25px);
+                width: calc(100% + 30px);
                 margin-right: -25px;
                 padding-bottom: 20px;
                 padding-top: 60px;
@@ -258,6 +277,9 @@
                 margin: 0 auto;
                 @media screen and (max-width: 768px) {
                     width: 100%;
+                }
+                @media #{$iphone-x-landscape} {
+                    width: 165px;
                 }
                 img {
                     width: 100%;
@@ -389,6 +411,9 @@
                             font-size: 2.2rem;
                             margin-top: 40px;
                         }
+                        @media #{$iphone-x-landscape} {
+                            font-size: 2.2rem;
+                        }
                     }
                     p {
                         font-size: 1.3rem;
@@ -441,8 +466,11 @@
             .image-holder {
                 background-position: center center;
                 background-repeat: no-repeat;
-                @media #{$handheld} {
+                @media #{$handheld}, #{$handheld-landscape} {
                     margin-bottom: 40px;
+                }
+                @media #{$iphone-x-landscape} {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -472,6 +500,10 @@
                 @media screen and (max-width: 768px) {
                     font-size: 2.2rem;
                     margin-top: 40px;
+                }
+                @media #{$iphone-x-landscape} {
+                    margin-bottom: 2rem;
+                    font-size: 2rem;
                 }
             }
             h3 {

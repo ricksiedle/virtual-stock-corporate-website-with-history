@@ -324,7 +324,7 @@ global $post;
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>
 												<div class="container">
-													<div id="partners-carousel" class="row owl-carousel owl-theme">
+													<div id="partners-carousel" class="owl-carousel owl-theme">
 														<?php while ( have_rows('partner') ) : the_row(); ?>
 															<div class="v-ret-sup-wrapper text-align-center">
 																<img class="v-img" src="<?php echo get_sub_field('logo_image'); ?>"/>
@@ -379,11 +379,7 @@ global $post;
 			loop		: true,
 			margin		: 10,
 			dots		: false,
-			<?php if(!wp_is_mobile()): ?>
 			nav    		: true,
-			<?php else: ?>
-			nav    		: false,
-			<?php endif; ?>
 			smartSpeed 	: 900,
 			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 			responsive	: {
@@ -421,11 +417,7 @@ global $post;
 			loop		: true,
 			margin		: 10,
 			dots		: false,
-			<?php if(!wp_is_mobile()): ?>
 			nav    		: true,
-			<?php else: ?>
-			nav    		: false,
-			<?php endif; ?>
 			smartSpeed 	: 800,
 			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 			autoplay   	: true,

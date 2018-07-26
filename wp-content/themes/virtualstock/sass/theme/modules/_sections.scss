@@ -142,7 +142,7 @@
                     opacity: 0;
                     transform: translateY(200%);
                     transition: all 0.5s;
-                    @media #{$ipad-landscape} {
+                    @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
                         font-size: 1.2rem;
                         line-height: 1.2rem;
                     }

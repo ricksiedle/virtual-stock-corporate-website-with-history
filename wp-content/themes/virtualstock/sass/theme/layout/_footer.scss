@@ -9,6 +9,11 @@
                 margin-left: 25%;
                 margin-right: 25%;
             }
+            @media #{$handheld-landscape} {
+                width: 70%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
             .site-info {
                 text-align: center;
                 font-size: 1rem;
@@ -22,6 +27,9 @@
                 @media #{$ipad-portrait} {
                     text-align: center;
                 }
+                @media #{$handheld-landscape} {
+                    text-align: center;
+                }
             }
         }
 
@@ -33,6 +41,12 @@
                 margin-top: 0;
             }
             .menu-footer-2-container {
+                ul {
+                    @media #{$iphone-x-landscape} {
+                        margin: 0 auto;
+                        width: 250px;
+                    }
+                }
                 li {
                     position: relative;
                     padding: 0px;
@@ -153,6 +167,9 @@
                 margin-top: 10px;
             }
             @media #{$ipad-portrait} {
+                text-align: center;
+            }
+            @media #{$handheld-landscape} {
                 text-align: center;
             }
             .socials-menu {

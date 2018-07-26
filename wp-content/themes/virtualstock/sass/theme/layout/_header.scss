@@ -67,7 +67,7 @@
         @media #{$ipad-portrait} {
             padding-bottom: 5px;
         }
-        @media #{$handheld} {
+        @media #{$handheld}, #{$handheld-landscape} {
             padding-bottom: 25px;
         }
         .navbar-nav {
@@ -104,7 +104,7 @@
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
-    @media #{$handheld} {
+    @media #{$handheld}, #{$handheld-landscape} {
         position: relative;
     }
     img {
@@ -120,8 +120,11 @@
     margin-left: 0;
     margin-top: 60px;
     font-family: 'Serenity Medium', Helvetica, Arial, serif;
-    @media #{$ipad-portrait}, #{$handheld-landscape} {
+    @media #{$ipad-portrait} {
         margin-top: 40px;
+    }
+    @media #{$handheld-landscape} {
+        margin-top: 0px;
     }
     @media #{$handheld} {
         margin-top: 60px;

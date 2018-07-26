@@ -70,6 +70,12 @@
         .v-owl-carousel {
             position: absolute;
             bottom: 50px;
+            @media #{$handheld}, #{$ipad-portrait} {
+                width: 90%;
+            }
+            @media #{$handheld-landscape} {
+                width: 100%;
+            }
         }
     }
     div[class^="n2-font-"], div[class*=" n2-font-"] {
@@ -113,6 +119,9 @@
                 margin-top: 0;
                 margin-bottom: 0;
                 line-height: 55px;
+                @media #{$handheld} {
+                    font-size: 0.8rem;
+                }
             }
         }
     }

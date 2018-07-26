@@ -61,6 +61,9 @@
         padding: 6px 30px 10px;
         border: none;
         font-size: 2em;
+        @media #{$handheld-landscape} {
+            top: 150vh;
+        }
     }
 
     .home {
@@ -100,7 +103,11 @@
     .owl-theme {
         .owl-nav {
             .owl-prev {
-                margin-left: -20px !important;
+                margin-left: -20px;
+                @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                    margin-left: 0;
+                    left: -15px;
+                }
             }
         }
     }
@@ -127,6 +134,23 @@
 
     .home .carousel-btn {
         top: 140vh;
+    }
+    .carousel-btn {
+        position: absolute;
+        display: block;
+        left: 20px;
+        top: 75vh;
+        color: #fff;
+        background-color: $pink;
+        padding: 6px 30px 10px;
+        border: none;
+        font-size: 2em;
+        @media #{$handheld-landscape} {
+            top: 150vh;
+        }
+    }
+    .mobile-hidden {
+        display: none !important;
     }
 }
 
