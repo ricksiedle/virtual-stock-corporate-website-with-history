@@ -107,6 +107,7 @@
                 color: $white;
                 a {
                     color:$white;
+                    display: block;
                     &:hover, &:active {
                         text-decoration: none;
                         color:$white;
