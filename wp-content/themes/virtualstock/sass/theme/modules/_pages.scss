@@ -513,6 +513,32 @@
         }
     }
 }
+
+/**
+*
+* 404 Page
+*
+*/
+
+#error-404-wrapper {
+    margin-top: 50px;
+    height: calc(100vh - 205px);
+    @media #{$handheld-landscape} {
+        height: 200vh;
+    }
+    padding-top: 35vh;
+    @media #{$ipad-landscape} {
+        margin-top: 40vh;
+        height: calc(70vh - 205px);
+    }
+    .page-content a {
+        display: block;
+        height: 100px;
+    }
+    @include moduled-btn( '#homepage', 0, 10px, 30px, $pink ) {
+        font-size: 1.4rem;
+    }
+}
  
 
 /**
@@ -576,24 +602,6 @@
             &:after {
                 right: 0;
             }
-
-            // &:before,
-            // &:after {
-            //     position: absolute;
-            //     content: '';
-            //     bottom: 0;
-            //     width: 0;
-            //     height: 2px;
-            //     width: 0;
-            //     background-color: $pink;
-            //     @include tranz(.3s, all);
-            // }
-            // &:before {
-            //     left: 50%;
-            // }
-            // &:after {
-            //     right: 50%;
-            // }
             &.current-page {
                 color: $pink;
                 &:before,
