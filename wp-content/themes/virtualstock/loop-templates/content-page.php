@@ -36,7 +36,7 @@ global $post;
 						</div>
 					</div>
 
-					<button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button>
+					<a href="https://go.virtualstock.co.uk"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button></a>
 				<?php endif; ?>
 
 				<?php if( is_front_page() ) : ?>
