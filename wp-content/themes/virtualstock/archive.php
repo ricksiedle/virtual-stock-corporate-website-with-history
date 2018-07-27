@@ -42,7 +42,7 @@ global $post;
 					if ( ! empty( $categories ) ) {
 						
 
-						$output = '<a href="' . home_url() . '/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+						$output = '<a href="' . home_url() . '/resources/"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
 						
 						foreach( $categories as $category ) {
 							$is_this_page = $this_category_slug == $category->slug ? 'current-page' : '';

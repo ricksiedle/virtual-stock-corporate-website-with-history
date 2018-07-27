@@ -37,7 +37,7 @@ global $post;
 					//var_dump($categories); die();
 					if ( ! empty( $categories ) ) {
 
-						$output = '<a class="current-page" href="' . home_url() . '/resources"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+						$output = '<a class="current-page" href="' . home_url() . '/resources/"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
 						
 						foreach( $categories as $category ) {
 

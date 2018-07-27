@@ -115,7 +115,7 @@ get_header();
                                 
                             <div class="images-partners">
                                 <div class="partner-logo-holder">
-                                    <div class="partner-logo-wrapper"><a href="https://www.ibm.com" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibmpos_blue.jpg" alt="IBM - link to corporate site"/></a></div>
+                                    <div class="partner-logo-wrapper"><a href="https://www.ibm.com" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibm-logo.jpg" alt="IBM - link to corporate site"/></a></div>
                                     <div class="partner-logo-wrapper"><a href="https://www.sbs.nhs.uk" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" alt="SBS - link to corporate site"/></a></div>
                                 </div>
                                 <div class="partner-logo-holder">
