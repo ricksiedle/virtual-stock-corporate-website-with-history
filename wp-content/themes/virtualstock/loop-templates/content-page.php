@@ -36,7 +36,7 @@ global $post;
 						</div>
 					</div>
 
-					<a href="https://go.virtualstock.co.uk/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet', 'virtual' ) ?></button></a>
+					<a href="https://go.virtualstock.co.uk/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
 				<?php endif; ?>
 
 				<?php if( is_front_page() ) : ?>
@@ -60,7 +60,7 @@ global $post;
 			
 			<?php if(get_field('has_under_header_logo') && get_field('under_header_logo')) : ?>
 				<div class="under-header-logo">
-					<img src="<?php echo get_field('under_header_logo') ?>" alt="">
+					<a href="https://edge4health.co.uk" target="_blank"><img src="<?php echo get_field('under_header_logo') ?>" alt=""></a>
 				</div>
 			<?php endif; ?>
 

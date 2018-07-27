@@ -192,6 +192,10 @@
                     &.img-portrait {
                         width:120px;
                         height: auto;
+                        &[src*="Sheffield-Teaching-Hospitals"] {
+                            width: auto;
+                            height: 55px;
+                        }
                     } 
                     &.img-landscape {
                         width:auto;
