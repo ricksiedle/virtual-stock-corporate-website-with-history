@@ -473,6 +473,16 @@
                 @media #{$iphone-x-landscape} {
                     margin-bottom: 0;
                 }
+                @media only screen and (min-width: 768px) {
+                    left: 50%;
+                    right: auto;
+                }
+            }
+            &-content {
+                @media only screen and (min-width: 768px) {
+                    left: auto;
+                    right: 50%;     
+                }    
             }
         }
         &-contact.v-full-width {

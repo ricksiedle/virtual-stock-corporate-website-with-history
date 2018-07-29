@@ -108,6 +108,8 @@ get_header();
                 ?>
 
                 <div class="row section-partners v-full-width">
+                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_partners_bg_image ?>')">
+                    </div>
                     <div class="section-partners-content col-md-6">
                         <div class="section-partners-content-inside">
                             <h2> <?php echo $our_partners_heading; ?></h2>
@@ -125,8 +127,7 @@ get_header();
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_partners_bg_image ?>')">
-                    </div>
+                    
                 </div>
 
             <?php endwhile; ?>
