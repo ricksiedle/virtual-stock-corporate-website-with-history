@@ -31,14 +31,26 @@ function understrap_pagination() {
 		$links[] = $paged;
 	}
 
+	// ORIGINAL CODE FROM THE UNDERSTRAP THEME
 	/**    Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
+	// if ( $paged >= 3 ) {
+	// 	$links[] = $paged - 1;
+	// 	$links[] = $paged - 2;
+	// }
+
+	// CHANGED CODE FROM THE UNDERSTRAP THEME
+	if ( $paged >= 2 ) {
 		$links[] = $paged - 1;
-		$links[] = $paged - 2;
 	}
 
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
+	// ORIGINAL CODE FROM THE UNDERSTRAP THEME
+	// if ( ( $paged + 2 ) <= $max ) {
+	// 	$links[] = $paged + 2;
+	// 	$links[] = $paged + 1;
+	// }
+
+	// CHANGED CODE FROM THE UNDERSTRAP THEME
+	if ( ( $paged + 1 ) <= $max ) {
 		$links[] = $paged + 1;
 	}
 
