@@ -96,6 +96,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+	<!-- Start of HubSpot Embed Code -->
+	<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/4511426.js"></script>
+	<!-- End of HubSpot Embed Code -->
 
 </body>
 

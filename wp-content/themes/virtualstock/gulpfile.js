@@ -50,7 +50,7 @@ gulp.task( 'scss-for-prod', function() {
         .pipe( rename( 'custom-editor-style.css' ) );
 
     var pipe2 = source.pipe( clone() )
-        .pipe( minifycss() )
+        .pipe( cleanCSS({compatibility: 'ie8'}) )
         .pipe( rename( { suffix: '.min' } ) )
         .pipe( gulp.dest( paths.css ) );
     return merge( pipe1, pipe2 );
