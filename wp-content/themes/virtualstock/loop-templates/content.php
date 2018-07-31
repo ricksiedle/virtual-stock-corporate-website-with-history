@@ -15,7 +15,7 @@ if( get_the_post_thumbnail( $post->ID ) ) {
 	/**
 	 * Check if the feature image of the post is portrait or landscape  or some
 	 * kind of it :) and than set $v_img_position class
-	 * 
+	 * 	
 	 */
 	if(wp_is_mobile()) {
 		$v_img_position = 'grid-item--width2';

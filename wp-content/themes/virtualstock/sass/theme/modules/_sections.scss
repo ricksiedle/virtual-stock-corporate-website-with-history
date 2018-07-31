@@ -24,6 +24,9 @@
                 font-size: 1.4rem;	
                 font-weight: 300;	
                 line-height: 1.6rem;
+                @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                    font-size: 1.2rem;
+                }
             }
         }
     }
@@ -212,6 +215,10 @@
                 p {
                     text-align: left;
                     line-height: 2rem;
+                    @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
             .v_testimonial_profession {
@@ -221,6 +228,9 @@
                 font-weight: bold;
                 color: $light-gray;
                 float: right;
+                @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                    font-size: 1.1rem;
+                }
             }
         }
     }

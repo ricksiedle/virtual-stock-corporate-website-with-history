@@ -54,7 +54,7 @@
     .carousel-btn {
         position: absolute;
         display: block;
-        left: 20px;
+        left: calc(50% - 88px);
         top: 75vh;
         color: #fff;
         background-color: $pink;
@@ -138,7 +138,7 @@
     .carousel-btn {
         position: absolute;
         display: block;
-        left: 20px;
+        left: calc(50% - 88px);
         top: 75vh;
         color: #fff;
         background-color: $pink;

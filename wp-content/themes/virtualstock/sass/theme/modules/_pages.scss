@@ -27,7 +27,10 @@
             p {
                 margin-top: 10px;
                 margin-bottom: 8px;
-                font-size: 1.5rem;    
+                font-size: 1.5rem;   
+                @media #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                    font-size: 1.2rem;
+                } 
             }
             &-content {
                 width: 80%;
@@ -47,7 +50,11 @@
                 }
                 p {
                     font-size: 1.5rem;
-                    line-height: 2rem;    
+                    line-height: 2rem; 
+                    @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                        font-size: 1.2rem;
+                        line-height: 1.5rem;
+                    }  
                 }
             }
             &-footer {
@@ -349,6 +356,19 @@
                         height: auto;
                         background-color: rgba(69, 81, 96, 0.85);
                         transform: translate(0, 10px);
+                        padding: 20px 10px 20px;
+                    }
+                    @media #{$ipad-landscape} {
+                        min-height: 310px;
+                    }
+                    @media #{$ipad-portrait} {
+                        min-height: 310px;
+                    }
+                    @media #{$handheld-landscape}, #{$iphone-x-landscape} {
+                        min-height: 315px;
+                    }
+                    @media #{$handheld} {
+                        min-height: 235px;
                     }
                     h3 {
                         font-size: 1.55rem;
@@ -417,9 +437,12 @@
                         }
                     }
                     p {
-                        font-size: 1.3rem;
+                        font-size: 1.4rem;
                         font-family: 'Serenity Light';
                         color: $light-gray;
+                        @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                            font-size: 1.2rem;
+                        }
                     }
                 }
             }
@@ -773,6 +796,10 @@
         .entry-meta {
             font-size: 1.2rem;
             margin-bottom: 40px;
+        }
+        @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+            font-size: 1.2rem;
+            line-height: 1.7rem;
         }
         h1 {
             font-size: 3rem;
