@@ -313,7 +313,9 @@
                         transform: translate(0, 196px);
                         transition-delay:1s;
                         @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                            padding: 5px 10px 20px;
                             height: auto;
+                            background-color: transparent !important;
                             transform: translate(0, 5px);
                         }
                         h3 {
