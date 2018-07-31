@@ -1,7 +1,12 @@
 .v-large-logo {
     margin-bottom: 50px;
     @media screen and (min-width: 768px) {
-        margin-top: 40px;
+        margin-top: 0px;
+    }
+    &-content {
+        @media screen and (min-width: 768px) {
+            margin-top: 15px;
+        }
     }
 }
 
