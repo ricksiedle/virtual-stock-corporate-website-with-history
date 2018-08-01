@@ -1,0 +1,206 @@
+#carousel {
+    .owl-theme {
+        .owl-nav {
+            margin-top: -10px;
+            button {
+                &:hover {
+                    background-color: transparent;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
+
+.carousel-btn {
+    display: none;
+}
+
+@media #{$ipad-landscape} {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: calc(100vh - 30px) !important;
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+}
+
+
+
+
+@media #{$ipad-portrait} {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: calc(100vh - 30px) !important;
+        @media #{$ipad-landscape} {
+            height: calc(100vh - 30px) !important;
+        }
+    }
+
+    .mobile-hidden {
+        display: none !important;
+    }
+
+    .carousel-btn {
+        position: absolute;
+        display: block;
+        left: calc(50% - 88px);
+        top: 75vh;
+        color: #fff;
+        background-color: $pink;
+        padding: 6px 30px 10px;
+        border: none;
+        font-size: 2em;
+        @media #{$handheld-landscape} {
+            top: 150vh;
+        }
+    }
+
+    .home {
+        .carousel-btn {
+            top: 72vh;
+        }
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+
+    #carousel {
+        .v-carousel-wrapper {
+            margin-left: -17px;
+            width: 100%;
+            max-width: 305px;
+            top: calc(50% - 205px);
+            h1, .v-carousel-heading {
+                width: 100%;
+                text-align: left;
+                padding: 10px 10px 10px 15px;
+                line-height: 1em;
+                font-size: 2.6rem;
+                span {
+                    display: block;
+                }
+            }
+            .v-carousel-content {
+                font-weight: 700;
+                line-height: 2rem;
+                padding: 5px 30px 20px 20px;
+            }
+        }
+    }
+
+    .owl-theme {
+        .owl-nav {
+            .owl-prev {
+                margin-left: -20px;
+                @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                    margin-left: 0;
+                    left: -15px;
+                }
+            }
+        }
+    }
+}
+
+.owl-dot {
+    &:focus {
+        outline:none;
+    }
+}
+
+@media #{$handheld-landscape} {
+    #carousel,
+    .n2-ss-slider-3,
+    .n2-ss-slide-background-wrap,
+    .n2-ss-slide-backgrounds,
+    .n2-ss-align {
+        height: calc(200vh - 30px) !important;
+    }
+
+    .nextend-arrow {
+        display: none !important;
+    }
+
+    .home .carousel-btn {
+        top: 140vh;
+    }
+    .carousel-btn {
+        position: absolute;
+        display: block;
+        left: calc(50% - 88px);
+        top: 75vh;
+        color: #fff;
+        background-color: $pink;
+        padding: 6px 30px 10px;
+        border: none;
+        font-size: 2em;
+        @media #{$handheld-landscape} {
+            top: 150vh;
+        }
+    }
+    .mobile-hidden {
+        display: none !important;
+    }
+}
+
+
+// Set some of the images more centrally
+// in the Smart sliders
+@media #{$handheld} {
+    .home {
+        .n2-ss-slider-1 {
+            .n2-ss-slide-backgrounds {
+            
+                .n2-ss-slide-background.n2-ow:nth-child(1) {
+                    div {
+                        .n2-ss-slide-background-image {
+                            background-position: 65%, 0 !important;
+                        }
+                    }
+                }
+                .n2-ss-slide-background.n2-ow:nth-child(3) {
+                    div {
+                        .n2-ss-slide-background-image {
+                            background-position: 44%, 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    .#{$providers}, .#{$suppliers} {
+        .n2-ss-slider-1 {
+            .n2-ss-slide-background.n2-ow:nth-child(1) {
+                div {
+                    .n2-ss-slide-background-image {
+                        background-position: 90%, 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    .#{$retail} {
+        .n2-ss-slider-1 {
+            .n2-ss-slide-background.n2-ow:nth-child(1) {
+                div {
+                    .n2-ss-slide-background-image {
+                        background-position: 55%, 0 !important;
+                    }
+                }
+            }
+        }
+    }
+}

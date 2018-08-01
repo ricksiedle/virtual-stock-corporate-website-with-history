@@ -12,7 +12,7 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 	function understrap_scripts() {
 		// Get the theme data.
 		$the_theme = wp_get_theme();
-		wp_enqueue_style( 'understrap-styles', get_stylesheet_directory_uri() . '/css/theme.css', array(), $the_theme->get( 'Version' ) );
+		wp_enqueue_style( 'understrap-styles', get_stylesheet_directory_uri() . '/css/theme.min.css', array(), $the_theme->get( 'Version' ) );
 		wp_enqueue_script( 'jquery');
 		wp_enqueue_script( 'popper-scripts', get_template_directory_uri() . '/js/popper.min.js', array(), true);
 		wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $the_theme->get( 'Version' ), true );
@@ -28,6 +28,10 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		wp_enqueue_style( 'owl-carousel-theme', get_stylesheet_directory_uri() . '/css/owl.theme.default.min.css', array(), $the_theme->get( 'Version' ) );
 
 		wp_enqueue_script( 'owl-carousel-scripts', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), true);
+
+		// Simple Parallax from http://pixelcog.github.io/parallax.js/
+		wp_enqueue_script( 'parallax-scripts', get_template_directory_uri() . '/js/parallax.min.js', array(), true);
+		
 	}
 } // endif function_exists( 'understrap_scripts' ).
 

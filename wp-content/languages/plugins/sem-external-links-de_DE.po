@@ -1,0 +1,161 @@
+# Translation of Plugins - External Links - Development (trunk) in German
+# This file is distributed under the same license as the Plugins - External Links - Development (trunk) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-09-30 11:44:35+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - External Links - Development (trunk)\n"
+
+#: sem-external-links-admin.php:112
+msgid "Settings saved."
+msgstr "Einstellungen wurden gespeichert."
+
+#: sem-external-links-admin.php:136
+msgid "Note: Your rel=nofollow preferences is being ignored because the dofollow plugin is enabled on your site."
+msgstr "Hinweis: Deine rel=nofollow Einstellung wird ignoriert, weil das dofollow Plugin auf deiner Website aktiviert ist."
+
+#: sem-external-links-admin.php:147
+msgid "Apply Globally"
+msgstr "Global anwenden"
+
+#: sem-external-links-admin.php:141
+msgid "External Links Settings"
+msgstr "External Links Einstellungen"
+
+#: sem-external-links-admin.php:155
+msgid "Apply these settings to all outbound links on the site except those in scripts, styles and the html head section."
+msgstr "Wende diese Einstellungen auf alle ausgehenden Links deiner Website an, außer denen in Skripten, Styles und dem HTML-Head-Abschnitt."
+
+#: sem-external-links-admin.php:162
+msgid "Apply to Text Widgets"
+msgstr "Auf Text Widgets anwenden"
+
+#: sem-external-links-admin.php:170
+msgid "Apply these settings to any text widgets in addition to post, page and comments content."
+msgstr "Wende diese Einstellungen auf alle Text Widgets an, zusätzlich zu Beiträgen, Seiten und Kommentaren."
+
+#: sem-external-links-admin.php:177
+msgid "Treat Subdomains as Local"
+msgstr "Subdomains als lokal behandeln"
+
+#: sem-external-links-admin.php:185
+msgid "Treat any subdomains for this site as a local link."
+msgstr "Behandel jede Subdomain dieser Website als lokalen Link."
+
+#: sem-external-links-admin.php:188
+msgid "Example: If your site is at domain.com and you also have store.domain.com, any link to store.domain.com will be treated as local."
+msgstr "Beispiel: Wenn deine Website unter domain.com läuft und du auch store.domain.com nutzt, wird jeder Link auf store.domain.com als lokaler Link behandelt."
+
+#: sem-external-links-admin.php:194
+msgid "Auto Convert Text Urls"
+msgstr "Automatische Umwandlung von Text URLs"
+
+#: sem-external-links-admin.php:202
+msgid "Automatically converts text urls into clickable urls."
+msgstr "Wandelt automatisch Text URLs in anklickbare URLs."
+
+#: sem-external-links-admin.php:205
+msgid "Note: If this option is enabled then if www.example.com is found in your text, it will be converted to an html &lt;a&gt; link.\""
+msgstr "Hinweis: Wenn diese Option aktiviert ist, dann wird der Text www.example.com automatisch in ein HTML &lt;a&gt; Link gewandelt."
+
+#: sem-external-links-admin.php:221
+msgid "Add a rel=\"nofollow\" attribute to outbound links."
+msgstr "Füge das rel=\"nofollow\" Attribute zu ausgehenden Links hinzu."
+
+#: sem-external-links-admin.php:213
+msgid "Add No Follow"
+msgstr "„No Follow“ hinzufügen"
+
+#: sem-external-links-admin.php:207
+msgid "This conversion will occur first so external link treatment for nofollow, icon and target will be applied to this auto links."
+msgstr "Diese Umwandlung erfolgt zuerst, so dass die externe Linkbehandlung für nofollow, Icon und Target auf diese Auto-Links angewendet wird."
+
+#: sem-external-links-admin.php:230
+msgid "Add Icons"
+msgstr "Icons hinzufügen"
+
+#: sem-external-links-admin.php:224
+msgid "Note: You can override this behavior by adding the attribute rel=\"follow\" to individual links."
+msgstr "Hinweis: Du kannst dieses Verhalten überschreiben indem du das rel=\"follow\" Attribut zu individuellen Links hinzufügst."
+
+#: sem-external-links-admin.php:238
+msgid "Mark outbound links with an icon."
+msgstr "Ausgehende Links mit einem Icon auszeichnen."
+
+#: sem-external-links-admin.php:247
+msgid "Open in New Windows"
+msgstr "In neuem Fenster öffnen"
+
+#: sem-external-links-admin.php:241
+msgid "Note: You can override this behavior by adding a class=\"no_icon\" or \"noicon\" to individual links."
+msgstr "Hinweis: Du kannst dieses Verhalten überschreiben, indem du class=\"no_icon\" oder \"noicon\" zu individuellen Links hinzufügst."
+
+#: sem-external-links-admin.php:255
+msgid "Open outbound links in new windows."
+msgstr "Ausgehende Links in einem neuen Fenster öffnen."
+
+#: sem-external-links-admin.php:258
+msgid "Note: Some usability experts discourage this, claiming that <a href=\"http://www.useit.com/alertbox/9605.html\">this can damage your visitors' trust</a> towards your site. Others highlight that computer-illiterate users do not always know how to use the back button, and encourage the practice for that reason."
+msgstr "Hinweis: Einige Usability-Experten raten davon ab und behaupten, dass <a href=\"http://www.useit.com/alertbox/9605.html\">dies das Vertrauen deiner Besucher zu deiner Website beeinträchtige</a>. Andere heben hervor, dass manche Benutzer nicht immer wissen, wie der Zurück-Button benutzt wird und ermutigen die Praxis aus diesem Grund."
+
+#: sem-external-links-admin.php:264
+msgid "Exclude HTML Code Blocks"
+msgstr "HTML-Code-Blöcke ausschließen"
+
+#: sem-external-links-admin.php:275
+msgid "Links found inside either &ltcode&gt or &ltpre&gt html tags will be ignored."
+msgstr "Links die innerhalb &ltcode&gt oder &ltpre&gt HTML Tags gefunden werden, werden ignoriert."
+
+#: sem-external-links-admin.php:272
+msgid "Do not process links in html code blocks."
+msgstr "Links innerhalb HTML-Code-Blöcken nicht behandeln."
+
+#: sem-external-links-admin.php:281
+msgid "Domains to Exclude"
+msgstr "Auszuschließende Domains"
+
+#: sem-external-links-admin.php:285
+msgid "External site domains that should be excluded from processing:"
+msgstr "Externe Website Domains, die von der Behandlung ausgeschlossen werden sollen:"
+
+#: sem-external-links-admin.php:289
+msgid "Domains and subdomains should be separated by a comma, space or carriage return. &nbsp;http://, https://, www. should not be included and will be stripped off."
+msgstr "Domains und Subdomains müssen durch Komma, Leerzeichen oder Zeilenumbruch getrennt werden. &nbsp;http://, https://, www. sollte nicht enthalten sein und wird entfernt."
+
+#: sem-external-links-admin.php:291
+msgid "Example: domain.com, domain.net, sub.domain.com, somesite.com, external.org."
+msgstr "Beispiel: domain.com, domain.net, sub.domain.com, somesite.com, external.org."
+
+#. #-#-#-#-#  tmp-sem-external-links.pot (External Links 6.8.1)  #-#-#-#-#
+#. Description of the plugin/theme
+#: sem-external-links-info.php:3
+msgid "Marks outbound links as such, with various effects that are configurable under <a href=\"options-general.php?page=external-links\">Settings / External Links</a>."
+msgstr "Markiert ausgehende Links als solche mit unterschiedlichen Effekten, die unter <a href=\"options-general.php?page=external-links\">Einstellungen / External Links</a> konfigurierbar sind."
+
+#. #-#-#-#-#  tmp-sem-external-links.pot (External Links 6.8.1)  #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: sem-external-links-info.php:2 sem-external-links.php:871
+#: sem-external-links.php:872
+msgid "External Links"
+msgstr "External Links"
+
+#: sem-external-links-admin.php:300
+msgid "Save Changes"
+msgstr "Änderungen speichern"
+
+#. Plugin URI of the plugin/theme
+msgid "http://www.semiologic.com/software/external-links/"
+msgstr "http://www.semiologic.com/software/external-links/"
+
+#. Author URI of the plugin/theme
+msgid "https://www.semiologic.com"
+msgstr "https://www.semiologic.com"
+
+#. Author of the plugin/theme
+msgid "Denis de Bernardy & Mike Koepke"
+msgstr "Denis de Bernardy & Mike Koepke"

@@ -13,7 +13,8 @@
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+global $post;
+
 ?>
 
 <?php if ( is_front_page() && is_home() ) : ?>
@@ -22,7 +23,47 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 <div class="wrapper" id="index-wrapper">
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+	<div class="container" id="content" tabindex="-1">
+		<?php if(!wp_is_mobile()) { ?>
+			<div class="row v-categories-menu">
+				<?php 
+					$categories = get_terms( array(
+						'taxonomy' => 'category',
+						'hide_empty' => true
+					) );
+					
+					$separator = ' ';
+					$all = 'All';
+					//var_dump($categories); die();
+					if ( ! empty( $categories ) ) {
+
+						$output = '<a class="current-page" href="' . home_url() . '/resources/"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
+						
+						foreach( $categories as $category ) {
+
+							$is_this_page = $post->post_name == $category->slug ? 'current_page' : '';
+
+							$output .= '<a class="' . $is_this_page . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'virtual' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+						}
+						echo trim( $output, $separator );
+					}
+				?>
+			</div>
+		<?php } else { ?>
+			<div id="categories"><h4><?php _e( 'Filter posts by Category' ); ?></h4>
+				<?php wp_dropdown_categories( 'show_option_none=Select category' ); ?>
+				<script type="text/javascript">
+					var dropdown = document.getElementById("cat");
+					function onCatChange() {
+						if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
+							location.href = "<?php echo esc_url( home_url( '/' ) ); ?>?cat="+dropdown.options[dropdown.selectedIndex].value;
+						}
+					}
+					dropdown.onchange = onCatChange;
+				</script>
+			</div>
+		<?php } ?>
+		
 
 		<div class="row">
 
@@ -33,21 +74,29 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php if ( have_posts() ) : ?>
 
+					
+
 					<?php /* Start the Loop */ ?>
 
-					<?php while ( have_posts() ) : the_post(); ?>
+					<div class="grid">
+						<div class="gutter-sizer"></div>
+						<div class="grid-sizer"></div>
+						<?php while ( have_posts() ) : the_post(); ?>
 
 						<?php
 
 						/*
-						 * Include the Post-Format-specific template for the content.
-						 * If you want to override this in a child theme, then include a file
-						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-						 */
+						* Include the Post-Format-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						*/
 						get_template_part( 'loop-templates/content', get_post_format() );
 						?>
 
-					<?php endwhile; ?>
+						<?php endwhile; ?>
+					</div>
+
+					
 
 				<?php else : ?>
 
@@ -72,4 +121,19 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/isotope.pkgd.js' ?>"></script>
+
+<script>
+	// Isotope settings
+	jQuery('.grid').isotope({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		masonry: {
+			columnWidth: '.grid-sizer',
+			gutter: '.gutter-sizer'
+		}
+	});
+</script>
+
 <?php get_footer(); ?>
+

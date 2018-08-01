@@ -53,4 +53,8 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 
+<div class="fancybox-hidden" style="display: none;">
+	<div id="contact_form_pop"><?php echo do_shortcode( '[contact-form-7 id="197" title="Contact form 1"]' ) ?></div>
+</div>
+
 <?php get_footer(); ?>

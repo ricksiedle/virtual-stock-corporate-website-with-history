@@ -1,18 +1,33 @@
-
 //Eeeeh, you know... just lay out your layout here
 
 .v-wrapper {
     @extend %clearfix;
     margin-top: 80px;
-    padding-top: 200px;
-    padding-bottom: 200px;  
+    padding-top: 75px;
+    padding-bottom: 75px;  
 }
 
-/**
- * Footer
- */
-
-#wrapper-footer {
-    background-color: $light-gray;
+//Reset wrapper from understrap without padding on ipad-portrait
+@media #{$between-mobile-and-ipad-portrait} {
+    .wrapper {
+        padding-top: 0 !important;
+    }
 }
 
+.v-partners {
+    @extend %clearfix;
+    margin-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.v-suppliers {
+    @extend %clearfix;
+    margin-top: 80px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.negative-margin-bottom70 {
+    margin-bottom: -70px;
+}

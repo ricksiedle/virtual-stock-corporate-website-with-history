@@ -4,11 +4,15 @@
 
     //Heading styles
     h2.v-section-heading {
-        margin-bottom: 60px;
-        font-size: 2.8rem;
+        margin-bottom: 30px;
+        font-size: 1.6rem;
         color: $light-gray;
         span{
             color: $pink;
+        }
+        @media screen and (min-width: 564px) {
+            margin-bottom: 60px;
+            font-size: 2.8rem;
         }
     }
 
@@ -20,42 +24,24 @@
                 font-size: 1.4rem;	
                 font-weight: 300;	
                 line-height: 1.6rem;
+                @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                    font-size: 1.2rem;
+                }
             }
         }
     }
     .v-box-wrapper {
-        //this section is valid if the boxes are rectangles
-        &.col-md-4 {
-            .v-box {
-                &-rectangles {
-                    height:330px;
-                }
-            }
-        }
-        &.col-md-6 {
-            .v-box {
-                &-rectangles {
-                    height:540px;
-                    padding-top: 195px;
-                    h3 {
-                        font-size: 1.75rem;
-                    }
-                }
-            }
-        }
-        //this sections are valid even if the boxes are not rectangles
+        
         .v-box {
             position:relative;
             margin-bottom: 30px;
-            &[ref='retailers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
-            &[ref='providers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
-            &[ref='supliers']:before {
-                background-image: url('http://virtual.local/wp-content/uploads/2018/06/v-box-temp-bg.png');
-            }
+            padding-top: 65px;
+            padding-left: 30px;
+            padding-right: 30px;
+            height:330px;
+            border-radius: 3px;
+            overflow: hidden;
+            transition: transform 0.5s;
             &:before {
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -79,7 +65,27 @@
                 background-color: rgba(0, 0, 0, 0.4);
                 z-index: -1;
             }
-            padding-top: 65px;
+            &:hover {
+                transform: scale(1.15);
+                transition: transform 0.5s;
+                transition-delay: 1s;
+                .v-box-txt {
+                    opacity: 1;
+                    top: 0;
+                    transition: opacity 0.5s;
+                    transition-delay: 0.4s;
+                    h2, h3, h4, h5 {
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: all 0.8s;
+                    }
+                    p {
+                        transform: translateY(0);
+                        opacity: 1;
+                        transition: all 0.8s;
+                    }
+                }
+            }
             &-icon {
                 margin: 0px auto 25px;
                 height: 100px;
@@ -90,9 +96,13 @@
             }
             h3 {
                 margin: 20px 0 35px;
-                font-size: 1.25rem;
+                font-size: 1.65rem;
+                font-family: 'Serenity Demi Bold';
                 text-transform: uppercase;
-                color: $white;
+                color: #fff;
+                @media #{$ipad-landscape} {
+                    font-size: 1.25rem;
+                }
                 
             }
             @include moduled-btn( '.v-box-button', 0, 10px, 30px, $pink ) {
@@ -100,28 +110,81 @@
                 color: $white;
                 a {
                     color:$white;
+                    display: block;
                     &:hover, &:active {
                         text-decoration: none;
                         color:$white;
+                    }
+                    @media #{$ipad-landscape} {
+                        font-size: 1rem;
                     }
                 }
             }
             &:last-child {
                 margin-right: 0;
             }
-            .v-box-icon {
+            &-icon {
                 background-position: center center;
                 background-size: 80%;
                 background-repeat: no-repeat;                   
             }
+            &-txt {
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                padding: 20px;
+                background-color: rgba(0, 0, 0, 0.75);
+                transition: opacity 0.5s;
+                h2, h3, h4, h5 {
+                    margin-bottom: 10px;
+                    font-size: 1.6rem;
+                    line-height: 1.8rem;
+                    opacity: 0;
+                    transform: translateY(200%);
+                    transition: all 0.5s;
+                    @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                        font-size: 1.2rem;
+                        line-height: 1.2rem;
+                    }
+                }
+                p {
+                    margin: 0 auto;
+                    max-width: 650px;
+                    font-size: 1.2rem;
+                    line-height: 1.5rem;
+                    opacity: 0;
+                    transform: translateY(250%);
+                    transition: all 0.5s;
+                    @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
+                        font-size: 1.1rem;
+                        line-height: 1.3rem;
+                    }
+                    @media #{$handheld} {
+                        font-size: 0.9rem;
+                        line-height: 1.1rem;
+                    }
+                    strong > span {
+                        margin-bottom:20px;
+                    }
+                }
+            }
         }
     }
     .v-testimonials {
-        margin-top: 100px;
-        margin-bottom: 100px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        @media screen and (min-width: 768px) {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
         .v-testimonial {
-            padding-left: 80px;
-            padding-right: 80px;
+            @media screen and (min-width: 768px) {
+                padding-left: 80px;
+                padding-right: 80px;
+            }
             .image_wrapper {
                 @extend %clearfix;
                 img {
@@ -129,10 +192,22 @@
                     width: auto;
                     float: left;
                     @extend %clearfix;
+                    &.img-portrait {
+                        width:120px;
+                        height: auto;
+                        &[src*="sheffield-teaching-hospitals"] {
+                            width: auto;
+                            height: 70px;
+                        }
+                    } 
+                    &.img-landscape {
+                        width:auto;
+                        height: 30px;
+                    }
                 }
             }
             .v_testimonial_content {
-                margin-top: 50px;
+                margin-top: 40px;
                 margin-bottom: 30px;
                 font-size: 1.4rem;
                 font-weight: 300;
@@ -140,15 +215,22 @@
                 p {
                     text-align: left;
                     line-height: 2rem;
+                    @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
+                    }
                 }
             }
             .v_testimonial_profession {
-                margin-top: 50px;
+                margin-top: 40px;
                 margin-bottom: 30px;
                 font-size: 1.4rem;
                 font-weight: bold;
                 color: $light-gray;
                 float: right;
+                @media #{$handheld}, #{$handheld-landscape}, #{$iphone-x-landscape} { 
+                    font-size: 1.1rem;
+                }
             }
         }
     }

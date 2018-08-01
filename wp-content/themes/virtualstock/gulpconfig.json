@@ -1,6 +1,6 @@
 {
   "browserSyncOptions" : {
-    "proxy": "virtual.local/",
+    "proxy": "virtualstock.local/",
     "notify": false
   },
   "browserSyncWatchFiles" : [
@@ -13,7 +13,7 @@
     "css": "./css",
     "img": "./img",
 		"imgsrc": "./src/img",
-    "sass": "./sass",
+    "sass": "./sass/",
     "node": "./node_modules/",
     "bower": "./bower_components/",
     "dev": "./src",

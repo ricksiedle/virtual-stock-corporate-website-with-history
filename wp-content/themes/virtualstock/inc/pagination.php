@@ -31,14 +31,26 @@ function understrap_pagination() {
 		$links[] = $paged;
 	}
 
+	// ORIGINAL CODE FROM THE UNDERSTRAP THEME
 	/**    Add the pages around the current page to the array */
-	if ( $paged >= 3 ) {
+	// if ( $paged >= 3 ) {
+	// 	$links[] = $paged - 1;
+	// 	$links[] = $paged - 2;
+	// }
+
+	// CHANGED CODE FROM THE UNDERSTRAP THEME
+	if ( $paged >= 2 ) {
 		$links[] = $paged - 1;
-		$links[] = $paged - 2;
 	}
 
-	if ( ( $paged + 2 ) <= $max ) {
-		$links[] = $paged + 2;
+	// ORIGINAL CODE FROM THE UNDERSTRAP THEME
+	// if ( ( $paged + 2 ) <= $max ) {
+	// 	$links[] = $paged + 2;
+	// 	$links[] = $paged + 1;
+	// }
+
+	// CHANGED CODE FROM THE UNDERSTRAP THEME
+	if ( ( $paged + 1 ) <= $max ) {
 		$links[] = $paged + 1;
 	}
 
@@ -91,3 +103,21 @@ function understrap_pagination() {
 }
 
 endif;
+
+/**
+ * Rewrite rule for custom category base with pagination conflict
+ * Credits to https://codex.wordpress.org/Rewrite_API/add_rewrite_rule
+ */
+
+if ( ! function_exists( 'wpa_fix_blog_pagination' ) ) :
+function wpa_fix_blog_pagination(){
+    add_rewrite_rule(
+        'resources/page/([0-9]+)/?$',
+        'index.php?page_id=12&paged=$matches[1]',
+        'top'
+    );
+}
+
+endif;
+
+add_action( 'init', 'wpa_fix_blog_pagination' );

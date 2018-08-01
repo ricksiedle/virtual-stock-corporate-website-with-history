@@ -1,0 +1,229 @@
+//Footer
+#wrapper-footer {
+    background-color: $light-gray;
+    margin-top: -60px;
+    .site- {
+        &footer {
+            @media #{$ipad-portrait} {
+                width: 50%;
+                margin-left: 25%;
+                margin-right: 25%;
+            }
+            @media #{$handheld-landscape} {
+                width: 70%;
+                margin-left: 15%;
+                margin-right: 15%;
+            }
+            .site-info {
+                text-align: center;
+                font-size: 1rem;
+                color: $white;
+                margin-top: 40px;
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    margin-top: 15px;
+                    font-size: 1.8em;
+                }
+                @media #{$ipad-portrait} {
+                    text-align: center;
+                }
+                @media #{$handheld-landscape} {
+                    text-align: center;
+                }
+            }
+        }
+
+        &footer-menu {
+            margin-top: 40px;
+            text-transform: uppercase;
+            font-size: 1.8em;
+            @media screen and (min-width: 768px) {
+                margin-top: 0;
+            }
+            .menu-footer-2-container {
+                ul {
+                    @media #{$iphone-x-landscape} {
+                        margin: 0 auto;
+                        width: 250px;
+                    }
+                }
+                li {
+                    position: relative;
+                    padding: 0px;
+                    display: inline-block;
+                    &:after {
+                        content:'';
+                        position: absolute;
+                        top: 32px;
+                        right: 0;
+                        width: 1px;
+                        height: 5px;
+                        background-color:$white;
+                        @media #{$handheld}, #{$ipad-portrait} {
+                            content:none;
+                        }
+                    }
+                    &:last-child {
+                        &:after {
+                            content: none;
+                        }
+                    }
+                }
+                a {
+                    text-transform: capitalize;
+                    font-size: 0.9rem;
+                    @media #{$ipad-portrait} {
+                        text-align: center;
+                    }
+                }
+            }
+            ul {
+                -webkit-box-orient: horizontal;
+                display: inline-block;
+                li {
+                    float: left;
+                    @media screen and (max-width: 768px) {
+                        width: 100%;
+                    }
+                    a {
+                        padding: 0 1rem;
+                        font-weight: 700;
+                        text-align: center;
+                        color:$white;
+                        line-height: 4rem;
+                        &:hover, &:active {
+                            color:darken($white, 20%);
+                        }
+                        @media #{$ipad-landscape} {
+                            padding: 0 0.6rem;
+                        }
+                        @media screen and (min-width: 768px) {
+                            font-weight: 300;
+                            text-align: left;
+                        }
+                        @media #{$ipad-portrait} {
+                            text-align: center;
+                        }
+                    }
+                    &.dropdown {
+                        &:hover {
+                            a {
+                                &:after {
+                                    transform: rotate(180deg);
+                                }
+                            }
+                            .dropdown-menu {
+                                height: 65px;
+                                opacity: 1;
+                                transition: all 0.5s;
+                            }
+                        }
+                        
+                        .dropdown-menu {
+                            position: absolute;
+                            top: 0;
+                            float: left;
+                            display: block;
+                            background-color: transparent;
+                            padding: 0;
+                            margin: 0;
+                            border: none;
+                            min-width: 0;
+                            width: 100%;
+                            -webkit-padding-start: 0;
+                            height: 0;
+                            opacity: 0;
+                            transition: all 0.5s;
+                            transform: translate3d(0px, 45px, 0px) !important;
+                            @media #{$ipad-portrait}, #{$handheld-landscape} {
+                                position: relative !important;
+                                transform: translate3d(0px, 0px, 0px) !important;
+                            }
+                            li {
+                                display: block;
+                                clear: both;
+                                a {
+                                    position: relative;
+                                    float: left;
+                                    display: block;
+                                    line-height: 1.4em;
+                                    text-transform: none;
+                                    @media screen and (max-width: 768px) {
+                                        width: 100%;
+                                        text-align: center;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &socials {
+            margin-top: 40px;
+            text-align: center;
+            @media screen and (min-width: 768px) {
+                text-align: right;
+                margin-top: 10px;
+            }
+            @media #{$ipad-portrait} {
+                text-align: center;
+            }
+            @media #{$handheld-landscape} {
+                text-align: center;
+            }
+            .socials-menu {
+                &#footer-socials.menu {
+                    margin-top: 0.5rem;
+                    padding: 0;
+                    list-style: none;
+                }
+                li {
+                    position: relative;
+                    display: inline-block;
+                    padding: 0 15px;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        top: 7px;
+                        right: -2px;
+                        width: 1px;
+                        height: 7px;
+                        background-color: $white;
+                    }
+                }
+                span {
+                    clip: rect(1px, 1px, 1px, 1px);
+                    position: absolute !important;
+                    height: 1px;
+                    width: 1px;
+                    overflow: hidden;
+                }
+                li:first-child {
+                    padding-left: 0;
+                }
+                li:last-child {
+                    padding-right: 0;
+                    &:after {
+                        content:none;
+                    }
+                }
+                a {
+                    // color: lighten($light-gray, 40%);
+                    color: #fff;
+                    font: normal normal normal 22px/1 FontAwesome;
+                    display: inline-block;
+                    text-rendering: auto;
+                    -webkit-font-smoothing: antialiased;
+                    -moz-osx-font-smoothing: grayscale;
+                    position: relative;
+                    font-size: 2.2em;
+                    &:hover {
+                        color: $pink;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+}

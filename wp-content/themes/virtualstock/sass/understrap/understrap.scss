@@ -1,7 +1,12 @@
 // Some basic padding for all wrappers
 .wrapper {
-  padding: $grid-gutter-width 0; }
+  padding: 0; }
 
+
+  @media screen and (min-width: 564px) {
+    .wrapper {
+      padding: $grid-gutter-width 0; }
+  }
 // Reset hero wrapper padding to 0
 #wrapper-hero { padding: 0px !important; }
 
