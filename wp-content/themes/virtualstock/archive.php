@@ -18,7 +18,7 @@ global $post;
 
 	<div class="container" id="content" tabindex="-1">
 
-		<?php echo do_shortcode( '[searchandfilter taxonomies="category,sector"]' ); ?>
+		<?php echo do_shortcode( '[searchandfilter taxonomies="category,sector" headings="Category, Sector"]' ); ?>
 
 		
 
