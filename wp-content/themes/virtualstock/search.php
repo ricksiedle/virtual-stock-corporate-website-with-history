@@ -1,19 +1,31 @@
 <?php
 /**
- * The template for displaying search results pages.
+ * The main template file.
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package understrap
  */
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
+global $post;
 
 ?>
 
-<div class="wrapper" id="search-wrapper">
+<?php if ( is_front_page() && is_home() ) : ?>
+	<?php get_template_part( 'global-templates/hero' ); ?>
+<?php endif; ?>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
+<div class="wrapper" id="index-wrapper">
+
+	<div class="container" id="content" tabindex="-1">
+
+		<?php echo do_shortcode( '[searchandfilter taxonomies="category,sector"]' ); ?>
 
 		<div class="row">
 
@@ -21,31 +33,38 @@ $container   = get_theme_mod( 'understrap_container_type' );
 			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
 
 			<main class="site-main" id="main">
+			<?php
 
-				<?php if ( have_posts() ) : ?>
+				$args = array(
+					'post_type' => 'post',
+				);
+				$query_posts = new WP_Query( $args );
 
-					<header class="page-header">
-						
-							<h1 class="page-title"><?php printf(
-							/* translators:*/
-							 esc_html__( 'Search Results for: %s', 'understrap' ),
-								'<span>' . get_search_query() . '</span>' ); ?></h1>
+				if ( $query_posts->have_posts() ) : ?>
 
-					</header><!-- .page-header -->
+					
 
 					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+
+					<div class="grid">
+						<div class="gutter-sizer"></div>
+						<div class="grid-sizer"></div>
+						<?php while ( $query_posts->have_posts() ) : $query_posts->the_post(); ?>
 
 						<?php
-						/**
-						 * Run the loop for the search to output the results.
-						 * If you want to overload this in a child theme then include a file
-						 * called content-search.php and that will be used instead.
-						 */
-						get_template_part( 'loop-templates/content', 'search' );
+
+						/*
+						* Include the Post-Format-specific template for the content.
+						* If you want to override this in a child theme, then include a file
+						* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						*/
+						get_template_part( 'loop-templates/content', get_post_format() );
 						?>
 
-					<?php endwhile; ?>
+						<?php endwhile; ?>
+					</div>
+
+					
 
 				<?php else : ?>
 
@@ -62,6 +81,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 		<!-- Do the right sidebar check -->
 		<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
+		
 
 	</div><!-- .row -->
 
@@ -69,4 +89,19 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- Wrapper end -->
 
+<script src="<?php echo get_stylesheet_directory_uri() . '/js/isotope.pkgd.js' ?>"></script>
+
+<script>
+	// Isotope settings
+	jQuery('.grid').isotope({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+		masonry: {
+			columnWidth: '.grid-sizer',
+			gutter: '.gutter-sizer'
+		}
+	});
+</script>
+
 <?php get_footer(); ?>
+

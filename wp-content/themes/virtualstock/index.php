@@ -24,45 +24,10 @@ global $post;
 <div class="wrapper" id="index-wrapper">
 
 	<div class="container" id="content" tabindex="-1">
-		<?php if(!wp_is_mobile()) { ?>
-			<div class="row v-categories-menu">
-				<?php 
-					$categories = get_terms( array(
-						'taxonomy' => 'category',
-						'hide_empty' => true
-					) );
-					
-					$separator = ' ';
-					$all = 'All';
-					//var_dump($categories); die();
-					if ( ! empty( $categories ) ) {
 
-						$output = '<a class="current-page" href="' . home_url() . '/resources/"' . '" alt="' . esc_attr( __( 'View all posts', 'textdomain' ) ) . '">' . esc_html( $all )  . '</a>' . $separator;
-						
-						foreach( $categories as $category ) {
+		<?php echo do_shortcode( '[searchandfilter taxonomies="category,sector"]' ); ?>
 
-							$is_this_page = $post->post_name == $category->slug ? 'current_page' : '';
-
-							$output .= '<a class="' . $is_this_page . '" href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'virtual' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
-						}
-						echo trim( $output, $separator );
-					}
-				?>
-			</div>
-		<?php } else { ?>
-			<div id="categories"><h4><?php _e( 'Filter posts by Category' ); ?></h4>
-				<?php wp_dropdown_categories( 'show_option_none=Select category' ); ?>
-				<script type="text/javascript">
-					var dropdown = document.getElementById("cat");
-					function onCatChange() {
-						if ( dropdown.options[dropdown.selectedIndex].value > 0 ) {
-							location.href = "<?php echo esc_url( home_url( '/' ) ); ?>?cat="+dropdown.options[dropdown.selectedIndex].value;
-						}
-					}
-					dropdown.onchange = onCatChange;
-				</script>
-			</div>
-		<?php } ?>
+		
 		
 
 		<div class="row">

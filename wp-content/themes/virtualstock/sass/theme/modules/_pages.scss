@@ -581,7 +581,7 @@
 * Blog
 *
 */
-.blog, .archive {
+.blog, .archive, .search     {
     #primary {
         @extend %clearfix;
         margin-bottom: 100px;
@@ -764,6 +764,25 @@
         left: 110px;
         @include moduled-btn( 'button', 0, 10px, 30px, $pink ) {
             font-size: 1.4rem;
+        }
+    }
+    .searchandfilter {
+        @media only screen and (min-width: 1200px) {
+            margin-top: 15px;
+            padding-left: 70px;
+        }
+        @include moduled-btn( 'input[type=submit]', 0, 10px, 30px, $pink ) {
+            font-size: 1.4rem;
+        }
+        input[type=submit] {
+            position: relative !important;
+            bottom: 3px;
+            -ms-transform: translate(0, 0) !important;
+            -webkit-transform: translate(0, 0) !important;
+            transform: translate(0, 0) !important;
+        }
+        select {
+            padding: 5px 30px;
         }
     }
 }
