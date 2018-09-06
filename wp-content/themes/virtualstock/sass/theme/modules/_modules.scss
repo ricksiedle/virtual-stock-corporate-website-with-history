@@ -68,6 +68,9 @@
                 @media #{$between-ipad-landscape-and-lg} {
                     line-height: 2rem;
                 }
+                @media #{$handheld-xs} {
+                    font-size: 1.1rem;
+                }
             }
         }
         .v-owl-carousel {
