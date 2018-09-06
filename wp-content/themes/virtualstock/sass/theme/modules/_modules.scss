@@ -65,6 +65,9 @@
                 font-size: 1.6rem;
                 font-weight: 500;
                 line-height: 2.4rem;
+                @media #{$between-ipad-landscape-and-lg} {
+                    line-height: 2rem;
+                }
             }
         }
         .v-owl-carousel {

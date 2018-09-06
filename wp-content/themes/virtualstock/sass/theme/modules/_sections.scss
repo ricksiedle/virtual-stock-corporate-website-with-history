@@ -115,6 +115,9 @@
                         text-decoration: none;
                         color:$white;
                     }
+                    @media #{$between-ipad-landscape-and-lg} {
+                        font-size: 1.2rem;
+                    }
                     @media #{$ipad-landscape} {
                         font-size: 1rem;
                     }
@@ -158,6 +161,10 @@
                     opacity: 0;
                     transform: translateY(250%);
                     transition: all 0.5s;
+                    @media #{$between-ipad-landscape-and-lg} {
+                        font-size: 1.1rem;
+                        line-height: 1.2rem;
+                    }
                     @media #{$handheld}, #{$handheld-landscape}, #{$ipad-landscape}, #{$ipad-portrait} {
                         font-size: 1.1rem;
                         line-height: 1.3rem;
