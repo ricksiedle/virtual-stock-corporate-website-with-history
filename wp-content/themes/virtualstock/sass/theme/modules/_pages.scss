@@ -582,6 +582,11 @@
 *
 */
 .blog, .archive, .search     {
+    .no-results {
+        text-align: center;
+        margin-top: 5vmax;
+        margin-bottom: 5vmax;
+    }
     #primary {
         @extend %clearfix;
         margin-bottom: 100px;
