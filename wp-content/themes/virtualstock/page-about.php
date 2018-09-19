@@ -182,7 +182,7 @@ get_header();
                 </iframe>
             </div>
             <div class="col-md-5">
-                <h2> <?php _e('Our <span style="color:#E64097">Location</span>', 'virtual') ?></h2>
+                <h2> <?php _e('Our <span style="color:#E64097">Locations</span>', 'virtual') ?></h2>
 
                     <?php if( have_rows('contact_section') ): ?> 
 
