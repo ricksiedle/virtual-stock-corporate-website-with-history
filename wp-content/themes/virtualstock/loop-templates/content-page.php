@@ -42,7 +42,7 @@ global $post;
 				<?php if( is_front_page() ) : ?>
 					<div class="owl-carousel owl-theme v-owl-carousel">
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/09/john-lewis-white.png" height="30" alt=""/></div>
+						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/09/john-lewis-opt.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
 						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-28.png" height="30" alt=""/></div>
