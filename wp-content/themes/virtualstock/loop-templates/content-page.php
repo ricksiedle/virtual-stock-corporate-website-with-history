@@ -76,7 +76,7 @@ global $post;
 			?>
 				<div class="under-header-section">
 					<h3 class="text-align-center"> <?php echo $v_under_header_title; ?> </h3>
-					<p class="text-align-center"> <?php _e( 'The Edge4Health is a partnership between NHS SBS and Virtualstock' ); ?> </p>
+					<p class="text-align-center"> <?php _e( 'The Edge4Health is a partnership between NHS Shared Business Services and Virtualstock' ); ?> </p>
 					<div class="row under-header-section-content">
 						<div class="col-sm-12 text-align-center">
 							<?php echo $v_under_header_left; ?>
