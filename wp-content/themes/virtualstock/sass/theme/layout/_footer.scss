@@ -203,6 +203,11 @@
                         height: 7px;
                         background-color: $white;
                     }
+                    @media screen and (min-width: 768px) {
+                        &:after {
+                            right: 0;
+                        }
+                    }
                 }
                 span {
                     clip: rect(1px, 1px, 1px, 1px);
