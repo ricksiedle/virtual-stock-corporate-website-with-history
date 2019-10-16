@@ -82,7 +82,7 @@
                 @media #{$ipad-portrait}, #{$handheld-landscape} {
                     min-width: 10rem;
                 }
-                @media only screen and (min-width: 981px) {
+                @media #{$larger-than-md} {
                     min-width: auto;
                 }
                 a {

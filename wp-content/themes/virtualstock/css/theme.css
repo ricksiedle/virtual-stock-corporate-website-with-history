@@ -10717,7 +10717,7 @@ h1 {
       @media only screen and (max-width: 768px), only screen and (max-width: 991px) and (orientation: landscape) {
         .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu {
           min-width: 10rem; } }
-      @media only screen and (min-width: 981px) {
+      @media only screen and (min-width: 992px) {
         .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu {
           min-width: auto; } }
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu a {
