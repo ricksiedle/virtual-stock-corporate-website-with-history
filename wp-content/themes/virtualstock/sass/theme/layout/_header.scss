@@ -250,66 +250,87 @@
           color: $pink !important;
         }
       }
-    }
-    li.dropdown {
-      text-align: left;
-      a {
-        color: #333;
-        &:hover {
-          //margin-right: -10px;
+      @media screen and (min-width: 991px) {
+        #header-btn.moduled-btn.pink-btn {
+          //      position: absolute;
+          position: fixed;
+          display: block; //      top: 0;
+          right: 20px;
+          bottom: 20px; // height: 50px;
+          //              margin-top: 20px;
+          //              margin-bottom: 10px;
+          font-size: 20px;
+          cursor: pointer;
+          z-index: 9;
+          background: $pink;
+          border: 0;
+          color: #fff;
+          padding: 10px 30px 15px;
+          line-height: 100%;
+          &:hover {
+            font-size: 22px;
+            transition: ease 0.2s;
+          }
+        }
+        .wrapper-navbar {
+          .navbar.navbar-expand-md.navbar-light {
+            background-color: #fff;
+          }
         }
       }
-      ul.dropdown-menu {
+      li.dropdown {
         text-align: left;
-        -webkit-transition: .3s height;
-        -moz-transition: .3s height;
-        transition: .3s height;
-        li {
-          a {
-            font-size: .65em;
-            &:hover,
-            &:active {
-              color: $pink !important;
+        a {
+          color: #333;
+        }
+        ul.dropdown-menu {
+          text-align: left;
+          -webkit-transition: .3s height;
+          -moz-transition: .3s height;
+          transition: .3s height;
+          li {
+            a {
+              font-size: .65em;
+              &:hover,
+              &:active {
+                color: $pink !important;
+              }
             }
           }
         }
       }
     }
   }
-}
-
-@media #{$ipad-landscape} {
-  .wrapper {
-    padding: 0 !important;
-  }
-  .navbar.navbar-expand-md.navbar-light {
-    background-color: rgba(69, 81, 96, 0.8) !important;
-  }
-  #main-menu>li {
-    &>a {
-      color: $white !important;
+  @media #{$ipad-landscape} {
+    .wrapper {
+      padding: 0 !important;
     }
-    &.dropdown a {
-      color: $white !important;
+    .navbar.navbar-expand-md.navbar-light {
+      background-color: rgba(69, 81, 96, 0.8) !important;
+    }
+    #main-menu>li {
+      &>a {
+        color: $white !important;
+      }
+      &.dropdown a {
+        color: $white !important;
+      }
+    }
+  } // Ready to meet btn fix on ipad-portrait
+  .navbar-light #header-btn.pink-btn {
+    @media #{$ipad-portrait},
+    #{$handheld-landscape} {
+      position: relative !important;
+      bottom: -45px !important;
+      right: -100px;
     }
   }
-}
-
-// Ready to meet btn fix on ipad-portrait
-.navbar-light #header-btn.pink-btn {
-  @media #{$ipad-portrait},
-  #{$handheld-landscape} {
-    position: relative !important;
-    bottom: -45px !important;
-    right: -100px;
-  }
-}
-
-.logged-in {
-  .wrapper-navbar {
-    top: 30px;
-    .navbar-toggler {
+  .logged-in {
+    .wrapper-navbar {
       top: 30px;
+      .navbar-toggler {
+        top: 30px;
+      }
     }
   }
 }

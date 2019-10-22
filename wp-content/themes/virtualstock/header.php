@@ -32,6 +32,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
+    <a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php _e( 'Talk to Sales?', 'virtual' ) ?></button></a>
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WDJHR2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -93,7 +94,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-				<a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
+<!--				<a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php // _e( 'Ready to meet?', 'virtual' ) ?></button></a>-->
 				
 			</div><!-- .container -->
 			
