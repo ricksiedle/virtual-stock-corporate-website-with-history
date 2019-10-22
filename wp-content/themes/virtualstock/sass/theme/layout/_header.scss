@@ -1,135 +1,172 @@
 .wrapper-navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 9999;
-    width: 100vw;
-    #responsive-menu {
-        @extend %clearfix;
-    }
-    .navbar-collapse.collapse.show {
-        height: 100vh;
-        .navbar.navbar-expand-md.navbar-light {
-            height: 100vh;
-        }
-    }
-
-    .navbar-toggler {
-        position: absolute;
-        right: 20px;
-        top: 30px;
-        width: 40px;
-        height: 30px;
-        padding: 0;
-        z-index: 999;
-        border: 0;
-        &:focus {
-            outline: none;
-        }
-        span {
-            position: relative;
-            display: block;
-            width: 30px;
-            height: 2px;
-            background-color: #fff;
-            margin: 7px 2px;
-            -webkit-transition: .3s all;
-            -moz-transition: .3s all;
-            transition: .3s all;
-        }
-    }
-    .navbar-toggler[aria-expanded='true'] {
-        span {
-           width: 34px;
-           margin-left: 4px;
-            &:nth-of-type(2) {
-                display: none;
-            }
-            &:nth-of-type(1) {
-                margin: auto;
-                transform: rotate(-45deg);
-                transform-origin: 50% 50%;
-            }
-            &:nth-of-type(3) {
-                margin: auto;
-                transform: rotate(45deg);
-                transform-origin: 50% 50%;
-                top: -1px;
-            }
-        }
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  width: 100vw;
+  #responsive-menu {
+    @extend %clearfix;
+  }
+  .navbar-collapse.collapse.show {
+    height: 100vh;
     .navbar.navbar-expand-md.navbar-light {
-        top: -8px;
-        height: auto;
-        background-color: rgba(69,81,96, .8);
-        padding-bottom: 25px;
-        @media #{$ipad-portrait} {
-            padding-bottom: 5px;
-        }
-        @media #{$handheld}, #{$handheld-landscape} {
-            padding-bottom: 25px;
-        }
-        .navbar-nav {
-            .dropdown-menu {
-                position: static;
-                border: none;
-                padding-top: 0;
-                padding-bottom: 1rem;
-                @media #{$ipad-landscape} {
-                    min-width: 8rem;
-                }
-                @media #{$ipad-portrait}, #{$handheld-landscape} {
-                    min-width: 10rem;
-                }
-                @media #{$larger-than-md} {
-                    min-width: auto;
-                }
-                a {
-                    font-size: 1.2rem;
-                    font-weight: 400;
-                    padding: 2px 20px;
-                }
-            }
-        }
-        .container {
-            position: relative;            
-        }
+      height: 100vh;
     }
+  }
+  .navbar-toggler {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    width: 40px;
+    height: 30px;
+    padding: 0;
+    z-index: 999;
+    border: 0;
+    &:focus {
+      outline: none;
+    }
+    span {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 2px;
+      background-color: #fff;
+      margin: 7px 2px;
+      -webkit-transition: .3s all;
+      -moz-transition: .3s all;
+      transition: .3s all;
+    }
+  }
+  .navbar-toggler[aria-expanded='true'] {
+    span {
+      width: 34px;
+      margin-left: 4px;
+      &:nth-of-type(2) {
+        display: none;
+      }
+      &:nth-of-type(1) {
+        margin: auto;
+        transform: rotate(-45deg);
+        transform-origin: 50% 50%;
+      }
+      &:nth-of-type(3) {
+        margin: auto;
+        transform: rotate(45deg);
+        transform-origin: 50% 50%;
+        top: -1px;
+      }
+    }
+  }
+  .navbar.navbar-expand-md.navbar-light {
+    top: -8px;
+    height: auto;
+    background-color: rgba(69, 81, 96, .8);
+    padding-bottom: 25px;
+    @media #{$ipad-portrait} {
+      padding-bottom: 5px;
+    }
+    @media #{$handheld},
+    #{$handheld-landscape} {
+      padding-bottom: 25px;
+    }
+    .navbar-nav {
+      .dropdown-menu {
+        position: static;
+        border: none;
+        padding-top: 0;
+        padding-bottom: 1rem;
+        @media #{$ipad-landscape} {
+          min-width: 8rem;
+        }
+        @media #{$ipad-portrait},
+        #{$handheld-landscape} {
+          min-width: 10rem;
+        }
+        @media #{$larger-than-md} {
+          min-width: auto;
+        }
+        a {
+          font-size: 1.2rem;
+          font-weight: 400;
+          padding: 2px 20px;
+        }
+      }
+    }
+    .container {
+      position: relative;
+    }
+  }
 }
 
 .custom-logo-link {
-    display: block;
-    position: absolute;
-    top: 5px;
-    margin-top: 14px;
-    padding-bottom: 0;
-    max-width: 215px;
-    z-index: 9999;
-    @media #{$handheld}, #{$handheld-landscape} {
-        position: relative;
-    }
-    img {
-        margin-bottom: -10px;
-    }
+  display: block;
+  position: absolute;
+  top: 5px;
+  margin-top: 14px;
+  padding-bottom: 0;
+  max-width: 215px;
+  z-index: 9999;
+  @media #{$handheld},
+  #{$handheld-landscape} {
+    position: relative;
+  }
+  img {
+    margin-bottom: -10px;
+  }
 }
 
 #navbarNavDropdown {
-    margin-top: 23px;
+  margin-top: 23px;
 }
 
 #main-menu {
-    margin-left: 0;
+  margin-left: 0;
+  margin-top: 60px;
+  font-family: 'Serenity Medium', Helvetica, Arial, serif;
+  @media #{$ipad-portrait} {
+    margin-top: 40px;
+  }
+  @media #{$handheld-landscape} {
+    margin-top: 0px;
+  }
+  @media #{$handheld} {
     margin-top: 60px;
-    font-family: 'Serenity Medium', Helvetica, Arial, serif;
-    @media #{$ipad-portrait} {
-        margin-top: 40px;
+  }
+  >li {
+    position: relative;
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    >a {
+      position: relative;
+      display: block;
+      font-family: 'Serenity Medium', Helvetica, Arial, serif;
+      font-weight: 500;
+      color: #fff;
+      &:after {
+        display: inline-block;
+        width: 8px;
+        height: 10px;
+        margin-bottom: -6px;
+        margin-left: 0;
+        @media #{$handheld} {
+          display: none;
+        }
+      }
     }
-    @media #{$handheld-landscape} {
-        margin-top: 0px;
-    }
-    @media #{$handheld} {
-        margin-top: 60px;
+  }
+  .menu-item.dropdown {
+    height: auto;
+  }
+  li.show {
+    >a {
+      &:after {
+        transform: rotate(180deg);
+        margin-bottom: -5px;
+      }
     }
     > li {
         position: relative;
@@ -155,9 +192,24 @@
                 }
             }
         }
+  }
+  li.dropdown {
+    height: 0;
+    text-align: center;
+    a {
+      color: #fff;
     }
-    .menu-item.dropdown {
+    .dropdown-menu {
+      display: block;
+      height: 0;
+      overflow: hidden;
+      padding: 0;
+      font-size: 1.5rem;
+      background-color: transparent;
+      text-align: center;
+      @media #{$handheld} {
         height: auto;
+      }
     }
     li.show {
         > a {
@@ -197,138 +249,139 @@
             .dropdown-menu {
                 height: 65px;
             }
+    &:hover {
+      height: 118px;
+      a.dropdown-toggle {
+        font-weight: 500;
+        &:after {
+          transform: rotate(180deg);
+          margin-bottom: -5px;
         }
+      }
+      .dropdown-menu {
+        height: 65px;
+      }
     }
+  }
 }
-
 
 @media screen and (min-width: 991px) {
-    
-    #header-btn.moduled-btn.pink-btn {
-//      position: absolute;
-        position: fixed;
-        display: block;
-//      top: 0;
-        right: 20px;
-        bottom: 20px;
-       // height: 50px;
-//              margin-top: 20px;
-//              margin-bottom: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        z-index: 9;
-        background: $pink;
-        border: 0;
-        color: #fff;
-        padding: 10px 30px 15px;
-        line-height: 100%;
-        &:hover {
-            font-size: 22px;
-            transition: ease 0.2s;
-        }
+  #header-btn.moduled-btn.pink-btn {
+    //      position: absolute;
+    position: fixed;
+    display: block; //      top: 0;
+    right: 20px;
+    bottom: 20px; // height: 50px;
+    //              margin-top: 20px;
+    //              margin-bottom: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 9;
+    background: $pink;
+    border: 0;
+    color: #fff;
+    padding: 10px 30px 15px;
+    line-height: 100%;
+    &:hover {
+      font-size: 22px;
+      transition: ease 0.2s;
     }
-    
-    .wrapper-navbar {
-        .navbar.navbar-expand-md.navbar-light {
-            background-color: #fff;
-            
-        }
+  }
+  .wrapper-navbar {
+    .navbar.navbar-expand-md.navbar-light {
+      background-color: #fff;
     }
-    
-    #main-menu {
-        margin-left: 220px;
-        margin-top: 0;
-        @media #{$between-ipad-landscape-and-lg} {
-            margin-left: 180px;
-        }
-        > li {
-            width: auto;
-            > a {
-                padding-left: 1rem;
-                padding-right: 1rem;
-                color: #333;
-                padding-bottom: 2px;
-                padding-top: 0;
-                font-family: 'Serenity Medium';
-                @media #{$ipad-landscape} {
-                    padding-left: 0.5rem;
-                    padding-right: 0.5rem;
-                }
-                @media #{$ipad-portrait} {
-                    padding-left: 1rem;
-                    padding-right: 1rem;
-                }
-                &:hover, &:active {
-                    color: $pink !important;
-                }
-            }
-            &.current-menu-item {
-                a {
-                    color: $pink !important;
-                }
-            }
-        }
-        
-        li.dropdown {
-            text-align: left;
-            a {
-                color: #333;
-                &:hover {
-                    //margin-right: -10px;
-                }
-            }
-            ul.dropdown-menu {
-                text-align: left;
-                -webkit-transition: .3s height;
-                -moz-transition: .3s height;
-                transition: .3s height;
-                li {
-                    a {
-                        font-size: .65em;
-                        &:hover, &:active {
-                            color: $pink !important;
-                        }
-                    }
-                }
-            }
-        }
+  }
+  #main-menu {
+    margin-left: 220px;
+    margin-top: 0;
+    @media #{$between-ipad-landscape-and-lg} {
+      margin-left: 180px;
     }
+    >li {
+      width: auto;
+      >a {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: #333;
+        padding-bottom: 2px;
+        padding-top: 0;
+        font-family: 'Serenity Medium';
+        @media #{$ipad-landscape} {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
+        @media #{$ipad-portrait} {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+        &:hover,
+        &:active {
+          color: $pink !important;
+        }
+      }
+      &.current-menu-item {
+        a {
+          color: $pink !important;
+        }
+      }
+    }
+    li.dropdown {
+      text-align: left;
+      a {
+        color: #333;
+      }
+      ul.dropdown-menu {
+        text-align: left;
+        -webkit-transition: .3s height;
+        -moz-transition: .3s height;
+        transition: .3s height;
+        li {
+          a {
+            font-size: .65em;
+            &:hover,
+            &:active {
+              color: $pink !important;
+            }
+          }
+        }
+      }
+    }
+  }
 }
-
 
 @media #{$ipad-landscape} {
-    .wrapper {
-        padding: 0 !important;
+  .wrapper {
+    padding: 0 !important;
+  }
+  .navbar.navbar-expand-md.navbar-light {
+    background-color: rgba(69, 81, 96, 0.8) !important;
+  }
+  #main-menu>li {
+    &>a {
+      color: $white !important;
     }
-    .navbar.navbar-expand-md.navbar-light {
-        background-color: rgba(69, 81, 96, 0.8) !important;
+    &.dropdown a {
+      color: $white !important;
     }
-    #main-menu > li {
-        & > a {
-            color: $white !important;
-        }
-        &.dropdown a {
-            color: $white !important;
-        }
-    }
-     
+  }
 }
-
 
 // Ready to meet btn fix on ipad-portrait
 .navbar-light #header-btn.pink-btn {
-    @media #{$ipad-portrait}, #{$handheld-landscape} {
-        position: relative !important;
-        bottom: -45px !important;
-        right: -100px;
-    }
+  @media #{$ipad-portrait},
+  #{$handheld-landscape} {
+    position: relative !important;
+    bottom: -45px !important;
+    right: -100px;
+  }
 }
 
 .logged-in {
-    .wrapper-navbar {
-        top: 30px;
-        .navbar-toggler {
-            top: 30px;
-        }
+  .wrapper-navbar {
+    top: 30px;
+    .navbar-toggler {
+      top: 30px;
     }
+  }
 }

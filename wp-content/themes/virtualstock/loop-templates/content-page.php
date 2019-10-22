@@ -82,6 +82,27 @@ global $post;
 
 					<a href="https://go.virtualstock.com/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
 				<?php endif; ?>
+<<<<<<< HEAD
+=======
+
+				<?php if( is_front_page() ) : ?>
+				<div class="owl-carousel owl-theme v-owl-carousel">
+					<?php
+						// check if the repeater field has rows of data
+						if( have_rows('customer_icons') ):
+							// loop through the rows of data
+							while ( have_rows('customer_icons') ) : the_row(); ?>
+
+								<div class="item"><img src="<?php the_sub_field('customer_logo'); ?>" height="30" alt=""/></div>
+					<?php
+							endwhile;
+
+						else : // no rows found
+						endif;
+					?>
+				</div>
+				<?php endif; ?>
+>>>>>>> c7ddebf2d267edeedd13f060efa2d8b8e6899dc1
 			</div> <!-- end .container -->
 		</div>
         <?php endif; ?>
