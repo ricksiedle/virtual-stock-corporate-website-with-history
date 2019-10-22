@@ -10795,6 +10795,9 @@ h1 {
       font-size: 1.5rem;
       background-color: transparent;
       text-align: center; }
+      @media only screen and (max-width: 480px) {
+        #main-menu li.dropdown .dropdown-menu {
+          height: auto !important; } }
     #main-menu li.dropdown:hover {
       height: 118px; }
       #main-menu li.dropdown:hover a.dropdown-toggle {

@@ -40,18 +40,21 @@ global $post;
 				<?php endif; ?>
 
 				<?php if( is_front_page() ) : ?>
-					<div class="owl-carousel owl-theme v-owl-carousel">
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/09/john-lewis-opt.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-28.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-22.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-21.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/nhs.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-17.png" height="30" alt=""/></div>
-					</div>
+				<div class="owl-carousel owl-theme v-owl-carousel">
+					<?php
+						// check if the repeater field has rows of data
+						if( have_rows('customer_icons') ):
+							// loop through the rows of data
+							while ( have_rows('customer_icons') ) : the_row(); ?>
+
+								<div class="item"><img src="<?php the_sub_field('customer_logo'); ?>" height="30" alt=""/></div>
+					<?php
+							endwhile;
+
+						else : // no rows found
+						endif;
+					?>
+				</div>
 				<?php endif; ?>
 			</div> <!-- end .container -->
 		</div>
