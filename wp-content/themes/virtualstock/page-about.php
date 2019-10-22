@@ -5,28 +5,6 @@ get_header();
 ?>
 <div class="wrapper">
     <div class="container">        
-        <div class="row">            
-            <div class="col">  
-                <a href="#">
-                    <div class="box-wrapper">
-                        <div class="inner-box-wrapper">
-                            <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
-                            <h2>Retail Platform</h2>
-                        </div>
-                    </div>
-                </a>    
-            </div>
-            <div class="col">
-                <a href="#">
-                    <div class="box-wrapper">
-                        <div class="inner-box-wrapper">
-                            <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/edge_4_health.png" alt="">   
-                            <h2>Healthcare Platform</h2>
-                        </div>
-                    </div>
-                </a>    
-            </div>                
-        </div>
 
     <!-- OUR PURPOSE SECTION -->
     <?php if( have_rows('our_purpose_section') ): ?>

@@ -5,20 +5,22 @@
  */   
          
 .box-wrapper {
-    padding: 100px 50px;
+    padding: 100px;
     border-radius: 40px;
     background: rgba(255, 255, 255, 0.7);
     position: relative;
+    min-height: 100%;
+    height: 100%;
+    display: table;
+    width: 100%;
+    margin: auto;
     @media only screen and (max-width: 767px) {
         margin-bottom: 30px;
     }
 
     .inner-box-wrapper {   
-//        position: absolute;
-//        top: 50%;
-//        left: 50%;
-//        -ms-transform: translate(-50%, -50%);
-//        transform: translate(-50%, -50%);
+        display: table-cell;
+        vertical-align: middle;
         
         img {
             width: auto;
@@ -32,33 +34,38 @@
             display: block;
             text-align: center;            
         }
-        
-        h2, h3 {
-            font-size: 1.4rem;
-        }
-        
-        h2, p {
-            color: $light-gray;
-        }
-        
-        h2 {            
-            color: $light-gray;
+             
+        h2 {    
+            color: $pink;
             margin-bottom: 0;
-            line-height: 100%;
+            line-height: 120%;
+            font-size: 2.4rem;
+            
+            p {
+                color: $pink;
+                margin-bottom: 0;
+                line-height: 120%;
+                font-size: 2.4rem;
+            }
         }
         
         h3 {
             color: $pink;
             line-height: 130%;
+            font-size: 1.4rem;
         }
         
         p {
             font-size: 1.1rem;
             line-height: 110%;
+            color: $light-gray;
         }
     }         
 }  
 
+.full-content-boxes {
+    padding: 30px;
+}
 
 // Landing page styles
 
@@ -78,6 +85,46 @@
         a:hover {
             text-decoration: none;
         }
+        
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 2.8rem;
+            margin-bottom: 50px;
+            font-weight: 500;
+            color: $light-gray;
+            line-height: 100%;
+            
+            span {
+                color: $pink;
+            }
+        }
+    }
+    
+    .full-content {
+        .row {
+            margin-bottom: 30px;
+            
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        h1 {
+            
+            p {
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 40px;
+                text-transform: none;
+                font-size: 1.6rem;
+                padding: 8px 15px 12px;
+                line-height: 100%;
+                margin-bottom: 0;
+
+                span {
+                    color: $pink;
+                }                
+            }
+        }
     }
 }
 
@@ -93,7 +140,7 @@
 
 .retail-inner-wrapper {
     display: block;
-    margin-bottom: 40px;
+    margin-bottom: 90px;
     
     h2 {
         color: $pink;

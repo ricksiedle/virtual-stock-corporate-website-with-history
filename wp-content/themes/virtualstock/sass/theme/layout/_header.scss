@@ -150,6 +150,9 @@
                 height: 10px;
                 margin-bottom: -6px;
                 margin-left: 0;
+                @media #{$handheld} {
+                    display: none;
+                }
             }
         }
     }
@@ -178,6 +181,9 @@
             font-size: 1.5rem;
             background-color: transparent;
             text-align: center;
+            @media #{$handheld} {
+                height: auto;
+            }
         }
         &:hover {
             height: 118px;

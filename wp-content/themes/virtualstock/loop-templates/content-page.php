@@ -12,6 +12,50 @@ global $post;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
+        
+        <?php if( is_front_page() ) : ?>
+            
+        
+		
+			
+			<!-- Static content in the carousel area -->
+			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
+                <div class="solutions-boxes">
+                    <h1><?php the_field('header'); ?></h1>        
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"> 
+                                <a href="<?php echo esc_url( get_field('left_box_url') ); ?>">
+                                    <div class="box-wrapper">
+                                        <div class="inner-box-wrapper">
+                                            <?php if( get_field('left_box_image') ): ?><img src="<?php the_field('left_box_image'); ?>" alt=""> 
+                                            <?php endif; ?>
+                                            <h2><?php the_field('left_box_title'); ?></h2>
+                                            <p><?php the_field('left_box_paragraph'); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="<?php echo esc_url( get_field('right_box_url') ); ?>">
+                                    <div class="box-wrapper">
+                                        <div class="inner-box-wrapper">
+                                            <?php if( get_field('right_box_image') ): ?><img src="<?php the_field('right_box_image'); ?>" alt=""> 
+                                            <?php endif; ?>   
+                                            <h2><?php the_field('right_box_title'); ?></h2>
+                                            <p><?php the_field('right_box_paragraph'); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>        
+                        </div>
+                    </div>
+                </div>  
+            </div> <!-- end .container -->
+		
+        
+        <?php else: ?>
+        
 
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
@@ -38,23 +82,9 @@ global $post;
 
 					<a href="https://go.virtualstock.com/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
 				<?php endif; ?>
-
-				<?php if( is_front_page() ) : ?>
-					<div class="owl-carousel owl-theme v-owl-carousel">
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/09/john-lewis-opt.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-28.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-22.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-21.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/nhs.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-17.png" height="30" alt=""/></div>
-					</div>
-				<?php endif; ?>
 			</div> <!-- end .container -->
 		</div>
+        <?php endif; ?>
 
 		<div class="under-header-wrapper container">
 			
@@ -102,7 +132,8 @@ global $post;
 			
 			endif; ?>
 
-		</div>
+		</div>    
+        
 
 	</header><!-- .entry-header -->
 

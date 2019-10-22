@@ -10776,6 +10776,9 @@ h1 {
         height: 10px;
         margin-bottom: -6px;
         margin-left: 0; }
+        @media only screen and (max-width: 480px) {
+          #main-menu > li > a:after {
+            display: none; } }
   #main-menu .menu-item.dropdown {
     height: auto; }
   #main-menu li.show > a:after {
@@ -10795,6 +10798,9 @@ h1 {
       font-size: 1.5rem;
       background-color: transparent;
       text-align: center; }
+      @media only screen and (max-width: 480px) {
+        #main-menu li.dropdown .dropdown-menu {
+          height: auto; } }
     #main-menu li.dropdown:hover {
       height: 118px; }
       #main-menu li.dropdown:hover a.dropdown-toggle {
@@ -12581,36 +12587,51 @@ button.bg-custom:focus {
  *
  */
 .box-wrapper {
-  padding: 100px 50px;
+  padding: 100px;
   border-radius: 40px;
   background: rgba(255, 255, 255, 0.7);
-  position: relative; }
+  position: relative;
+  min-height: 100%;
+  height: 100%;
+  display: table;
+  width: 100%;
+  margin: auto; }
   @media only screen and (max-width: 767px) {
     .box-wrapper {
       margin-bottom: 30px; } }
-  .box-wrapper .inner-box-wrapper img {
-    width: auto;
-    max-width: 70%;
-    max-height: 200px;
-    margin: auto;
-    display: block; }
-  .box-wrapper .inner-box-wrapper h2, .box-wrapper .inner-box-wrapper h3, .box-wrapper .inner-box-wrapper p {
-    display: block;
-    text-align: center; }
-  .box-wrapper .inner-box-wrapper h2, .box-wrapper .inner-box-wrapper h3 {
-    font-size: 1.4rem; }
-  .box-wrapper .inner-box-wrapper h2, .box-wrapper .inner-box-wrapper p {
-    color: #455160; }
-  .box-wrapper .inner-box-wrapper h2 {
-    color: #455160;
-    margin-bottom: 0;
-    line-height: 100%; }
-  .box-wrapper .inner-box-wrapper h3 {
-    color: #E64097;
-    line-height: 130%; }
-  .box-wrapper .inner-box-wrapper p {
-    font-size: 1.1rem;
-    line-height: 110%; }
+  .box-wrapper .inner-box-wrapper {
+    display: table-cell;
+    vertical-align: middle; }
+    .box-wrapper .inner-box-wrapper img {
+      width: auto;
+      max-width: 70%;
+      max-height: 200px;
+      margin: auto;
+      display: block; }
+    .box-wrapper .inner-box-wrapper h2, .box-wrapper .inner-box-wrapper h3, .box-wrapper .inner-box-wrapper p {
+      display: block;
+      text-align: center; }
+    .box-wrapper .inner-box-wrapper h2 {
+      color: #E64097;
+      margin-bottom: 0;
+      line-height: 120%;
+      font-size: 2.4rem; }
+      .box-wrapper .inner-box-wrapper h2 p {
+        color: #E64097;
+        margin-bottom: 0;
+        line-height: 120%;
+        font-size: 2.4rem; }
+    .box-wrapper .inner-box-wrapper h3 {
+      color: #E64097;
+      line-height: 130%;
+      font-size: 1.4rem; }
+    .box-wrapper .inner-box-wrapper p {
+      font-size: 1.1rem;
+      line-height: 110%;
+      color: #455160; }
+
+.full-content-boxes {
+  padding: 30px; }
 
 .solutions-wrapper, .retail-wrapper {
   display: table;
@@ -12625,6 +12646,30 @@ button.bg-custom:focus {
     vertical-align: middle; }
     .solutions-wrapper .solutions-boxes a:hover, .retail-wrapper .solutions-boxes a:hover {
       text-decoration: none; }
+    .solutions-wrapper .solutions-boxes h1, .retail-wrapper .solutions-boxes h1 {
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      font-weight: 500;
+      color: #455160;
+      line-height: 100%; }
+      .solutions-wrapper .solutions-boxes h1 span, .retail-wrapper .solutions-boxes h1 span {
+        color: #E64097; }
+  .solutions-wrapper .full-content .row, .retail-wrapper .full-content .row {
+    margin-bottom: 30px; }
+    .solutions-wrapper .full-content .row:last-child, .retail-wrapper .full-content .row:last-child {
+      margin-bottom: 0; }
+  .solutions-wrapper .full-content h1 p, .retail-wrapper .full-content h1 p {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 40px;
+    text-transform: none;
+    font-size: 1.6rem;
+    padding: 8px 15px 12px;
+    line-height: 100%;
+    margin-bottom: 0; }
+    .solutions-wrapper .full-content h1 p span, .retail-wrapper .full-content h1 p span {
+      color: #E64097; }
 
 .retail-wrapper {
   margin-bottom: 30px; }
@@ -12634,7 +12679,7 @@ button.bg-custom:focus {
 
 .retail-inner-wrapper {
   display: block;
-  margin-bottom: 40px; }
+  margin-bottom: 90px; }
   .retail-inner-wrapper h2 {
     color: #E64097; }
   .retail-inner-wrapper p {
