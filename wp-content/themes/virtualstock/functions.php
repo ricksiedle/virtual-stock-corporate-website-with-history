@@ -6,6 +6,13 @@
  */
 
 /**
+remove auto added paragraphs
+**/
+
+remove_filter ('acf_the_content', 'wpautop');
+remove_filter('the_content', 'wpautop');
+
+/**
  * Initialize theme default settings
  */
 require get_template_directory() . '/inc/theme-settings.php';
@@ -69,4 +76,3 @@ require get_template_directory() . '/inc/woocommerce.php';
  * Load Editor functions.
  */
 require get_template_directory() . '/inc/editor.php';
-

@@ -12,6 +12,50 @@ global $post;
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
 	<header class="entry-header">
+        
+        <?php if( is_front_page() ) : ?>
+            
+        
+		
+			
+			<!-- Static content in the carousel area -->
+			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
+                <div class="solutions-boxes">
+                    <h1><?php the_field('header'); ?></h1>        
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"> 
+                                <a href="<?php echo esc_url( get_field('left_box_url') ); ?>">
+                                    <div class="box-wrapper">
+                                        <div class="inner-box-wrapper">
+                                            <?php if( get_field('left_box_image') ): ?><img src="<?php the_field('left_box_image'); ?>" alt=""> 
+                                            <?php endif; ?>
+                                            <h2><?php the_field('left_box_title'); ?></h2>
+                                            <p><?php the_field('left_box_paragraph'); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col">
+                                <a href="<?php echo esc_url( get_field('right_box_url') ); ?>">
+                                    <div class="box-wrapper">
+                                        <div class="inner-box-wrapper">
+                                            <?php if( get_field('right_box_image') ): ?><img src="<?php the_field('right_box_image'); ?>" alt=""> 
+                                            <?php endif; ?>   
+                                            <h2><?php the_field('right_box_title'); ?></h2>
+                                            <p><?php the_field('right_box_paragraph'); ?></p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>        
+                        </div>
+                    </div>
+                </div>  
+            </div> <!-- end .container -->
+		
+        
+        <?php else: ?>
+        
 
 		<div id="carousel" class="carousel slide" data-ride="carousel">
 
@@ -38,23 +82,30 @@ global $post;
 
 					<a href="https://go.virtualstock.com/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
 				<?php endif; ?>
+<<<<<<< HEAD
+=======
 
 				<?php if( is_front_page() ) : ?>
-					<div class="owl-carousel owl-theme v-owl-carousel">
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/tesco.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/john_lewis.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/argos.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/dixons.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-28.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-22.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/06/screwfix.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-21.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/nhs.png" height="30" alt=""/></div>
-						<div class="item"><img src="<?php echo home_url(); ?>/wp-content/uploads/2018/07/logo-17.png" height="30" alt=""/></div>
-					</div>
+				<div class="owl-carousel owl-theme v-owl-carousel">
+					<?php
+						// check if the repeater field has rows of data
+						if( have_rows('customer_icons') ):
+							// loop through the rows of data
+							while ( have_rows('customer_icons') ) : the_row(); ?>
+
+								<div class="item"><img src="<?php the_sub_field('customer_logo'); ?>" height="30" alt=""/></div>
+					<?php
+							endwhile;
+
+						else : // no rows found
+						endif;
+					?>
+				</div>
 				<?php endif; ?>
+>>>>>>> c7ddebf2d267edeedd13f060efa2d8b8e6899dc1
 			</div> <!-- end .container -->
 		</div>
+        <?php endif; ?>
 
 		<div class="under-header-wrapper container">
 			
@@ -76,7 +127,7 @@ global $post;
 			?>
 				<div class="under-header-section">
 					<h3 class="text-align-center"> <?php echo $v_under_header_title; ?> </h3>
-					<p class="text-align-center"> <?php _e( 'The Edge4Health is a partnership between NHS SBS and Virtualstock' ); ?> </p>
+					<p class="text-align-center"> <?php _e( 'The Edge4Health is a partnership between NHS Shared Business Services and Virtualstock' ); ?> </p>
 					<div class="row under-header-section-content">
 						<div class="col-sm-12 text-align-center">
 							<?php echo $v_under_header_left; ?>
@@ -102,7 +153,8 @@ global $post;
 			
 			endif; ?>
 
-		</div>
+		</div>    
+        
 
 	</header><!-- .entry-header -->
 

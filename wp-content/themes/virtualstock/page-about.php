@@ -4,7 +4,7 @@ get_header();
 
 ?>
 <div class="wrapper">
-    <div class="container">
+    <div class="container">        
 
     <!-- OUR PURPOSE SECTION -->
     <?php if( have_rows('our_purpose_section') ): ?>
@@ -37,7 +37,7 @@ get_header();
         <div class="row section-people v-full-width">
                 
             <div class="container">
-                <h2 class="text-align-center"> <?php _e('Our <span style="color:#E64097">people</span>', 'virtual') ?></h2>
+                <h2 class="text-align-center"> <?php _e('Our <span style="color:#E64097;">people</span>', 'virtual') ?></h2>
                 <div class="row">
                 <?php
                 if ($team_object_arr = get_field('team')):
@@ -198,8 +198,10 @@ get_header();
                 <p> <?php _e('', 'virtual') ?></p>    
             </div>
         </div>
+        
+        
 
-    </div><!-- end .container -->
+    </div><!-- end .container -->    
 </div><!-- end .wrapper -->
 
 
