@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
+<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center 103px no-repeat; background-size: contain; height: 100vh;">
     <div class="solutions-boxes full-content">               
         <div class="container">
             <h1><?php the_field('header'); ?></h1> 
