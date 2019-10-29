@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="retail-wrapper" style="background: url(http://localhost/VirtualStock/wp-content/uploads/2019/10/titles.jpg) center center no-repeat; background-size: cover; min-height: 100vh;">
+<div class="retail-wrapper" style="background: url(http://localhost/VirtualStock/wp-content/uploads/2019/10/titles.jpg) center 103px no-repeat; background-size: cover; min-height: 100vh;">
     <div class="solutions-boxes">
         <div class="container">
             <div class="row bottom-margin">

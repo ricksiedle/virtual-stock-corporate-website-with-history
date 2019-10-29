@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center 103px no-repeat; background-size: contain; height: 100vh;">
+<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center 103px no-repeat; background-size: cover; height: 100vh;">
     <div class="solutions-boxes full-content">               
         <div class="container">
             <h1><?php the_field('header'); ?></h1> 
@@ -75,7 +75,7 @@ get_header();
                     <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
                 </div>
                 <div class="col-sm-6">
-                    <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+                    <img data-aos="zoom-in" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+                    <img data-aos="fade-left" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
                 </div>
                 <div class="col-sm-6">
                     <h2>Manage your Orders</h2>
@@ -103,7 +103,7 @@ get_header();
                     <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
                 </div>
                 <div class="col-sm-6">
-                    <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+                    <img data-aos="fade-right" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    <img src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+                    <img data-aos="fade-up" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
                 </div>
                 <div class="col-sm-6">
                     <h2>Find new Products & Suppliers</h2>
@@ -123,6 +123,10 @@ get_header();
         </div>
     </div>
 </section>
+
+<script>
+  AOS.init();
+</script>
 
 <?php
 
