@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center 103px no-repeat; background-size: cover; height: 100vh;">
+<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; height: 100vh;">
     <div class="solutions-boxes full-content">               
         <div class="container">
             <h1><?php the_field('header'); ?></h1> 
@@ -114,109 +114,71 @@ endif;
     
 </section>
 
+<!-- Pricing boxes -->
+
 <section class="pricing-boxes">
+
+   
     <div class="card-deck">
         <div class="container">
             <div class="row">
+                 <?php
+
+                // check if the repeater field has rows of data
+                if( have_rows('pricing_boxes') ):
+
+               // loop through the rows of data
+                while ( have_rows('pricing_boxes') ) : the_row(); ?> 
+        
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <div class="card">
                         <div class="card-header">
-                            <h2>Starter</h2>
-                            <p>Powerful tools for small businesses</p>
+                            <h2><?php the_sub_field('package_name'); ?></h2>
+                            <p><?php the_sub_field('package_description'); ?></p>
                         </div>
+    
                         <div class="card-body">
                             <div class="card-body-content">
-                                <h2>Starts from</h2>
-                                <p>$25</p>
-                                <span>per month</span>
-                                <a href="#">Start Now</a>
+                                <h2><?php the_sub_field('package_start'); ?></h2>
+                                <h3><?php the_sub_field('custom_input'); ?></h3>
+                                <p><?php the_sub_field('price'); ?></p>
+                                <span><?php the_sub_field('price_info'); ?></span>
+                                <a href="#"><?php the_sub_field('button_link_text'); ?></a>
                             </div>
                         </div>
+                        
                         <div class="card-footer">
+                            
                             <ul>
-                                <li>On-Site Trust Widgets</li>
-                                <li>Smart reminders</li>
-                                <li>Priority support</li>
+                                <?php
+                            if( have_rows('package_footer_list') ):
+                            while ( have_rows('package_footer_list') ) : the_row(); ?> 
+                                <li><?php the_sub_field('package_footer_list_item'); ?></li>
+                                <?php  $i++;  endwhile;
+                            else :
+
+                                // no rows found
+
+                            endif;
+
+                            ?>
                             </ul>
+                            
                         </div>
                     </div>
                 </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Starter</h2>
-                            <p>Powerful tools for small businesses</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <h2>Starts from</h2>
-                                <p>$25</p>
-                                <span>per month</span>
-                                <a href="#">Start Now</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <ul>
-                                <li>On-Site Trust Widgets</li>
-                                <li>Smart reminders</li>
-                                <li>Priority support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Starter</h2>
-                            <p>Powerful tools for small businesses</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-body-content">
-                                <h2>Starts from</h2>
-                                <p>$25</p>
-                                <span>per month</span>
-                                <a href="#">Start Now</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <ul>
-                                <li>On-Site Trust Widgets</li>
-                                <li>Smart reminders</li>
-                                <li>Priority support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="card">
-                        <div class="card-header">
-                            <h2>Starter</h2>
-                            <p>Powerful tools for small businesses</p>
-                        </div>
-                        <div class="card-body">
-                            <div class="card-body-content">
-    <!--                            <h2>Starts from</h2>-->
-                                <h3>Custom<br> Plan</h3>
-    <!--                            <p>$25</p><p>$25</p>-->
-    <!--                            <span>per month</span>-->
-                                <a href="#">Start Now</a>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <ul>
-                                <li>On-Site Trust Widgets</li>
-                                <li>Smart reminders</li>
-                                <li>Priority support</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                 <?php  $i++;  endwhile;
+
+                else :
+
+                    // no rows found
+
+                endif;
+
+                ?>
             </div>
-        </div>        
-    </div>
+        </div>
+    </div>      
 </section>
 
 <script>

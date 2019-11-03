@@ -12693,6 +12693,9 @@ button.bg-custom:focus {
     display: table-cell;
     height: 100%;
     vertical-align: middle; }
+    .animation-wrapper .animation-inner-container img {
+      width: 100%;
+      max-width: 100%; }
 
 .retail-inner-wrapper {
   display: block;
@@ -12712,52 +12715,64 @@ button.bg-custom:focus {
     margin-bottom: 0; }
 
 .pricing-boxes {
-  margin-bottom: 90px; }
+  margin-bottom: 150px; }
 
 .card-deck {
   margin-right: 0;
-  margin-left: 0; }
+  margin-left: 0;
+  height: 100%; }
   .card-deck .card {
     height: 100%;
     margin-right: 0;
     margin-left: 0; }
     .card-deck .card .card-header {
+      height: auto;
       background: #55575e;
       padding: 10px 25px; }
       .card-deck .card .card-header h2, .card-deck .card .card-header p {
         text-align: center; }
-      .card-deck .card .card-header h2 {
+      .card-deck .card .card-header h2 p {
         color: #fff;
         font-size: 1.4rem; }
       .card-deck .card .card-header p {
         color: #7f7f7f;
         font-size: 1rem;
         line-height: 110%; }
+
+@-moz-document url-prefix() {
+  .card-deck .card .card-header {
+    height: 100%;
+    max-height: 105px; } }
     .card-deck .card .card-body {
       position: relative;
       min-height: 200px;
-      display: table; }
+      display: table;
+      width: 100%; }
       .card-deck .card .card-body .card-body-content {
         display: table-cell;
-        vertical-align: middle; }
+        vertical-align: middle;
+        width: 100%; }
         .card-deck .card .card-body .card-body-content h2, .card-deck .card .card-body .card-body-content h3, .card-deck .card .card-body .card-body-content p, .card-deck .card .card-body .card-body-content span {
           text-align: center; }
-        .card-deck .card .card-body .card-body-content h2 {
+        .card-deck .card .card-body .card-body-content h2 p {
           font-size: 1rem;
           margin-bottom: 20px; }
-        .card-deck .card .card-body .card-body-content h3 {
-          font-size: 2rem;
-          line-height: 120%; }
-        .card-deck .card .card-body .card-body-content h3, .card-deck .card .card-body .card-body-content p {
-          font-weight: 700; }
+        .card-deck .card .card-body .card-body-content h3 p {
+          font-size: 3rem;
+          line-height: 100%;
+          font-weight: 400;
+          margin-top: -50px; }
         .card-deck .card .card-body .card-body-content p {
           font-size: 3rem;
           margin-bottom: 5px;
-          line-height: 100%; }
-        .card-deck .card .card-body .card-body-content span {
+          line-height: 100%;
+          font-weight: 700; }
+        .card-deck .card .card-body .card-body-content span p {
           display: block;
           font-size: 0.8rem;
-          margin-bottom: 30px; }
+          margin-bottom: 30px;
+          color: #c0c0c5;
+          font-weight: 400; }
         .card-deck .card .card-body .card-body-content a {
           display: block;
           border: 2px solid #fac532;
@@ -12773,12 +12788,17 @@ button.bg-custom:focus {
           margin-right: auto;
           left: 0;
           right: 0;
-          max-width: 80%; }
+          max-width: 80%;
+          width: 80%; }
           .card-deck .card .card-body .card-body-content a:hover {
             text-decoration: none;
             border: 2px solid transparent;
             background: #fac532;
             color: #fff; }
+
+@-moz-document url-prefix() {
+  .card-deck .card .card-body {
+    height: 200px; } }
     .card-deck .card .card-footer {
       border-top: 0;
       background: #fff;
@@ -12791,11 +12811,14 @@ button.bg-custom:focus {
         border-top: 1px solid rgba(0, 0, 0, 0.125); }
         .card-deck .card .card-footer ul li {
           font-size: 1rem;
-          text-align: center; }
+          text-align: center;
+          text-transform: capitalize; }
     .card-deck .card:hover .card-header {
       background: #378bea; }
       .card-deck .card:hover .card-header p {
         color: #fff; }
+    .card-deck .card:hover .card-body .card-body-content h2 p, .card-deck .card:hover .card-body .card-body-content span p {
+      color: #455160; }
     .card-deck .card:hover .card-body .card-body-content p {
       color: #378bea; }
 

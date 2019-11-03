@@ -19,7 +19,7 @@ global $post;
 		
 			
 			<!-- Static content in the carousel area -->
-			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center 103px no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
+			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
                 <div class="solutions-boxes">
                     <h1><?php the_field('header'); ?></h1>        
                     <div class="container">
