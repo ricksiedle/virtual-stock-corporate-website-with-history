@@ -19,12 +19,12 @@ global $post;
 		
 			
 			<!-- Static content in the carousel area -->
-			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: 100vh;">
+			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 103px; min-height: 100vh; height: calc(100vh - 103px);">
                 <div class="solutions-boxes">
                     <h1><?php the_field('header'); ?></h1>        
                     <div class="container">
                         <div class="row">
-                            <div class="col"> 
+                            <div class="mobile-box col"> 
                                 <a href="<?php echo esc_url( get_field('left_box_url') ); ?>">
                                     <div class="box-wrapper">
                                         <div class="inner-box-wrapper">
@@ -36,7 +36,7 @@ global $post;
                                     </div>
                                 </a>
                             </div>
-                            <div class="col">
+                            <div class="mobile-box col">
                                 <a href="<?php echo esc_url( get_field('right_box_url') ); ?>">
                                     <div class="box-wrapper">
                                         <div class="inner-box-wrapper">

@@ -12726,7 +12726,6 @@ button.bg-custom:focus {
     margin-right: 0;
     margin-left: 0; }
     .card-deck .card .card-header {
-      height: auto;
       background: #55575e;
       padding: 10px 25px; }
       .card-deck .card .card-header h2, .card-deck .card .card-header p {
@@ -12842,6 +12841,10 @@ button.bg-custom:focus {
 
 body.page-template-page-full-content .solutions-wrapper {
   margin-bottom: 0; }
+
+@media only screen and (max-width: 991px) {
+  .mobile-box {
+    margin-bottom: 30px; } }
 
 /*
  *
