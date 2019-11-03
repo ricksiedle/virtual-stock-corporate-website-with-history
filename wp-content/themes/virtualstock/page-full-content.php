@@ -130,7 +130,7 @@ endif;
                // loop through the rows of data
                 while ( have_rows('pricing_boxes') ) : the_row(); ?> 
         
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                <div class="mobile-box col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <div class="card">
                         <div class="card-header">
                             <h2><?php the_sub_field('package_name'); ?></h2>
