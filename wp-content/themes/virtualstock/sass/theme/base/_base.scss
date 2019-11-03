@@ -4,6 +4,11 @@
         overflow-x: hidden;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     // Body font size assigned to decade multiplier for clear and intuitive rem values.
     font-size: 10px;

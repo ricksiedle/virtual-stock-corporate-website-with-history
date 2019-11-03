@@ -18,7 +18,7 @@ get_header();
             <h1><?php the_field('header'); ?></h1> 
             <div class="row">
                 <div class="col"> 
-                    <a href="<?php echo esc_url( get_field('left_box_url') ); ?>">
+                    <a href="#first">
                         <div class="box-wrapper full-content-boxes">
                             <div class="inner-box-wrapper">
                                 <h2><?php the_field('left_box_title'); ?></h2>
@@ -28,7 +28,7 @@ get_header();
                     </a>
                 </div>
                 <div class="col">
-                    <a href="<?php echo esc_url( get_field('right_box_url') ); ?>">
+                    <a href="#second">
                         <div class="box-wrapper full-content-boxes">
                             <div class="inner-box-wrapper">  
                                 <h2><?php the_field('right_box_title'); ?></h2>
@@ -41,7 +41,7 @@ get_header();
             
             <div class="row">
                 <div class="col"> 
-                    <a href="<?php echo esc_url( get_field('second_row_left_box_url') ); ?>">
+                    <a href="#third">
                         <div class="box-wrapper full-content-boxes">
                             <div class="inner-box-wrapper">
                                 <h2><?php the_field('second_row_left_box_title'); ?></h2>
@@ -51,7 +51,7 @@ get_header();
                     </a>
                 </div>
                 <div class="col">
-                    <a href="<?php echo esc_url( get_field('second_row_right_box_url') ); ?>">
+                    <a href="#fourth">
                         <div class="box-wrapper full-content-boxes">
                             <div class="inner-box-wrapper">  
                                 <h2><?php the_field('second_row_right_box_title'); ?></h2>
@@ -66,61 +66,156 @@ get_header();
 </div>
 
 <section class="retail-content">
-    <div class="retail-inner-wrapper">
+
+<?php
+    
+    $ids = ['first', 'second', 'third', 'fourth'];
+    $i = 0;
+
+// check if the repeater field has rows of data
+if( have_rows('animated_box_content') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('animated_box_content') ) : the_row(); ?>
+
+    <div id="<?php echo $ids[$i]; ?>" class="retail-inner-wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <h2>Expand your Range</h2>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
+                <div class="col-12">
+                    <h2><?php the_sub_field('title'); ?></h2>
                 </div>
-                <div class="col-sm-6">
-                    <img data-aos="zoom-in" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+            </div>
+            <div class="row">                
+                <div class="col-sm-6">                    
+                    <p><?php the_sub_field('paragraph'); ?></p>
+                </div>
+                <div class="<?php if (get_sub_field('animation_position') == 'left') { echo 'left-floated'; } else { echo 'right-floated'; } ?> col-sm-6">
+                    <div class="animation-wrapper">
+                        <div class="animation-inner-container">
+                            <?php if( get_sub_field('animated_image') ): ?>
+                            <img data-aos="<?php the_sub_field('animation_type') ?>" src="<?php the_sub_field('animated_image'); ?>" alt=""> 
+                            <?php endif; ?>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <div class="retail-inner-wrapper">
+
+ <?php    $i++;  endwhile;
+
+else :
+
+    // no rows found
+
+endif;
+
+?>
+    
+</section>
+
+<section class="pricing-boxes">
+    <div class="card-deck">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6">
-                    <img data-aos="fade-left" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Starter</h2>
+                            <p>Powerful tools for small businesses</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-content">
+                                <h2>Starts from</h2>
+                                <p>$25</p>
+                                <span>per month</span>
+                                <a href="#">Start Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <li>On-Site Trust Widgets</li>
+                                <li>Smart reminders</li>
+                                <li>Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-sm-6">
-                    <h2>Manage your Orders</h2>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Starter</h2>
+                            <p>Powerful tools for small businesses</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-content">
+                                <h2>Starts from</h2>
+                                <p>$25</p>
+                                <span>per month</span>
+                                <a href="#">Start Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <li>On-Site Trust Widgets</li>
+                                <li>Smart reminders</li>
+                                <li>Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Starter</h2>
+                            <p>Powerful tools for small businesses</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-content">
+                                <h2>Starts from</h2>
+                                <p>$25</p>
+                                <span>per month</span>
+                                <a href="#">Start Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <li>On-Site Trust Widgets</li>
+                                <li>Smart reminders</li>
+                                <li>Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Starter</h2>
+                            <p>Powerful tools for small businesses</p>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-body-content">
+    <!--                            <h2>Starts from</h2>-->
+                                <h3>Custom<br> Plan</h3>
+    <!--                            <p>$25</p><p>$25</p>-->
+    <!--                            <span>per month</span>-->
+                                <a href="#">Start Now</a>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <ul>
+                                <li>On-Site Trust Widgets</li>
+                                <li>Smart reminders</li>
+                                <li>Priority support</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="retail-inner-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <h2>Stay Safe</h2>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                </div>
-                <div class="col-sm-6">
-                    <img data-aos="fade-right" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="retail-inner-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <img data-aos="fade-up" src="http://localhost/VirtualStock/wp-content/uploads/2018/07/The-Edge-Platform-2018-Dark.png" alt="">  
-                </div>
-                <div class="col-sm-6">
-                    <h2>Find new Products & Suppliers</h2>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                    <p>Lorem ipsum dolor sit amet, cu patrioque rationibus vim, solum ullum erant eum eu. Ei quo labore appellantur, vidit democritum honestatis nam et. An quo postea tacimates, labitur accusata ea pro. Te pri veri deserunt. Est et dicunt nominati</p>
-                </div>
-            </div>
-        </div>
+        </div>        
     </div>
 </section>
 
