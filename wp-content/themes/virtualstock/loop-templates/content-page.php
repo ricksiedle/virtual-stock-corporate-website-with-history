@@ -82,8 +82,6 @@ global $post;
 
 					<a href="https://go.virtualstock.com/contact"><button id="carousel-btn" class="moduled-btn pink-btn carousel-btn"><?php _e( 'Ready to meet?', 'virtual' ) ?></button></a>
 				<?php endif; ?>
-<<<<<<< HEAD
-=======
 
 				<?php if( is_front_page() ) : ?>
 				<div class="owl-carousel owl-theme v-owl-carousel">
@@ -102,7 +100,6 @@ global $post;
 					?>
 				</div>
 				<?php endif; ?>
->>>>>>> c7ddebf2d267edeedd13f060efa2d8b8e6899dc1
 			</div> <!-- end .container -->
 		</div>
         <?php endif; ?>

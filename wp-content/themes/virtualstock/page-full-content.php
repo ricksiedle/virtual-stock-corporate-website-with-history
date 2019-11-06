@@ -114,6 +114,16 @@ endif;
     
 </section>
 
+<section class="stats-scrolling-banner">
+
+<?php 
+
+v_stats_counter(); 
+
+?>
+    
+    </section>
+
 <!-- Pricing boxes -->
 
 <section class="pricing-boxes">
@@ -183,6 +193,44 @@ endif;
 
 <script>
   AOS.init();
+</script>
+
+<script>
+	if(jQuery('#counter-owl').length > 0) {
+		jQuery('#counter-owl').owlCarousel({
+			loop		: true,
+			margin		: 10,
+			dots		: false,
+			<?php if(!wp_is_mobile()): ?>
+			nav    		: true,
+			<?php else: ?>
+			nav    		: false,
+			<?php endif; ?>
+			smartSpeed 	: 2000,
+			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+			autoplay   	: true,
+			autoplayTimeout: 6000,
+			autoplayHoverPause:true,
+			responsive	: {
+					0	: { items:1 },
+					768	: { items:2 },
+					1200: { items:4 }
+			}
+		})
+	}
+</script>
+
+
+<script>
+	jQuery(document).ready(function($) {
+		if(jQuery('.counter').length > 0) {
+			
+			$('.counter').counterUp({
+				delay: 10,
+				time: 1000
+			});
+		}
+	});
 </script>
 
 <?php
