@@ -20,7 +20,8 @@ if ( ! function_exists( 'v_stats_counter' ) ) :
 								?>
 
 								<div class="v-counter-wrapper text-align-center">	
-									<span class="counter v-counter"><?php echo $v_statistic_figure; ?></span> <span class="v-counter-unit"><?php echo $v_unit; ?></span>
+									<span class="counter v-counter"><?php echo $v_statistic_figure; ?></span> 
+                                    <span class="v-counter-unit"><?php echo $v_unit; ?></span>
 									<div class="v-counter-label">
 										<?php echo $v_stock; ?>
 									</div>

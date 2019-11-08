@@ -65,6 +65,17 @@ get_header();
     </div>  
 </div>
 
+
+<section class="stats-scrolling-slider">
+
+<?php 
+
+   v_stats_slider(); 
+?>
+    
+</section>
+
+
 <section class="retail-content">
 
 <?php
@@ -116,13 +127,13 @@ endif;
 
 <section class="stats-scrolling-banner">
 
-<?php 
+    <?php 
 
-v_stats_counter(); 
+    v_stats_counter(); 
 
-?>
+    ?>
     
-    </section>
+</section>
 
 <!-- Pricing boxes -->
 
@@ -198,6 +209,31 @@ v_stats_counter();
 <script>
 	if(jQuery('#counter-owl').length > 0) {
 		jQuery('#counter-owl').owlCarousel({
+			loop		: true,
+			margin		: 10,
+			dots		: false,
+			<?php if(!wp_is_mobile()): ?>
+			nav    		: true,
+			<?php else: ?>
+			nav    		: false,
+			<?php endif; ?>
+			smartSpeed 	: 2000,
+			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+			autoplay   	: true,
+			autoplayTimeout: 6000,
+			autoplayHoverPause:true,
+			responsive	: {
+					0	: { items:1 },
+					768	: { items:2 },
+					1200: { items:4 }
+			}
+		})
+	}
+</script>
+
+<script>
+	if(jQuery('#stats-slider-owl').length > 0) {
+		jQuery('#stats-slider-owl').owlCarousel({
 			loop		: true,
 			margin		: 10,
 			dots		: false,

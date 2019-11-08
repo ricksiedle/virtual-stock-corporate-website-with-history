@@ -38,6 +38,11 @@ require get_template_directory() . '/inc/enqueue.php';
 require get_template_directory() . '/inc/template-tags.php';
 
 /**
+ * Custom template for stats slider.
+ */
+require get_template_directory() . '/inc/v_stats_slider.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/pagination.php';
