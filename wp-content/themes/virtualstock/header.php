@@ -33,8 +33,8 @@ $container = get_theme_mod( 'understrap_container_type' );
 </head>
 
 <body <?php body_class(); ?>>
-    <a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php _e( 'Talk to Sales?', 'virtual' ) ?></button></a>
-
+    <a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn"><?php _e( 'Talk to Sales?', 'virtual' ) ?></button></a>
+    
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WDJHR2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
@@ -68,6 +68,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" id="site-logo" class="navbar-brand custom-logo-link" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home">
 										<img src="<?php echo get_theme_mod( 'm_logo' ); ?>" class="img-fluid" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 									</a>
+<!--                <a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn "><?php // _e( 'Login', 'virtual' ) ?></button></a>-->
 								<?php 
 								} else {
 										the_custom_logo();
@@ -95,10 +96,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-<!--				<a href="https://go.virtualstock.com/contact"><button id="header-btn" class="moduled-btn pink-btn mobile-hidden"><?php // _e( 'Ready to meet?', 'virtual' ) ?></button></a>-->
+                
+                <?php if (is_page (array('healthcare', 'suppliers', 'providers') ) ) : ?>
+                    <a class="pink-button" href="https://labs-022.labs.the-edge.io/"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                <?php else : ?>
+                    <a class="pink-button" href="https://labs-003-zone.labs.the-edge.io/"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                <?php endif; ?>            
 				
-			</div><!-- .container -->
-			
+			</div><!-- .container -->			
 
 		</nav><!-- .site-navigation -->
 

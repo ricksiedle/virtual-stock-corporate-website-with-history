@@ -10815,24 +10815,50 @@ h1 {
       #main-menu li.dropdown:hover .dropdown-menu {
         height: 65px; }
 
-@media screen and (min-width: 991px) {
-  #header-btn.moduled-btn.pink-btn {
-    position: fixed;
+#header-btn.moduled-btn.pink-btn {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 9;
+  background: #E64097;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  padding: 10px 30px 15px;
+  line-height: 100%; }
+  #header-btn.moduled-btn.pink-btn:hover {
+    font-size: 22px;
+    -webkit-transition: ease 0.2s;
+    transition: ease 0.2s; }
+
+a.pink-button {
+  text-decoration: none; }
+  a.pink-button button#login {
     display: block;
-    right: 20px;
-    bottom: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    z-index: 9;
     background: #E64097;
-    border: 0;
-    color: #fff;
+    z-index: 9;
     padding: 10px 30px 15px;
-    line-height: 100%; }
-    #header-btn.moduled-btn.pink-btn:hover {
+    line-height: 100%;
+    color: #fff;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 20px; }
+    a.pink-button button#login:hover {
       font-size: 22px;
+      text-decoration: none;
       -webkit-transition: ease 0.2s;
       transition: ease 0.2s; }
+  @media only screen and (max-width: 1023px) {
+    a.pink-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px; } }
+
+@media screen and (min-width: 991px) {
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
     background-color: #fff; }
   #main-menu {
