@@ -12660,7 +12660,12 @@ button.bg-custom:focus {
       color: #455160; }
 
 .full-content-boxes {
-  padding: 30px; }
+  background: transparent;
+  padding: 25px; }
+
+.full-content-boxes-wrapper {
+  border-radius: 40px;
+  background: rgba(255, 255, 255, 0.7); }
 
 .solutions-wrapper, .retail-wrapper {
   display: table;
@@ -12688,7 +12693,7 @@ button.bg-custom:focus {
       .solutions-wrapper .solutions-boxes .col, .retail-wrapper .solutions-boxes .col {
         margin-bottom: 30px; } }
   .solutions-wrapper .full-content .row, .retail-wrapper .full-content .row {
-    margin-bottom: 30px; }
+    margin-bottom: 20px; }
     @media only screen and (max-width: 479px) {
       .solutions-wrapper .full-content .row, .retail-wrapper .full-content .row {
         margin-bottom: 0; } }

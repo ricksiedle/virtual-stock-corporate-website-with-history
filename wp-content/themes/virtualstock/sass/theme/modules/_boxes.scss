@@ -64,7 +64,13 @@
 }  
 
 .full-content-boxes {
-    padding: 30px;
+    background: transparent;
+    padding: 25px;
+}
+
+.full-content-boxes-wrapper {
+    border-radius: 40px;
+    background: rgba(255,255,255,.7);
 }
 
 // Landing page styles
@@ -108,7 +114,7 @@
     
     .full-content {
         .row {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             
             @media only screen and (max-width:479px) {
                 margin-bottom: 0;
