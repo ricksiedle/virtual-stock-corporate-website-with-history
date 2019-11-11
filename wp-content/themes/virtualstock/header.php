@@ -98,9 +98,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 
                 
                 <?php if (is_page (array('healthcare', 'suppliers', 'providers') ) ) : ?>
-                    <a class="pink-button" href="https://labs-022.labs.the-edge.io/"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                    <a class="pink-button" href="https://labs-022.labs.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
                 <?php else : ?>
-                    <a class="pink-button" href="https://labs-003-zone.labs.the-edge.io/"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                    <a class="pink-button" href="https://labs-003.labs.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
                 <?php endif; ?>            
 				
 			</div><!-- .container -->			
