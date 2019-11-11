@@ -12884,6 +12884,9 @@ section.stats-scrolling-banner {
   height: 50px;
   width: auto; }
 
+section.stats-scrolling-slider .owl-stage-outer {
+  margin-top: 30px; }
+
 /*
  *
  * Landing Page elements

@@ -405,7 +405,6 @@ body.page-template-page-full-content {
     }
 }
 
-
 section.stats-scrolling-banner {
     margin-bottom: 100px;
 }
@@ -413,6 +412,12 @@ section.stats-scrolling-banner {
 #stats-slider-owl img.stats-slider-img {
     height: 50px;
     width: auto;
+}
+
+section.stats-scrolling-slider {
+    .owl-stage-outer {
+        margin-top: 30px;
+    }
 }
 
 
