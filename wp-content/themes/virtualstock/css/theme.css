@@ -10927,8 +10927,7 @@ a.pink-button {
     top: 30px; }
 
 #wrapper-footer {
-  background-color: #455160;
-  margin-top: -60px; }
+  background-color: #455160; }
   @media only screen and (max-width: 768px) {
     #wrapper-footer .site-footer {
       width: 50%;
@@ -12746,7 +12745,10 @@ button.bg-custom:focus {
     margin-bottom: 0; }
 
 .pricing-boxes {
-  margin-bottom: 150px; }
+  margin-bottom: 100px; }
+  @media only screen and (max-width: 767px) {
+    .pricing-boxes {
+      margin-bottom: 70px; } }
 
 .card-deck {
   margin-right: 0;
@@ -12756,6 +12758,10 @@ button.bg-custom:focus {
     height: 100%;
     margin-right: 0;
     margin-left: 0; }
+    @media only screen and (max-width: 767px) {
+      .card-deck .card {
+        height: auto;
+        margin-bottom: 30px; } }
     .card-deck .card .card-header {
       background: #55575e;
       padding: 10px 25px; }
@@ -12877,6 +12883,10 @@ body.page-template-page-full-content .solutions-wrapper {
   .mobile-box {
     margin-bottom: 30px; } }
 
+@media only screen and (max-width: 767px) {
+  .mobile-box {
+    margin-bottom: 0; } }
+
 section.stats-scrolling-banner {
   margin-bottom: 100px; }
 
@@ -12886,6 +12896,33 @@ section.stats-scrolling-banner {
 
 section.stats-scrolling-slider .owl-stage-outer {
   margin-top: 30px; }
+
+.pricing-plans {
+  display: block;
+  margin-bottom: 100px; }
+  @media only screen and (max-width: 767px) {
+    .pricing-plans {
+      margin-bottom: 70px; } }
+  .pricing-plans h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px; }
+  .pricing-plans .plan-box {
+    border: 1px solid #ccc;
+    border-radius: .25rem;
+    padding: 20px;
+    height: 100%; }
+    @media only screen and (max-width: 767px) {
+      .pricing-plans .plan-box {
+        margin-bottom: 30px;
+        height: auto; } }
+    .pricing-plans .plan-box h2 {
+      color: #E64097;
+      font-size: 2.2rem;
+      line-height: 100%;
+      margin-bottom: 10px; }
+    .pricing-plans .plan-box p {
+      font-size: 1.4rem;
+      line-height: 120%; }
 
 /*
  *

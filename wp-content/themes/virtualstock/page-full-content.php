@@ -139,9 +139,7 @@ endif;
 
 <!-- Pricing boxes -->
 
-<section class="pricing-boxes">
-
-   
+<section class="pricing-boxes">   
     <div class="card-deck">
         <div class="container">
             <div class="row">
@@ -202,6 +200,27 @@ endif;
             </div>
         </div>
     </div>      
+</section>
+
+<section class="pricing-plans">
+    <div class="container">
+        <h2>Support and success plans</h2>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="plan-box">
+                    <h2>Included Support:</h2>
+                    <p>Every license includes two-day response time, our customer support community, interactive webinars, events, guided journeys, and more.</p>
+                </div>
+            </div>
+            
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="plan-box">
+                    <h2>Additional Support:</h2>
+                    <p>Our Premier, Premier+, and Priority plans offer increased support for additional fees.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <script>

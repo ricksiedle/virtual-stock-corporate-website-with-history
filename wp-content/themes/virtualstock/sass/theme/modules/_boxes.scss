@@ -201,7 +201,10 @@
 // Pricing boxes
 
 .pricing-boxes {
-    margin-bottom: 150px;
+    margin-bottom: 100px;
+    @media only screen and (max-width: 767px) {
+        margin-bottom: 70px;
+    }
 }
 
 .card-deck {
@@ -213,6 +216,10 @@
         height: 100%;
         margin-right: 0;
         margin-left: 0;
+        @media only screen and (max-width: 767px) {
+            height: auto;
+            margin-bottom: 30px;
+        }
         
         .card-header {
             //height: 100%;
@@ -399,9 +406,15 @@ body.page-template-page-full-content {
     }
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width: 991px) {
     .mobile-box {
         margin-bottom: 30px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .mobile-box {
+        margin-bottom: 0;
     }
 }
 
@@ -420,6 +433,43 @@ section.stats-scrolling-slider {
     }
 }
 
+// Section Plans
+
+.pricing-plans {
+    display: block;
+    margin-bottom: 100px;
+    @media only screen and (max-width:767px) {
+        margin-bottom: 70px;
+    }
+    
+    h2 {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+    }
+        
+    .plan-box {
+        border: 1px solid #ccc;
+        border-radius: .25rem;
+        padding: 20px;
+        height: 100%;
+        @media only screen and (max-width:767px) {
+            margin-bottom: 30px;
+            height: auto;
+        }
+        
+        h2 {
+            color: $pink;
+            font-size: 2.2rem;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+        
+        p {
+            font-size: 1.4rem;
+            line-height: 120%;
+        }
+    }
+}
 
 
 
