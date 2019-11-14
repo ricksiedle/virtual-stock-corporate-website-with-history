@@ -154,7 +154,7 @@ endif;
                 <div class="mobile-box col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <div class="card">
                         <div class="card-header">
-                            <h2><?php the_sub_field('package_name'); ?></h2>
+                            <h2><?php get_sub_field('package_name'); ?></h2>
                             <p><?php the_sub_field('package_description'); ?></p>
                         </div>
     
@@ -203,28 +203,104 @@ endif;
 </section>
 
 <section class="pricing-plans">
+    <?php
+
+// check if the repeater field has rows of data
+if( have_rows('support_and_success_plans') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('support_and_success_plans') ) : the_row(); ?>
     <div class="container">
-        <h2>Support and success plans</h2>
+        <h2><?php the_sub_field('section_heading'); ?></h2> 
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="plan-box">
-                    <h2>Included Support:</h2>
-                    <p>Every license includes two-day response time, our customer support community, interactive webinars, events, guided journeys, and more.</p>
+                    <h2><?php the_sub_field('first_box_heading'); ?></h2>
+                    <p><?php the_sub_field('first_box_paragraph'); ?></p>
                 </div>
             </div>
             
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div class="plan-box">
-                    <h2>Additional Support:</h2>
-                    <p>Our Premier, Premier+, and Priority plans offer increased support for additional fees.</p>
+                    <h2><?php the_sub_field('second_box_heading'); ?></h2>
+                    <p><?php the_sub_field('second_box_paragraph'); ?></p>
                 </div>
             </div>
         </div>
+        <?php  endwhile;
+
+            else :
+
+                // no rows found
+
+            endif;
+
+        ?>
     </div>
+</section>
+
+<section class="page-accordion">
+    <?php
+
+// check if the repeater field has rows of data
+if( have_rows('faq_accordion') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('faq_accordion') ) : the_row(); ?>
+    <div class="container">
+        <h2><?php the_sub_field('accordion_section_title'); ?></h2>
+        <div class="accordion" id="accordion">
+            <?php
+
+            // check if the repeater field has rows of data
+            if( have_rows('accordion_repeater') ):
+
+            // loop through the rows of data
+            while ( have_rows('accordion_repeater') ) : the_row(); ?>
+              <div class="card">
+                <button class="btn-accordion"><?php the_sub_field('item_title'); ?></button>
+                <div class="panel">
+                  <p><?php the_sub_field('item_description'); ?></p>
+                </div>
+              </div>
+                <?php  endwhile;
+
+            else :
+                // no rows found
+                endif;
+            ?>
+        </div>
+    </div>
+    <?php  endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
+    ?>
 </section>
 
 <script>
   AOS.init();
+</script>
+
+<script>
+var acc = document.getElementsByClassName("btn-accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
 </script>
 
 <script>

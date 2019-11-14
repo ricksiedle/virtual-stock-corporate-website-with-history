@@ -1,0 +1,88 @@
+/*
+ *
+ * Page accordion elements
+ *
+ */   
+
+section.page-accordion {
+    h2 {
+        margin-bottom: 30px;
+    }
+}
+         
+#accordion {
+    margin-bottom: 100px;
+    
+    .card {
+        border-bottom: 0;
+        
+        &:last-child {
+            border-bottom: 1px solid rgba(0,0,0,.125);
+        }
+        
+        div.collapse.show {
+            
+        }
+    }
+        
+    .card-header {
+        border-radius: 0.25rem;
+        background-color: $white;
+        padding: 0;
+        border-bottom: 0;
+        
+        h2 {
+            margin-bottom: 0;
+            
+            button.btn.btn-link {
+                p {
+                    color: $light-gray;
+                    font-size: 1.4rem;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                    padding: 0;
+                    line-height: 100%;
+                    padding: 20px 25px 25px;
+                    display: inline-block;
+                    margin-bottom: 0;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+
+                    &:before {
+                        font-family: 'FontAwesome';
+                        content: '\f0d8';
+                        font-size: 22px;
+                        color: $light-gray;
+                        vertical-align: middle;
+                        margin-right: 30px;
+                    }                    
+                }
+            }
+            
+            button.btn.btn-link.collapsed {
+                p {
+                    &:before {
+                        content: '\f0d7';
+                    }
+                }
+            }
+        }
+    }
+    
+    .card-body {
+        p {
+            font-size: 1.2rem;
+            border-top: 1px solid rgba(0,0,0,.125);
+        }
+    }
+}
+
+
+.panel {
+    overflow: hidden;
+    display: none;
+}
+

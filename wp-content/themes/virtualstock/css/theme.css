@@ -12905,7 +12905,7 @@ section.stats-scrolling-slider .owl-stage-outer {
       margin-bottom: 70px; } }
   .pricing-plans h2 {
     font-size: 2.8rem;
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
   .pricing-plans .plan-box {
     border: 1px solid #ccc;
     border-radius: .25rem;
@@ -12926,9 +12926,55 @@ section.stats-scrolling-slider .owl-stage-outer {
 
 /*
  *
- * Landing Page elements
+ * Page accordion elements
  *
  */
+section.page-accordion h2 {
+  margin-bottom: 30px; }
+
+#accordion {
+  margin-bottom: 100px; }
+  #accordion .card {
+    border-bottom: 0; }
+    #accordion .card:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
+  #accordion .card-header {
+    border-radius: 0.25rem;
+    background-color: #fff;
+    padding: 0;
+    border-bottom: 0; }
+    #accordion .card-header h2 {
+      margin-bottom: 0; }
+      #accordion .card-header h2 button.btn.btn-link p {
+        color: #455160;
+        font-size: 1.4rem;
+        display: block;
+        width: 100%;
+        text-align: left;
+        padding: 0;
+        line-height: 100%;
+        padding: 20px 25px 25px;
+        display: inline-block;
+        margin-bottom: 0; }
+        #accordion .card-header h2 button.btn.btn-link p:hover {
+          text-decoration: none; }
+        #accordion .card-header h2 button.btn.btn-link p:before {
+          font-family: 'FontAwesome';
+          content: '\f0d8';
+          font-size: 22px;
+          color: #455160;
+          vertical-align: middle;
+          margin-right: 30px; }
+      #accordion .card-header h2 button.btn.btn-link.collapsed p:before {
+        content: '\f0d7'; }
+  #accordion .card-body p {
+    font-size: 1.2rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.125); }
+
+.panel {
+  overflow: hidden;
+  display: none; }
+
 .v-large-logo {
   margin-bottom: 50px; }
   @media screen and (min-width: 768px) {
