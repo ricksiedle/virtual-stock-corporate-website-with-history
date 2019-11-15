@@ -258,9 +258,9 @@ if( have_rows('faq_accordion') ):
             // loop through the rows of data
             while ( have_rows('accordion_repeater') ) : the_row(); ?>
               <div class="card">
-                <button class="btn-accordion"><?php the_sub_field('item_title'); ?></button>
+                <button class="btn-accordion"><h2><?php the_sub_field('item_title'); ?></h2></button>
                 <div class="panel">
-                  <p><?php the_sub_field('item_description'); ?></p>
+                  <?php the_sub_field('item_description'); ?>
                 </div>
               </div>
                 <?php  endwhile;

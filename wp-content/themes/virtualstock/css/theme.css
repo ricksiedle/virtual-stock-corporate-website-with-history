@@ -12938,42 +12938,44 @@ section.page-accordion h2 {
     border-bottom: 0; }
     #accordion .card:last-child {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
-  #accordion .card-header {
+  #accordion .btn-accordion {
     border-radius: 0.25rem;
     background-color: #fff;
-    padding: 0;
-    border-bottom: 0; }
-    #accordion .card-header h2 {
-      margin-bottom: 0; }
-      #accordion .card-header h2 button.btn.btn-link p {
-        color: #455160;
-        font-size: 1.4rem;
-        display: block;
-        width: 100%;
-        text-align: left;
-        padding: 0;
-        line-height: 100%;
-        padding: 20px 25px 25px;
+    padding: 15px 25px 30px;
+    border: 0;
+    outline: 0; }
+    #accordion .btn-accordion:hover {
+      cursor: pointer; }
+    #accordion .btn-accordion h2 {
+      margin-bottom: 0;
+      text-align: left;
+      font-weight: 400;
+      line-height: 100%; }
+      #accordion .btn-accordion h2 p {
+        font-size: 1.6rem;
         display: inline-block;
-        margin-bottom: 0; }
-        #accordion .card-header h2 button.btn.btn-link p:hover {
-          text-decoration: none; }
-        #accordion .card-header h2 button.btn.btn-link p:before {
+        margin-bottom: 0;
+        line-height: 100%; }
+        #accordion .btn-accordion h2 p:before {
           font-family: 'FontAwesome';
-          content: '\f0d8';
+          content: '\f0d7';
           font-size: 22px;
           color: #455160;
           vertical-align: middle;
           margin-right: 30px; }
-      #accordion .card-header h2 button.btn.btn-link.collapsed p:before {
-        content: '\f0d7'; }
-  #accordion .card-body p {
-    font-size: 1.2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.125); }
-
-.panel {
-  overflow: hidden;
-  display: none; }
+  #accordion button.btn-accordion.active h2 p:before {
+    content: '\f0d8'; }
+  #accordion .panel {
+    overflow: hidden;
+    display: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.125);
+    padding: 25px; }
+    #accordion .panel p {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      line-height: 100%; }
+      #accordion .panel p:last-child {
+        margin-bottom: 0; }
 
 .v-large-logo {
   margin-bottom: 50px; }
