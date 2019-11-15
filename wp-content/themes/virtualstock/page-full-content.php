@@ -164,12 +164,18 @@ endif;
                                 <h3><?php the_sub_field('custom_input'); ?></h3>
                                 <p><?php the_sub_field('price'); ?></p>
                                 <span><?php the_sub_field('price_info'); ?></span>
-                                <a href="#"><?php the_sub_field('button_link_text'); ?></a>
+                                <?php 
+                                    $link = get_sub_field('button_link_text');
+                                    $link_url = $link['url'];
+                                    $link_title = $link['title'];
+                                
+                                if( $link ): ?>
+                                    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+                                <?php endif; ?>
                             </div>
                         </div>
                         
-                        <div class="card-footer">
-                            
+                        <div class="card-footer">                            
                             <ul>
                                 <?php
                             if( have_rows('package_footer_list') ):
@@ -281,6 +287,26 @@ if( have_rows('faq_accordion') ):
 
     ?>
 </section>
+
+<!--
+<section class="explore-features">
+    <div class="container">
+        <h2>Explore all features.</h2>
+        <div class="row ">
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <button class="btn-accordion"><h2>Find and manage leads better.</h2></button>
+                
+            </div>
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                
+            </div>
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                
+            </div>
+        </div>
+    </div>
+</section>
+-->
 
 <script>
   AOS.init();
