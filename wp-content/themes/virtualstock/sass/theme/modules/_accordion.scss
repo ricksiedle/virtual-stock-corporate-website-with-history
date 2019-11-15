@@ -71,6 +71,7 @@ section.page-accordion {
         display: none;
         border-top: 1px solid rgba(0,0,0,.125);
         padding: 25px;
+        background: #fafafa;
         
         p {
             font-size: 1.2rem;
@@ -83,5 +84,96 @@ section.page-accordion {
         }
     }
 }
+
+
+// Features Accordion
+
+section.explore-features {
+    margin-bottom: 100px;
+    
+    h2 {
+        margin-bottom: 30px;
+    }
+    
+    .clickable-row {
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: .25rem;
+        
+        .bordered {
+            border-right: 1px solid rgba(0,0,0,.125);
+            padding: 20px 25px;
+            
+            &:last-child {
+                border-right: 0;
+            }
+            
+            h2 {
+                vertical-align: middle;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                line-height: 100%;
+                
+                &:before {
+                    font-family: 'FontAwesome';
+                    content: '\f0d7';
+                    font-size: 22px;
+                    color: $light-gray;
+                    vertical-align: middle;
+                    margin-right: 30px;
+                } 
+            }
+        }
+    }
+    
+    .explore-panel {
+        background: #fafafa;
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        
+        .bordered {
+            border-right: 1px solid rgba(0,0,0,.125);
+            padding: 20px 25px;
+            
+            &:last-child {
+                border-right: 0;
+            }
+            
+            h2 {
+                vertical-align: middle;
+                font-size: 1.2rem;
+                margin-bottom: 0;
+                line-height: 100%;
+                display: inline-block;
+                text-transform: capitalize;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

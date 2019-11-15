@@ -292,21 +292,45 @@ if( have_rows('faq_accordion') ):
 <section class="explore-features">
     <div class="container">
         <h2>Explore all features.</h2>
-        <div class="row ">
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
-                <button class="btn-accordion"><h2>Find and manage leads better.</h2></button>
+        <div class="row clickable-row">
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                <h2>Find and manage leads better.</h2>                
+            </div>
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                 
             </div>
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                 
             </div>
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4">
+            
+        </div>
+        <div class="row explore-panel">
+            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                <h2>Lead management</h2>   
+                <span class="fa fa-times-circle-o" data-toggle="tooltip" data-placement="right" title="Hooray!"></span>
+            </div>
+            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                
+            </div>
+            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                
+            </div>
+           <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                
+            </div>
+            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
                 
             </div>
         </div>
     </div>
 </section>
 -->
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 
 <script>
   AOS.init();
