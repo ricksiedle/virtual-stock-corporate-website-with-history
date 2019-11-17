@@ -7,6 +7,11 @@
 section.page-accordion {
     h2 {
         margin-bottom: 30px;
+        line-height: 100%;
+        
+        p {
+            line-height: 100%;
+        }
     }
 }
          
@@ -24,7 +29,7 @@ section.page-accordion {
     .btn-accordion {
         border-radius: 0.25rem;
         background-color: $white;
-        padding: 15px 25px 30px;
+        padding: 15px 25px 22px;
         border: 0;
         outline: 0;
         &:hover {
@@ -88,20 +93,26 @@ section.page-accordion {
 
 // Features Accordion
 
-section.explore-features {
+section.explore-features, section.compare-editions {
     margin-bottom: 100px;
     
+    @media only screen and (max-width: 767px) {
+        display: none;
+    }
+            
     h2 {
         margin-bottom: 30px;
     }
     
     .clickable-row {
         border: 1px solid rgba(0,0,0,.125);
+        border-top: 0;
         border-radius: .25rem;
-        
+        cursor: pointer;
+                         
         .bordered {
             border-right: 1px solid rgba(0,0,0,.125);
-            padding: 20px 25px;
+            padding: 25px 15px 25px 40px;
             
             &:last-child {
                 border-right: 0;
@@ -125,13 +136,25 @@ section.explore-features {
         }
     }
     
-    .explore-panel {
+    div.clickable-row.active {
+        .bordered {
+            h2 {
+                &:before {
+                    content: '\f0d8';
+                }
+            }
+        }
+    }
+    
+    .explore {
         background: #fafafa;
         border-bottom: 1px solid rgba(0,0,0,.125);
+        overflow: hidden;
+        display: none;
         
         .bordered {
             border-right: 1px solid rgba(0,0,0,.125);
-            padding: 20px 25px;
+            padding: 25px;
             
             &:last-child {
                 border-right: 0;
@@ -146,15 +169,99 @@ section.explore-features {
                 text-transform: capitalize;
             }
         }
+        
+        .row {
+            border-bottom: 1px solid rgba(0,0,0,.125);
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    
+    .fa-dot-circle-o {
+        vertical-align: middle;
+        margin-left: 10px;
+        margin-top: 7px;
+        font-size: 14px;
+        color: $pink;
+        position: relative;
+        cursor: pointer;
+        display: inline-block;
+        border: 0;
     }
 }
 
+.explore-wrapper {
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
 
+span.fa-check-circle, span.fa-times-circle-o {
+    font-size: 20px;
+    text-align: center;
+    display: block;
+}
 
+span.fa-check-circle {
+    color: forestgreen;
+}
 
+span.fa-times-circle-o {
+    color: $light_gray;
+}
 
+// Section Compare editions and top features
 
-
+section.compare-editions {
+    .clickable-row {
+                
+        .bordered {
+            border-right: 1px solid $white;
+            padding: 0;
+            
+            &:first-child {
+                background: $white;
+            }            
+            
+            .edition-description {
+                padding: 15px;
+                background: #228b22;
+                text-align: center;
+                height: 100%;
+                
+                    span {
+                        display: block;
+                }
+                
+                .edition-title, .price, .edition-timeline {
+                    font-weight: 300;
+                    font-size: 16px;
+                    color: $white;
+                    line-height: 100%;
+                    margin: 0 auto 5px;
+                }
+                
+                .price {
+                    font-size: 24px;
+                }
+                
+                .edition-timeline {
+                    margin-bottom: 0;
+                }
+            }  
+            
+            &:last-child {
+                .edition-description {
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+    
+    .explore {
+        display: block;
+    }
+}
 
 
 

@@ -288,52 +288,242 @@ if( have_rows('faq_accordion') ):
     ?>
 </section>
 
-<!--
-<section class="explore-features">
+<section class="compare-editions">
     <div class="container">
-        <h2>Explore all features.</h2>
-        <div class="row clickable-row">
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                <h2>Find and manage leads better.</h2>                
+        <h2>Compare editions and top features.</h2>
+        <div class="explore-wrapper">
+            <div class="clickable-row">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                                     
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <div class="edition-description">
+                            <span class="edition-title">
+                                Essentials
+                            </span>
+                            <span class="price">
+                                £ 20
+                            </span>
+                            <span class="edition-timeline">
+                                /user/month*
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <div class="edition-description">
+                            <span class="edition-title">
+                                Essentials
+                            </span>
+                            <span class="price">
+                                £ 20
+                            </span>
+                            <span class="edition-timeline">
+                                /user/month*
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <div class="edition-description">
+                            <span class="edition-title">
+                                Essentials
+                            </span>
+                            <span class="price">
+                                £ 20
+                            </span>
+                            <span class="edition-timeline">
+                                /user/month*
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <div class="edition-description">
+                            <span class="edition-title">
+                                Essentials
+                            </span>
+                            <span class="price">
+                                £ 20
+                            </span>
+                            <span class="edition-timeline">
+                                /user/month*
+                            </span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                
+            <div class="explore">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="wrong estimation" data-placement="right" data-trigger="hover">
+                        </span>  
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                
+            <div class="explore">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Bla bla" data-placement="right" data-trigger="hover">
+                        </span>  
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
             </div>
-            
-        </div>
-        <div class="row explore-panel">
-            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                <h2>Lead management</h2>   
-                <span class="fa fa-times-circle-o" data-toggle="tooltip" data-placement="right" title="Hooray!"></span>
+            <div class="explore">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen" data-placement="right" data-trigger="hover">
+                        </span>  
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
             </div>
-            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                
-            </div>
-            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                
-            </div>
-           <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                
-            </div>
-            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                
-            </div>
+              
         </div>
     </div>
 </section>
--->
 
-<script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    })
-</script>
+<section class="explore-features">
+    <div class="container">
+        <h2>Explore all features.</h2>
+        <div class="explore-wrapper">
+            <div class="clickable-row">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Find and manage leads better.</h2>                
+                    </div>
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                    </div>
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="explore">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." data-placement="right" data-trigger="hover">
+                        </span>  
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-check-circle"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="clickable-row">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Find and manage leads better.</h2>                
+                    </div>
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                    </div>
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="explore">
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?dfdfff pizda li ti mater mi go eba denot sve da ti iznaebem u dupe" data-placement="right" data-trigger="hover">
+                        </span>                   
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                        <h2>Lead management</h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?dfdfff pizda li ti mater mi go eba denot sve da ti iznaebem u dupe" data-placement="right" data-trigger="hover">
+                        </span>                   
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <span class="fa fa-times-circle-o"></span>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>
+</section>
 
 <script>
   AOS.init();
+</script>
+
+<script>
+jQuery(document).ready(function($){
+    $('[data-toggle="popover"]').popover();
+});
 </script>
 
 <script>
@@ -348,6 +538,23 @@ for (i = 0; i < acc.length; i++) {
       panel.style.display = "none";
     } else {
       panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+var acc = document.getElementsByClassName("clickable-row");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var explore = this.nextElementSibling;
+    if (explore.style.display === "block") {
+      explore.style.display = "none";
+    } else {
+      explore.style.display = "block";
     }
   });
 }
@@ -402,7 +609,6 @@ for (i = 0; i < acc.length; i++) {
 		})
 	}
 </script>
-
 
 <script>
 	jQuery(document).ready(function($) {
