@@ -208,91 +208,11 @@ endif;
     </div>      
 </section>
 
-<section class="pricing-plans">
-    <?php
-
-// check if the repeater field has rows of data
-if( have_rows('support_and_success_plans') ):
-
- 	// loop through the rows of data
-    while ( have_rows('support_and_success_plans') ) : the_row(); ?>
-    <div class="container">
-        <h2><?php the_sub_field('section_heading'); ?></h2> 
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="plan-box">
-                    <h2><?php the_sub_field('first_box_heading'); ?></h2>
-                    <p><?php the_sub_field('first_box_paragraph'); ?></p>
-                </div>
-            </div>
-            
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="plan-box">
-                    <h2><?php the_sub_field('second_box_heading'); ?></h2>
-                    <p><?php the_sub_field('second_box_paragraph'); ?></p>
-                </div>
-            </div>
-        </div>
-        <?php  endwhile;
-
-            else :
-
-                // no rows found
-
-            endif;
-
-        ?>
-    </div>
-</section>
-
-<section class="page-accordion">
-    <?php
-
-// check if the repeater field has rows of data
-if( have_rows('faq_accordion') ):
-
- 	// loop through the rows of data
-    while ( have_rows('faq_accordion') ) : the_row(); ?>
-    <div class="container">
-        <h2><?php the_sub_field('accordion_section_title'); ?></h2>
-        <div class="accordion" id="accordion">
-            <?php
-
-            // check if the repeater field has rows of data
-            if( have_rows('accordion_repeater') ):
-
-            // loop through the rows of data
-            while ( have_rows('accordion_repeater') ) : the_row(); ?>
-              <div class="card">
-                <button class="btn-accordion"><h2><?php the_sub_field('item_title'); ?></h2></button>
-                <div class="panel">
-                  <?php the_sub_field('item_description'); ?>
-                </div>
-              </div>
-                <?php  endwhile;
-
-            else :
-                // no rows found
-                endif;
-            ?>
-        </div>
-    </div>
-    <?php  endwhile;
-
-        else :
-
-            // no rows found
-
-        endif;
-
-    ?>
-</section>
-
 <section class="compare-editions">
     <div class="container">
         <h2>Compare editions and top features.</h2>
         <div class="explore-wrapper">
-            <div class="clickable-row">
+            <div class="clickable-row" id="scroll-fixed">
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                                      
@@ -515,6 +435,67 @@ if( have_rows('faq_accordion') ):
         </div>
     </div>
 </section>
+
+
+<section class="page-accordion">
+    <?php
+
+// check if the repeater field has rows of data
+if( have_rows('faq_accordion') ):
+
+ 	// loop through the rows of data
+    while ( have_rows('faq_accordion') ) : the_row(); ?>
+    <div class="container">
+        <h2><?php the_sub_field('accordion_section_title'); ?></h2>
+        <div class="accordion" id="accordion">
+            <?php
+
+            // check if the repeater field has rows of data
+            if( have_rows('accordion_repeater') ):
+
+            // loop through the rows of data
+            while ( have_rows('accordion_repeater') ) : the_row(); ?>
+              <div class="card">
+                <button class="btn-accordion"><h2><?php the_sub_field('item_title'); ?></h2></button>
+                <div class="panel">
+                  <?php the_sub_field('item_description'); ?>
+                </div>
+              </div>
+                <?php  endwhile;
+
+            else :
+                // no rows found
+                endif;
+            ?>
+        </div>
+    </div>
+    <?php  endwhile;
+
+        else :
+
+            // no rows found
+
+        endif;
+
+    ?>
+</section>
+
+
+
+
+<!--
+<script>
+    var elementPosition = jQuery('#scroll-fixed').offset();
+
+    jQuery(window).scroll(function(){
+        if(jQuery(window).scrollTop() > elementPosition.top){
+              jQuery('#scroll-fixed').css('position','fixed').css('top','103px');
+        } else {
+            jQuery('#scroll-fixed').css('position','relative');
+        }    
+    });
+</script>
+-->
 
 <script>
   AOS.init();
