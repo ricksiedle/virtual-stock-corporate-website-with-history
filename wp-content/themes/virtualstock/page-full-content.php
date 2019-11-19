@@ -217,7 +217,7 @@ endif;
     ?>
     <div class="container">
         <h2><?php the_sub_field('section_title'); ?></h2>
-        <div class="explore-wrapper">
+        <div class="explore-wrapper no-top-border">
             <div class="clickable-row">                
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">

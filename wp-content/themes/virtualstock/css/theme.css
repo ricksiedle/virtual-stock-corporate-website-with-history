@@ -13115,6 +13115,9 @@ section.compare-editions .clickable-row .bordered {
 .clickable-row-explore.active .explore-options {
   display: block; }
 
+.no-top-border {
+  border-top: 0 !important; }
+
 .v-large-logo {
   margin-bottom: 50px; }
   @media screen and (min-width: 768px) {
