@@ -15,14 +15,14 @@ get_header();
 <div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 103px; height: calc(100vh - 103px);">
     <div class="solutions-boxes full-content">               
         <div class="container">
-            <h1><?php the_field('header'); ?></h1> 
+            <h1><?php the_field('header',false,false); ?></h1> 
             <div class="full-content-boxes-wrapper">
                 <div class="row">
                     <div class="col"> 
                         <a href="#first">
                             <div class="box-wrapper full-content-boxes">
                                 <div class="inner-box-wrapper">
-                                    <h2><?php the_field('left_box_title'); ?></h2>
+                                    <h2><?php the_field('left_box_title',false,false); ?></h2>
                                     <p><?php the_field('left_box_paragraph'); ?></p>
                                 </div>
                             </div>
@@ -32,7 +32,7 @@ get_header();
                         <a href="#second">
                             <div class="box-wrapper full-content-boxes">
                                 <div class="inner-box-wrapper">  
-                                    <h2><?php the_field('right_box_title'); ?></h2>
+                                    <h2><?php the_field('right_box_title',false,false); ?></h2>
                                     <p><?php the_field('right_box_paragraph'); ?></p>
                                 </div>
                             </div>
@@ -45,7 +45,7 @@ get_header();
                         <a href="#third">
                             <div class="box-wrapper full-content-boxes">
                                 <div class="inner-box-wrapper">
-                                    <h2><?php the_field('second_row_left_box_title'); ?></h2>
+                                    <h2><?php the_field('second_row_left_box_title',false,false); ?></h2>
                                     <p><?php the_field('second_row_left_box_paragraph'); ?></p>
                                 </div>
                             </div>
@@ -55,7 +55,7 @@ get_header();
                         <a href="#fourth">
                             <div class="box-wrapper full-content-boxes">
                                 <div class="inner-box-wrapper">  
-                                    <h2><?php the_field('second_row_right_box_title'); ?></h2>
+                                    <h2><?php the_field('second_row_right_box_title',false,false); ?></h2>
                                     <p><?php the_field('second_row_right_box_paragraph'); ?></p>
                                 </div>
                             </div>
@@ -79,7 +79,6 @@ get_header();
 
 
 <section class="retail-content">
-
 <?php
     
     $ids = ['first', 'second', 'third', 'fourth'];
@@ -95,7 +94,7 @@ if( have_rows('animated_box_content') ):
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2><?php the_sub_field('title'); ?></h2>
+                    <h2><?php the_sub_field('title',false,false); ?></h2>
                 </div>
             </div>
             <div class="row">                
@@ -154,16 +153,16 @@ endif;
                 <div class="mobile-box col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
                     <div class="card">
                         <div class="card-header">
-                            <h2><?php get_sub_field('package_name'); ?></h2>
+                            <h2><?php get_sub_field('package_name',false,false); ?></h2>
                             <p><?php the_sub_field('package_description'); ?></p>
                         </div>
     
                         <div class="card-body">
                             <div class="card-body-content">
-                                <h2><?php the_sub_field('package_start'); ?></h2>
-                                <h3><?php the_sub_field('custom_input'); ?></h3>
+                                <h2><?php the_sub_field('package_start',false,false); ?></h2>
+                                <h3><?php the_sub_field('custom_input',false,false); ?></h3>
                                 <p><?php the_sub_field('price'); ?></p>
-                                <span><?php the_sub_field('price_info'); ?></span>
+                                <span><?php the_sub_field('price_info',false,false); ?></span>
                                 <?php 
                                     $link = get_sub_field('button_link_text');
                                     $link_url = $link['url'];
@@ -180,7 +179,7 @@ endif;
                                 <?php
                             if( have_rows('package_footer_list') ):
                             while ( have_rows('package_footer_list') ) : the_row(); ?> 
-                                <li><?php the_sub_field('package_footer_list_item'); ?></li>
+                                <li><?php the_sub_field('package_footer_list_item',false,false); ?></li>
                                 <?php  $i++;  endwhile;
                             else :
 
@@ -209,231 +208,175 @@ endif;
 </section>
 
 <section class="compare-editions">
+    <?php 
+        // check if the repeater field has rows of data
+        if( have_rows('compare_editions') ):
+
+        // loop through the rows of data
+        while ( have_rows('compare_editions') ) : the_row(); 
+    ?>
     <div class="container">
-        <h2>Compare editions and top features.</h2>
+        <h2><?php the_sub_field('section_title'); ?></h2>
         <div class="explore-wrapper">
-            <div class="clickable-row" id="scroll-fixed">
+            <div class="clickable-row">                
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                                      
                     </div>
+                    <?php
+                        // check if the repeater field has rows of data
+                        if( have_rows('editions') ):
+
+                        // loop through the rows of data
+                        while ( have_rows('editions') ) : the_row(); 
+                    ?>
                     <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        
                         <div class="edition-description">
                             <span class="edition-title">
-                                Essentials
+                                <?php the_sub_field('edition_name',false,false); ?>
                             </span>
                             <span class="price">
-                                £ 20
+                                <?php the_sub_field('edition_price',false,false); ?>
                             </span>
                             <span class="edition-timeline">
-                                /user/month*
+                                <?php the_sub_field('edition_durability',false,false); ?>
                             </span>
                         </div>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <div class="edition-description">
-                            <span class="edition-title">
-                                Essentials
-                            </span>
-                            <span class="price">
-                                £ 20
-                            </span>
-                            <span class="edition-timeline">
-                                /user/month*
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <div class="edition-description">
-                            <span class="edition-title">
-                                Essentials
-                            </span>
-                            <span class="price">
-                                £ 20
-                            </span>
-                            <span class="edition-timeline">
-                                /user/month*
-                            </span>
-                        </div>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <div class="edition-description">
-                            <span class="edition-title">
-                                Essentials
-                            </span>
-                            <span class="price">
-                                £ 20
-                            </span>
-                            <span class="edition-timeline">
-                                /user/month*
-                            </span>
-                        </div>
-                    </div>
-                </div>
+                    </div> 
+                    <?php  endwhile;
+                        else :
+                        // no rows found
+                        endif;
+                    ?>
+                </div>                
             </div>
+            <?php 
+                // check if the repeater field has rows of data
+                if( have_rows('edition_options') ):
+
+                // loop through the rows of data
+                while ( have_rows('edition_options') ) : the_row(); 
+            ?>
             <div class="explore">
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="wrong estimation" data-placement="right" data-trigger="hover">
+                        <h2><?php the_sub_field('edition_option_title',false,false); ?></h2>   
+                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('edition_option_tooltip_text',false,false); ?>" data-placement="right" data-trigger="hover">
                         </span>  
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
+                    </div>   
+                    
+                        <?php 
+                            // check if the repeater field has rows of data
+                            if( have_rows('edition_option_check_status') ):
+
+                            // loop through the rows of data
+                            while ( have_rows('edition_option_check_status') ) : the_row(); 
+                        ?>
+                        <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                            <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
+                        </div>
+                        <?php  endwhile;
+                            else :
+                            // no rows found
+                            endif;
+                        ?>  
                 </div>
             </div>
-            <div class="explore">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Bla bla" data-placement="right" data-trigger="hover">
-                        </span>  
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="explore">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five cen" data-placement="right" data-trigger="hover">
-                        </span>  
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                </div>
-            </div>
-              
+            <?php  endwhile;
+                else :
+                // no rows found
+                endif;
+            ?>          
         </div>
     </div>
+    <?php  endwhile;
+    else :
+        // no rows found
+        endif;
+    ?>
 </section>
 
 <section class="explore-features">
+    <?php 
+        // check if the repeater field has rows of data
+        if( have_rows('explore_all_features') ):
+
+        // loop through the rows of data
+        while ( have_rows('explore_all_features') ) : the_row(); 
+    ?>
     <div class="container">
-        <h2>Explore all features.</h2>
+        <h2><?php the_sub_field('section_title',false,false); ?></h2>
         <div class="explore-wrapper">
-            <div class="clickable-row">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Find and manage leads better.</h2>                
-                    </div>
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+            <?php 
+                // check if the repeater field has rows of data
+                if( have_rows('features') ):
+
+                    // loop through the rows of data
+                    while ( have_rows('features') ) : the_row(); 
+                ?>
+                <div class="clickable-row-explore">
+                    <div class="row">
+                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                            <h2><?php the_sub_field('feature_title',false,false); ?></h2>                
+                        </div>
+                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                        </div>
+                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+
+                        </div>
 
                     </div>
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                    <?php 
+                        // check if the repeater field has rows of data
+                        if( have_rows('explore_feature') ):
 
-                    </div>
+                        // loop through the rows of data
+                        while ( have_rows('explore_feature') ) : the_row(); 
+                    ?>
+                    <div class="explore-options">
+                        <div class="row">
+                            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered sanja">
+                                <h2><?php the_sub_field('feature_option_title',false,false); ?></h2>   
+                                <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('feature_tooltip',false,false); ?>" data-placement="right" data-trigger="hover">
+                                </span>  
+                            </div>
 
-                </div>
-            </div>
-            <div class="explore">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum." data-placement="right" data-trigger="hover">
-                        </span>  
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-check-circle"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="clickable-row">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Find and manage leads better.</h2>                
-                    </div>
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                            <?php 
+                                // check if the repeater field has rows of data
+                                if( have_rows('feature_option_check_status') ):
 
+                                // loop through the rows of data
+                                while ( have_rows('feature_option_check_status') ) : the_row(); 
+                            ?>
+                            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                                <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
+                            </div>
+                            <?php  endwhile;
+                                else :
+                                // no rows found
+                                endif;
+                            ?> 
+                        </div>
                     </div>
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-
-                    </div>
-
-                </div>
-            </div>
-            <div class="explore">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?dfdfff pizda li ti mater mi go eba denot sve da ti iznaebem u dupe" data-placement="right" data-trigger="hover">
-                        </span>                   
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2>Lead management</h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="And here's some amazing content. It's very engaging. Right?dfdfff pizda li ti mater mi go eba denot sve da ti iznaebem u dupe" data-placement="right" data-trigger="hover">
-                        </span>                   
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                   <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        <span class="fa fa-times-circle-o"></span>
-                    </div>
-                </div>
-            </div>     
+                    <?php  endwhile;
+                        else :
+                        // no rows found
+                        endif;
+                    ?> 
+                        </div>  
+                    <?php 
+                    endwhile;
+                endif;
+            ?>
         </div>
     </div>
+    <?php  endwhile;
+    else :
+        // no rows found
+        endif;
+    ?>
 </section>
 
 
@@ -446,7 +389,7 @@ if( have_rows('faq_accordion') ):
  	// loop through the rows of data
     while ( have_rows('faq_accordion') ) : the_row(); ?>
     <div class="container">
-        <h2><?php the_sub_field('accordion_section_title'); ?></h2>
+        <h2><?php the_sub_field('accordion_section_title',false,false); ?></h2>
         <div class="accordion" id="accordion">
             <?php
 
@@ -456,7 +399,7 @@ if( have_rows('faq_accordion') ):
             // loop through the rows of data
             while ( have_rows('accordion_repeater') ) : the_row(); ?>
               <div class="card">
-                <button class="btn-accordion"><h2><?php the_sub_field('item_title'); ?></h2></button>
+                <button class="btn-accordion"><h2><?php the_sub_field('item_title',false,false); ?></h2></button>
                 <div class="panel">
                   <?php the_sub_field('item_description'); ?>
                 </div>
@@ -479,23 +422,6 @@ if( have_rows('faq_accordion') ):
 
     ?>
 </section>
-
-
-
-
-<!--
-<script>
-    var elementPosition = jQuery('#scroll-fixed').offset();
-
-    jQuery(window).scroll(function(){
-        if(jQuery(window).scrollTop() > elementPosition.top){
-              jQuery('#scroll-fixed').css('position','fixed').css('top','103px');
-        } else {
-            jQuery('#scroll-fixed').css('position','relative');
-        }    
-    });
-</script>
--->
 
 <script>
   AOS.init();
@@ -525,17 +451,19 @@ for (i = 0; i < acc.length; i++) {
 </script>
 
 <script>
-var acc = document.getElementsByClassName("clickable-row");
+var acc = document.getElementsByClassName("clickable-row-explore");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
+    console.log("tikcvi");
+    acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var explore = this.nextElementSibling;
-    if (explore.style.display === "block") {
-      explore.style.display = "none";
+    var explore_options = this.querySelectorAll(".sanja");
+      console.log(explore_options);
+    if (explore_options[0].style.display === "block") {
+      explore_options[0].style.display = "none";
     } else {
-      explore.style.display = "block";
+      explore_options[0].style.display = "block";
     }
   });
 }

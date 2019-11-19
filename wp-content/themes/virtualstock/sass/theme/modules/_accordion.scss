@@ -8,10 +8,6 @@ section.page-accordion {
     h2 {
         margin-bottom: 30px;
         line-height: 100%;
-        
-        p {
-            line-height: 100%;
-        }
     }
 }
          
@@ -40,33 +36,27 @@ section.page-accordion {
             margin-bottom: 0;
             text-align: left;
             font-weight: 400;
+            line-height: 100%;                       
+            font-size: 1.6rem;
+            margin-bottom: 0;
             line-height: 100%;
-            
-            p {                
-                font-size: 1.6rem;
-                display: inline-block;
-                margin-bottom: 0;
-                line-height: 100%;
-                
-                &:before {
-                    font-family: 'FontAwesome';
-                    content: '\f0d7';
-                    font-size: 22px;
-                    color: $light-gray;
-                    vertical-align: middle;
-                    margin-right: 30px;
-                } 
-            }
+
+            &:before {
+                font-family: 'FontAwesome';
+                content: '\f0d7';
+                font-size: 22px;
+                color: $light-gray;
+                vertical-align: middle;
+                margin-right: 30px;
+            }             
         }
     }
     
     button.btn-accordion.active {
         
         h2 {
-            p {
-                &:before {
-                    content: '\f0d8';
-                }
+            &:before {
+                content: '\f0d8';
             }
         }
     }
@@ -104,7 +94,7 @@ section.explore-features, section.compare-editions {
         margin-bottom: 30px;
     }
     
-    .clickable-row {
+    .clickable-row, .clickable-row-explore {
         border: 1px solid rgba(0,0,0,.125);
         border-top: 0;
         border-radius: .25rem;
@@ -134,9 +124,43 @@ section.explore-features, section.compare-editions {
                 } 
             }
         }
+        
+        .explore-options {
+            background: #fafafa;
+            border-bottom: 1px solid rgba(0,0,0,.125);
+
+            .bordered {
+                border-right: 1px solid rgba(0,0,0,.125);
+                padding: 25px;
+                position: relative;
+
+                &:last-child {
+                    border-right: 0;
+                }
+
+                h2 {
+                    display: inline;               
+                    vertical-align: middle;
+                    font-size: 1.2rem;
+                    margin-bottom: 0;
+                    line-height: 100%;
+                    text-transform: capitalize;    
+                    &:before {
+                        display: none;
+                    }
+                }
+            }
+
+            .row {
+                border-bottom: 1px solid rgba(0,0,0,.125);
+                &:last-child {
+                    border-bottom: 0;
+                }
+            }
+        }
     }
     
-    div.clickable-row.active {
+    div.clickable-row-explore.active {
         .bordered {
             h2 {
                 &:before {
@@ -146,27 +170,26 @@ section.explore-features, section.compare-editions {
         }
     }
     
-    .explore {
+    .explore, .explore-options {
         background: #fafafa;
         border-bottom: 1px solid rgba(0,0,0,.125);
-        overflow: hidden;
-        display: none;
-        
+                
         .bordered {
             border-right: 1px solid rgba(0,0,0,.125);
             padding: 25px;
+            position: relative;
             
             &:last-child {
                 border-right: 0;
             }
             
             h2 {
+                display: inline;               
                 vertical-align: middle;
                 font-size: 1.2rem;
                 margin-bottom: 0;
                 line-height: 100%;
-                display: inline-block;
-                text-transform: capitalize;
+                text-transform: capitalize;                
             }
         }
         
@@ -199,7 +222,11 @@ section.explore-features, section.compare-editions {
 span.fa-check-circle, span.fa-times-circle-o {
     font-size: 20px;
     text-align: center;
-    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin-top: -10px;
 }
 
 span.fa-check-circle {
@@ -224,7 +251,7 @@ section.compare-editions {
             }            
             
             .edition-description {
-                padding: 15px;
+                padding: 12px 15px 15px;
                 background: #228b22;
                 text-align: center;
                 height: 100%;
@@ -233,15 +260,15 @@ section.compare-editions {
                         display: block;
                 }
                 
-                .edition-title, .price, .edition-timeline {
+                .edition-title, .price, .edition-timeline {       
                     font-weight: 300;
                     font-size: 16px;
                     color: $white;
                     line-height: 100%;
-                    margin: 0 auto 5px;
+                    margin: 0 auto 5px;                    
                 }
                 
-                .price {
+                .price {                    
                     font-size: 24px;
                 }
                 
@@ -257,8 +284,14 @@ section.compare-editions {
             }
         }
     }
-    
-    .explore {
+}
+
+.explore-options {
+    display: none;
+}
+
+.clickable-row-explore.active {
+    .explore-options {
         display: block;
     }
 }

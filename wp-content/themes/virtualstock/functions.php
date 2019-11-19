@@ -11,6 +11,8 @@ remove auto added paragraphs
 
 remove_filter ('acf_the_content', 'wpautop');
 remove_filter('the_content', 'wpautop');
+remove_filter( 'the_excerpt', 'wpautop' );
+
 
 /**
  * Initialize theme default settings

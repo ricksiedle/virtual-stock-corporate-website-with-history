@@ -104,3 +104,15 @@ h1 {
         margin-right: calc(-50vw);
     }
 }
+
+p:empty {
+    display: none !important;
+}
+
+h3:empty {
+    display: none !important;
+}
+
+.margin-bottom-universal {
+    margin-bottom: 0 !important;
+}

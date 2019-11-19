@@ -39,14 +39,7 @@
             color: $pink;
             margin-bottom: 0;
             line-height: 120%;
-            font-size: 2.4rem;
-            
-            p {
-                color: $pink;
-                margin-bottom: 0;
-                line-height: 120%;
-                font-size: 2.4rem;
-            }
+            font-size: 2.4rem;            
         }
         
         h3 {
@@ -124,21 +117,18 @@
                 margin-bottom: 0;
             }
         }
-        h1 {
+        h1 {           
             
-            p {
-                background: rgba(255, 255, 255, 0.7);
-                border-radius: 40px;
-                text-transform: none;
-                font-size: 1.6rem;
-                padding: 8px 15px 12px;
-                line-height: 100%;
-                margin-bottom: 0;
-
-                span {
-                    color: $pink;
-                }                
-            }
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 40px;
+            text-transform: none;
+            font-size: 1.6rem;
+            padding: 8px 15px 12px;
+            line-height: 100%;
+            
+            span {
+                color: $pink;
+            }                  
         }
     }
 }
@@ -179,13 +169,10 @@
     }
     
     h2 {
-        margin-bottom: 35px;
-        
-        p {
-            color: $pink;
-            font-size: 64px;
-            font-size: 3rem;
-        }
+        margin-bottom: 35px;       
+        color: $pink;
+        font-size: 64px;
+        font-size: 3rem;        
     }
     
     p {
@@ -231,10 +218,8 @@
             }
             
             h2 {
-                p {
-                    color: $white;
-                    font-size: 1.4rem;
-                }
+                color: $white;
+                font-size: 1.4rem;
             }
             
             p {
@@ -268,19 +253,17 @@
                 }
 
                 h2 {
-                    p {
-                        font-size: 1rem;
-                        margin-bottom: 20px;
-                    }
+                    font-size: 1rem;
+                    margin-bottom: 20px;
+                    line-height: 100%;
+                    font-weight: 700;
                 }
                 
                 h3 {
-                    p {
-                        font-size: 3rem;
-                        line-height: 100%;
-                        font-weight: 400;
-                        margin-top: -50px;
-                    }
+                    font-size: 3rem;
+                    line-height: 100%;
+                    font-weight: 400;
+                    margin-top: -50px;                    
                 }
 
                 p {
@@ -291,13 +274,11 @@
                 }
 
                 span {
-                    p {
-                        display: block;
-                        font-size: 0.8rem;
-                        margin-bottom: 30px;
-                        color: #c0c0c5;
-                        font-weight: 400;
-                    }
+                    display: block;
+                    font-size: 0.8rem;
+                    margin-bottom: 30px;
+                    color: #c0c0c5;
+                    font-weight: 400;                    
                 }
 
                 a {
@@ -354,8 +335,7 @@
             }
         }
         
-        &:hover {
-            
+        &:hover {            
             .card-header {
                 background: $blue;
                 
@@ -367,10 +347,8 @@
             .card-body {
                 .card-body-content {
                     
-                    h2, span {
-                        p {
-                            color: $light-gray;
-                        }
+                    h2, span {                        
+                        color: $light-gray;
                     }
                     
                     p {
@@ -379,8 +357,7 @@
                 }
             }
         }
-    }   
-    
+    }       
 }
 
 
