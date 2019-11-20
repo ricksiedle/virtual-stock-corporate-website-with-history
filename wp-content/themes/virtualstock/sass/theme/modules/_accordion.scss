@@ -191,6 +191,13 @@ section.explore-features, section.compare-editions {
                 line-height: 100%;
                 text-transform: capitalize;                
             }
+            
+            p {
+                text-align: center;
+                font-size: 1.1rem;
+                margin-bottom: 0;
+                line-height: 110%;
+            }
         }
         
         .row {
@@ -248,7 +255,14 @@ section.compare-editions {
             
             &:first-child {
                 background: $white;
-            }            
+            } 
+            
+            h3 {
+                margin-bottom: 0;
+                line-height: 100%;
+                font-size: 2rem;
+                padding: 25px;
+            }
             
             .edition-description {
                 padding: 12px 15px 15px;
@@ -297,10 +311,8 @@ section.compare-editions {
 }
 
 .no-top-border {
-    border-top: 0 !important;
+    border-top: 0!important;
 }
-
-
 
 
 

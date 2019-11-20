@@ -67,7 +67,6 @@ get_header();
     </div>  
 </div>
 
-
 <section class="stats-scrolling-slider">
 
 <?php 
@@ -141,6 +140,7 @@ endif;
 <section class="pricing-boxes">   
     <div class="card-deck">
         <div class="container">
+            <h2><?php the_field('pricing_section_title',false,false); ?></h2>
             <div class="row">
                  <?php
 
@@ -194,13 +194,10 @@ endif;
                     </div>
                 </div>
                  <?php  $i++;  endwhile;
-
                 else :
-
                     // no rows found
 
                 endif;
-
                 ?>
             </div>
         </div>
@@ -216,12 +213,12 @@ endif;
         while ( have_rows('compare_editions') ) : the_row(); 
     ?>
     <div class="container">
-        <h2><?php the_sub_field('section_title'); ?></h2>
+        <h2><?php the_sub_field('section_title',false,false); ?></h2>
         <div class="explore-wrapper no-top-border">
             <div class="clickable-row">                
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                                     
+                        <h3><?php the_sub_field('editions_main_title',false,false); ?></h3>            
                     </div>
                     <?php
                         // check if the repeater field has rows of data
@@ -274,7 +271,12 @@ endif;
                             while ( have_rows('edition_option_check_status') ) : the_row(); 
                         ?>
                         <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                            <?php if (get_sub_field('choose_text_or_icon') == 'icon') : ?>
                             <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
+                            
+                            <?php else : ?>
+                                <p><?php the_sub_field('custom_option_input',false,false); ?></p>
+                            <?php endif; ?>
                         </div>
                         <?php  endwhile;
                             else :
@@ -351,7 +353,12 @@ endif;
                                 while ( have_rows('feature_option_check_status') ) : the_row(); 
                             ?>
                             <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                                <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
                                 <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
+                                
+                                <?php else : ?>
+                                    <p><?php the_sub_field('custom_text_input',false,false); ?></p>
+                                <?php endif; ?>
                             </div>
                             <?php  endwhile;
                                 else :

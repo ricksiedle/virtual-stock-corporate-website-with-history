@@ -12751,6 +12751,8 @@ button.bg-custom:focus {
   @media only screen and (max-width: 767px) {
     .pricing-boxes {
       margin-bottom: 70px; } }
+  .pricing-boxes h2 {
+    margin-bottom: 30px; }
 
 .card-deck {
   margin-right: 0;
@@ -13050,6 +13052,11 @@ section.explore-features, section.compare-editions {
         margin-bottom: 0;
         line-height: 100%;
         text-transform: capitalize; }
+      section.explore-features .explore .bordered p, section.explore-features .explore-options .bordered p, section.compare-editions .explore .bordered p, section.compare-editions .explore-options .bordered p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 0;
+        line-height: 110%; }
     section.explore-features .explore .row, section.explore-features .explore-options .row, section.compare-editions .explore .row, section.compare-editions .explore-options .row {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
       section.explore-features .explore .row:last-child, section.explore-features .explore-options .row:last-child, section.compare-editions .explore .row:last-child, section.compare-editions .explore-options .row:last-child {
@@ -13089,6 +13096,11 @@ section.compare-editions .clickable-row .bordered {
   padding: 0; }
   section.compare-editions .clickable-row .bordered:first-child {
     background: #fff; }
+  section.compare-editions .clickable-row .bordered h3 {
+    margin-bottom: 0;
+    line-height: 100%;
+    font-size: 2rem;
+    padding: 25px; }
   section.compare-editions .clickable-row .bordered .edition-description {
     padding: 12px 15px 15px;
     background: #228b22;
