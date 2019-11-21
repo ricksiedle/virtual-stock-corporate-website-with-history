@@ -14,9 +14,9 @@ get_header();
 
 <div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 103px; height: calc(100vh - 103px);">
     <div class="solutions-boxes full-content">               
-        <div class="container">
-            <h1><?php the_field('header',false,false); ?></h1> 
+        <div class="container">            
             <div class="full-content-boxes-wrapper">
+                <h1 id="main-page-title"><?php the_field('header',false,false); ?></h1> 
                 <div class="row">
                     <div class="col"> 
                         <a href="#first">
@@ -215,7 +215,7 @@ endif;
     <div class="container">
         <h2><?php the_sub_field('section_title',false,false); ?></h2>
         <div class="explore-wrapper no-top-border">
-            <div class="clickable-row">                
+            <div class="clickable-row" id="fixed">                
                 <div class="row">
                     <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                         <h3><?php the_sub_field('editions_main_title',false,false); ?></h3>            
@@ -228,7 +228,7 @@ endif;
                         while ( have_rows('editions') ) : the_row(); 
                     ?>
                     <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                        
+
                         <div class="edition-description">
                             <span class="edition-title">
                                 <?php the_sub_field('edition_name',false,false); ?>
@@ -247,7 +247,7 @@ endif;
                         endif;
                     ?>
                 </div>                
-            </div>
+            </div>          
             <?php 
                 // check if the repeater field has rows of data
                 if( have_rows('edition_options') ):
@@ -537,7 +537,6 @@ for (i = 0; i < acc.length; i++) {
 		}
 	});
 </script>
-
 <?php
 
 get_footer();

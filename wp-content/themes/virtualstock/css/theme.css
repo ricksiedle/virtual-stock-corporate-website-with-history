@@ -12668,7 +12668,14 @@ button.bg-custom:focus {
 
 .full-content-boxes-wrapper {
   border-radius: 40px;
-  background: rgba(255, 255, 255, 0.7); }
+  background: rgba(255, 255, 255, 0.8); }
+  .full-content-boxes-wrapper h1#main-page-title {
+    background: transparent;
+    border-radius: 0;
+    margin-bottom: 30px;
+    color: #000;
+    font-size: 2.8rem;
+    padding: 30px 0 0; }
 
 .solutions-wrapper, .retail-wrapper {
   display: table;
@@ -12703,7 +12710,7 @@ button.bg-custom:focus {
     .solutions-wrapper .full-content .row:last-child, .retail-wrapper .full-content .row:last-child {
       margin-bottom: 0; }
   .solutions-wrapper .full-content h1, .retail-wrapper .full-content h1 {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 40px;
     text-transform: none;
     font-size: 1.6rem;
@@ -13129,6 +13136,13 @@ section.compare-editions .clickable-row .bordered {
 
 .no-top-border {
   border-top: 0 !important; }
+
+.sticky {
+  position: -webkit-sticky;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  z-index: 9999; }
 
 .v-large-logo {
   margin-bottom: 50px; }
