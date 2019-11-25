@@ -314,6 +314,22 @@ section.compare-editions {
     border-top: 0!important;
 }
 
+#fixed {
+    max-width: 1110px;
+    width: 100%;
+    
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        max-width: 690px !important;
+    }
+    
+    @media only screen and (min-width: 992px) {
+        max-width: 930px !important;
+    }
+    
+    @media only screen and (min-width: 1200px) {
+        max-width: 1110px !important;
+    }        
+}
 
 
 

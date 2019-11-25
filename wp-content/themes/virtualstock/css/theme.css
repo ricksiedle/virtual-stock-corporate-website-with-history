@@ -10855,7 +10855,8 @@ a.pink-button {
     border: 0;
     outline: 0;
     cursor: pointer;
-    font-size: 20px; }
+    font-size: 20px;
+    margin-right: 10px; }
     a.pink-button button#login:hover {
       font-size: 22px;
       text-decoration: none;
@@ -13137,12 +13138,18 @@ section.compare-editions .clickable-row .bordered {
 .no-top-border {
   border-top: 0 !important; }
 
-.sticky {
-  position: -webkit-sticky;
-  margin-top: 0;
-  position: fixed;
-  top: 0;
-  z-index: 9999; }
+#fixed {
+  max-width: 1110px;
+  width: 100%; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    #fixed {
+      max-width: 690px !important; } }
+  @media only screen and (min-width: 992px) {
+    #fixed {
+      max-width: 930px !important; } }
+  @media only screen and (min-width: 1200px) {
+    #fixed {
+      max-width: 1110px !important; } }
 
 .v-large-logo {
   margin-bottom: 50px; }

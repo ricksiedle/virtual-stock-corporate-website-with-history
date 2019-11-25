@@ -339,7 +339,7 @@ endif;
                     ?>
                     <div class="explore-options">
                         <div class="row">
-                            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered sanja">
+                            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered explore-item">
                                 <h2><?php the_sub_field('feature_option_title',false,false); ?></h2>   
                                 <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('feature_tooltip',false,false); ?>" data-placement="right" data-trigger="hover">
                                 </span>  
@@ -385,7 +385,6 @@ endif;
         endif;
     ?>
 </section>
-
 
 <section class="page-accordion">
     <?php
@@ -462,10 +461,9 @@ var acc = document.getElementsByClassName("clickable-row-explore");
 var i;
 
 for (i = 0; i < acc.length; i++) {
-    console.log("tikcvi");
     acc[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var explore_options = this.querySelectorAll(".sanja");
+    var explore_options = this.querySelectorAll(".explore-item");
       console.log(explore_options);
     if (explore_options[0].style.display === "block") {
       explore_options[0].style.display = "none";
@@ -474,6 +472,21 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+</script>
+
+<script>
+    jQuery(document).ready(function() {
+    var stickyTop = jQuery('#fixed').offset().top; 
+    jQuery(window).scroll(function(event) {
+        var windowTop = jQuery(window).scrollTop();
+        if (stickyTop < windowTop && jQuery(".explore-features").height() + jQuery(".explore-features").offset().top - jQuery("#fixed").height() > windowTop) {
+            event.preventDefault();
+          jQuery('#fixed').css({"position":"fixed", "top":"105px", "z-index":"10000"});
+        } else {
+          jQuery('#fixed').css({"position":"relative", "top":"0"});
+        }
+    });
+});
 </script>
 
 <script>
