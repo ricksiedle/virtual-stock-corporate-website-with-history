@@ -12943,9 +12943,11 @@ section.stats-scrolling-slider .owl-stage-outer {
  * Page accordion elements
  *
  */
-section.page-accordion h2 {
-  margin-bottom: 30px;
-  line-height: 100%; }
+section.page-accordion {
+  padding-top: 50px; }
+  section.page-accordion h2 {
+    margin-bottom: 30px;
+    line-height: 100%; }
 
 #accordion {
   margin-bottom: 100px; }
@@ -13079,6 +13081,9 @@ section.explore-features, section.compare-editions {
     cursor: pointer;
     display: inline-block;
     border: 0; }
+
+section.explore-features {
+  margin-bottom: 50px; }
 
 .explore-wrapper {
   border-top: 1px solid rgba(0, 0, 0, 0.125);

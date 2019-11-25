@@ -5,6 +5,8 @@
  */   
 
 section.page-accordion {
+    padding-top: 50px;
+    
     h2 {
         margin-bottom: 30px;
         line-height: 100%;
@@ -221,6 +223,10 @@ section.explore-features, section.compare-editions {
     }
 }
 
+section.explore-features {
+    margin-bottom: 50px;
+}
+
 .explore-wrapper {
     border-top: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
@@ -330,23 +336,3 @@ section.compare-editions {
         max-width: 1110px !important;
     }        
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

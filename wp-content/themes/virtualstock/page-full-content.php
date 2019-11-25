@@ -479,11 +479,11 @@ for (i = 0; i < acc.length; i++) {
     var stickyTop = jQuery('#fixed').offset().top; 
     jQuery(window).scroll(function(event) {
         var windowTop = jQuery(window).scrollTop();
-        if (stickyTop < windowTop && jQuery(".explore-features").height() + jQuery(".explore-features").offset().top - jQuery("#fixed").height() > windowTop) {
+        if (stickyTop < windowTop && jQuery(".explore-features").outerHeight() + jQuery(".explore-features").offset().top - jQuery("#fixed").outerHeight() > windowTop) {
             event.preventDefault();
-          jQuery('#fixed').css({"position":"fixed", "top":"105px", "z-index":"10000"});
+          jQuery('#fixed').css({"position":"fixed", "top":"95px", "z-index":"10000", "transition":"ease .5s"});
         } else {
-          jQuery('#fixed').css({"position":"relative", "top":"0"});
+          jQuery('#fixed').css({"position":"relative", "top":"0", "z-index":"6", "transition":"ease 1s"});
         }
     });
 });
