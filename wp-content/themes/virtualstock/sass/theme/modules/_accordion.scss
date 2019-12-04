@@ -5,7 +5,6 @@
  */   
 
 section.page-accordion {
-    padding-top: 50px;
     
     h2 {
         margin-bottom: 30px;
@@ -133,7 +132,7 @@ section.explore-features, section.compare-editions {
 
             .bordered {
                 border-right: 1px solid rgba(0,0,0,.125);
-                padding: 25px;
+                padding: 0;
                 position: relative;
 
                 &:last-child {
@@ -159,6 +158,24 @@ section.explore-features, section.compare-editions {
                     border-bottom: 0;
                 }
             }
+            
+            .edition-name-box {
+                width: 20%;
+                display: inline-block;
+                float: left;
+                
+                .text-input {
+                    display: table;
+                    height: 100%;
+                    width: 100%;
+
+                    p {
+                        display: table-cell;
+                        vertical-align: middle;
+                        height: 100%;
+                    }
+                }
+            }
         }
     }
     
@@ -176,10 +193,17 @@ section.explore-features, section.compare-editions {
         background: #fafafa;
         border-bottom: 1px solid rgba(0,0,0,.125);
                 
-        .bordered {
-            border-right: 1px solid rgba(0,0,0,.125);
-            padding: 25px;
+        .bordered {           
             position: relative;
+            display: table;
+            height: 100%;
+            
+            .bordered-inner-content {
+                padding: 25px;
+                display: table-cell;
+                height: 100%;
+                vertical-align: middle;
+            }
             
             &:last-child {
                 border-right: 0;
@@ -210,6 +234,31 @@ section.explore-features, section.compare-editions {
         }
     }
     
+    .explore {
+        .edition-name-box {
+            width: 20%;
+            display: inline-block;
+            float: left;
+            border-right: 1px solid rgba(0,0,0,.125);
+            
+            &:last-child {
+                border-right: 0;
+            }
+            
+            .text-input {
+                display: table;
+                height: 100%;
+                width: 100%;
+                
+                p {
+                    display: table-cell;
+                    vertical-align: middle;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    
     .fa-dot-circle-o {
         vertical-align: middle;
         margin-left: 10px;
@@ -221,10 +270,6 @@ section.explore-features, section.compare-editions {
         display: inline-block;
         border: 0;
     }
-}
-
-section.explore-features {
-    margin-bottom: 50px;
 }
 
 .explore-wrapper {
@@ -276,8 +321,8 @@ section.compare-editions {
                 text-align: center;
                 height: 100%;
                 
-                    span {
-                        display: block;
+                span {
+                    display: block;
                 }
                 
                 .edition-title, .price, .edition-timeline {       
@@ -296,12 +341,12 @@ section.compare-editions {
                     margin-bottom: 0;
                 }
             }  
-            
-            &:last-child {
-                .edition-description {
-                    margin-right: 15px;
-                }
-            }
+        }
+        
+        .edition-name-box {
+            width: 20%;
+            display: inline-block;
+            float: left;
         }
     }
 }
