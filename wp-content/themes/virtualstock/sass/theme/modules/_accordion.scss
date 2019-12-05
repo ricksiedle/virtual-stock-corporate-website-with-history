@@ -5,7 +5,7 @@
  */   
 
 section.page-accordion {
-    
+        
     h2 {
         margin-bottom: 30px;
         line-height: 100%;
@@ -132,7 +132,7 @@ section.explore-features, section.compare-editions {
 
             .bordered {
                 border-right: 1px solid rgba(0,0,0,.125);
-                padding: 0;
+                padding: 25px;
                 position: relative;
 
                 &:last-child {
@@ -158,24 +158,6 @@ section.explore-features, section.compare-editions {
                     border-bottom: 0;
                 }
             }
-            
-            .edition-name-box {
-                width: 20%;
-                display: inline-block;
-                float: left;
-                
-                .text-input {
-                    display: table;
-                    height: 100%;
-                    width: 100%;
-
-                    p {
-                        display: table-cell;
-                        vertical-align: middle;
-                        height: 100%;
-                    }
-                }
-            }
         }
     }
     
@@ -193,17 +175,10 @@ section.explore-features, section.compare-editions {
         background: #fafafa;
         border-bottom: 1px solid rgba(0,0,0,.125);
                 
-        .bordered {           
+        .bordered {
+            border-right: 1px solid rgba(0,0,0,.125);
+            padding: 25px;
             position: relative;
-            display: table;
-            height: 100%;
-            
-            .bordered-inner-content {
-                padding: 25px;
-                display: table-cell;
-                height: 100%;
-                vertical-align: middle;
-            }
             
             &:last-child {
                 border-right: 0;
@@ -230,31 +205,6 @@ section.explore-features, section.compare-editions {
             border-bottom: 1px solid rgba(0,0,0,.125);
             &:last-child {
                 border-bottom: 0;
-            }
-        }
-    }
-    
-    .explore {
-        .edition-name-box {
-            width: 20%;
-            display: inline-block;
-            float: left;
-            border-right: 1px solid rgba(0,0,0,.125);
-            
-            &:last-child {
-                border-right: 0;
-            }
-            
-            .text-input {
-                display: table;
-                height: 100%;
-                width: 100%;
-                
-                p {
-                    display: table-cell;
-                    vertical-align: middle;
-                    height: 100%;
-                }
             }
         }
     }
@@ -321,8 +271,8 @@ section.compare-editions {
                 text-align: center;
                 height: 100%;
                 
-                span {
-                    display: block;
+                    span {
+                        display: block;
                 }
                 
                 .edition-title, .price, .edition-timeline {       
@@ -341,12 +291,12 @@ section.compare-editions {
                     margin-bottom: 0;
                 }
             }  
-        }
-        
-        .edition-name-box {
-            width: 20%;
-            display: inline-block;
-            float: left;
+            
+            &:last-child {
+                .edition-description {
+                    margin-right: 15px;
+                }
+            }
         }
     }
 }

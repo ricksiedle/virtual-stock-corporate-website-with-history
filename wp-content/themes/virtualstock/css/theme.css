@@ -12786,8 +12786,6 @@ button.bg-custom:focus {
         color: #7f7f7f;
         font-size: 1rem;
         line-height: 110%; }
-        .card-deck .card .card-header p:last-child {
-          margin-bottom: 0; }
 
 @-moz-document url-prefix() {
   .card-deck .card .card-header {
@@ -12895,28 +12893,13 @@ button.bg-custom:focus {
 body.page-template-page-full-content .solutions-wrapper {
   margin-bottom: 0; }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 991px) {
   .mobile-box {
-    width: calc(100% / 5 - 15px);
-    margin-right: 15px; }
-    .mobile-box:first-child {
-      margin-left: 15px; }
-    .mobile-box:last-child {
-      margin-right: 0; } }
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .mobile-box {
-    margin-bottom: 30px;
-    width: calc(50% - 15px);
-    margin-right: 15px; }
-    .mobile-box:nth-child(2n) {
-      margin-right: 0; } }
+    margin-bottom: 30px; } }
 
 @media only screen and (max-width: 767px) {
   .mobile-box {
-    margin-bottom: 0;
-    width: 100%;
-    margin: 0 15px; } }
+    margin-bottom: 0; } }
 
 section.stats-scrolling-banner {
   margin-bottom: 100px; }
@@ -13109,7 +13092,7 @@ section.explore-features, section.compare-editions {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
       section.explore-features .clickable-row .explore-options .bordered, section.explore-features .clickable-row-explore .explore-options .bordered, section.compare-editions .clickable-row .explore-options .bordered, section.compare-editions .clickable-row-explore .explore-options .bordered {
         border-right: 1px solid rgba(0, 0, 0, 0.125);
-        padding: 0;
+        padding: 25px;
         position: relative; }
         section.explore-features .clickable-row .explore-options .bordered:last-child, section.explore-features .clickable-row-explore .explore-options .bordered:last-child, section.compare-editions .clickable-row .explore-options .bordered:last-child, section.compare-editions .clickable-row-explore .explore-options .bordered:last-child {
           border-right: 0; }
@@ -13126,32 +13109,15 @@ section.explore-features, section.compare-editions {
         border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
         section.explore-features .clickable-row .explore-options .row:last-child, section.explore-features .clickable-row-explore .explore-options .row:last-child, section.compare-editions .clickable-row .explore-options .row:last-child, section.compare-editions .clickable-row-explore .explore-options .row:last-child {
           border-bottom: 0; }
-      section.explore-features .clickable-row .explore-options .edition-name-box, section.explore-features .clickable-row-explore .explore-options .edition-name-box, section.compare-editions .clickable-row .explore-options .edition-name-box, section.compare-editions .clickable-row-explore .explore-options .edition-name-box {
-        width: 20%;
-        display: inline-block;
-        float: left; }
-        section.explore-features .clickable-row .explore-options .edition-name-box .text-input, section.explore-features .clickable-row-explore .explore-options .edition-name-box .text-input, section.compare-editions .clickable-row .explore-options .edition-name-box .text-input, section.compare-editions .clickable-row-explore .explore-options .edition-name-box .text-input {
-          display: table;
-          height: 100%;
-          width: 100%; }
-          section.explore-features .clickable-row .explore-options .edition-name-box .text-input p, section.explore-features .clickable-row-explore .explore-options .edition-name-box .text-input p, section.compare-editions .clickable-row .explore-options .edition-name-box .text-input p, section.compare-editions .clickable-row-explore .explore-options .edition-name-box .text-input p {
-            display: table-cell;
-            vertical-align: middle;
-            height: 100%; }
   section.explore-features div.clickable-row-explore.active .bordered h2:before, section.compare-editions div.clickable-row-explore.active .bordered h2:before {
     content: '\f0d8'; }
   section.explore-features .explore, section.explore-features .explore-options, section.compare-editions .explore, section.compare-editions .explore-options {
     background: #fafafa;
     border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
     section.explore-features .explore .bordered, section.explore-features .explore-options .bordered, section.compare-editions .explore .bordered, section.compare-editions .explore-options .bordered {
-      position: relative;
-      display: table;
-      height: 100%; }
-      section.explore-features .explore .bordered .bordered-inner-content, section.explore-features .explore-options .bordered .bordered-inner-content, section.compare-editions .explore .bordered .bordered-inner-content, section.compare-editions .explore-options .bordered .bordered-inner-content {
-        padding: 25px;
-        display: table-cell;
-        height: 100%;
-        vertical-align: middle; }
+      border-right: 1px solid rgba(0, 0, 0, 0.125);
+      padding: 25px;
+      position: relative; }
       section.explore-features .explore .bordered:last-child, section.explore-features .explore-options .bordered:last-child, section.compare-editions .explore .bordered:last-child, section.compare-editions .explore-options .bordered:last-child {
         border-right: 0; }
       section.explore-features .explore .bordered h2, section.explore-features .explore-options .bordered h2, section.compare-editions .explore .bordered h2, section.compare-editions .explore-options .bordered h2 {
@@ -13170,21 +13136,6 @@ section.explore-features, section.compare-editions {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
       section.explore-features .explore .row:last-child, section.explore-features .explore-options .row:last-child, section.compare-editions .explore .row:last-child, section.compare-editions .explore-options .row:last-child {
         border-bottom: 0; }
-  section.explore-features .explore .edition-name-box, section.compare-editions .explore .edition-name-box {
-    width: 20%;
-    display: inline-block;
-    float: left;
-    border-right: 1px solid rgba(0, 0, 0, 0.125); }
-    section.explore-features .explore .edition-name-box:last-child, section.compare-editions .explore .edition-name-box:last-child {
-      border-right: 0; }
-    section.explore-features .explore .edition-name-box .text-input, section.compare-editions .explore .edition-name-box .text-input {
-      display: table;
-      height: 100%;
-      width: 100%; }
-      section.explore-features .explore .edition-name-box .text-input p, section.compare-editions .explore .edition-name-box .text-input p {
-        display: table-cell;
-        vertical-align: middle;
-        height: 100%; }
   section.explore-features .fa-dot-circle-o, section.compare-editions .fa-dot-circle-o {
     vertical-align: middle;
     margin-left: 10px;
@@ -13242,11 +13193,8 @@ section.compare-editions .clickable-row .bordered {
       font-size: 24px; }
     section.compare-editions .clickable-row .bordered .edition-description .edition-timeline {
       margin-bottom: 0; }
-
-section.compare-editions .clickable-row .edition-name-box {
-  width: 20%;
-  display: inline-block;
-  float: left; }
+  section.compare-editions .clickable-row .bordered:last-child .edition-description {
+    margin-right: 15px; }
 
 .explore-options {
   display: none; }
