@@ -12642,7 +12642,7 @@ button.bg-custom:focus {
       width: 100%;
       max-width: 70%;
       max-height: 200px;
-      margin: auto;
+      margin: 0 auto 15px;
       display: block; }
     .box-wrapper .inner-box-wrapper h2, .box-wrapper .inner-box-wrapper h3, .box-wrapper .inner-box-wrapper p {
       display: block;
