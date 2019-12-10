@@ -489,6 +489,12 @@ html body [data-ca3_iconfont="ETmodules"]::before {
     content: attr(data-ca3_icon);
 }
 
+.ca3-scroll-down-arrow {
+	//background-image: url(<img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0yMy4yNDUgNGwtMTEuMjQ1IDE0LjM3NC0xMS4yMTktMTQuMzc0LS43ODEuNjE5IDEyIDE1LjM4MSAxMi0xNS4zOTEtLjc1NS0uNjA5eiIvPjwvc3ZnPg==">);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 .ca3-scroll-down-link {
     cursor:pointer;
 	height: 60px;
@@ -508,11 +514,6 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 	-webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
 	-moz-animation:    ca3_fade_move_down 2s ease-in-out infinite;
 	animation:         ca3_fade_move_down 2s ease-in-out infinite;
-	
-	.fa-chevron-down {
-		color: $pink; 
-		font-size: 72px;
-	}
 }
 
 
