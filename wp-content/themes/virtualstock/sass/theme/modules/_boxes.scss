@@ -508,6 +508,11 @@ html body [data-ca3_iconfont="ETmodules"]::before {
 	-webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
 	-moz-animation:    ca3_fade_move_down 2s ease-in-out infinite;
 	animation:         ca3_fade_move_down 2s ease-in-out infinite;
+	
+	.fa-chevron-down {
+		color: $pink; 
+		font-size: 72px;
+	}
 }
 
 

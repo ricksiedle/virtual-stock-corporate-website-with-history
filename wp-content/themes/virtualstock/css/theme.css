@@ -12976,6 +12976,9 @@ html body [data-ca3_iconfont="ETmodules"]::before {
   text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4);
   -webkit-animation: ca3_fade_move_down 2s ease-in-out infinite;
   animation: ca3_fade_move_down 2s ease-in-out infinite; }
+  .ca3-scroll-down-link .fa-chevron-down {
+    color: #E64097;
+    font-size: 72px; }
 
 /*animated scroll arrow animation*/
 @-webkit-keyframes ca3_fade_move_down {
