@@ -389,38 +389,6 @@ endif;
     ?>
 </section>
 
-<section class="pricing-plans">
-    <?php
-        // check if the repeater field has rows of data
-        if( have_rows('support_and_success_plans') ):
-
-        // loop through the rows of data
-    while ( have_rows('support_and_success_plans') ) : the_row(); ?>
-    <div class="container">
-        <h2><?php the_sub_field('section_heading',false,false); ?></h2>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="plan-box">
-                    <h2><?php the_sub_field('first_box_heading',false,false); ?></h2>
-                    <p><?php the_sub_field('first_box_paragraph'); ?></p>
-                </div>
-            </div>
-            
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                <div class="plan-box">
-                    <h2><?php the_sub_field('second_box_heading',false,false); ?></h2>
-                    <p><?php the_sub_field('second_box_paragraph'); ?></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <?php  endwhile;
-        else :
-            // no rows found
-        endif;
-    ?>
-</section>
-
 <section class="page-accordion">
     <?php
 
