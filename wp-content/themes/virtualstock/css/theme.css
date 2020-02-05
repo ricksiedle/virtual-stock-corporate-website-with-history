@@ -12012,10 +12012,10 @@ a.pink-button {
   .v-section .v-box-wrapper .v-box {
     position: relative;
     margin-bottom: 30px;
-    padding-top: 20px;
+    padding-top: 65px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 300px;
+    height: 330px;
     border-radius: 3px;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.5s;
@@ -12080,7 +12080,7 @@ a.pink-button {
         font-size: 4rem; }
     .v-section .v-box-wrapper .v-box h3 {
       margin: 20px 0 35px;
-      font-size: 1.50rem;
+      font-size: 1.65rem;
       font-family: 'Serenity Demi Bold';
       text-transform: uppercase;
       color: #fff; }
