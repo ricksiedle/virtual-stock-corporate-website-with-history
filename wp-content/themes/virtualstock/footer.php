@@ -11,6 +11,7 @@ $the_theme = wp_get_theme();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
+
 <?php get_sidebar( 'footerfull' ); ?>
 
 <div class="wrapper" id="wrapper-footer">
