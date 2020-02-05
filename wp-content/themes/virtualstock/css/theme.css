@@ -1656,24 +1656,24 @@ pre {
   .wpcf7 textarea::-webkit-input-placeholder, .wpcf7 .wpcf7-validation-errors::-webkit-input-placeholder {
     color: #6c757d;
     opacity: 1; }
-  .form-control:-ms-input-placeholder, .wpcf7 input[type=text]:-ms-input-placeholder,
-  .wpcf7 input[type=search]:-ms-input-placeholder,
-  .wpcf7 input[type=url]:-ms-input-placeholder,
-  .wpcf7 input[type=tel]:-ms-input-placeholder,
-  .wpcf7 input[type=number]:-ms-input-placeholder,
-  .wpcf7 input[type=range]:-ms-input-placeholder,
-  .wpcf7 input[type=date]:-ms-input-placeholder,
-  .wpcf7 input[type=month]:-ms-input-placeholder,
-  .wpcf7 input[type=week]:-ms-input-placeholder,
-  .wpcf7 input[type=time]:-ms-input-placeholder,
-  .wpcf7 input[type=datetime]:-ms-input-placeholder,
-  .wpcf7 input[type=datetime-local]:-ms-input-placeholder,
-  .wpcf7 input[type=color]:-ms-input-placeholder,
-  .wpcf7 input[type=email]:-ms-input-placeholder,
-  .wpcf7 input[type=file]:-ms-input-placeholder,
-  .wpcf7 input[type=submit]:-ms-input-placeholder,
-  .wpcf7 select:-ms-input-placeholder,
-  .wpcf7 textarea:-ms-input-placeholder, .wpcf7 .wpcf7-validation-errors:-ms-input-placeholder {
+  .form-control::-moz-placeholder, .wpcf7 input[type=text]::-moz-placeholder,
+  .wpcf7 input[type=search]::-moz-placeholder,
+  .wpcf7 input[type=url]::-moz-placeholder,
+  .wpcf7 input[type=tel]::-moz-placeholder,
+  .wpcf7 input[type=number]::-moz-placeholder,
+  .wpcf7 input[type=range]::-moz-placeholder,
+  .wpcf7 input[type=date]::-moz-placeholder,
+  .wpcf7 input[type=month]::-moz-placeholder,
+  .wpcf7 input[type=week]::-moz-placeholder,
+  .wpcf7 input[type=time]::-moz-placeholder,
+  .wpcf7 input[type=datetime]::-moz-placeholder,
+  .wpcf7 input[type=datetime-local]::-moz-placeholder,
+  .wpcf7 input[type=color]::-moz-placeholder,
+  .wpcf7 input[type=email]::-moz-placeholder,
+  .wpcf7 input[type=file]::-moz-placeholder,
+  .wpcf7 input[type=submit]::-moz-placeholder,
+  .wpcf7 select::-moz-placeholder,
+  .wpcf7 textarea::-moz-placeholder, .wpcf7 .wpcf7-validation-errors::-moz-placeholder {
     color: #6c757d;
     opacity: 1; }
   .form-control::-ms-input-placeholder, .wpcf7 input[type=text]::-ms-input-placeholder,
@@ -4740,8 +4740,10 @@ tbody.collapse.show {
 @media (min-width: 576px) {
   .card-columns {
     -webkit-column-count: 3;
+       -moz-column-count: 3;
             column-count: 3;
     -webkit-column-gap: 1.25rem;
+       -moz-column-gap: 1.25rem;
             column-gap: 1.25rem; }
     .card-columns .card {
       display: inline-block;
@@ -12012,10 +12014,10 @@ a.pink-button {
   .v-section .v-box-wrapper .v-box {
     position: relative;
     margin-bottom: 30px;
-    padding-top: 65px;
+    padding-top: 20px;
     padding-left: 30px;
     padding-right: 30px;
-    height: 330px;
+    height: 300px;
     border-radius: 3px;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.5s;
@@ -12080,7 +12082,7 @@ a.pink-button {
         font-size: 4rem; }
     .v-section .v-box-wrapper .v-box h3 {
       margin: 20px 0 35px;
-      font-size: 1.65rem;
+      font-size: 1.50rem;
       font-family: 'Serenity Demi Bold';
       text-transform: uppercase;
       color: #fff; }
