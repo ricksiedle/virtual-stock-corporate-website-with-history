@@ -98,19 +98,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-
-
-                <?php if (!is_front_page() && !is_home()){ ?>
-                    <a class="pink-button" href="https://www.edge4health.co.uk/cas/login?service=https%3A%2F%2Fmarket.edge4health.co.uk%2Faccounts%2Flogin%2F%3Fnext%3D%252F"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
-                <?php } ?>
-                
-<!--
-                <?php // if (is_page (array('healthcare', 'suppliers', 'providers') ) ) : ?>
-                    <a class="pink-button" href="https://labs-022.labs.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
-                <?php // else : ?>
-                    <a class="pink-button" href="https://labs-003.labs.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
-                <?php // endif; ?>            
--->
+                <?php  if (is_page (array('healthcare', 'suppliers', 'providers') ) ) : ?>
+                    <a class="pink-button" href="https://www.edge4health.co.uk/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                <?php  else : ?>
+                    <?php if (!is_front_page() && !is_home()){ ?>
+                        <a class="pink-button" href="https://www.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
+                    <?php } ?>
+                <?php  endif; ?>
 				
 			</div><!-- .container -->			
 
