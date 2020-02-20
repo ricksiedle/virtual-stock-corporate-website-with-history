@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 					<div class="row">
 						<div class="site-info col-lg-3 col-md-12">
-							<?php _e('© 2018 by Virtualstock Ltd') ?>
+                            <?php _e('© '.date("Y").' by Virtualstock Ltd') ?>
 						</div><!-- .site-info -->
 
 						<div class="site-footer-menu col-lg-7 col-md-12">
