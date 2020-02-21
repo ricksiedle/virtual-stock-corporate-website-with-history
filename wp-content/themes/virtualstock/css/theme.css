@@ -12637,6 +12637,10 @@ button.bg-custom:focus {
     .box-wrapper {
       margin-bottom: 30px;
       padding: 50px; } }
+  @media only screen and (max-width: 380px) {
+    .box-wrapper {
+      padding: 50px;
+      margin: 0; } }
   .box-wrapper .inner-box-wrapper {
     display: table-cell;
     vertical-align: middle;
@@ -12655,6 +12659,9 @@ button.bg-custom:focus {
       margin-bottom: 0;
       line-height: 120%;
       font-size: 2.4rem; }
+      @media only screen and (max-width: 380px) {
+        .box-wrapper .inner-box-wrapper h2 {
+          font-size: 2.2rem; } }
     .box-wrapper .inner-box-wrapper h3 {
       color: #E64097;
       line-height: 130%;
@@ -12703,6 +12710,9 @@ button.bg-custom:focus {
       line-height: 100%; }
       .solutions-wrapper .solutions-boxes h1 span, .retail-wrapper .solutions-boxes h1 span {
         color: #E64097; }
+      @media only screen and (max-width: 380px) {
+        .solutions-wrapper .solutions-boxes h1, .retail-wrapper .solutions-boxes h1 {
+          font-size: 2rem; } }
     @media only screen and (max-width: 767px) {
       .solutions-wrapper .solutions-boxes .col, .retail-wrapper .solutions-boxes .col {
         margin-bottom: 30px; } }

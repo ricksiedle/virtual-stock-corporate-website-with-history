@@ -18,6 +18,10 @@
         margin-bottom: 30px;
         padding: 50px;
     }
+    @media only screen and (max-width: 380px) {
+        padding: 50px;
+        margin: 0;
+    }
 
     .inner-box-wrapper {   
         display: table-cell;
@@ -34,14 +38,17 @@
         
         h2, h3, p {
             display: block;
-            text-align: center;            
+            text-align: center;
         }
              
         h2 {    
             color: $pink;
             margin-bottom: 0;
             line-height: 120%;
-            font-size: 2.4rem;            
+            font-size: 2.4rem;
+            @media only screen and (max-width: 380px) {
+                font-size: 2.2rem;
+            }
         }
         
         h3 {
@@ -109,8 +116,12 @@
             span {
                 color: $pink;
             }
+
+            @media only screen and (max-width: 380px) {
+                font-size: 2rem;
+            }
         }
-        
+
         @media only screen and (max-width:767px) {
             .col {
                 margin-bottom: 30px;
