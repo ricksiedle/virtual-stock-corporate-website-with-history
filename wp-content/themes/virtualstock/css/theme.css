@@ -12635,7 +12635,8 @@ button.bg-custom:focus {
   margin: auto; }
   @media only screen and (max-width: 767px) {
     .box-wrapper {
-      margin-bottom: 30px; } }
+      margin-bottom: 30px;
+      padding: 50px; } }
   .box-wrapper .inner-box-wrapper {
     display: table-cell;
     vertical-align: middle;
