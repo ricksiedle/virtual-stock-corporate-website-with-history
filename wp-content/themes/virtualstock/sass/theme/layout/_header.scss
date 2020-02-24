@@ -157,7 +157,9 @@
         }
     }
     .menu-item.dropdown {
-        height: auto;
+        @media screen and (max-width: 991px) {
+            height: auto;
+        }
     }
     li.show {
         > a {
@@ -186,7 +188,6 @@
             }
         }
         &:hover {
-            height: 118px;
              a.dropdown-toggle {
                 font-weight: 500;
                 &:after {
@@ -195,7 +196,17 @@
                 }
             }
             .dropdown-menu {
-                height: 65px;
+                @media screen and (max-width: 991px) {
+                    height: 65px;
+                }
+                @media screen and (min-width: 991px) {
+                    height: auto;
+                    position: relative;
+                    background-color: white;
+                    margin-top: -1px;
+                    border-radius: 0;
+                    border-left: solid 2px #e64097;
+                }
             }
         }
     }
@@ -237,6 +248,7 @@ a.pink-button {
         cursor: pointer;
         font-size: 20px;   
         margin-right: 10px;
+        margin-top: 20px;
 
         &:hover {
             font-size: 22px;

@@ -10793,8 +10793,9 @@ h3:empty {
         @media only screen and (max-width: 480px) {
           #main-menu > li > a:after {
             display: none; } }
-  #main-menu .menu-item.dropdown {
-    height: auto; }
+  @media screen and (max-width: 991px) {
+    #main-menu .menu-item.dropdown {
+      height: auto; } }
   #main-menu li.show > a:after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg);
@@ -10815,16 +10816,23 @@ h3:empty {
       @media only screen and (max-width: 480px) {
         #main-menu li.dropdown .dropdown-menu {
           height: auto; } }
-    #main-menu li.dropdown:hover {
-      height: 118px; }
-      #main-menu li.dropdown:hover a.dropdown-toggle {
-        font-weight: 500; }
-        #main-menu li.dropdown:hover a.dropdown-toggle:after {
-          -webkit-transform: rotate(180deg);
-                  transform: rotate(180deg);
-          margin-bottom: -5px; }
+    #main-menu li.dropdown:hover a.dropdown-toggle {
+      font-weight: 500; }
+      #main-menu li.dropdown:hover a.dropdown-toggle:after {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+        margin-bottom: -5px; }
+    @media screen and (max-width: 991px) {
       #main-menu li.dropdown:hover .dropdown-menu {
-        height: 65px; }
+        height: 65px; } }
+    @media screen and (min-width: 991px) {
+      #main-menu li.dropdown:hover .dropdown-menu {
+        height: auto;
+        position: relative;
+        background-color: white;
+        margin-top: -1px;
+        border-radius: 0;
+        border-left: solid 2px #e64097; } }
 
 #header-btn.moduled-btn.pink-btn {
   position: fixed;
@@ -10858,7 +10866,8 @@ a.pink-button {
     outline: 0;
     cursor: pointer;
     font-size: 20px;
-    margin-right: 10px; }
+    margin-right: 10px;
+    margin-top: 20px; }
     a.pink-button button#login:hover {
       font-size: 22px;
       text-decoration: none;
