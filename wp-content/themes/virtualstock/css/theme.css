@@ -10710,10 +10710,9 @@ h3:empty {
               transform-origin: 50% 50%;
       top: -1px; }
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-    top: -8px;
     height: auto;
     background-color: rgba(69, 81, 96, 0.8);
-    padding-bottom: 25px; }
+    padding-bottom: 0px; }
     @media only screen and (max-width: 768px) {
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
         padding-bottom: 5px; } }
@@ -10830,7 +10829,7 @@ h3:empty {
         height: auto;
         position: relative;
         background-color: white;
-        margin-top: -5px;
+        margin-top: -3px;
         border-radius: 0;
         border-left: solid 2px #e64097; } }
 
@@ -10881,7 +10880,8 @@ a.pink-button {
 
 @media screen and (min-width: 991px) {
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-    background-color: #fff; }
+    background-color: #fff;
+    padding-bottom: 29px; }
   #main-menu {
     margin-left: 220px;
     margin-top: 0; } }
@@ -11153,6 +11153,12 @@ a.pink-button {
  * All pages rules
  *
  */
+#page-wrapper {
+  padding-top: 0; }
+  #page-wrapper #content {
+    padding-left: 0;
+    padding-right: 0; }
+
 .entry-header {
   overflow: hidden; }
   .entry-header .under-header-wrapper .under-header-logo img {
