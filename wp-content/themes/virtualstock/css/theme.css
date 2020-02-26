@@ -12681,7 +12681,10 @@ button.bg-custom:focus {
       font-size: 2.4rem; }
       @media only screen and (max-width: 380px) {
         .box-wrapper .inner-box-wrapper h2 {
-          font-size: 2.2rem; } }
+          font-size: 1.4rem; } }
+      @media only screen and (max-width: 767px) {
+        .box-wrapper .inner-box-wrapper h2 {
+          font-size: 1.4rem; } }
     .box-wrapper .inner-box-wrapper h3 {
       color: #E64097;
       line-height: 130%;
