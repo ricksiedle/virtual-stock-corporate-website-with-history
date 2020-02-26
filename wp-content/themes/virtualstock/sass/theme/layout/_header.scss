@@ -64,10 +64,10 @@
         background-color: rgba(69,81,96, .8);
         padding-bottom: 0px;
         @media #{$ipad-portrait} {
-            padding-bottom: 5px;
+            padding-bottom: 95px;
         }
         @media #{$handheld}, #{$handheld-landscape} {
-            padding-bottom: 25px;
+            padding-bottom: 38px;
         }
         .navbar-nav {
             .dropdown-menu {
