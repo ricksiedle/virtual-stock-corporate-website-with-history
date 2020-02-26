@@ -10715,10 +10715,10 @@ h3:empty {
     padding-bottom: 0px; }
     @media only screen and (max-width: 768px) {
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-        padding-bottom: 5px; } }
+        padding-bottom: 95px; } }
     @media only screen and (max-width: 480px), only screen and (max-width: 991px) and (orientation: landscape) {
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-        padding-bottom: 25px; } }
+        padding-bottom: 38px; } }
     .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu {
       position: static;
       border: none;
@@ -11158,7 +11158,7 @@ a.pink-button {
   #page-wrapper #content {
     padding-left: 0;
     padding-right: 0;
-    overflow: hidden; }
+    overflow-x: hidden; }
 
 #single-wrapper #primary {
   padding-left: 0;
@@ -12725,6 +12725,7 @@ button.bg-custom:focus {
       text-transform: uppercase;
       font-size: 2.8rem;
       margin-bottom: 50px;
+      margin-top: 20px;
       font-weight: 500;
       color: #fff;
       line-height: 100%; }
@@ -12732,7 +12733,12 @@ button.bg-custom:focus {
         color: #E64097; }
       @media only screen and (max-width: 380px) {
         .solutions-wrapper .solutions-boxes h1, .retail-wrapper .solutions-boxes h1 {
-          font-size: 2rem; } }
+          font-size: 2rem;
+          margin-bottom: 20px; } }
+      @media only screen and (max-width: 767px) {
+        .solutions-wrapper .solutions-boxes h1, .retail-wrapper .solutions-boxes h1 {
+          font-size: 2rem;
+          margin-bottom: 20px; } }
     @media only screen and (max-width: 767px) {
       .solutions-wrapper .solutions-boxes .col, .retail-wrapper .solutions-boxes .col {
         margin-bottom: 30px; } }
