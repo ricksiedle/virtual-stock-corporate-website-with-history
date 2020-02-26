@@ -4183,7 +4183,8 @@ tbody.collapse.show {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding: 0.5rem 1rem; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: -webkit-box;
@@ -11156,7 +11157,8 @@ a.pink-button {
   padding-top: 0; }
   #page-wrapper #content {
     padding-left: 0;
-    padding-right: 0; }
+    padding-right: 0;
+    overflow: hidden; }
 
 #single-wrapper #primary {
   padding-left: 0;
