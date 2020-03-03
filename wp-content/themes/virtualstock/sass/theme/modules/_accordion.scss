@@ -100,7 +100,6 @@ section.explore-features, section.compare-editions {
         border-top: 0;
         border-radius: .25rem;
         cursor: pointer;
-                         
         .bordered {
             border-right: 1px solid rgba(0,0,0,.125);
             padding: 25px 15px 25px 40px;
@@ -114,6 +113,7 @@ section.explore-features, section.compare-editions {
                 font-size: 1.2rem;
                 margin-bottom: 0;
                 line-height: 100%;
+                display: inline;
                 
                 &:before {
                     font-family: 'FontAwesome';
@@ -123,6 +123,16 @@ section.explore-features, section.compare-editions {
                     vertical-align: middle;
                     margin-right: 30px;
                 } 
+            }
+        }
+
+        .clickable-row-explore-data{
+            padding: 25px;
+
+            p{
+                text-align: center;
+                font-size:1.1rem;
+                margin-bottom: 0;
             }
         }
         

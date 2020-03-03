@@ -256,27 +256,27 @@ endif;
                 if( have_rows('edition_options') ):
 
                 // loop through the rows of data
-                while ( have_rows('edition_options') ) : the_row(); 
+                while ( have_rows('edition_options') ) : the_row();
             ?>
-            <div class="explore">
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h2><?php the_sub_field('edition_option_title',false,false); ?></h2>   
-                        <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('edition_option_tooltip_text',false,false); ?>" data-placement="right" data-trigger="hover">
-                        </span>  
-                    </div>   
-                    
-                        <?php 
+                <div class="clickable-row-explore">
+                    <div class="row">
+                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
+                            <h2><?php the_sub_field('edition_option_title',false,false); ?></h2>
+                            <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('edition_option_tooltip_text',false,false); ?>" data-placement="right" data-trigger="hover" style="margin-top: 0;">
+                            </span>
+                        </div>
+
+                        <?php
                             // check if the repeater field has rows of data
                             if( have_rows('edition_option_check_status') ):
 
                             // loop through the rows of data
-                            while ( have_rows('edition_option_check_status') ) : the_row(); 
+                            while ( have_rows('edition_option_check_status') ) : the_row();
                         ?>
-                        <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                        <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered clickable-row-explore-data">
                             <?php if (get_sub_field('choose_text_or_icon') == 'icon') : ?>
                             <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-                            
+
                             <?php else : ?>
                                 <p><?php the_sub_field('custom_option_input',false,false); ?></p>
                             <?php endif; ?>
@@ -285,101 +285,63 @@ endif;
                             else :
                             // no rows found
                             endif;
-                        ?>  
+                        ?>
+                    </div>
+                    <?php
+                    $title = get_sub_field('edition_option_title', false);
+                    if( have_rows('explore_all_features') ):
+                        while ( have_rows('explore_all_features') ) : the_row();
+                            if( have_rows('features') ):
+                                while ( have_rows('features') ) : the_row();
+                                    $sub_row = get_row();
+                                    if($sub_row[key($sub_row)] == $title):
+                                        if( have_rows('explore_feature') ):
+                                            while ( have_rows('explore_feature') ) : the_row(); ?>
+                                                <div class="explore-options">
+                                                    <div class="row">
+                                                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered explore-item">
+                                                            <h2><?php the_sub_field('feature_option_title',false,false); ?></h2>
+                                                            <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('feature_tooltip',false,false); ?>" data-placement="right" data-trigger="hover">
+                                                            </span>
+                                                        </div>
+
+                                                        <?php
+                                                        if( have_rows('feature_option_check_status') ):
+
+                                                            // loop through the rows of data
+                                                            while ( have_rows('feature_option_check_status') ) : the_row();
+                                                                ?>
+                                                                <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                                                                    <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
+                                                                        <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
+
+                                                                    <?php else : ?>
+                                                                        <p><?php the_sub_field('custom_text_input',false,false); ?></p>
+                                                                    <?php endif; ?>
+                                                                </div>
+                                                            <?php  endwhile;
+                                                        else :
+                                                            // no rows found
+                                                        endif;
+                                                        ?>
+                                                    </div>
+                                                </div>
+                                            <?php  endwhile;
+                                        else :
+                                            // no rows found
+                                        endif;
+                                    endif;
+                                endwhile;
+                            endif;
+                        endwhile;
+                    endif;
+                ?>
                 </div>
-            </div>
-            <?php  endwhile;
+                <?php  endwhile;
                 else :
                 // no rows found
                 endif;
             ?>          
-        </div>
-    </div>
-    <?php  endwhile;
-    else :
-        // no rows found
-        endif;
-    ?>
-</section>
-
-<section class="explore-features">
-    <?php 
-        // check if the repeater field has rows of data
-        if( have_rows('explore_all_features') ):
-
-        // loop through the rows of data
-        while ( have_rows('explore_all_features') ) : the_row(); 
-    ?>
-    <div class="container">
-        <h2><?php the_sub_field('section_title',false,false); ?></h2>
-        <div class="explore-wrapper">
-            <?php 
-                // check if the repeater field has rows of data
-                if( have_rows('features') ):
-
-                    // loop through the rows of data
-                    while ( have_rows('features') ) : the_row(); 
-                ?>
-                <div class="clickable-row-explore">
-                    <div class="row">
-                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                            <h2><?php the_sub_field('feature_title',false,false); ?></h2>                
-                        </div>
-                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-
-                        </div>
-                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-
-                        </div>
-
-                    </div>
-                    <?php 
-                        // check if the repeater field has rows of data
-                        if( have_rows('explore_feature') ):
-
-                        // loop through the rows of data
-                        while ( have_rows('explore_feature') ) : the_row(); 
-                    ?>
-                    <div class="explore-options">
-                        <div class="row">
-                            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered explore-item">
-                                <h2><?php the_sub_field('feature_option_title',false,false); ?></h2>   
-                                <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('feature_tooltip',false,false); ?>" data-placement="right" data-trigger="hover">
-                                </span>  
-                            </div>
-
-                            <?php 
-                                // check if the repeater field has rows of data
-                                if( have_rows('feature_option_check_status') ):
-
-                                // loop through the rows of data
-                                while ( have_rows('feature_option_check_status') ) : the_row(); 
-                            ?>
-                            <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
-                                <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
-                                <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-                                
-                                <?php else : ?>
-                                    <p><?php the_sub_field('custom_text_input',false,false); ?></p>
-                                <?php endif; ?>
-                            </div>
-                            <?php  endwhile;
-                                else :
-                                // no rows found
-                                endif;
-                            ?> 
-                        </div>
-                    </div>
-                    <?php  endwhile;
-                        else :
-                        // no rows found
-                        endif;
-                    ?> 
-                        </div>  
-                    <?php 
-                    endwhile;
-                endif;
-            ?>
         </div>
     </div>
     <?php  endwhile;

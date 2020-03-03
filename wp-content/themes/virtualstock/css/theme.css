@@ -13120,7 +13120,8 @@ section.explore-features, section.compare-editions {
         vertical-align: middle;
         font-size: 1.2rem;
         margin-bottom: 0;
-        line-height: 100%; }
+        line-height: 100%;
+        display: inline; }
         section.explore-features .clickable-row .bordered h2:before, section.explore-features .clickable-row-explore .bordered h2:before, section.compare-editions .clickable-row .bordered h2:before, section.compare-editions .clickable-row-explore .bordered h2:before {
           font-family: 'FontAwesome';
           content: '\f0d7';
@@ -13128,6 +13129,12 @@ section.explore-features, section.compare-editions {
           color: #455160;
           vertical-align: middle;
           margin-right: 30px; }
+    section.explore-features .clickable-row .clickable-row-explore-data, section.explore-features .clickable-row-explore .clickable-row-explore-data, section.compare-editions .clickable-row .clickable-row-explore-data, section.compare-editions .clickable-row-explore .clickable-row-explore-data {
+      padding: 25px; }
+      section.explore-features .clickable-row .clickable-row-explore-data p, section.explore-features .clickable-row-explore .clickable-row-explore-data p, section.compare-editions .clickable-row .clickable-row-explore-data p, section.compare-editions .clickable-row-explore .clickable-row-explore-data p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 0; }
     section.explore-features .clickable-row .explore-options, section.explore-features .clickable-row-explore .explore-options, section.compare-editions .clickable-row .explore-options, section.compare-editions .clickable-row-explore .explore-options {
       background: #fafafa;
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
