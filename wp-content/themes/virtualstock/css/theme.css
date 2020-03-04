@@ -13140,7 +13140,7 @@ section.explore-features, section.compare-editions {
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
       section.explore-features .clickable-row .explore-options .bordered, section.explore-features .clickable-row-explore .explore-options .bordered, section.compare-editions .clickable-row .explore-options .bordered, section.compare-editions .clickable-row-explore .explore-options .bordered {
         border-right: 1px solid rgba(0, 0, 0, 0.125);
-        padding: 25px;
+        padding: 25px 15px 25px 82px;
         position: relative; }
         section.explore-features .clickable-row .explore-options .bordered:last-child, section.explore-features .clickable-row-explore .explore-options .bordered:last-child, section.compare-editions .clickable-row .explore-options .bordered:last-child, section.compare-editions .clickable-row-explore .explore-options .bordered:last-child {
           border-right: 0; }
