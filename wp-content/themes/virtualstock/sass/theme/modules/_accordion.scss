@@ -124,6 +124,24 @@ section.explore-features, section.compare-editions {
                     margin-right: 30px;
                 } 
             }
+            .span{
+                margin-top: 0;
+            }
+        }
+        .feature-option-row{
+            padding: 0 15px;
+            .feature-option-item{
+                padding: 46px !important;
+            }
+        }
+        .clickable-item{
+            padding: 35px 25px 15px 40px;
+        }
+        .option-item-row{
+            padding: 0 15px;
+            .option-item{
+                padding: 46px;
+            }
         }
 
         .clickable-row-explore-data{
@@ -163,6 +181,9 @@ section.explore-features, section.compare-editions {
             }
             .explore-item{
                 padding-left: 82px;
+            }
+            .explore-item-3{
+                padding: 35px 15px 25px 80px;
             }
 
             .row {
