@@ -76,7 +76,7 @@ section.page-accordion {
             
             &:last-child {
                 margin-bottom: 0;
-            }  
+            }
         }
     }
 }
@@ -100,7 +100,6 @@ section.explore-features, section.compare-editions {
         border-top: 0;
         border-radius: .25rem;
         cursor: pointer;
-                         
         .bordered {
             border-right: 1px solid rgba(0,0,0,.125);
             padding: 25px 15px 25px 40px;
@@ -114,6 +113,7 @@ section.explore-features, section.compare-editions {
                 font-size: 1.2rem;
                 margin-bottom: 0;
                 line-height: 100%;
+                display: inline;
                 
                 &:before {
                     font-family: 'FontAwesome';
@@ -123,6 +123,34 @@ section.explore-features, section.compare-editions {
                     vertical-align: middle;
                     margin-right: 30px;
                 } 
+            }
+            .span{
+                margin-top: 0;
+            }
+        }
+        .feature-option-row{
+            padding: 0 15px;
+            .feature-option-item{
+                padding: 46px !important;
+            }
+        }
+        .clickable-item{
+            padding: 35px 25px 15px 40px;
+        }
+        .option-item-row{
+            padding: 0 15px;
+            .option-item{
+                padding: 46px;
+            }
+        }
+
+        .clickable-row-explore-data{
+            padding: 25px;
+
+            p{
+                text-align: center;
+                font-size:1.1rem;
+                margin-bottom: 0;
             }
         }
         
@@ -150,6 +178,12 @@ section.explore-features, section.compare-editions {
                         display: none;
                     }
                 }
+            }
+            .explore-item{
+                padding-left: 82px;
+            }
+            .explore-item-3{
+                padding: 35px 15px 25px 80px;
             }
 
             .row {
@@ -267,7 +301,7 @@ section.compare-editions {
             
             .edition-description {
                 padding: 12px 15px 15px;
-                background: #228b22;
+                background: #55575e;
                 text-align: center;
                 height: 100%;
                 

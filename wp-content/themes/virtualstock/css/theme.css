@@ -13120,7 +13120,8 @@ section.explore-features, section.compare-editions {
         vertical-align: middle;
         font-size: 1.2rem;
         margin-bottom: 0;
-        line-height: 100%; }
+        line-height: 100%;
+        display: inline; }
         section.explore-features .clickable-row .bordered h2:before, section.explore-features .clickable-row-explore .bordered h2:before, section.compare-editions .clickable-row .bordered h2:before, section.compare-editions .clickable-row-explore .bordered h2:before {
           font-family: 'FontAwesome';
           content: '\f0d7';
@@ -13128,6 +13129,24 @@ section.explore-features, section.compare-editions {
           color: #455160;
           vertical-align: middle;
           margin-right: 30px; }
+      section.explore-features .clickable-row .bordered .span, section.explore-features .clickable-row-explore .bordered .span, section.compare-editions .clickable-row .bordered .span, section.compare-editions .clickable-row-explore .bordered .span {
+        margin-top: 0; }
+    section.explore-features .clickable-row .feature-option-row, section.explore-features .clickable-row-explore .feature-option-row, section.compare-editions .clickable-row .feature-option-row, section.compare-editions .clickable-row-explore .feature-option-row {
+      padding: 0 15px; }
+      section.explore-features .clickable-row .feature-option-row .feature-option-item, section.explore-features .clickable-row-explore .feature-option-row .feature-option-item, section.compare-editions .clickable-row .feature-option-row .feature-option-item, section.compare-editions .clickable-row-explore .feature-option-row .feature-option-item {
+        padding: 46px !important; }
+    section.explore-features .clickable-row .clickable-item, section.explore-features .clickable-row-explore .clickable-item, section.compare-editions .clickable-row .clickable-item, section.compare-editions .clickable-row-explore .clickable-item {
+      padding: 35px 25px 15px 40px; }
+    section.explore-features .clickable-row .option-item-row, section.explore-features .clickable-row-explore .option-item-row, section.compare-editions .clickable-row .option-item-row, section.compare-editions .clickable-row-explore .option-item-row {
+      padding: 0 15px; }
+      section.explore-features .clickable-row .option-item-row .option-item, section.explore-features .clickable-row-explore .option-item-row .option-item, section.compare-editions .clickable-row .option-item-row .option-item, section.compare-editions .clickable-row-explore .option-item-row .option-item {
+        padding: 46px; }
+    section.explore-features .clickable-row .clickable-row-explore-data, section.explore-features .clickable-row-explore .clickable-row-explore-data, section.compare-editions .clickable-row .clickable-row-explore-data, section.compare-editions .clickable-row-explore .clickable-row-explore-data {
+      padding: 25px; }
+      section.explore-features .clickable-row .clickable-row-explore-data p, section.explore-features .clickable-row-explore .clickable-row-explore-data p, section.compare-editions .clickable-row .clickable-row-explore-data p, section.compare-editions .clickable-row-explore .clickable-row-explore-data p {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 0; }
     section.explore-features .clickable-row .explore-options, section.explore-features .clickable-row-explore .explore-options, section.compare-editions .clickable-row .explore-options, section.compare-editions .clickable-row-explore .explore-options {
       background: #fafafa;
       border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
@@ -13146,6 +13165,10 @@ section.explore-features, section.compare-editions {
           text-transform: capitalize; }
           section.explore-features .clickable-row .explore-options .bordered h2:before, section.explore-features .clickable-row-explore .explore-options .bordered h2:before, section.compare-editions .clickable-row .explore-options .bordered h2:before, section.compare-editions .clickable-row-explore .explore-options .bordered h2:before {
             display: none; }
+      section.explore-features .clickable-row .explore-options .explore-item, section.explore-features .clickable-row-explore .explore-options .explore-item, section.compare-editions .clickable-row .explore-options .explore-item, section.compare-editions .clickable-row-explore .explore-options .explore-item {
+        padding-left: 82px; }
+      section.explore-features .clickable-row .explore-options .explore-item-3, section.explore-features .clickable-row-explore .explore-options .explore-item-3, section.compare-editions .clickable-row .explore-options .explore-item-3, section.compare-editions .clickable-row-explore .explore-options .explore-item-3 {
+        padding: 35px 15px 25px 80px; }
       section.explore-features .clickable-row .explore-options .row, section.explore-features .clickable-row-explore .explore-options .row, section.compare-editions .clickable-row .explore-options .row, section.compare-editions .clickable-row-explore .explore-options .row {
         border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
         section.explore-features .clickable-row .explore-options .row:last-child, section.explore-features .clickable-row-explore .explore-options .row:last-child, section.compare-editions .clickable-row .explore-options .row:last-child, section.compare-editions .clickable-row-explore .explore-options .row:last-child {
@@ -13219,7 +13242,7 @@ section.compare-editions .clickable-row .bordered {
     padding: 25px; }
   section.compare-editions .clickable-row .bordered .edition-description {
     padding: 12px 15px 15px;
-    background: #228b22;
+    background: #55575e;
     text-align: center;
     height: 100%; }
     section.compare-editions .clickable-row .bordered .edition-description span {
