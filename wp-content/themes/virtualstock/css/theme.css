@@ -13101,9 +13101,6 @@ section.page-accordion h2 {
 
 section.explore-features, section.compare-editions {
   margin-bottom: 100px; }
-  @media only screen and (max-width: 767px) {
-    section.explore-features, section.compare-editions {
-      display: none; } }
   section.explore-features h2, section.compare-editions h2 {
     margin-bottom: 30px; }
   section.explore-features .clickable-row, section.explore-features .clickable-row-explore, section.compare-editions .clickable-row, section.compare-editions .clickable-row-explore {
