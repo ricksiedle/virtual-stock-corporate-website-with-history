@@ -250,7 +250,7 @@ endif;
                             </div>
                             <?php else:
                                  while ( have_rows('editions') ) : the_row(); ?>
-                                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                                    <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered">
                                         <div class="edition-description">
                                             <span class="edition-title">
                                                 <?php the_sub_field('edition_name',false,false); ?>
@@ -306,7 +306,7 @@ endif;
                                 </div>
                             <?php else:
                                 while ( have_rows('edition_option_check_status') ) : the_row(); ?>
-                                    <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered clickable-row-explore-data">
+                                    <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered clickable-row-explore-data">
                                         <?php if (get_sub_field('choose_text_or_icon') == 'icon') : ?>
                                             <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
 
@@ -361,7 +361,7 @@ endif;
                                                              <?php else: ?>
                                                                  <?php while ( have_rows('feature_option_check_status') ) : the_row();
                                                                      ?>
-                                                                     <div class="col-xs-hidden col-sm-2 col-md-2 col-lg-2 col-xl-2 bordered">
+                                                                     <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered">
                                                                          <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
                                                                              <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
 
