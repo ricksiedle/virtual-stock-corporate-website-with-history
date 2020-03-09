@@ -127,6 +127,9 @@ section.explore-features, section.compare-editions {
             .span{
                 margin-top: 0;
             }
+            @media only screen and (max-width: 575px) {
+                border-right: 1px solid rgba(0,0,0,.125) !important;
+            }
         }
         .feature-option-row{
             padding: 0 15px;
@@ -192,6 +195,10 @@ section.explore-features, section.compare-editions {
                     border-bottom: 0;
                 }
             }
+        }
+        @media only screen and (max-width: 575px) {
+            margin-top: 10px;
+            border-top: 1px solid rgba(0,0,0,.125);
         }
     }
     
@@ -329,7 +336,14 @@ section.compare-editions {
             &:last-child {
                 .edition-description {
                     margin-right: 15px;
+                    @media only screen and (max-width: 575px) {
+                        margin-right: 0px;
+                    }
                 }
+            }
+            @media only screen and (max-width: 575px) {
+                margin-right: 14px;
+                margin-left: 15px;
             }
         }
     }
@@ -352,7 +366,11 @@ section.compare-editions {
 #fixed {
     max-width: 1110px;
     width: 100%;
-    
+
+    @media only screen and (max-width: 768px) {
+        max-width: 690px !important;
+    }
+
     @media only screen and (min-width: 768px) and (max-width: 991px) {
         max-width: 690px !important;
     }

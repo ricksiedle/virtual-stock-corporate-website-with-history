@@ -221,7 +221,7 @@ endif;
             <div class="clickable-row" id="fixed">                
                 <div class="row">
                     <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h3><?php the_sub_field('editions_main_title',false,false); ?></h3>            
+                        <h3><?php the_sub_field('editions_main_title',false,false); ?></h3>
                     </div>
                     <?php
                         $count = 0;
@@ -234,15 +234,15 @@ endif;
                                 <?php while ( have_rows('editions') ) : the_row(); ?>
                                     <div class="col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
                                         <div class="edition-description">
-                                        <span class="edition-title">
-                                            <?php the_sub_field('edition_name',false,false); ?>
-                                        </span>
-                                            <span class="price">
-                                            <?php the_sub_field('edition_price',false,false); ?>
-                                        </span>
-                                            <span class="edition-timeline">
-                                            <?php the_sub_field('edition_durability',false,false); ?>
-                                        </span>
+                                            <span class="edition-title">
+                                                <?php the_sub_field('edition_name',false,false); ?>
+                                            </span>
+                                                <span class="price">
+                                                <?php the_sub_field('edition_price',false,false); ?>
+                                            </span>
+                                                <span class="edition-timeline">
+                                                <?php the_sub_field('edition_durability',false,false); ?>
+                                            </span>
                                         </div>
                                     </div>
                                  <?php endwhile; ?>
@@ -492,16 +492,16 @@ for (i = 0; i < acc.length; i++) {
 
 <script>
     jQuery(document).ready(function() {
-    var stickyTop = jQuery('#fixed').offset().top; 
-    jQuery(window).scroll(function(event) {
-        var windowTop = jQuery(window).scrollTop();
-        if (stickyTop < windowTop && jQuery(".compare-editions").outerHeight() + jQuery(".compare-editions").offset().top - jQuery("#fixed").outerHeight() > windowTop) {
-            event.preventDefault();
-          jQuery('#fixed').css({"position":"fixed", "top":"103px", "z-index":"10000", "transition":"ease .5s"});
-        } else {
-          jQuery('#fixed').css({"position":"relative", "top":"0", "z-index":"6", "transition":"ease 1s"});
-        }
-    });
+    // var stickyTop = jQuery('#fixed').offset().top;
+    // jQuery(window).scroll(function(event) {
+        // var windowTop = jQuery(window).scrollTop();
+        // if (stickyTop < windowTop && jQuery(".compare-editions").outerHeight() + jQuery(".compare-editions").offset().top - jQuery("#fixed").outerHeight() > windowTop) {
+        //     event.preventDefault();
+          // jQuery('#fixed').css({"position":"fixed", "top":"103px", "z-index":"10000", "transition":"ease .5s"});
+        // } else {
+          // jQuery('#fixed').css({"position":"relative", "top":"0", "z-index":"6", "transition":"ease 1s"});
+        // }
+    // });
 });
 </script>
 

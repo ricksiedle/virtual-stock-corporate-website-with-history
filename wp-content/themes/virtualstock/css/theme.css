@@ -13128,6 +13128,9 @@ section.explore-features, section.compare-editions {
           margin-right: 30px; }
       section.explore-features .clickable-row .bordered .span, section.explore-features .clickable-row-explore .bordered .span, section.compare-editions .clickable-row .bordered .span, section.compare-editions .clickable-row-explore .bordered .span {
         margin-top: 0; }
+      @media only screen and (max-width: 575px) {
+        section.explore-features .clickable-row .bordered, section.explore-features .clickable-row-explore .bordered, section.compare-editions .clickable-row .bordered, section.compare-editions .clickable-row-explore .bordered {
+          border-right: 1px solid rgba(0, 0, 0, 0.125) !important; } }
     section.explore-features .clickable-row .feature-option-row, section.explore-features .clickable-row-explore .feature-option-row, section.compare-editions .clickable-row .feature-option-row, section.compare-editions .clickable-row-explore .feature-option-row {
       padding: 0 15px; }
       section.explore-features .clickable-row .feature-option-row .feature-option-item, section.explore-features .clickable-row-explore .feature-option-row .feature-option-item, section.compare-editions .clickable-row .feature-option-row .feature-option-item, section.compare-editions .clickable-row-explore .feature-option-row .feature-option-item {
@@ -13170,6 +13173,10 @@ section.explore-features, section.compare-editions {
         border-bottom: 1px solid rgba(0, 0, 0, 0.125); }
         section.explore-features .clickable-row .explore-options .row:last-child, section.explore-features .clickable-row-explore .explore-options .row:last-child, section.compare-editions .clickable-row .explore-options .row:last-child, section.compare-editions .clickable-row-explore .explore-options .row:last-child {
           border-bottom: 0; }
+    @media only screen and (max-width: 575px) {
+      section.explore-features .clickable-row, section.explore-features .clickable-row-explore, section.compare-editions .clickable-row, section.compare-editions .clickable-row-explore {
+        margin-top: 10px;
+        border-top: 1px solid rgba(0, 0, 0, 0.125); } }
   section.explore-features div.clickable-row-explore.active .bordered h2:before, section.compare-editions div.clickable-row-explore.active .bordered h2:before {
     content: '\f0d8'; }
   section.explore-features .explore, section.explore-features .explore-options, section.compare-editions .explore, section.compare-editions .explore-options {
@@ -13256,6 +13263,13 @@ section.compare-editions .clickable-row .bordered {
       margin-bottom: 0; }
   section.compare-editions .clickable-row .bordered:last-child .edition-description {
     margin-right: 15px; }
+    @media only screen and (max-width: 575px) {
+      section.compare-editions .clickable-row .bordered:last-child .edition-description {
+        margin-right: 0px; } }
+  @media only screen and (max-width: 575px) {
+    section.compare-editions .clickable-row .bordered {
+      margin-right: 14px;
+      margin-left: 15px; } }
 
 .explore-options {
   display: none; }
@@ -13269,6 +13283,9 @@ section.compare-editions .clickable-row .bordered {
 #fixed {
   max-width: 1110px;
   width: 100%; }
+  @media only screen and (max-width: 768px) {
+    #fixed {
+      max-width: 690px !important; } }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     #fixed {
       max-width: 690px !important; } }
