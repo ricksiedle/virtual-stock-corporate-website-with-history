@@ -12828,6 +12828,8 @@ button.bg-custom:focus {
       float: left !important;
       color: green !important;
       margin-bottom: 0px !important; }
+  .pricing-boxes .card-body .card-body-content h2 {
+    font-size: 1.6rem !important; }
   .pricing-boxes .card-body .card-body-content input, .pricing-boxes .card-body .card-body-content label {
     float: left; }
   .pricing-boxes .essential {
