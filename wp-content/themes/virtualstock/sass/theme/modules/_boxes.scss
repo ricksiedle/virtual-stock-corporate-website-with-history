@@ -272,6 +272,16 @@
                 float: left;
             }
 
+            label{
+                span{
+                    margin-bottom: 0 !important;
+                    display: inline !important;
+                    color: #e64097 !important;
+                    font-size: 1.8rem !important;
+                    vertical-align: sub !important;
+                }
+            }
+
         }
     }
     .essential{

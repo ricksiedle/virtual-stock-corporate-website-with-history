@@ -12829,6 +12829,12 @@ button.bg-custom:focus {
     font-size: 1.6rem !important; }
   .pricing-boxes .card-body .card-body-content input, .pricing-boxes .card-body .card-body-content label {
     float: left; }
+  .pricing-boxes .card-body .card-body-content label span {
+    margin-bottom: 0 !important;
+    display: inline !important;
+    color: #e64097 !important;
+    font-size: 1.8rem !important;
+    vertical-align: sub !important; }
   .pricing-boxes .essential {
     background-color: #fcf2fc !important; }
   .pricing-boxes .card-essential {
