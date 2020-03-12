@@ -237,6 +237,7 @@
     .card-header{
         background:#fff !important;
         border-bottom: none !important;
+        padding: 10px 20px !important;
         h2{
             color: inherit !important;
             text-align: left !important;
@@ -253,6 +254,9 @@
                 }
             }
 
+            p{
+                font-size: 2rem !important;
+            }
             p, h2 {
                 text-align: left !important;
                 span{

@@ -12808,7 +12808,8 @@ button.bg-custom:focus {
     margin-bottom: 30px; }
   .pricing-boxes .card-header {
     background: #fff !important;
-    border-bottom: none !important; }
+    border-bottom: none !important;
+    padding: 10px 20px !important; }
     .pricing-boxes .card-header h2 {
       color: inherit !important;
       text-align: left !important;
@@ -12817,6 +12818,8 @@ button.bg-custom:focus {
   .pricing-boxes .card-body .card-body-content div p {
     font-size: 1.2rem !important;
     font-weight: 500 !important; }
+  .pricing-boxes .card-body .card-body-content p {
+    font-size: 2rem !important; }
   .pricing-boxes .card-body .card-body-content p, .pricing-boxes .card-body .card-body-content h2 {
     text-align: left !important; }
     .pricing-boxes .card-body .card-body-content p span, .pricing-boxes .card-body .card-body-content h2 span {
