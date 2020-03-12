@@ -221,6 +221,10 @@
 // Pricing boxes
 
 .pricing-boxes {
+    .card{
+        border: 1px solid lightgrey;
+        border-radius: 0 !important;
+    }
     margin-bottom: 100px;
     @media only screen and (max-width: 767px) {
         margin-bottom: 70px;
@@ -228,6 +232,49 @@
     
     h2 {
         margin-bottom: 30px;
+    }
+
+    .card-header{
+        background:#fff !important;
+        border-bottom: none !important;
+        h2{
+            color: inherit !important;
+            text-align: left !important;
+            font-size: 2rem !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    .card-body {
+        .card-body-content {
+            div {
+                p {
+                    font-size: 1.2rem !important;
+                    font-weight: 500 !important;
+                }
+            }
+
+            p, h2 {
+                text-align: left !important;
+                span{
+                    font-size:40px !important;
+                    display:inline !important;
+                    float:left !important;
+                    color:green !important;
+                    margin-bottom: 0px !important;
+                }
+            }
+
+            input, label {
+                float: left;
+            }
+
+        }
+    }
+    .essential{
+        background-color: rgb(252, 242, 252) !important;
+    }
+    .card-essential{
+        border: 1px solid #e64097;
     }
 }
 
@@ -374,7 +421,7 @@
         
         &:hover {            
             .card-header {
-                background: $blue;
+                //background: $blue;
                 
                 p {
                     color: $white;
@@ -389,7 +436,7 @@
                     }
                     
                     p {
-                        color: $blue;
+                        //color: $blue;
                     }
                 }
             }

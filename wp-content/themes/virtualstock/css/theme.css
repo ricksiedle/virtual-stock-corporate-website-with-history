@@ -12798,11 +12798,39 @@ button.bg-custom:focus {
 
 .pricing-boxes {
   margin-bottom: 100px; }
+  .pricing-boxes .card {
+    border: 1px solid lightgrey;
+    border-radius: 0 !important; }
   @media only screen and (max-width: 767px) {
     .pricing-boxes {
       margin-bottom: 70px; } }
   .pricing-boxes h2 {
     margin-bottom: 30px; }
+  .pricing-boxes .card-header {
+    background: #fff !important;
+    border-bottom: none !important; }
+    .pricing-boxes .card-header h2 {
+      color: inherit !important;
+      text-align: left !important;
+      font-size: 2rem !important;
+      margin-bottom: 0 !important; }
+  .pricing-boxes .card-body .card-body-content div p {
+    font-size: 1.2rem !important;
+    font-weight: 500 !important; }
+  .pricing-boxes .card-body .card-body-content p, .pricing-boxes .card-body .card-body-content h2 {
+    text-align: left !important; }
+    .pricing-boxes .card-body .card-body-content p span, .pricing-boxes .card-body .card-body-content h2 span {
+      font-size: 40px !important;
+      display: inline !important;
+      float: left !important;
+      color: green !important;
+      margin-bottom: 0px !important; }
+  .pricing-boxes .card-body .card-body-content input, .pricing-boxes .card-body .card-body-content label {
+    float: left; }
+  .pricing-boxes .essential {
+    background-color: #fcf2fc !important; }
+  .pricing-boxes .card-essential {
+    border: 1px solid #e64097; }
 
 .card-deck {
   margin-right: 0;
@@ -12905,14 +12933,10 @@ button.bg-custom:focus {
           font-size: 1rem;
           text-align: center;
           text-transform: capitalize; }
-    .card-deck .card:hover .card-header {
-      background: #378bea; }
-      .card-deck .card:hover .card-header p {
-        color: #fff; }
+    .card-deck .card:hover .card-header p {
+      color: #fff; }
     .card-deck .card:hover .card-body .card-body-content h2, .card-deck .card:hover .card-body .card-body-content span {
       color: #455160; }
-    .card-deck .card:hover .card-body .card-body-content p {
-      color: #378bea; }
 
 .left-floated {
   -webkit-box-ordinal-group: 0;
