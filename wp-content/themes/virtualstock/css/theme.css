@@ -12824,7 +12824,8 @@ button.bg-custom:focus {
   .pricing-boxes .card-body .card-body-content p {
     font-size: 2rem !important; }
   .pricing-boxes .card-body .card-body-content p, .pricing-boxes .card-body .card-body-content h2 {
-    text-align: left !important; }
+    text-align: left !important;
+    color: #455160 !important; }
   .pricing-boxes .card-body .card-body-content h2 {
     font-size: 1.6rem !important; }
   .pricing-boxes .card-body .card-body-content input, .pricing-boxes .card-body .card-body-content label {
