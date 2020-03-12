@@ -239,7 +239,7 @@
         border-bottom: none !important;
         padding: 10px 20px !important;
         h2{
-            color: inherit !important;
+            color: #455160 !important;
             text-align: left !important;
             font-size: 2rem !important;
             margin-bottom: 0 !important;
@@ -251,6 +251,10 @@
                 p {
                     font-size: 1.2rem !important;
                     font-weight: 500 !important;
+                    color: #455160 !important;
+                    label{
+                        font-size:0.9rem !important;
+                    }
                 }
             }
 
@@ -259,13 +263,6 @@
             }
             p, h2 {
                 text-align: left !important;
-                span{
-                    font-size:40px !important;
-                    display:inline !important;
-                    float:left !important;
-                    color:green !important;
-                    margin-bottom: 0px !important;
-                }
             }
             h2{
                 font-size: 1.6rem !important;

@@ -12811,23 +12811,20 @@ button.bg-custom:focus {
     border-bottom: none !important;
     padding: 10px 20px !important; }
     .pricing-boxes .card-header h2 {
-      color: inherit !important;
+      color: #455160 !important;
       text-align: left !important;
       font-size: 2rem !important;
       margin-bottom: 0 !important; }
   .pricing-boxes .card-body .card-body-content div p {
     font-size: 1.2rem !important;
-    font-weight: 500 !important; }
+    font-weight: 500 !important;
+    color: #455160 !important; }
+    .pricing-boxes .card-body .card-body-content div p label {
+      font-size: 0.9rem !important; }
   .pricing-boxes .card-body .card-body-content p {
     font-size: 2rem !important; }
   .pricing-boxes .card-body .card-body-content p, .pricing-boxes .card-body .card-body-content h2 {
     text-align: left !important; }
-    .pricing-boxes .card-body .card-body-content p span, .pricing-boxes .card-body .card-body-content h2 span {
-      font-size: 40px !important;
-      display: inline !important;
-      float: left !important;
-      color: green !important;
-      margin-bottom: 0px !important; }
   .pricing-boxes .card-body .card-body-content h2 {
     font-size: 1.6rem !important; }
   .pricing-boxes .card-body .card-body-content input, .pricing-boxes .card-body .card-body-content label {
