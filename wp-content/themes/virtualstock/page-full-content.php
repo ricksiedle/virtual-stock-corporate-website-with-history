@@ -140,7 +140,7 @@ endif;
 
 <!-- Pricing boxes -->
 
-<?php  if (is_page (array('retailers') ) ) : ?>
+<?php  if (is_page (array('retailers-3') ) ) : ?>
 <section class="pricing-boxes">   
     <div class="card-deck">
         <div class="container">
