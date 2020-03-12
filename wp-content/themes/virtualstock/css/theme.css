@@ -12833,6 +12833,14 @@ button.bg-custom:focus {
     background-color: #fcf2fc !important; }
   .pricing-boxes .card-essential {
     border: 1px solid #e64097; }
+  .pricing-boxes p.most-popular {
+    margin-top: -57px !important;
+    font-size: 28px !important;
+    text-align: center !important;
+    color: #e64097 !important; }
+    @media only screen and (max-width: 767px) {
+      .pricing-boxes p.most-popular {
+        margin-top: -40px !important; } }
 
 .card-deck {
   margin-right: 0;

@@ -280,6 +280,15 @@
     .card-essential{
         border: 1px solid #e64097;
     }
+    p.most-popular{
+        margin-top: -57px !important;
+        font-size: 28px !important;
+        text-align: center !important;
+        color: #e64097 !important;
+        @media only screen and (max-width: 767px) {
+            margin-top: -40px !important;
+        }
+    }
 }
 
 .card-deck {
