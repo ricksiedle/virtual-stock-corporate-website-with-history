@@ -10710,8 +10710,10 @@ h3:empty {
               transform-origin: 50% 50%;
       top: -1px; }
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-    height: auto;
-    background-color: rgba(69, 81, 96, 0.8);
+    height: 70px;
+    -webkit-transition: background-color ease-out 0.2s;
+    transition: background-color ease-out 0.2s;
+    background: rgba(0, 0, 0, 0.3) !important;
     padding-bottom: 0px; }
     @media only screen and (max-width: 768px) {
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
@@ -10883,7 +10885,7 @@ a.pink-button {
     background-color: #fff;
     padding-bottom: 29px; }
   #main-menu {
-    margin-left: 220px;
+    margin-left: 455px;
     margin-top: 0; } }
   @media only screen and (min-width: 991px) and (min-width: 1024px) and (max-width: 1200px) {
     #main-menu {
@@ -10895,7 +10897,7 @@ a.pink-button {
       #main-menu > li > a {
         padding-left: 1rem;
         padding-right: 1rem;
-        color: #333;
+        color: #fff;
         padding-bottom: 2px;
         padding-top: 0;
         font-family: 'Serenity Medium'; } }
@@ -10916,7 +10918,7 @@ a.pink-button {
     #main-menu li.dropdown {
       text-align: left; }
       #main-menu li.dropdown a {
-        color: #333; }
+        color: #fff; }
       #main-menu li.dropdown ul.dropdown-menu {
         text-align: left;
         -webkit-transition: .3s height;

@@ -17,9 +17,9 @@ global $post;
         
 					
 			<!-- Static content in the carousel area -->
-			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: calc(100vh - 103px); margin-top: 103px;">
-                 
-                <video muted autoplay loop>
+            <div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: calc(100vh - 103px); margin-top: 0;">
+
+            <video muted autoplay loop>
                     <?php if( get_field('video') ): ?>                        
                         <source src="<?php the_field('video'); ?>">
                     <?php endif; ?>
