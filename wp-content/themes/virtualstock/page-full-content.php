@@ -155,8 +155,8 @@ endif;
                 while ( have_rows('pricing_boxes') ) : the_row(); ?> 
         
                 <div class="mobile-box col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="card <?php if(get_sub_field('package_name',false,false) == 'Essential'): ?>essential card-essential<?php endif; ?>">
-                        <div class="card-header <?php if(get_sub_field('package_name',false,false) == 'Essential'): ?>essential<?php endif; ?>">
+                    <div class="card <?php if(get_sub_field('package_name',false,false) == 'Essentials'): ?>essential card-essential<?php endif; ?>">
+                        <div class="card-header <?php if(get_sub_field('package_name',false,false) == 'Essentials'): ?>essential<?php endif; ?>">
                             <h2><?php the_sub_field('package_name',false,false); ?></h2>
                         </div>
     
