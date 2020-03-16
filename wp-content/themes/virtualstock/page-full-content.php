@@ -140,6 +140,7 @@ endif;
 
 <!-- Pricing boxes -->
 
+<?php  if (is_page (array('retailers-3') ) ) : ?>
 <section class="pricing-boxes">   
     <div class="card-deck">
         <div class="container">
@@ -154,46 +155,23 @@ endif;
                 while ( have_rows('pricing_boxes') ) : the_row(); ?> 
         
                 <div class="mobile-box col-xs-12 col-sm-12 col-md-6 col-lg-3 col-xl-3">
-                    <div class="card">
-                        <div class="card-header">
+                    <div class="card <?php if(get_sub_field('package_name',false,false) == 'Essentials'): ?>essential card-essential<?php endif; ?>">
+                        <?php if(get_sub_field('package_name',false,false) == 'Essentials'): ?>
+                        <p class="most-popular">Most Popular</p>
+                        <?php endif; ?>
+                        <div class="card-header <?php if(get_sub_field('package_name',false,false) == 'Essentials'): ?>essential<?php endif; ?>">
                             <h2><?php the_sub_field('package_name',false,false); ?></h2>
-                            <p><?php the_sub_field('package_description'); ?></p>
                         </div>
     
                         <div class="card-body">
                             <div class="card-body-content">
-                                <h2><?php the_sub_field('package_start',false,false); ?></h2>
-                                <h3><?php the_sub_field('custom_input',false,false); ?></h3>
                                 <p><?php the_sub_field('price'); ?></p>
-                                <span><?php the_sub_field('price_info',false,false); ?></span>
-                                <?php 
-                                    $link = get_sub_field('button_link_text');
-                                    $link_url = $link['url'];
-                                    $link_title = $link['title'];
-                                
-                                if( $link ): ?>
-                                    <a href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
-                                <?php endif; ?>
+                                <div><?php the_sub_field('price_info',false,false); ?></div>
                             </div>
                         </div>
                         
-                        <div class="card-footer">                            
-                            <ul>
-                                <?php
-                            if( have_rows('package_footer_list') ):
-                            while ( have_rows('package_footer_list') ) : the_row(); ?> 
-                                <li><?php the_sub_field('package_footer_list_item',false,false); ?></li>
-                                <?php  $i++;  endwhile;
-                            else :
-
-                                // no rows found
-
-                            endif;
-
-                            ?>
-                            </ul>
-                            
-                        </div>
+<!--                        <div class="card-footer">-->
+<!--                        </div>-->
                     </div>
                 </div>
                  <?php  $i++;  endwhile;
@@ -206,244 +184,7 @@ endif;
         </div>
     </div>      
 </section>
-
-<section class="compare-editions">
-    <?php 
-        // check if the repeater field has rows of data
-        if( have_rows('compare_editions') ):
-
-        // loop through the rows of data
-        while ( have_rows('compare_editions') ) : the_row(); 
-    ?>
-    <div class="container">
-        <h2><?php the_sub_field('section_title',false,false); ?></h2>
-        <div class="explore-wrapper no-top-border">
-            <div class="clickable-row" id="fixed">                
-                <div class="row">
-                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                        <h3><?php the_sub_field('editions_main_title',false,false); ?></h3>            
-                    </div>
-                    <?php
-                        $count = 0;
-                        if( have_rows('editions') ): while ( have_rows('editions') ) : the_row(); $count++; endwhile; endif;
-
-                        if( have_rows('editions') ):
-                            if($count == 3): ?>
-                            <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
-                                <div class="row">
-                                <?php while ( have_rows('editions') ) : the_row(); ?>
-                                    <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered">
-                                        <div class="edition-description">
-                                        <span class="edition-title">
-                                            <?php the_sub_field('edition_name',false,false); ?>
-                                        </span>
-                                            <span class="price">
-                                            <?php the_sub_field('edition_price',false,false); ?>
-                                        </span>
-                                            <span class="edition-timeline">
-                                            <?php the_sub_field('edition_durability',false,false); ?>
-                                        </span>
-                                        </div>
-                                    </div>
-                                 <?php endwhile; ?>
-                                </div>
-                            </div>
-                            <?php else:
-                                 while ( have_rows('editions') ) : the_row(); ?>
-                                    <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered">
-                                        <div class="edition-description">
-                                            <span class="edition-title">
-                                                <?php the_sub_field('edition_name',false,false); ?>
-                                            </span>
-                                            <span class="price">
-                                                <?php the_sub_field('edition_price',false,false); ?>
-                                            </span>
-                                            <span class="edition-timeline">
-                                                <?php the_sub_field('edition_durability',false,false); ?>
-                                            </span>
-                                        </div>
-                                    </div>
-                                 <?php
-                                 endwhile;
-                             endif;
-
-                        else :
-                        // no rows found
-                        endif;
-                    ?>
-                </div>
-            </div>
-            <?php 
-                // check if the repeater field has rows of data
-                if( have_rows('edition_options') ):
-
-                // loop through the rows of data
-                while ( have_rows('edition_options') ) : the_row();
-            ?>
-                <div class="clickable-row-explore">
-                    <div class="row">
-                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered <?php if($count == 3): ?>clickable-item<?php endif; ?>">
-                            <h2><?php the_sub_field('edition_option_title',false,false); ?></h2>
-                            <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('edition_option_tooltip_text',false,false); ?>" data-placement="right" data-trigger="hover">
-                            </span>
-                        </div>
-
-                        <?php if( have_rows('edition_option_check_status') ): ?>
-                            <?php if($count == 3): ?>
-                                <div class="col-xs-hidden col-sm-8 col-md-8 col-lg-8 col-xl-8 option-item-row">
-                                    <div class="row">
-                                    <?php while ( have_rows('edition_option_check_status') ) : the_row(); ?>
-                                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered clickable-row-explore-data option-item">
-                                            <?php if (get_sub_field('choose_text_or_icon') == 'icon') : ?>
-                                                <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-
-                                            <?php else : ?>
-                                                <p><?php the_sub_field('custom_option_input',false,false); ?></p>
-                                            <?php endif; ?>
-                                        </div>
-                                    <?php endwhile; ?>
-                                    </div>
-                                </div>
-                            <?php else:
-                                while ( have_rows('edition_option_check_status') ) : the_row(); ?>
-                                    <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered clickable-row-explore-data">
-                                        <?php if (get_sub_field('choose_text_or_icon') == 'icon') : ?>
-                                            <span class="<?php if (get_sub_field('option_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-
-                                        <?php else : ?>
-                                            <p><?php the_sub_field('custom_option_input',false,false); ?></p>
-                                        <?php endif; ?>
-                                    </div>
-                                <?php endwhile;
-                            endif; ?>
-                        <?php
-                            else :
-                            // no rows found
-                            endif;
-                        ?>
-                    </div>
-                    <?php
-                    $title = get_sub_field('edition_option_title', false);
-                    if( have_rows('explore_all_features') ):
-                        while ( have_rows('explore_all_features') ) : the_row();
-                            if( have_rows('features') ):
-                                while ( have_rows('features') ) : the_row();
-                                    $sub_row = get_row();
-                                    if($sub_row[key($sub_row)] == $title):
-                                        if( have_rows('explore_feature') ):
-                                            while ( have_rows('explore_feature') ) : the_row(); ?>
-                                                <div class="explore-options">
-                                                    <div class="row">
-                                                        <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered <?php if($count==3): ?>explore-item-3<?php else: ?>explore-item<?php endif; ?>">
-                                                            <h2><?php the_sub_field('feature_option_title',false,false); ?></h2>
-                                                            <span class="fa fa-dot-circle-o popoverOption popover" data-toggle="popover" data-content="<?php the_sub_field('feature_tooltip',false,false); ?>" data-placement="right" data-trigger="hover">
-                                                            </span>
-                                                        </div>
-
-                                                        <?php
-                                                        if( have_rows('feature_option_check_status') ):
-                                                             if($count == 3): ?>
-                                                                <div class="col-xs-hidden col-sm-8 col-md-8 col-lg-8 col-xl-8 feature-option-row">
-                                                                    <div class="row">
-                                                                        <?php while ( have_rows('feature_option_check_status') ) : the_row();
-                                                                            ?>
-                                                                            <div class="col-xs-hidden col-sm-4 col-md-4 col-lg-4 col-xl-4 bordered feature-option-item">
-                                                                                <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
-                                                                                    <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-
-                                                                                <?php else : ?>
-                                                                                    <p><?php the_sub_field('custom_text_input',false,false); ?></p>
-                                                                                <?php endif; ?>
-                                                                            </div>
-                                                                        <?php  endwhile; ?>
-                                                                    </div>
-                                                                </div>
-                                                             <?php else: ?>
-                                                                 <?php while ( have_rows('feature_option_check_status') ) : the_row();
-                                                                     ?>
-                                                                     <div class="col-xs-hidden <?php if($count == 2): ?>col-sm-4 col-md-4 col-lg-4 col-xl-4<?php else: ?>col-sm-2 col-md-2 col-lg-2 col-xl-2<?php endif; ?> bordered">
-                                                                         <?php if (get_sub_field('choose_type_of_input') == 'icon') : ?>
-                                                                             <span class="<?php if (get_sub_field('feature_availability') == 'checked') { echo 'fa fa-check-circle'; } else { echo 'fa fa-times-circle-o'; } ?>"></span>
-
-                                                                         <?php else : ?>
-                                                                             <p><?php the_sub_field('custom_text_input',false,false); ?></p>
-                                                                         <?php endif; ?>
-                                                                     </div>
-                                                                 <?php  endwhile; ?>
-                                                             <?php endif; ?>
-                                                        <?php else :
-                                                            // no rows found
-                                                        endif;
-                                                        ?>
-                                                    </div>
-                                                </div>
-                                            <?php  endwhile;
-                                        else :
-                                            // no rows found
-                                        endif;
-                                    endif;
-                                endwhile;
-                            endif;
-                        endwhile;
-                    endif;
-                ?>
-                </div>
-                <?php  endwhile;
-                else :
-                // no rows found
-                endif;
-            ?>          
-        </div>
-    </div>
-    <?php  endwhile;
-    else :
-        // no rows found
-        endif;
-    ?>
-</section>
-
-<section class="page-accordion">
-    <?php
-
-// check if the repeater field has rows of data
-if( have_rows('faq_accordion') ):
-
- 	// loop through the rows of data
-    while ( have_rows('faq_accordion') ) : the_row(); ?>
-    <div class="container">
-        <h2><?php the_sub_field('accordion_section_title',false,false); ?></h2>
-        <div class="accordion" id="accordion">
-            <?php
-
-            // check if the repeater field has rows of data
-            if( have_rows('accordion_repeater') ):
-
-            // loop through the rows of data
-            while ( have_rows('accordion_repeater') ) : the_row(); ?>
-              <div class="card">
-                <button class="btn-accordion"><h2><?php the_sub_field('item_title',false,false); ?></h2></button>
-                <div class="panel">
-                  <?php the_sub_field('item_description'); ?>
-                </div>
-              </div>
-                <?php  endwhile;
-
-            else :
-                // no rows found
-                endif;
-            ?>
-        </div>
-    </div>
-    <?php  endwhile;
-
-        else :
-
-            // no rows found
-
-        endif;
-
-    ?>
-</section>
+<?php  endif; ?>
 
 <script>
   AOS.init();
@@ -488,21 +229,6 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
-</script>
-
-<script>
-    jQuery(document).ready(function() {
-    var stickyTop = jQuery('#fixed').offset().top; 
-    jQuery(window).scroll(function(event) {
-        var windowTop = jQuery(window).scrollTop();
-        if (stickyTop < windowTop && jQuery(".compare-editions").outerHeight() + jQuery(".compare-editions").offset().top - jQuery("#fixed").outerHeight() > windowTop) {
-            event.preventDefault();
-          jQuery('#fixed').css({"position":"fixed", "top":"103px", "z-index":"10000", "transition":"ease .5s"});
-        } else {
-          jQuery('#fixed').css({"position":"relative", "top":"0", "z-index":"6", "transition":"ease 1s"});
-        }
-    });
-});
 </script>
 
 <script>

@@ -221,13 +221,84 @@
 // Pricing boxes
 
 .pricing-boxes {
+    .card{
+        border: 1px solid lightgrey;
+        border-radius: 0 !important;
+    }
     margin-bottom: 100px;
     @media only screen and (max-width: 767px) {
         margin-bottom: 70px;
     }
     
     h2 {
-        margin-bottom: 30px;
+        margin-bottom: 55px;
+    }
+
+    .card-header{
+        background:#fff !important;
+        border-bottom: none !important;
+        padding: 10px 20px !important;
+        h2{
+            color: #455160 !important;
+            text-align: left !important;
+            font-size: 2rem !important;
+            margin-bottom: 0 !important;
+        }
+    }
+    .card-body {
+        .card-body-content {
+            div {
+                p {
+                    font-size: 1.2rem !important;
+                    font-weight: 500 !important;
+                    color: #455160 !important;
+                    label{
+                        font-size:0.9rem !important;
+                    }
+                }
+            }
+
+            p{
+                font-size: 2rem !important;
+            }
+            p, h2 {
+                text-align: left !important;
+                color: #455160 !important;
+            }
+            h2{
+                font-size: 1.6rem !important;
+            }
+
+            input, label {
+                float: left;
+            }
+
+            label{
+                span{
+                    margin-bottom: 0 !important;
+                    display: inline !important;
+                    color: #e64097 !important;
+                    font-size: 1.8rem !important;
+                    vertical-align: sub !important;
+                }
+            }
+
+        }
+    }
+    .essential{
+        background-color: rgb(252, 242, 252) !important;
+    }
+    .card-essential{
+        border: 1px solid #e64097;
+    }
+    p.most-popular{
+        margin-top: -57px !important;
+        font-size: 28px !important;
+        text-align: center !important;
+        color: #e64097 !important;
+        @media only screen and (max-width: 767px) {
+            margin-top: -40px !important;
+        }
     }
 }
 
@@ -374,7 +445,7 @@
         
         &:hover {            
             .card-header {
-                background: $blue;
+                //background: $blue;
                 
                 p {
                     color: $white;
@@ -389,7 +460,7 @@
                     }
                     
                     p {
-                        color: $blue;
+                        //color: $blue;
                     }
                 }
             }
