@@ -76,6 +76,7 @@
                 border: none;
                 padding-top: 0;
                 padding-bottom: 1rem;
+                background: rgba(0,0,0,.3) !important;
                 @media #{$ipad-landscape} {
                     min-width: 8rem;
                 }
@@ -205,7 +206,7 @@
                     background-color: white;
                     margin-top: -3px;
                     border-radius: 0;
-                    border-left: solid 2px #e64097;
+                    border-left: solid 2px black;
                 }
             }
         }
@@ -325,6 +326,7 @@ a.pink-button {
                         font-size: .65em;
                         &:hover, &:active {
                             color: $pink !important;
+                            background: rgba(0,0,0,.3) !important;
                         }
                     }
                 }
