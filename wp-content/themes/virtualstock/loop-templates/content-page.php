@@ -17,8 +17,7 @@ global $post;
         
 					
 			<!-- Static content in the carousel area -->
-			<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh; height: calc(100vh - 103px); margin-top: 103px;">
-                 
+            <div class="landing solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
                 <video muted autoplay loop>
                     <?php if( get_field('video') ): ?>                        
                         <source src="<?php the_field('video'); ?>">
@@ -31,11 +30,8 @@ global $post;
                         <div class="row">
                             <div class="mobile-box col"> 
                                 <a href="<?php echo esc_url( get_field('left_box_url') ); ?>">
-                                    <div class="box-wrapper">
+                                    <div class="box-wrapper" style="background: none !important;">
                                         <div class="inner-box-wrapper">
-                                            <?php if( get_field('left_box_image') ): ?><img src="<?php the_field('left_box_image'); ?>" alt=""> 
-                                            <?php endif; ?>
-                                            <h2><?php the_field('left_box_title',false,false); ?></h2>
                                             <p><?php the_field('left_box_paragraph'); ?></p>
                                         </div>
                                     </div>
@@ -43,11 +39,8 @@ global $post;
                             </div>
                             <div class="mobile-box col">
                                 <a href="<?php echo esc_url( get_field('right_box_url') ); ?>">
-                                    <div class="box-wrapper">
+                                    <div class="box-wrapper" style="background: none !important;">
                                         <div class="inner-box-wrapper">
-                                            <?php if( get_field('right_box_image') ): ?><img src="<?php the_field('right_box_image'); ?>" alt=""> 
-                                            <?php endif; ?>   
-                                            <h2><?php the_field('right_box_title',false,false); ?></h2>
                                             <p><?php the_field('right_box_paragraph'); ?></p>
                                         </div>
                                     </div>

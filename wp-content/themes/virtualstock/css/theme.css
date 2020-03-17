@@ -10710,8 +10710,10 @@ h3:empty {
               transform-origin: 50% 50%;
       top: -1px; }
   .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
-    height: auto;
-    background-color: rgba(69, 81, 96, 0.8);
+    height: 70px;
+    -webkit-transition: background-color ease-out 0.2s;
+    transition: background-color ease-out 0.2s;
+    background: rgba(0, 0, 0, 0.3) !important;
     padding-bottom: 0px; }
     @media only screen and (max-width: 768px) {
       .wrapper-navbar .navbar.navbar-expand-md.navbar-light {
@@ -10723,7 +10725,8 @@ h3:empty {
       position: static;
       border: none;
       padding-top: 0;
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      background: rgba(0, 0, 0, 0.3) !important; }
       @media only screen and (max-width: 1024px) and (orientation: landscape) {
         .wrapper-navbar .navbar.navbar-expand-md.navbar-light .navbar-nav .dropdown-menu {
           min-width: 8rem; } }
@@ -10831,7 +10834,7 @@ h3:empty {
         background-color: white;
         margin-top: -3px;
         border-radius: 0;
-        border-left: solid 2px #e64097; } }
+        border-left: solid 2px black; } }
 
 #header-btn.moduled-btn.pink-btn {
   position: fixed;
@@ -10883,7 +10886,7 @@ a.pink-button {
     background-color: #fff;
     padding-bottom: 29px; }
   #main-menu {
-    margin-left: 220px;
+    margin-left: 340px;
     margin-top: 0; } }
   @media only screen and (min-width: 991px) and (min-width: 1024px) and (max-width: 1200px) {
     #main-menu {
@@ -10895,7 +10898,7 @@ a.pink-button {
       #main-menu > li > a {
         padding-left: 1rem;
         padding-right: 1rem;
-        color: #333;
+        color: #fff;
         padding-bottom: 2px;
         padding-top: 0;
         font-family: 'Serenity Medium'; } }
@@ -10916,7 +10919,7 @@ a.pink-button {
     #main-menu li.dropdown {
       text-align: left; }
       #main-menu li.dropdown a {
-        color: #333; }
+        color: #fff; }
       #main-menu li.dropdown ul.dropdown-menu {
         text-align: left;
         -webkit-transition: .3s height;
@@ -10924,7 +10927,10 @@ a.pink-button {
         #main-menu li.dropdown ul.dropdown-menu li a {
           font-size: .65em; }
           #main-menu li.dropdown ul.dropdown-menu li a:hover, #main-menu li.dropdown ul.dropdown-menu li a:active {
-            color: #E64097 !important; } }
+            color: #E64097 !important;
+            background: rgba(0, 0, 0, 0.3) !important; }
+  .home-menu {
+    margin-left: 456px !important; } }
 
 @media only screen and (max-width: 1024px) and (orientation: landscape) {
   .wrapper {
@@ -12761,6 +12767,26 @@ button.bg-custom:focus {
     line-height: 100%; }
     .solutions-wrapper .full-content h1 span, .retail-wrapper .full-content h1 span {
       color: #E64097; }
+
+.landing .solutions-boxes .box-wrapper {
+  padding: 0;
+  width: 70%; }
+  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p {
+    border: solid 2px #fff;
+    padding: 10px 0; }
+    .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span {
+      font-size: 32px;
+      color: #fff; }
+      @media only screen and (max-width: 767px) {
+        .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span {
+          font-size: 28px !important;
+          padding: 0 20px; } }
+  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p:hover {
+    background: rgba(0, 0, 0, 0.3) !important; }
+  @media only screen and (max-width: 767px) {
+    .landing .solutions-boxes .box-wrapper {
+      margin-bottom: 0;
+      width: 100%; } }
 
 .retail-wrapper {
   margin-bottom: 30px; }

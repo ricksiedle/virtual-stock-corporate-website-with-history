@@ -166,6 +166,37 @@
     }
 }
 
+.landing{
+        .solutions-boxes {
+                .box-wrapper{
+                    padding: 0;
+                    width: 70%;
+                        .inner-box-wrapper{
+                                p{
+                                    border: solid 2px #fff;
+                                    padding: 10px 0;
+                                        span{
+                                            font-size:32px;
+                                            @media only screen and (max-width: 767px){
+                                                font-size:28px !important;
+                                                padding: 0 20px;
+                                            }
+                                            color:#fff;
+                                        }
+                                }
+                        }
+                        .inner-box-wrapper p:hover{
+                            background: rgba(0,0,0,.3)!important;
+                        }
+                    @media only screen and (max-width: 767px){
+                        //padding: 20px !important;
+                        margin-bottom: 0;
+                        width: 100%;
+                    }
+                }
+        }
+}
+
 .retail-wrapper {
     margin-bottom: 30px;
 }

@@ -12,8 +12,8 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 103px; height: calc(100vh - 103px);">    
-    <div class="solutions-boxes full-content">               
+<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
+    <div class="solutions-boxes full-content">
         <div class="container">            
             <div class="full-content-boxes-wrapper">
                 <h1 id="main-page-title"><?php the_field('header',false,false); ?></h1> 

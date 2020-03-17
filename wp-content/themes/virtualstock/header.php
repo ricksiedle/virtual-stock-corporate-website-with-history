@@ -86,12 +86,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</button>
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
+				<?php
+                if(is_front_page()):
+                    $menu_class = 'home-menu';
+                else:
+                    $menu_class = '';
+                endif;
+
+                wp_nav_menu(
+
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
+						'menu_class'      => 'navbar-nav '.$menu_class,
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
