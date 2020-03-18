@@ -18,12 +18,12 @@ global $post;
 					
 			<!-- Static content in the carousel area -->
             <div class="landing solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
-                <video muted autoplay loop>
-                    <?php if( get_field('video') ): ?>                        
+                <video id="movie-area" muted preload="auto" muted preload loop>
+                    <?php if( get_field('video') ): ?>
                         <source src="<?php the_field('video'); ?>">
                     <?php endif; ?>
                 </video>
-                
+
                 <div class="solutions-boxes">
                     <h1><?php the_field('header',false,false); ?></h1>        
                     <div class="container">
@@ -516,4 +516,9 @@ global $post;
 			});
 		}
 	});
+
+    window.addEventListener('load', (event) => {
+        document.getElementById('movie-area').play();
+    });
+
 </script>
