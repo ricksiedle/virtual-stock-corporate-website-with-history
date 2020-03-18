@@ -12720,7 +12720,7 @@ button.bg-custom:focus {
 .solutions-wrapper, .retail-wrapper {
   display: table;
   width: 100%;
-  height: 100%;
+  height: 100px;
   margin-bottom: 60px;
   position: relative;
   overflow: hidden; }
