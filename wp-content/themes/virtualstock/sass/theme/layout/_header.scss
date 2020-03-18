@@ -60,9 +60,18 @@
         }
     }
     .navbar.navbar-expand-md.navbar-light {
-        height:70px;
-        transition: background-color ease-out 0.2s;
-        background: rgba(0, 0, 0, 0.3) !important;
+
+        @media screen and (min-width: 991px) {
+            height:70px;
+            transition: background-color ease-out 0.2s;
+            background: rgba(0, 0, 0, 0.3) !important;
+        }
+
+        @media screen and (max-width: 991px) {
+            height: auto;
+            background: grey !important;
+            padding-bottom: 20px !important;
+        }
         padding-bottom: 0px;
         @media #{$ipad-portrait} {
             padding-bottom: 95px;
@@ -76,7 +85,9 @@
                 border: none;
                 padding-top: 0;
                 padding-bottom: 1rem;
-                background: rgba(0,0,0,.3) !important;
+                @media screen and (min-width: 991px) {
+                    background: rgba(0,0,0,.3) !important;
+                }
                 @media #{$ipad-landscape} {
                     min-width: 8rem;
                 }
@@ -119,6 +130,9 @@
 
 #navbarNavDropdown {
     margin-top: 23px;
+    @media screen and (max-width: 991px) {
+        margin-top: 0;
+    }
 }
 
 #main-menu {
