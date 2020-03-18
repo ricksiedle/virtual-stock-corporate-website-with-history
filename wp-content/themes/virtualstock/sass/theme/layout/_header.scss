@@ -10,7 +10,7 @@
     }
     .navbar-collapse.collapse.show {
         height: 100vh;
-        .navbar.navbar-expand-md.navbar-light {
+        .navbar.navbar-expand-lg.navbar-light {
             height: 100vh;
         }
     }
@@ -59,7 +59,7 @@
             }
         }
     }
-    .navbar.navbar-expand-md.navbar-light {
+    .navbar.navbar-expand-lg.navbar-light {
 
         @media screen and (min-width: 991px) {
             height:70px;
@@ -70,14 +70,14 @@
         @media screen and (max-width: 991px) {
             height: auto;
             background: grey !important;
-            padding-bottom: 20px !important;
+            padding-bottom: 20px;
         }
         padding-bottom: 0px;
         @media #{$ipad-portrait} {
-            padding-bottom: 95px;
+            padding-bottom: 70px;
         }
         @media #{$handheld}, #{$handheld-landscape} {
-            padding-bottom: 38px;
+            padding-bottom: 20px;
         }
         .navbar-nav {
             .dropdown-menu {
@@ -118,13 +118,16 @@
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
-    @media #{$handheld}, #{$handheld-landscape} {
+    @media #{$ipad-portrait}{
+        margin-top: 0;
+    }
+    @media #{$larger-than-sm}, #{$handheld}, #{$handheld-landscape}, #{$larger-than-xs} {
         position: relative;
         top:0;
         margin-top: 0;
     }
     img {
-        margin-bottom: -10px;
+        margin-bottom: -15px;
     }
 }
 
@@ -283,7 +286,7 @@ a.pink-button {
 
 @media screen and (min-width: 991px) {   
     .wrapper-navbar {
-        .navbar.navbar-expand-md.navbar-light {
+        .navbar.navbar-expand-lg.navbar-light {
             background-color: #fff;
             padding-bottom: 29px;
             
@@ -291,11 +294,7 @@ a.pink-button {
     }
     
     #main-menu {
-        margin-left: 340px;
         margin-top: 0;
-        @media #{$between-ipad-landscape-and-lg} {
-            margin-left: 180px;
-        }
         > li {
             width: auto;
             > a {
@@ -350,7 +349,7 @@ a.pink-button {
         }
     }
     .home-menu{
-        margin-left: 456px !important;
+        //margin-left: 120px !important;
     }
 }
 
@@ -358,7 +357,7 @@ a.pink-button {
     .wrapper {
         padding: 0 !important;
     }
-    .navbar.navbar-expand-md.navbar-light {
+    .navbar.navbar-expand-lg.navbar-light {
         background-color: rgba(69, 81, 96, 0.8) !important;
     }
     #main-menu > li {
