@@ -10724,7 +10724,7 @@ h3:empty {
         padding-bottom: 20px; } }
     @media only screen and (max-width: 768px) {
       .wrapper-navbar .navbar.navbar-expand-lg.navbar-light {
-        padding-bottom: 70px; } }
+        padding-bottom: 0; } }
     @media only screen and (max-width: 480px), only screen and (max-width: 991px) and (orientation: landscape) {
       .wrapper-navbar .navbar.navbar-expand-lg.navbar-light {
         padding-bottom: 20px; } }

@@ -74,7 +74,7 @@
         }
         padding-bottom: 0px;
         @media #{$ipad-portrait} {
-            padding-bottom: 70px;
+            padding-bottom: 0;
         }
         @media #{$handheld}, #{$handheld-landscape} {
             padding-bottom: 20px;
