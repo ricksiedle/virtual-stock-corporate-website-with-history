@@ -18,7 +18,7 @@ global $post;
 					
 			<!-- Static content in the carousel area -->
             <div class="landing solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
-                <video id="movie-area" muted preload loop>
+                <video id="movie-area" muted preload loop playsinline>
                     <?php if( get_field('video') ): ?>
                         <source src="<?php the_field('video'); ?>">
                     <?php endif; ?>
