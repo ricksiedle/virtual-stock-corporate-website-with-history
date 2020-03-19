@@ -10,7 +10,7 @@
     }
     .navbar-collapse.collapse.show {
         height: 100vh;
-        .navbar.navbar-expand-md.navbar-light {
+        .navbar.navbar-expand-lg.navbar-light {
             height: 100vh;
         }
     }
@@ -18,7 +18,7 @@
     .navbar-toggler {
         position: absolute;
         right: 20px;
-        top: 30px;
+        top: 10px;
         width: 40px;
         height: 30px;
         padding: 0;
@@ -59,15 +59,25 @@
             }
         }
     }
-    .navbar.navbar-expand-md.navbar-light {
-        height: auto;
-        background-color: rgba(69,81,96, .8);
+    .navbar.navbar-expand-lg.navbar-light {
+
+        @media screen and (min-width: 991px) {
+            height:70px;
+            transition: background-color ease-out 0.2s;
+            background: rgba(0, 0, 0, 0.3) !important;
+        }
+
+        @media screen and (max-width: 991px) {
+            height: auto;
+            background: grey !important;
+            padding-bottom: 20px;
+        }
         padding-bottom: 0px;
         @media #{$ipad-portrait} {
-            padding-bottom: 95px;
+            padding-bottom: 0;
         }
         @media #{$handheld}, #{$handheld-landscape} {
-            padding-bottom: 38px;
+            padding-bottom: 20px;
         }
         .navbar-nav {
             .dropdown-menu {
@@ -75,6 +85,9 @@
                 border: none;
                 padding-top: 0;
                 padding-bottom: 1rem;
+                @media screen and (min-width: 991px) {
+                    background: rgba(0,0,0,.3) !important;
+                }
                 @media #{$ipad-landscape} {
                     min-width: 8rem;
                 }
@@ -105,16 +118,24 @@
     padding-bottom: 0;
     max-width: 215px;
     z-index: 9999;
-    @media #{$handheld}, #{$handheld-landscape} {
+    @media #{$ipad-portrait}{
+        margin-top: 0;
+    }
+    @media #{$larger-than-sm}, #{$handheld}, #{$handheld-landscape}, #{$larger-than-xs} {
         position: relative;
+        top:0;
+        margin-top: 0;
     }
     img {
-        margin-bottom: -10px;
+        margin-bottom: -15px;
     }
 }
 
 #navbarNavDropdown {
     margin-top: 23px;
+    @media screen and (max-width: 991px) {
+        margin-top: 0;
+    }
 }
 
 #main-menu {
@@ -204,7 +225,7 @@
                     background-color: white;
                     margin-top: -3px;
                     border-radius: 0;
-                    border-left: solid 2px #e64097;
+                    border-left: solid 2px black;
                 }
             }
         }
@@ -265,7 +286,7 @@ a.pink-button {
 
 @media screen and (min-width: 991px) {   
     .wrapper-navbar {
-        .navbar.navbar-expand-md.navbar-light {
+        .navbar.navbar-expand-lg.navbar-light {
             background-color: #fff;
             padding-bottom: 29px;
             
@@ -273,17 +294,13 @@ a.pink-button {
     }
     
     #main-menu {
-        margin-left: 220px;
         margin-top: 0;
-        @media #{$between-ipad-landscape-and-lg} {
-            margin-left: 180px;
-        }
         > li {
             width: auto;
             > a {
                 padding-left: 1rem;
                 padding-right: 1rem;
-                color: #333;
+                color: #fff;
                 padding-bottom: 2px;
                 padding-top: 0;
                 font-family: 'Serenity Medium';
@@ -309,7 +326,7 @@ a.pink-button {
         li.dropdown {
             text-align: left;
             a {
-                color: #333;
+                color: #fff;
                 &:hover {
                     //margin-right: -10px;
                 }
@@ -324,11 +341,15 @@ a.pink-button {
                         font-size: .65em;
                         &:hover, &:active {
                             color: $pink !important;
+                            background: rgba(0,0,0,.3) !important;
                         }
                     }
                 }
             }
         }
+    }
+    .home-menu{
+        //margin-left: 120px !important;
     }
 }
 
@@ -336,7 +357,7 @@ a.pink-button {
     .wrapper {
         padding: 0 !important;
     }
-    .navbar.navbar-expand-md.navbar-light {
+    .navbar.navbar-expand-lg.navbar-light {
         background-color: rgba(69, 81, 96, 0.8) !important;
     }
     #main-menu > li {

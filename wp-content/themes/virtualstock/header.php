@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link screen-reader-text sr-only" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav class="navbar navbar-expand-md navbar-light">
+		<nav class="navbar navbar-expand-lg navbar-light">
 			<div class="container" >
 							<!-- Your site title as branding in the menu -->
 							<?php if ( ! has_custom_logo() ) { ?>
@@ -86,12 +86,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</button>
 
 				<!-- The WordPress Menu goes here -->
-				<?php wp_nav_menu(
+				<?php
+                if(is_front_page()):
+                    $menu_class = 'home-menu';
+                else:
+                    $menu_class = '';
+                endif;
+
+                wp_nav_menu(
+
 					array(
 						'theme_location'  => 'primary',
 						'container_class' => 'collapse navbar-collapse',
 						'container_id'    => 'navbarNavDropdown',
-						'menu_class'      => 'navbar-nav',
+						'menu_class'      => 'navbar-nav '.$menu_class,
 						'fallback_cb'     => '',
 						'menu_id'         => 'main-menu',
 						'walker'          => new understrap_WP_Bootstrap_Navwalker(),
