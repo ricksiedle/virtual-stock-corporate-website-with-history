@@ -13014,6 +13014,30 @@ button.bg-custom:focus {
 body.page-template-page-full-content .solutions-wrapper {
   margin-bottom: 0; }
 
+body.page-template-page-full-content .providers-solutions-wrapper {
+  min-height: 70vh !important; }
+  body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper {
+    background: none;
+    border-radius: 0; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h1, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
+      color: #fff !important;
+      text-align: left !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
+      padding-top: 20px; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h {
+      color: #fff !important;
+      border: solid 2px #fff;
+      padding: 10px 20px;
+      margin-right: 50px; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h:hover {
+      background: rgba(0, 0, 0, 0.3) !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .row div.col:nth-child(2) {
+      display: none !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .box-wrapper {
+      padding: 0; }
+  body.page-template-page-full-content .providers-solutions-wrapper .providers-buttons p {
+    padding-left: 15px; }
+
 @media only screen and (max-width: 991px) {
   .mobile-box {
     margin-bottom: 30px; } }
@@ -13031,6 +13055,37 @@ section.stats-scrolling-banner {
 
 section.stats-scrolling-slider .owl-stage-outer {
   margin-top: 30px; }
+
+section.providers-retail-content h2 {
+  color: #3BAFDA; }
+
+section.providers-retail-content p a.provider-button {
+  color: #3BAFDA;
+  border: solid 1px #3BAFDA;
+  padding: 10px 30px;
+  text-decoration: none; }
+
+section.providers-retail-content p a {
+  color: #3BAFDA; }
+
+.v-providers-section .v-box {
+  background-color: #fff;
+  border: solid 1px #3BAFDA;
+  height: auto !important; }
+  .v-providers-section .v-box span {
+    color: #3BAFDA; }
+
+.v-providers-section .v-box-wrapper:hover {
+  background-color: #fff; }
+
+.v-providers-section .v-box:after {
+  background-color: #fff !important; }
+
+.v-providers-section .v-box-icon {
+  height: 62px !important; }
+
+.v-providers-section .v-box-txt {
+  background: rgba(0, 0, 0, 0.3) !important; }
 
 .pricing-plans {
   display: block;

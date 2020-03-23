@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
+<div class="solutions-wrapper <?php  if (is_page (array('providers') ) ) : ?>providers-solutions-wrapper<?php endif; ?>" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
     <div class="solutions-boxes full-content">
         <div class="container">            
             <div class="full-content-boxes-wrapper">
@@ -70,6 +70,268 @@ get_header();
     </a>    
 </div>
 
+<?php  if (is_page (array('providers') ) ) : ?>
+    <div class="entry-content">
+        <?php if(get_the_content()) : ?>
+            <div class="container text-align-center">
+                <div class="entry-content-inside">
+                    <?php the_content(); ?>
+                </div>
+            </div>
+
+        <?php endif; ?>
+
+        <div class="container text-align-center v-section v-providers-section">
+
+
+            <?php
+            wp_link_pages( array(
+                'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
+                'after'  => '</div>',
+            ) );
+            ?>
+
+            <?php
+            //counter initializer
+            //for positioning elements between sections
+            $i = 0;
+
+
+            // check if the repeater field has rows of data
+            if( have_rows('page_sections') ):
+
+                // loop through the rows of data
+                do {
+
+                    the_row(); $section_type = get_sub_field('section_type');
+
+                    //...increase the sections counter
+                    $i++;
+
+                    // Show the stats counter on the retail page
+                    if($i == 3 && ( get_page_by_path('retail')->post_name == $post->post_name) ) : v_stats_counter(); endif;
+
+
+                    // Check if the section has heading
+                    $v_section_heading = get_sub_field('section_heading');
+
+                    if($v_section_heading) :
+
+                        $margin40 = (get_page_by_path('suppliers') || get_page_by_path('providers')) ? "margined-top40" : "";
+
+                        ?>
+
+
+                        <h2 class="v-section-heading margined-heading <?php echo $margin40; ?> text-align-center">
+                            <?php echo $v_section_heading; ?>
+                        </h2>
+
+
+                    <?php
+
+                    endif;
+
+                    //Start check the type of the sections, dude
+
+                    // SECTION WITH BOXES
+                    if ( $section_type == 'v-box-section' ):
+
+                        ?>
+
+                        <div class="row">
+                            <?php
+
+                            while ( have_rows('section_with_boxes') ) : the_row();
+
+                                $v_box_background_image = get_sub_field('background_image');
+                                $v_box_icon_image = get_sub_field('icon_image');
+                                $v_box_title = get_sub_field('title');
+                                $v_box_hyperlink = get_sub_field('button_hyperlink');
+                                $v_box_size = get_sub_field('v_box_type');
+
+                                //Purge the v_box_title variable, for css usage
+                                $v_box_title_hashed = hash('sha256', $v_box_title);
+
+                                ?>
+                                <style type="text/css">
+                                    .v-box-<?php echo $v_box_title_hashed ?>:before {
+                                        background-image:url( <?php echo $v_box_background_image; ?> );
+                                    }
+                                </style>
+
+                                <?php
+
+                                if($v_box_size == 'small'){
+                                    //small box takes third of the real estate
+                                    $v_box_size_col = 'col-lg-3 col-md-8 col-md-offset-2';
+                                } elseif($v_box_size == 'medium') {
+                                    //meium box takes half of the real estate
+                                    $v_box_size_col = 'col-lg-6 col-md-8 col-md-offset-2';
+                                } elseif($v_box_size == 'large') {
+                                    //large box takes two-thirds of the real estate
+                                    $v_box_size_col = 'col-lg-8 col-md-8 col-md-offset-2';
+                                } elseif($v_box_size == 'full') {
+                                    //full box takes whole row
+                                    $v_box_size_col = 'col-md-12';
+                                } else {
+                                    $v_box_size_col = '';
+                                }
+
+                                ?>
+
+                                <div class="v-box-wrapper <?php echo $v_box_size_col ?> text-align-center">
+                                    <div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12">
+                                        <div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
+                                            <!-- no content within this div -->
+                                        </div>
+                                        <h3 class="v-box-caption">
+                                            <span> <?php echo $v_box_title; ?> </span>
+                                        </h3>
+                                        <?php if(get_sub_field('has_button') == true) { ?>
+                                            <a href="<?php echo $v_box_hyperlink ?>">
+                                                <button class="v-box-button">
+                                                    <?php _e('Learn more', 'virtual') ?>
+                                                </button>
+                                            </a>
+                                        <?php } ?>
+                                        <?php if(get_sub_field('has_text_overlay') == true) { ?>
+                                            <div class="v-box-txt">
+                                                <?php echo  get_sub_field('overlay_text') ?>
+                                            </div>
+                                        <?php } ?>
+                                    </div>
+
+                                </div>
+
+                            <?php
+
+                            endwhile;
+
+                            ?>
+                        </div><!-- end row -->
+
+                    <?php
+
+
+
+                    // SECTION WITH LARGE LOGO
+                    elseif ( $section_type == 'v-large-logo' ):
+
+                        while ( have_rows('section_with_large_logo') ) : the_row();
+
+                            $v_large_logo_image = get_sub_field('large_logo_image');
+                            $v_large_logo_image_content = get_sub_field('large_logo_content');
+
+                            ?>
+                            <div class="row">
+                                <div class="v-large-logo col-md-6">
+                                    <img src="<?php echo $v_large_logo_image ?>" />
+                                </div>
+                                <div class="div col-md-6 v-large-logo-content text-align-left">
+                                    <?php echo $v_large_logo_image_content ?>
+                                </div>
+                            </div>
+
+                        <?php
+
+                        endwhile;
+
+
+
+                    // SECTION WITH TESTIMONIALS
+                    elseif ( $section_type == 'v-testimonials' ):
+
+                        while ( have_rows('section_with_testimonials') ) : the_row();
+
+                            $testimonials_tag = get_sub_field('testimonials_tag');
+                            $tag = get_tag( $testimonials_tag );
+
+                            $args = array(
+                                'post_type' => 'testimonials',
+                                'tag' => $tag->name,
+                            );
+                            // The Query -- testimonials tagged with the custom tag
+                            $testimonials_query = new WP_Query( $args );
+
+                            //check the format of the image icon
+                            $img_icon = get_field('testimonial_icon');
+                            $img_icon_width = $img_icon['width'];
+                            $img_icon_height = $img_icon['height'];
+
+                            $img_icon_class = ($img_icon_width > $img_icon_height) ? 'img-landscape' : 'img-portrait';
+
+
+                            // The Loop
+                            if ( $testimonials_query->have_posts() ) {
+                                echo '<div class="v-testimonials owl-carousel owl-theme">';
+                                while ( $testimonials_query->have_posts() ) {  $testimonials_query->the_post();
+                                    echo '<div class="v-testimonial">';
+                                    echo '<div class="image_wrapper"><img class="'. $img_icon_class . '" src="' . get_field('testimonial_icon') . '"></div>';
+                                    echo '<div class="v_testimonial_content">';
+                                    the_content();
+                                    echo '</div>';
+                                    echo '<div class="v_testimonial_profession">' . get_field('profession') . '</div>';
+                                    echo '</div>';
+                                }
+                                echo '</div>';
+                                /* Restore original Post Data */
+                                wp_reset_postdata();
+                            }
+
+                        endwhile;
+
+                    // PARTNERS AND SUPPLIERS
+                    elseif ( $section_type == 'v-partners' ):
+
+                        while ( have_rows('section_with_partner_logos') ) : the_row();
+                            ?>
+                            <div class="container-fluid v-wrapper v-partners v-wrapper-ret-sup v-full-width parallax-window" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
+                                <div class="v-wrapper-ret-sup-heading">
+                                    <h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
+                                </div>
+                                <div class="container">
+                                    <div id="partners-carousel" class="owl-carousel owl-theme">
+                                        <?php while ( have_rows('partner') ) : the_row(); ?>
+                                            <div class="v-ret-sup-wrapper text-align-center">
+                                                <img class="v-img" src="<?php echo get_sub_field('logo_image'); ?>"/>
+                                                <div>
+                                                    <?php echo get_sub_field('under_logo_text'); ?>
+                                                </div>
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                </div>
+                            </div>
+
+                        <?php
+                        endwhile;
+
+                    // PLAIN TEXT SECTION
+                    elseif ( $section_type == 'v-plain' ):
+
+                        while ( have_rows('section_with_plain_text') ) : the_row();
+                            ?>
+
+                            <div class="v-plain v-full-width" style="background-color:<?php echo get_sub_field('bg_color'); ?>">
+                                <div class="container">
+                                    <?php echo get_sub_field('v_content'); ?>
+                                </div>
+                            </div>
+                        <?php
+                        endwhile;
+
+
+                    endif;
+
+                } while ( have_rows('page_sections') ); //have_rows page_sections
+
+            endif; //have_rows page_sections
+
+            ?>
+        </div><!-- end container -->
+    </div><!-- .entry-content -->
+<?php endif; ?>
+
 <section class="stats-scrolling-slider">
 
 <?php 
@@ -80,7 +342,7 @@ get_header();
 </section>
 
 
-<section class="retail-content">
+<section class="retail-content <?php  if (is_page (array('providers') ) ) : ?>providers-retail-content<?php endif; ?>">
 <?php
     
     $ids = ['first', 'second', 'third', 'fourth'];
@@ -103,7 +365,7 @@ if( have_rows('animated_box_content') ):
                 <div class="col-sm-6">                    
                     <p><?php the_sub_field('paragraph'); ?></p>
                 </div>
-                <div class="<?php if (get_sub_field('animation_position') == 'left') { echo 'left-floated'; } else { echo 'right-floated'; } ?> col-sm-6">
+                <div class="<?php if (get_sub_field('animation_position') == 'left') { echo 'left-floated'; } else { echo 'right-floated'; } ?> <?php  if (is_page (array('providers') ) ) : ?>col-sm-5<?php else: ?>col-sm-6<?php endif; ?>">
                     <div class="animation-wrapper">
                         <div class="animation-inner-container">
                             <?php if( get_sub_field('animated_image') ): ?>
