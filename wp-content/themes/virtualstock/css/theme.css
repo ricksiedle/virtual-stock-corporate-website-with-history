@@ -13016,25 +13016,37 @@ body.page-template-page-full-content .solutions-wrapper {
 
 body.page-template-page-full-content .providers-solutions-wrapper {
   min-height: 70vh !important; }
+  body.page-template-page-full-content .providers-solutions-wrapper .container {
+    height: 85%; }
   body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper {
     background: none;
     border-radius: 0; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h1, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
-      color: #fff !important;
-      text-align: left !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
+      color: #fff !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2 {
+      text-align: center;
+      margin-bottom: 20px; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h1 {
+      margin-bottom: 100px !important; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
-      padding-top: 20px; }
+      border: solid 2px #fff;
+      padding: 10px;
+      width: 70%;
+      margin: auto; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h {
       color: #fff !important;
       border: solid 2px #fff;
       padding: 10px 20px;
       margin-right: 50px; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h:hover {
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .inner-box-wrapper p:hover {
       background: rgba(0, 0, 0, 0.3) !important; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .row div.col:nth-child(2) {
-      display: none !important; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .inner-box-wrapper p a {
+      text-decoration: none;
+      color: #fff !important; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .box-wrapper {
       padding: 0; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h-logo {
+      float: right; }
   body.page-template-page-full-content .providers-solutions-wrapper .providers-buttons p {
     padding-left: 15px; }
 
@@ -13086,6 +13098,9 @@ section.providers-retail-content p a {
 
 .v-providers-section .v-box-txt {
   background: rgba(0, 0, 0, 0.3) !important; }
+
+.v-providers-section .v-box-caption span a {
+  color: #3BAFDA !important; }
 
 .pricing-plans {
   display: block;

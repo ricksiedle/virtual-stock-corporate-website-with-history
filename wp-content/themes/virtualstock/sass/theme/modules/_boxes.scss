@@ -525,15 +525,27 @@ body.page-template-page-full-content {
     }
     .providers-solutions-wrapper{
         min-height: 70vh !important;
+        .container{
+            height: 85%;
+        }
         .full-content-boxes-wrapper{
             background: none;
             border-radius: 0;
-            h1, h2, small, p{
+            h2, small, p{
                 color:#fff !important;
-                text-align: left !important;
+            }
+            h2{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            h1{
+                margin-bottom:100px !important;
             }
             p{
-              padding-top: 20px;
+                border: solid 2px #fff;
+                padding: 10px;
+                width: 70%;
+                margin: auto;
             }
             .e4h{
                 color: #fff !important;
@@ -541,14 +553,23 @@ body.page-template-page-full-content {
                 padding:10px 20px;
                 margin-right: 50px;
             }
-            .e4h:hover{
+            .inner-box-wrapper p:hover{
                 background: rgba(0,0,0,.3)!important;
             }
-            .row div.col:nth-child(2){
-                display: none !important;
+            .inner-box-wrapper {
+                p{
+                    a{
+                        text-decoration: none;
+                        color: #fff !important;
+                    }
+                }
             }
             .box-wrapper{
                 padding: 0;
+            }
+            .e4h-logo{
+                float: right;
+
             }
         }
         .providers-buttons{
@@ -624,6 +645,13 @@ section.providers-retail-content{
     }
     .v-box-txt{
         background: rgba(0,0,0,.3)!important;
+    }
+    .v-box-caption{
+        span{
+            a{
+                color: #3BAFDA !important;
+            }
+        }
     }
 }
 

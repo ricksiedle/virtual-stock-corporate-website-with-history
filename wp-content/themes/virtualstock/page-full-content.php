@@ -163,7 +163,7 @@ get_header();
 
                                 if($v_box_size == 'small'){
                                     //small box takes third of the real estate
-                                    $v_box_size_col = 'col-lg-3 col-md-8 col-md-offset-2';
+                                    $v_box_size_col = 'col-lg-4 col-md-8 col-md-offset-2';
                                 } elseif($v_box_size == 'medium') {
                                     //meium box takes half of the real estate
                                     $v_box_size_col = 'col-lg-6 col-md-8 col-md-offset-2';
