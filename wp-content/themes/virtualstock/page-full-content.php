@@ -365,7 +365,7 @@ if( have_rows('animated_box_content') ):
                 <div class="col-sm-6">                    
                     <p><?php the_sub_field('paragraph'); ?></p>
                 </div>
-                <div class="<?php if (get_sub_field('animation_position') == 'left') { echo 'left-floated'; } else { echo 'right-floated'; } ?> <?php  if (is_page (array('providers') ) ) : ?>col-sm-5<?php else: ?>col-sm-6<?php endif; ?>">
+                <div class="<?php if (get_sub_field('animation_position') == 'left') { echo 'left-floated'; } else { echo 'right-floated'; } ?> col-sm-6">
                     <div class="animation-wrapper">
                         <div class="animation-inner-container">
                             <?php if( get_sub_field('animated_image') ): ?>
