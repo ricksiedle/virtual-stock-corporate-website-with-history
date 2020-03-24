@@ -523,6 +523,58 @@ body.page-template-page-full-content {
     .solutions-wrapper {
         margin-bottom: 0;
     }
+    .providers-solutions-wrapper{
+        min-height: 70vh !important;
+        .full-content-boxes-wrapper{
+            background: none;
+            border-radius: 0;
+            h2, small, p{
+                color:#fff !important;
+            }
+            h2{
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            p{
+                border: solid 2px #fff;
+                padding: 10px;
+                width: 70%;
+                margin: auto;
+            }
+            .e4h{
+                color: #fff !important;
+                border: solid 2px #fff;
+                padding:10px 20px;
+                margin-right: 50px;
+            }
+            .inner-box-wrapper p:hover{
+                background: rgba(0,0,0,.3)!important;
+            }
+            .inner-box-wrapper {
+                p{
+                    a{
+                        text-decoration: none;
+                        color: #fff !important;
+                    }
+                }
+            }
+            .box-wrapper{
+                padding: 0;
+            }
+            .col{
+               flex-basis: inherit;
+                @media only screen and (min-width: 991px) {
+                    width: 50% !important;
+                }
+            }
+        }
+        .providers-buttons{
+            p{
+                padding-left: 15px;
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 991px) {
@@ -549,6 +601,53 @@ section.stats-scrolling-banner {
 section.stats-scrolling-slider {
     .owl-stage-outer {
         margin-top: 30px;
+    }
+}
+
+section.providers-retail-content{
+    h2{
+        color: #3BAFDA;
+    }
+    p{
+        a.provider-button{
+            color: #3BAFDA;
+            border: solid 1px #3BAFDA;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+        a{
+            color: #3BAFDA;
+        }
+    }
+}
+.v-providers-section{
+    .v-box{
+        background-color: #fff;
+        border: solid 1px #3BAFDA;
+        height: auto !important;
+
+        span{
+            color: #3BAFDA;
+        }
+    }
+    .v-box-wrapper:hover{
+        background-color: #fff;
+    }
+    .v-box:after{
+        background-color: #fff !important;
+    }
+    .v-box-icon{
+        height: 62px !important;
+    }
+    .v-box-txt{
+        background: rgba(0,0,0,.3)!important;
+    }
+    .v-box-caption{
+        span{
+            a{
+                color: #3BAFDA !important;
+            }
+        }
     }
 }
 
