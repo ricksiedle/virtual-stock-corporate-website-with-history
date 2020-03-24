@@ -525,9 +525,6 @@ body.page-template-page-full-content {
     }
     .providers-solutions-wrapper{
         min-height: 70vh !important;
-        .container{
-            height: 85%;
-        }
         .full-content-boxes-wrapper{
             background: none;
             border-radius: 0;
@@ -537,9 +534,6 @@ body.page-template-page-full-content {
             h2{
                 text-align: center;
                 margin-bottom: 20px;
-            }
-            h1{
-                margin-bottom:100px !important;
             }
             p{
                 border: solid 2px #fff;
@@ -566,10 +560,6 @@ body.page-template-page-full-content {
             }
             .box-wrapper{
                 padding: 0;
-            }
-            .e4h-logo{
-                float: right;
-
             }
         }
         .providers-buttons{

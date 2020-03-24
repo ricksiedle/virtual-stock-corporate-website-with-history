@@ -13016,8 +13016,6 @@ body.page-template-page-full-content .solutions-wrapper {
 
 body.page-template-page-full-content .providers-solutions-wrapper {
   min-height: 70vh !important; }
-  body.page-template-page-full-content .providers-solutions-wrapper .container {
-    height: 85%; }
   body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper {
     background: none;
     border-radius: 0; }
@@ -13026,8 +13024,6 @@ body.page-template-page-full-content .providers-solutions-wrapper {
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2 {
       text-align: center;
       margin-bottom: 20px; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h1 {
-      margin-bottom: 100px !important; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
       border: solid 2px #fff;
       padding: 10px;
@@ -13045,8 +13041,6 @@ body.page-template-page-full-content .providers-solutions-wrapper {
       color: #fff !important; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .box-wrapper {
       padding: 0; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h-logo {
-      float: right; }
   body.page-template-page-full-content .providers-solutions-wrapper .providers-buttons p {
     padding-left: 15px; }
 
