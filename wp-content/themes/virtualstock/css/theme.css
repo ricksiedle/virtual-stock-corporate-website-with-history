@@ -13041,6 +13041,12 @@ body.page-template-page-full-content .providers-solutions-wrapper {
       color: #fff !important; }
     body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .box-wrapper {
       padding: 0; }
+    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .col {
+      -ms-flex-preferred-size: inherit;
+          flex-basis: inherit; }
+      @media only screen and (min-width: 991px) {
+        body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .col {
+          width: 50% !important; } }
   body.page-template-page-full-content .providers-solutions-wrapper .providers-buttons p {
     padding-left: 15px; }
 
