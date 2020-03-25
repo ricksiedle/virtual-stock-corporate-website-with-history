@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper <?php  if (is_page (array('providers') ) ) : ?>providers-solutions-wrapper<?php endif; ?>" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
+<div class="solutions-wrapper <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>providers-solutions-wrapper<?php endif; ?>" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
     <div class="solutions-boxes full-content">
         <div class="container">            
             <div class="full-content-boxes-wrapper">
@@ -70,7 +70,7 @@ get_header();
     </a>    
 </div>
 
-<?php  if (is_page (array('providers') ) ) : ?>
+<?php  if (is_page (array('providers', 'suppliers') ) ) : ?>
     <div class="entry-content">
         <?php if(get_the_content()) : ?>
             <div class="container text-align-center">
@@ -342,7 +342,7 @@ get_header();
 </section>
 
 
-<section class="retail-content <?php  if (is_page (array('providers') ) ) : ?>providers-retail-content<?php endif; ?>">
+<section class="retail-content <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>providers-retail-content<?php endif; ?>">
 <?php
     
     $ids = ['first', 'second', 'third', 'fourth'];
