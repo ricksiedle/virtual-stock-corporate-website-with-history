@@ -12831,6 +12831,8 @@ button.bg-custom:focus {
   .retail-inner-wrapper p {
     color: #455160;
     font-size: 1.4rem; }
+  .retail-inner-wrapper p.retail-text {
+    color: #e64097; }
   .retail-inner-wrapper p:last-child {
     margin-bottom: 0; }
 
@@ -13014,41 +13016,47 @@ button.bg-custom:focus {
 body.page-template-page-full-content .solutions-wrapper {
   margin-bottom: 0; }
 
-body.page-template-page-full-content .providers-solutions-wrapper {
+body.page-template-page-full-content .healthcare-wrapper, body.page-template-page-full-content .retail-wrapper {
   min-height: 70vh !important; }
-  body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper {
+  body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper {
     background: none;
     border-radius: 0; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper p, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper small, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper p {
       color: #fff !important; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper h2 {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper h2, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper h2 {
       text-align: center;
       margin-bottom: 20px; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper p {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper p, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper p {
       border: solid 2px #fff;
       padding: 10px;
       width: 70%;
       margin: auto; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .e4h {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .e4h, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .e4h {
       color: #fff !important;
       border: solid 2px #fff;
       padding: 10px 20px;
       margin-right: 50px; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .inner-box-wrapper p:hover {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .inner-box-wrapper p:hover, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .inner-box-wrapper p:hover {
       background: rgba(0, 0, 0, 0.3) !important; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .inner-box-wrapper p a {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .inner-box-wrapper p a, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .inner-box-wrapper p a {
       text-decoration: none;
       color: #fff !important; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .box-wrapper {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .box-wrapper, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .box-wrapper {
       padding: 0; }
-    body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .col {
+    body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .col, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col {
       -ms-flex-preferred-size: inherit;
           flex-basis: inherit; }
       @media only screen and (min-width: 991px) {
-        body.page-template-page-full-content .providers-solutions-wrapper .full-content-boxes-wrapper .col {
+        body.page-template-page-full-content .healthcare-wrapper .full-content-boxes-wrapper .col, body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col {
           width: 50% !important; } }
-  body.page-template-page-full-content .providers-solutions-wrapper .providers-buttons p {
+  body.page-template-page-full-content .healthcare-wrapper .providers-buttons p, body.page-template-page-full-content .retail-wrapper .providers-buttons p {
     padding-left: 15px; }
+
+@media only screen and (min-width: 991px) {
+  body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col {
+    width: 100% !important; }
+    body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col p {
+      width: 50% !important; } }
 
 @media only screen and (max-width: 991px) {
   .mobile-box {
@@ -13068,39 +13076,54 @@ section.stats-scrolling-banner {
 section.stats-scrolling-slider .owl-stage-outer {
   margin-top: 30px; }
 
-section.providers-retail-content h2 {
-  color: #3BAFDA; }
-
-section.providers-retail-content p a.provider-button {
+section.healthcare p a.provider-button, section.retail p a.provider-button {
   color: #3BAFDA;
   border: solid 1px #3BAFDA;
   padding: 10px 30px;
   text-decoration: none; }
 
-section.providers-retail-content p a {
+section.healthcare p a, section.retail p a {
   color: #3BAFDA; }
 
-.v-providers-section .v-box {
+section.healthcare h2 {
+  color: #3BAFDA; }
+
+section.retail h2 {
+  color: #e64097; }
+
+.v-healthcare-section .v-box, .v-retail-section .v-box {
   background-color: #fff;
-  border: solid 1px #3BAFDA;
   height: auto !important; }
-  .v-providers-section .v-box span {
+  .v-healthcare-section .v-box span, .v-retail-section .v-box span {
     color: #3BAFDA; }
 
-.v-providers-section .v-box-wrapper:hover {
+.v-healthcare-section .v-box-wrapper:hover, .v-retail-section .v-box-wrapper:hover {
   background-color: #fff; }
 
-.v-providers-section .v-box:after {
+.v-healthcare-section .v-box:after, .v-retail-section .v-box:after {
   background-color: #fff !important; }
 
-.v-providers-section .v-box-icon {
+.v-healthcare-section .v-box-icon, .v-retail-section .v-box-icon {
   height: 62px !important; }
 
-.v-providers-section .v-box-txt {
+.v-healthcare-section .v-box-txt, .v-retail-section .v-box-txt {
   background: rgba(0, 0, 0, 0.3) !important; }
 
-.v-providers-section .v-box-caption span a {
+.v-healthcare-section .v-box {
+  border: solid 1px #3BAFDA; }
+  .v-healthcare-section .v-box span {
+    color: #3BAFDA; }
+
+.v-healthcare-section .v-box-caption span a {
   color: #3BAFDA !important; }
+
+.v-retail-section .v-box {
+  border: solid 1px #e64097; }
+  .v-retail-section .v-box span {
+    color: #e64097; }
+
+.v-retail-section .v-box-caption span a {
+  color: #e64097 !important; }
 
 .pricing-plans {
   display: block;
