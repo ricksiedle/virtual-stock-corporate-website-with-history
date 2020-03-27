@@ -13052,11 +13052,14 @@ body.page-template-page-full-content .healthcare-wrapper, body.page-template-pag
   body.page-template-page-full-content .healthcare-wrapper .providers-buttons p, body.page-template-page-full-content .retail-wrapper .providers-buttons p {
     padding-left: 15px; }
 
+body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper img {
+  width: 130px; }
+
 @media only screen and (min-width: 991px) {
   body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col {
     width: 100% !important; }
     body.page-template-page-full-content .retail-wrapper .full-content-boxes-wrapper .col p {
-      width: 50% !important; } }
+      width: 30% !important; } }
 
 @media only screen and (max-width: 991px) {
   .mobile-box {
