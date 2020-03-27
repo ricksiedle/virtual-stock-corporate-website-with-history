@@ -246,6 +246,10 @@
         color: $light-gray;
         font-size: 1.4rem;
     }
+
+    p.retail-text{
+        color: #e64097;
+    }
     
     p:last-child {
         margin-bottom: 0;
@@ -523,7 +527,7 @@ body.page-template-page-full-content {
     .solutions-wrapper {
         margin-bottom: 0;
     }
-    .providers-solutions-wrapper{
+    .healthcare-wrapper, .retail-wrapper{
         min-height: 70vh !important;
         .full-content-boxes-wrapper{
             background: none;
@@ -574,6 +578,21 @@ body.page-template-page-full-content {
             }
         }
     }
+    .retail-wrapper{
+        .full-content-boxes-wrapper{
+            img{
+                width: 130px;
+            }
+            .col{
+                @media only screen and (min-width: 991px) {
+                    width: 100% !important;
+                    p {
+                        width: 30% !important;
+                    }
+                }
+            }
+        }
+    }
 
 }
 
@@ -604,10 +623,7 @@ section.stats-scrolling-slider {
     }
 }
 
-section.providers-retail-content{
-    h2{
-        color: #3BAFDA;
-    }
+section.healthcare, section.retail{
     p{
         a.provider-button{
             color: #3BAFDA;
@@ -620,10 +636,19 @@ section.providers-retail-content{
         }
     }
 }
-.v-providers-section{
+section.healthcare{
+    h2{
+        color: #3BAFDA;
+    }
+}
+section.retail{
+    h2{
+        color: #e64097;
+    }
+}
+.v-healthcare-section, .v-retail-section{
     .v-box{
         background-color: #fff;
-        border: solid 1px #3BAFDA;
         height: auto !important;
 
         span{
@@ -642,10 +667,33 @@ section.providers-retail-content{
     .v-box-txt{
         background: rgba(0,0,0,.3)!important;
     }
+}
+.v-healthcare-section{
+    .v-box {
+        border: solid 1px #3BAFDA;
+        span {
+            color: #3BAFDA;
+        }
+    }
     .v-box-caption{
         span{
             a{
                 color: #3BAFDA !important;
+            }
+        }
+    }
+}
+.v-retail-section{
+    .v-box {
+        border: solid 1px #e64097;
+        span {
+            color: #e64097;
+        }
+    }
+    .v-box-caption{
+        span{
+            a{
+                color: #e64097 !important;
             }
         }
     }
