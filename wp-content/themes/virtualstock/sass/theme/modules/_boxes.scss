@@ -623,7 +623,7 @@ section.stats-scrolling-slider {
     }
 }
 
-section.healthcare, section.retail{
+section.healthcare{
     p{
         a.provider-button{
             color: #3BAFDA;
@@ -633,6 +633,20 @@ section.healthcare, section.retail{
         }
         a{
             color: #3BAFDA;
+        }
+    }
+}
+section.retail{
+    p{
+        a.retail-button{
+
+            color: #e64097;
+            border: solid 1px #e64097;
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+        a{
+            color: #e64097;
         }
     }
 }
@@ -666,6 +680,11 @@ section.retail{
     }
     .v-box-txt{
         background: rgba(0,0,0,.3)!important;
+    }
+    .row{
+        .col-lg-4{
+            display: grid !important;
+        }
     }
 }
 .v-healthcare-section{
