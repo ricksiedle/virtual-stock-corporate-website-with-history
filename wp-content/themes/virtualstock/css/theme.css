@@ -13079,14 +13079,23 @@ section.stats-scrolling-banner {
 section.stats-scrolling-slider .owl-stage-outer {
   margin-top: 30px; }
 
-section.healthcare p a.provider-button, section.retail p a.provider-button {
+section.healthcare p a.provider-button {
   color: #3BAFDA;
   border: solid 1px #3BAFDA;
   padding: 10px 30px;
   text-decoration: none; }
 
-section.healthcare p a, section.retail p a {
+section.healthcare p a {
   color: #3BAFDA; }
+
+section.retail p a.retail-button {
+  color: #e64097;
+  border: solid 1px #e64097;
+  padding: 10px 30px;
+  text-decoration: none; }
+
+section.retail p a {
+  color: #e64097; }
 
 section.healthcare h2 {
   color: #3BAFDA; }
@@ -13111,6 +13120,9 @@ section.retail h2 {
 
 .v-healthcare-section .v-box-txt, .v-retail-section .v-box-txt {
   background: rgba(0, 0, 0, 0.3) !important; }
+
+.v-healthcare-section .row .col-lg-4, .v-retail-section .row .col-lg-4 {
+  display: grid !important; }
 
 .v-healthcare-section .v-box {
   border: solid 1px #3BAFDA; }

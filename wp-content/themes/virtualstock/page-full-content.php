@@ -12,7 +12,7 @@ get_header();
 
 ?>
 
-<div class="solutions-wrapper <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>healthcare-wrapper<?php elseif(is_page (array('retailers-3') )): ?>retail-wrapper<?php endif; ?>" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
+<div class="solutions-wrapper <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>healthcare-wrapper<?php elseif(is_page (array('retailers-3', 'brands') )): ?>retail-wrapper<?php endif; ?>" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; min-height: 100vh;">
     <div class="solutions-boxes full-content">
         <div class="container">            
             <div class="full-content-boxes-wrapper">
@@ -70,7 +70,7 @@ get_header();
     </a>    
 </div>
 
-<?php  if (is_page (array('providers', 'suppliers', 'retailers-3') ) ) : ?>
+<?php  if (is_page (array('providers', 'suppliers', 'retailers-3', 'brands') ) ) : ?>
     <div class="entry-content">
         <?php if(get_the_content()) : ?>
             <div class="container text-align-center">
@@ -81,7 +81,7 @@ get_header();
 
         <?php endif; ?>
 
-        <div class="container text-align-center v-section <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>v-healthcare-section<?php elseif(is_page (array('retailers-3') )): ?>v-retail-section<?php endif; ?>">
+        <div class="container text-align-center v-section <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>v-healthcare-section<?php elseif(is_page (array('retailers-3', 'brands') )): ?>v-retail-section<?php endif; ?>">
 
 
             <?php
@@ -342,7 +342,7 @@ get_header();
 </section>
 
 
-<section class="retail-content <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>healthcare<?php elseif(is_page (array('retailers-3') )): ?>retail<?php endif; ?>">
+<section class="retail-content <?php  if (is_page (array('providers', 'suppliers') ) ) : ?>healthcare<?php elseif(is_page (array('retailers-3', 'brands') )): ?>retail<?php endif; ?>">
 <?php
     
     $ids = ['first', 'second', 'third', 'fourth'];
