@@ -11,8 +11,7 @@
 get_header();
 
 ?>
-
-<div class="solutions-wrapper margin-bottom-universal" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 0; height: calc(100vh - 103px);">
+<div class="landing solutions-wrapper margin-bottom-universal" style="background: url(<?php if( get_field('background_image') ): the_field('background_image'); endif; ?>) center center no-repeat; background-size: cover; margin-top: 0; height: calc(100vh - 103px);">
     <video muted autoplay loop>
         <?php if( get_field('video') ): ?>                        
             <source src="<?php the_field('video'); ?>">

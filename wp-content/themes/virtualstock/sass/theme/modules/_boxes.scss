@@ -174,8 +174,9 @@
                 .box-wrapper{
                     padding: 0;
                     width: 70%;
+                    background: none;
                         .inner-box-wrapper{
-                                p{
+                                p, h2{
                                     border: solid 2px #fff;
                                     padding: 10px 0;
                                         span{
@@ -187,8 +188,11 @@
                                             color:#fff;
                                         }
                                 }
+                                h2{
+                                    padding: 0 0 10px 0 ;
+                                }
                         }
-                        .inner-box-wrapper p:hover{
+                        .inner-box-wrapper p:hover, .inner-box-wrapper h2:hover{
                             background: rgba(0,0,0,.3)!important;
                         }
                     @media only screen and (max-width: 767px){

@@ -12782,18 +12782,21 @@ button.bg-custom:focus {
 
 .landing .solutions-boxes .box-wrapper {
   padding: 0;
-  width: 70%; }
-  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p {
+  width: 70%;
+  background: none; }
+  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p, .landing .solutions-boxes .box-wrapper .inner-box-wrapper h2 {
     border: solid 2px #fff;
     padding: 10px 0; }
-    .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span {
+    .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span, .landing .solutions-boxes .box-wrapper .inner-box-wrapper h2 span {
       font-size: 32px;
       color: #fff; }
       @media only screen and (max-width: 767px) {
-        .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span {
+        .landing .solutions-boxes .box-wrapper .inner-box-wrapper p span, .landing .solutions-boxes .box-wrapper .inner-box-wrapper h2 span {
           font-size: 28px !important;
           padding: 0 20px; } }
-  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p:hover {
+  .landing .solutions-boxes .box-wrapper .inner-box-wrapper h2 {
+    padding: 0 0 10px 0; }
+  .landing .solutions-boxes .box-wrapper .inner-box-wrapper p:hover, .landing .solutions-boxes .box-wrapper .inner-box-wrapper h2:hover {
     background: rgba(0, 0, 0, 0.3) !important; }
   @media only screen and (max-width: 767px) {
     .landing .solutions-boxes .box-wrapper {
