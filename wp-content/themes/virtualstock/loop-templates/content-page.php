@@ -261,7 +261,7 @@ global $post;
 			?>
 
 								<div class="v-box-wrapper <?php echo $v_box_size_col ?> text-align-center">
-									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12">
+									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12 <?php if (is_page (array('partners') ) ) : ?>partners-boxes<?php endif; ?>">
 										<div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
 											<!-- no content within this div -->
 										</div>
