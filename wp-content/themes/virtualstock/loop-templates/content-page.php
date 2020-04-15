@@ -65,7 +65,7 @@ global $post;
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
 				<?php if(get_field('has_header')): ?>
-					<div class="v-carousel-wrapper">
+					<div class="v-carousel-wrapper   <?php  if (is_page (array('partners') ) ) : ?>partners-wrapper<?php endif; ?>">
 						<h1 class="v-carousel-heading">
 							<?php if(get_field('header_text_heading')) :
 								echo get_field('header_text_heading');
