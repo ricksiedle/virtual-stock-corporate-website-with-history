@@ -367,7 +367,7 @@ global $post;
 										while ( have_rows('section_with_partner_logos') ) : the_row(); 
 			?>
 											<div class="container-fluid v-wrapper v-partners v-wrapper-ret-sup v-full-width parallax-window <?php if(is_front_page()): ?>home-slider<?php endif; ?>" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
-												<div class="v-wrapper-ret-sup-heading">
+												<div class="v-wrapper-ret-sup-heading <?php if (is_page (array('partners') ) ) : ?>partners-slider<?php endif; ?>">
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>
 												<div class="container">
