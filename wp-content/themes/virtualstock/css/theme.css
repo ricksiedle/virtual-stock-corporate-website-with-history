@@ -12274,6 +12274,11 @@ a.pink-button {
     height: 55px !important;
     max-width: auto !important; }
 
+.partners-wrapper {
+  background-color: none !important; }
+  .partners-wrapper .v-carousel-content {
+    color: #fff !important; }
+
 .bg-custom {
   background-color: #fff !important; }
 
