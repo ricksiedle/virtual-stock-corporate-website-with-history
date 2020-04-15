@@ -12275,7 +12275,7 @@ a.pink-button {
     max-width: auto !important; }
 
 .partners-wrapper {
-  background-color: none !important; }
+  background: none !important; }
   .partners-wrapper .v-carousel-content {
     color: #fff !important; }
 
