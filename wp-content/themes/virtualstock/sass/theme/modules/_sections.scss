@@ -251,3 +251,20 @@
         }
     }
 }
+
+.home-slider{
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    .v-wrapper-ret-sup-heading{
+        display: none;
+    }
+    .owl-prev, .owl-next{
+        i{
+            color: #455160;
+        }
+    }
+    img{
+        height: 55px !important;
+        max-width: auto !important;
+    }
+}

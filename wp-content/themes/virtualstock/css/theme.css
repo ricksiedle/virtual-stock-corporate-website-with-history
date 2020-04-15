@@ -12263,6 +12263,17 @@ a.pink-button {
       font-size: 1.4rem;
       font-weight: 300; }
 
+.home-slider {
+  margin-top: 0 !important;
+  padding-top: 0 !important; }
+  .home-slider .v-wrapper-ret-sup-heading {
+    display: none; }
+  .home-slider .owl-prev i, .home-slider .owl-next i {
+    color: #455160; }
+  .home-slider img {
+    height: 55px !important;
+    max-width: auto !important; }
+
 .bg-custom {
   background-color: #fff !important; }
 
