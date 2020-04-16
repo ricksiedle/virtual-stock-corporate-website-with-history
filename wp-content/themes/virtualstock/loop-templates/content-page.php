@@ -65,7 +65,7 @@ global $post;
 			<!-- Static content in the carousel area -->
 			<div class="container v-static">
 				<?php if(get_field('has_header')): ?>
-					<div class="v-carousel-wrapper">
+                    <div class="v-carousel-wrapper <?php if (is_page (array('partners') ) ) : ?>partners-wrapper<?php endif; ?>">
 						<h1 class="v-carousel-heading">
 							<?php if(get_field('header_text_heading')) :
 								echo get_field('header_text_heading');
@@ -261,7 +261,7 @@ global $post;
 			?>
 
 								<div class="v-box-wrapper <?php echo $v_box_size_col ?> text-align-center">
-									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12">
+									<div class="v-box v-box-<?php echo $v_box_title_hashed; ?> v-col-md-12 <?php if (is_page (array('partners') ) ) : ?>partners-boxes<?php endif; ?>">
 										<div class="v-box-icon" style="background-image:url('<?php echo $v_box_icon_image; ?>');">
 											<!-- no content within this div -->
 										</div>
@@ -367,7 +367,7 @@ global $post;
 										while ( have_rows('section_with_partner_logos') ) : the_row(); 
 			?>
 											<div class="container-fluid v-wrapper v-partners v-wrapper-ret-sup v-full-width parallax-window <?php if(is_front_page()): ?>home-slider<?php endif; ?>" data-parallax="scroll" data-image-src="<?php echo get_sub_field('p_bg_image'); ?>" >
-												<div class="v-wrapper-ret-sup-heading">
+												<div class="v-wrapper-ret-sup-heading <?php if (is_page (array('partners') ) ) : ?>partners-slider<?php endif; ?>">
 													<h2 class="text-align-center"><?php echo get_sub_field('p_heading'); ?></h2>
 												</div>
 												<div class="container">

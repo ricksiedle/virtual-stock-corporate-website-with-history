@@ -268,3 +268,21 @@
         max-width: auto !important;
     }
 }
+.partners-wrapper{
+    background: none !important;
+    .v-carousel-content{
+        color: #fff !important;
+        width: 700px;
+    }
+}
+.partners-slider{
+    background-color: #E64097 !important;
+}
+.partners-boxes{
+    background: #455160 !important;
+    .v-box-txt{
+        p{
+            font-size: 1rem !important;
+        }
+    }
+}
