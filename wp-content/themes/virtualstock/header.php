@@ -106,12 +106,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-                <?php  if (is_page (array('healthcare', 'suppliers', 'providers') ) ) : ?>
-                    <a class="pink-button" href="https://www.edge4health.co.uk/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
-                <?php  elseif (!is_front_page() && !is_home()) : ?>
-                    <a class="pink-button" href="https://www.the-edge.io/cas/login"><button id="login"><?php _e( 'Login?', 'virtual' ) ?></button></a>
-                <?php  endif; ?>
-				
 			</div><!-- .container -->			
 
 		</nav><!-- .site-navigation -->
