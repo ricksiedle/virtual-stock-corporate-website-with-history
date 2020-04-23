@@ -12828,6 +12828,103 @@ button.bg-custom:focus {
       margin-bottom: 0;
       width: 100%; } }
 
+.section-purpose .image-holder {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.section-purpose .section-purpose-content {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+  .section-purpose .section-purpose-content h2 {
+    font-size: 3rem; }
+  .section-purpose .section-purpose-content p {
+    font-size: 1.6rem; }
+  .section-purpose .section-purpose-content h2, .section-purpose .section-purpose-content p {
+    text-align: left;
+    color: #455160; }
+  .section-purpose .section-purpose-content .section-purpose-content-inside {
+    padding: 15% 20% !important; }
+
+.section-partners .image-holder {
+  left: 50%;
+  right: auto;
+  padding-right: 0;
+  padding-left: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100%;
+  min-height: 360px; }
+
+.section-partners .section-partners-content {
+  right: 50%;
+  left: auto; }
+  .section-partners .section-partners-content h2 {
+    font-size: 3rem; }
+  .section-partners .section-partners-content p {
+    font-size: 1.6rem; }
+  .section-partners .section-partners-content h2, .section-partners .section-partners-content p {
+    text-align: left;
+    color: #455160; }
+  .section-partners .section-partners-content .section-partners-content-inside {
+    padding: 15% 20%; }
+    .section-partners .section-partners-content .section-partners-content-inside .images-partners {
+      margin-top: 60px;
+      width: 80%;
+      margin-left: 8%; }
+      .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder {
+        height: 100px; }
+        .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder .partner-logo-wrapper {
+          width: 50%;
+          float: left;
+          text-align: center; }
+      .section-partners .section-partners-content .section-partners-content-inside .images-partners img {
+        height: 50px;
+        width: auto; }
+
+.section-investors .image-holder {
+  padding-right: 0;
+  padding-left: 0;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100%;
+  min-height: 360px; }
+
+.section-investors .section-investors-content h2 {
+  font-size: 3rem; }
+
+.section-investors .section-investors-content p {
+  font-size: 1.6rem; }
+
+.section-investors .section-investors-content h2, .section-investors .section-investors-content p {
+  text-align: left;
+  color: #455160; }
+
+.section-investors .section-investors-content .section-investors-content-inside {
+  padding: 15% 20%; }
+  .section-investors .section-investors-content .section-investors-content-inside .investor-logo-wrapper img {
+    height: 50px;
+    width: auto; }
+
+.section-contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: rgba(69, 81, 96, 0.05); }
+  .section-contact h2 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase; }
+  .section-contact p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    color: #455160; }
+  .section-contact h3 {
+    font-weight: bold; }
+  .section-contact h2, .section-contact p, .section-contact h3 {
+    text-align: left;
+    color: #455160; }
+
 .retail-wrapper {
   margin-bottom: 30px; }
 

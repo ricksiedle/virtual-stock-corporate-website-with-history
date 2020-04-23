@@ -34,66 +34,6 @@ get_header();
 
     <?php endif; ?>
 
-        <div class="row section-people v-full-width">
-                
-            <div class="container">
-                <h2 class="text-align-center"> <?php _e('Our <span style="color:#E64097;">people</span>', 'virtual') ?></h2>
-                <div class="row">
-                <?php
-                if ($team_object_arr = get_field('team')):
-
-                    foreach ($team_object_arr as $i => $post): setup_postdata( $post );
-                        
-                        if ( 'founders' == get_field('group') ):
-                ?>
-                    <div class="col-sx-6 col-md-3">
-                        <div class="section-people-content-holder <?php echo ( ($i == 0) ? 'first' : ($i == 3 ? 'last' : '') ); ?>">
-                            <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                            <div class="content-wrapper">
-                                <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
-                                <p class="people-content text-align-center">
-                                    <?php the_field('team_content'); ?>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                <?php
-                        endif;
-                    endforeach; wp_reset_postdata();
-                ?>
-                </div>
-
-                <div class="row">
-                <?php 
-                    foreach ($team_object_arr as $j => $post): setup_postdata( $post );
-
-                        if ( 'managers' == get_field('group') ):
-                ?>
-                    <div class="col-sx-6 col-md-3">
-                        <div class="section-people-content-holder">
-                            <img src="<?php the_post_thumbnail_url('team-thumbnail'); ?>" alt="">
-                            <div class="content-wrapper">
-                                <h3 class="text-align-center"> <?php the_title(); ?> </h3>
-                                <h4 class="text-align-center"> <?php the_field('team_position'); ?> </h4> 
-                                <p class="people-content text-align-center">
-                                    <?php the_field('team_content'); ?>
-                                </p>
-                            </div> 
-                        </div>
-                    </div>
-                <?php
-                        endif;
-                    endforeach; wp_reset_postdata();
-                ?>
-                
-                <?php
-                endif;
-                ?>
-                </div>
-            </div>
-        </div>
-
         <!-- OUR PARTNERS SECTION -->
 
         <?php if( have_rows('our_partners_section') ): ?>
