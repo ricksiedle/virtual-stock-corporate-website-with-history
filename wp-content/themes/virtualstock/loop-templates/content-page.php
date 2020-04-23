@@ -671,7 +671,4 @@ global $post;
     window.addEventListener('load', (event) => {
         document.getElementById('movie-area').play();
     });
-
-    // jQuery( "a[title='About']" ).stopPropagation();
-
 </script>
