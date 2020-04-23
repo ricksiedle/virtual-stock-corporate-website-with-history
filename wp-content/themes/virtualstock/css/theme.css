@@ -12880,7 +12880,9 @@ button.bg-custom:focus {
           text-align: center; }
       .section-partners .section-partners-content .section-partners-content-inside .images-partners img {
         height: 50px;
-        width: auto; }
+        width: auto;
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%); }
 
 .section-investors .image-holder {
   padding-right: 0;
@@ -12905,7 +12907,9 @@ button.bg-custom:focus {
   padding: 15% 20%; }
   .section-investors .section-investors-content .section-investors-content-inside .investor-logo-wrapper img {
     height: 50px;
-    width: auto; }
+    width: auto;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%); }
 
 .section-contact {
   padding-top: 100px;
