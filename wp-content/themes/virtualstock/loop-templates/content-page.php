@@ -388,9 +388,9 @@ global $post;
 										endwhile;
 										endif;?>
 
-                <div class="container" id="about">
                     <?php if( is_front_page() ): ?>
 
+                    <div class="container">
                             <!-- OUR PURPOSE SECTION -->
                         <?php if( have_rows('our_purpose_section') ): ?>
 
@@ -402,7 +402,7 @@ global $post;
 
                                 ?>
 
-                                <div class="row section-purpose v-full-width">
+                                <div id="about" class="row section-purpose v-full-width">
                                     <div class="col-md-6 image-holder">
                                         <img src="<?php echo $our_purpose_image; ?>" />
                                     </div>
@@ -522,8 +522,9 @@ global $post;
                                 <p> <?php _e('', 'virtual') ?></p>
                             </div>
                         </div>
-                        <?php endif; ?>
-            </div>
+                </div>
+                <?php endif; ?>
+
 
                         <?php
 
@@ -670,5 +671,7 @@ global $post;
     window.addEventListener('load', (event) => {
         document.getElementById('movie-area').play();
     });
+
+    // jQuery( "a[title='About']" ).stopPropagation();
 
 </script>
