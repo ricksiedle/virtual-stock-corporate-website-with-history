@@ -388,10 +388,10 @@ global $post;
 										endwhile;
 										endif;?>
 
-            <?php if( is_front_page() ): ?>
                 <div class="container" id="about">
+                    <?php if( is_front_page() ): ?>
 
-                        <!-- OUR PURPOSE SECTION -->
+                            <!-- OUR PURPOSE SECTION -->
                         <?php if( have_rows('our_purpose_section') ): ?>
 
                             <?php while( have_rows('our_purpose_section') ): the_row();
@@ -522,9 +522,10 @@ global $post;
                                 <p> <?php _e('', 'virtual') ?></p>
                             </div>
                         </div>
+                        <?php endif; ?>
             </div>
 
-                        <?php  endif;
+                        <?php
 
 									// PLAIN TEXT SECTION
 									if ( $section_type == 'v-plain' ):
