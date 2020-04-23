@@ -569,29 +569,6 @@ global $post;
 
 </article><!-- #post-## -->
 
-<?php if(is_front_page()) { ?>
-
-	<script>
-	if(jQuery('.owl-carousel').length > 0) {
-		jQuery('.owl-carousel').owlCarousel({
-			loop		: true,
-			margin		: 10,
-			dots		: false,
-			nav    		: true,
-			smartSpeed 	: 900,
-			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-			responsive	: {
-					0	: { items:1 },
-					768	: { items:3 },
-					1200: { items:5 }
-			}
-		})
-	}
-	
-</script>
-
-<?php } ?>
-
 <script>
 	if(jQuery('.v-testimonials').length > 0) {
 		jQuery('.v-testimonials').owlCarousel({
@@ -606,7 +583,7 @@ global $post;
 			}
 		})
 	}
-	
+
 </script>
 
 <script>
@@ -628,7 +605,7 @@ global $post;
 			}
 		})
 	}
-	
+
 </script>
 
 <script>
@@ -660,7 +637,7 @@ global $post;
 <script>
 	jQuery(document).ready(function($) {
 		if(jQuery('.counter').length > 0) {
-			
+
 			$('.counter').counterUp({
 				delay: 10,
 				time: 1000
@@ -672,3 +649,30 @@ global $post;
         document.getElementById('movie-area').play();
     });
 </script>
+
+<?php if(is_front_page()) { ?>
+<script>
+    if(jQuery('#stats-slider-owl').length > 0) {
+        jQuery('#stats-slider-owl').owlCarousel({
+            loop		: true,
+            margin		: 10,
+            dots		: false,
+            <?php if(!wp_is_mobile()): ?>
+            nav    		: true,
+            <?php else: ?>
+            nav    		: false,
+            <?php endif; ?>
+            smartSpeed 	: 2000,
+            navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+            autoplay   	: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause:true,
+            responsive	: {
+                0	: { items:1 },
+                768	: { items:2 },
+                1200: { items:4 }
+            }
+        })
+    }
+</script>
+<?php } ?>
