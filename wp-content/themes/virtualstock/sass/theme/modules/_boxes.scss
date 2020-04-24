@@ -292,18 +292,6 @@
     }
 }
 
-@media screen and (min-width: 564px) {
-    #page-wrapper{
-        .container .text-align-center {
-            .entry-content-inside {
-                margin-left: 0 !important;
-                margin-right: 0 !important;
-                width: 100% !important;
-            }
-        }
-    }
-}
-
 .section-investors{
     .image-holder{
         padding-right: 0;
@@ -316,7 +304,12 @@
     }
     .section-investors-content{
         h2{
-            font-size: 3rem;
+            @media only screen and (min-width: 767px) {
+                font-size: 3rem;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 2rem;
+            }
         }
         p{
             font-size: 1.6rem;

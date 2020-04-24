@@ -12906,12 +12906,6 @@ button.bg-custom:focus {
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%); }
 
-@media screen and (min-width: 564px) {
-  #page-wrapper .container .text-align-center .entry-content-inside {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    width: 100% !important; } }
-
 .section-investors .image-holder {
   padding-right: 0;
   padding-left: 0;
@@ -12921,8 +12915,13 @@ button.bg-custom:focus {
   max-height: 100%;
   min-height: 360px; }
 
-.section-investors .section-investors-content h2 {
-  font-size: 3rem; }
+@media only screen and (min-width: 767px) {
+  .section-investors .section-investors-content h2 {
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 767px) {
+  .section-investors .section-investors-content h2 {
+    font-size: 2rem; } }
 
 .section-investors .section-investors-content p {
   font-size: 1.6rem; }
