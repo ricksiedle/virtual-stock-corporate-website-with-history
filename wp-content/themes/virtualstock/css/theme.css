@@ -12847,7 +12847,7 @@ button.bg-custom:focus {
     text-align: left;
     color: #455160; }
   .section-purpose .section-purpose-content .section-purpose-content-inside {
-    padding: 15% 20% !important; }
+    padding: 10% 20% !important; }
 
 .section-partners .image-holder {
   background-position: center center;
@@ -12899,6 +12899,10 @@ button.bg-custom:focus {
       width: auto;
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%); }
+
+.container .text-align-center .entry-content-inside {
+  margin-left: 0 !important;
+  margin-right: 0 !important; }
 
 .section-investors .image-holder {
   padding-right: 0;
