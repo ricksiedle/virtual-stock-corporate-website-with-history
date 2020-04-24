@@ -12288,6 +12288,12 @@ a.pink-button {
   .partners-boxes .v-box-txt p {
     font-size: 1rem !important; }
 
+@media screen and (min-width: 564px) {
+  .entry-content-inside {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important; } }
+
 .bg-custom {
   background-color: #fff !important; }
 
