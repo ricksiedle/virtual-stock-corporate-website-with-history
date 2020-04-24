@@ -213,7 +213,12 @@
         padding-left: 0 !important;
         padding-right: 0 !important;
         h2{
-            font-size: 3rem;
+            @media only screen and (min-width: 767px) {
+                font-size: 3rem;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 2rem;
+            }
         }
         p{
             font-size: 1.6rem;
@@ -230,10 +235,13 @@
 
 .section-partners{
     .image-holder{
-        left: 50%;
-        right: auto;
-        padding-right: 0;
-        padding-left: 0;
+        @media only screen and (min-width: 767px) {
+            left: 50%;
+            right: auto;
+            padding-right: 0;
+            padding-left: 0;
+        }
+
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -241,10 +249,17 @@
         min-height: 360px;
     }
     .section-partners-content{
-        right: 50%;
-        left: auto;
+        @media only screen and (min-width: 767px) {
+            right: 50%;
+            left: auto;
+        }
         h2{
-            font-size: 3rem;
+            @media only screen and (min-width: 767px) {
+                font-size: 3rem;
+            }
+            @media only screen and (max-width: 767px) {
+                font-size: 2rem;
+            }
         }
         p{
             font-size: 1.6rem;

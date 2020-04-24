@@ -12835,8 +12835,12 @@ button.bg-custom:focus {
 .section-purpose .section-purpose-content {
   padding-left: 0 !important;
   padding-right: 0 !important; }
-  .section-purpose .section-purpose-content h2 {
-    font-size: 3rem; }
+  @media only screen and (min-width: 767px) {
+    .section-purpose .section-purpose-content h2 {
+      font-size: 3rem; } }
+  @media only screen and (max-width: 767px) {
+    .section-purpose .section-purpose-content h2 {
+      font-size: 2rem; } }
   .section-purpose .section-purpose-content p {
     font-size: 1.6rem; }
   .section-purpose .section-purpose-content h2, .section-purpose .section-purpose-content p {
@@ -12846,43 +12850,55 @@ button.bg-custom:focus {
     padding: 15% 20% !important; }
 
 .section-partners .image-holder {
-  left: 50%;
-  right: auto;
-  padding-right: 0;
-  padding-left: 0;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   max-height: 100%;
   min-height: 360px; }
+  @media only screen and (min-width: 767px) {
+    .section-partners .image-holder {
+      left: 50%;
+      right: auto;
+      padding-right: 0;
+      padding-left: 0; } }
 
-.section-partners .section-partners-content {
-  right: 50%;
-  left: auto; }
+@media only screen and (min-width: 767px) {
+  .section-partners .section-partners-content {
+    right: 50%;
+    left: auto; } }
+
+@media only screen and (min-width: 767px) {
   .section-partners .section-partners-content h2 {
-    font-size: 3rem; }
-  .section-partners .section-partners-content p {
-    font-size: 1.6rem; }
-  .section-partners .section-partners-content h2, .section-partners .section-partners-content p {
-    text-align: left;
-    color: #455160; }
-  .section-partners .section-partners-content .section-partners-content-inside {
-    padding: 15% 20%; }
-    .section-partners .section-partners-content .section-partners-content-inside .images-partners {
-      margin-top: 60px;
-      width: 80%;
-      margin-left: 8%; }
-      .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder {
-        height: 100px; }
-        .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder .partner-logo-wrapper {
-          width: 50%;
-          float: left;
-          text-align: center; }
-      .section-partners .section-partners-content .section-partners-content-inside .images-partners img {
-        height: 50px;
-        width: auto;
-        -webkit-filter: grayscale(100%);
-                filter: grayscale(100%); }
+    font-size: 3rem; } }
+
+@media only screen and (max-width: 767px) {
+  .section-partners .section-partners-content h2 {
+    font-size: 2rem; } }
+
+.section-partners .section-partners-content p {
+  font-size: 1.6rem; }
+
+.section-partners .section-partners-content h2, .section-partners .section-partners-content p {
+  text-align: left;
+  color: #455160; }
+
+.section-partners .section-partners-content .section-partners-content-inside {
+  padding: 15% 20%; }
+  .section-partners .section-partners-content .section-partners-content-inside .images-partners {
+    margin-top: 60px;
+    width: 80%;
+    margin-left: 8%; }
+    .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder {
+      height: 100px; }
+      .section-partners .section-partners-content .section-partners-content-inside .images-partners .partner-logo-holder .partner-logo-wrapper {
+        width: 50%;
+        float: left;
+        text-align: center; }
+    .section-partners .section-partners-content .section-partners-content-inside .images-partners img {
+      height: 50px;
+      width: auto;
+      -webkit-filter: grayscale(100%);
+              filter: grayscale(100%); }
 
 .section-investors .image-holder {
   padding-right: 0;
