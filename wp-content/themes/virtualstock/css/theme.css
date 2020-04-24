@@ -12853,7 +12853,7 @@ button.bg-custom:focus {
     text-align: left;
     color: #455160; }
   .section-purpose .section-purpose-content .section-purpose-content-inside {
-    padding: 10% 20% !important; }
+    padding: 0% 20% !important; }
 
 .section-partners .image-holder {
   background-position: center center;
