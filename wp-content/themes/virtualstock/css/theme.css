@@ -12902,7 +12902,8 @@ button.bg-custom:focus {
 
 .container .text-align-center .entry-content-inside {
   margin-left: 0 !important;
-  margin-right: 0 !important; }
+  margin-right: 0 !important;
+  width: 100% !important; }
 
 .section-investors .image-holder {
   padding-right: 0;
