@@ -12900,10 +12900,11 @@ button.bg-custom:focus {
       -webkit-filter: grayscale(100%);
               filter: grayscale(100%); }
 
-.container .text-align-center .entry-content-inside {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  width: 100% !important; }
+@media screen and (min-width: 564px) {
+  #page-wrapper .container .text-align-center .entry-content-inside {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 100% !important; } }
 
 .section-investors .image-holder {
   padding-right: 0;
