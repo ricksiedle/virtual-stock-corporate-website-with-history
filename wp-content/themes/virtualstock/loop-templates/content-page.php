@@ -384,11 +384,152 @@ global $post;
 												</div>
 											</div>
 
-			<?php							
+			<?php
 										endwhile;
+										endif;?>
+
+                    <?php if( is_front_page() ): ?>
+
+                    <div class="container">
+                            <!-- OUR PURPOSE SECTION -->
+                        <?php if( have_rows('our_purpose_section') ): ?>
+
+                            <?php while( have_rows('our_purpose_section') ): the_row();
+
+                                $our_purpose_heading = get_sub_field('our_purpose_heading');
+                                $our_purpose_image = get_sub_field('our_purpose_section_image');
+                                $our_purpose_content = get_sub_field('our_purpose_section_content');
+
+                                ?>
+
+                                <div id="about" class="row section-purpose v-full-width">
+                                    <div class="col-md-6 image-holder">
+                                        <img src="<?php echo $our_purpose_image; ?>" />
+                                    </div>
+                                    <div class="section-purpose-content col-md-6">
+                                        <div class="section-purpose-content-inside">
+                                            <h2> <?php echo $our_purpose_heading ?></h2>
+                                            <p> <?php echo $our_purpose_content ?></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <?php endwhile; ?>
+
+                        <?php endif; ?>
+
+                        <!-- OUR PARTNERS SECTION -->
+
+                        <?php if( have_rows('our_partners_section') ): ?>
+
+                            <?php while( have_rows('our_partners_section') ): the_row();
+
+                                // vars
+                                $our_partners_heading = get_sub_field('our_partners_heading');
+                                $our_partners_bg_image = get_sub_field('our_partners_section_background_image');
+                                $our_partners_content = get_sub_field('our_partners_section_content');
+
+                                ?>
+
+                                <div class="row section-partners v-full-width">
+                                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_partners_bg_image ?>')">
+                                    </div>
+                                    <div class="section-partners-content col-md-6">
+                                        <div class="section-partners-content-inside">
+                                            <h2> <?php echo $our_partners_heading; ?></h2>
+                                            <p> <?php echo $our_partners_content; ?></p>
+
+                                            <div class="images-partners">
+                                                <div class="partner-logo-holder">
+                                                    <div class="partner-logo-wrapper"><a href="https://www.ibm.com" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/ibm-logo.jpg" alt="IBM - link to corporate site"/></a></div>
+                                                    <div class="partner-logo-wrapper"><a href="https://www.sbs.nhs.uk" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/NHS_SBS_Logo.jpg" alt="SBS - link to corporate site"/></a></div>
+                                                </div>
+                                                <div class="partner-logo-holder">
+                                                    <div class="partner-logo-wrapper"><a href="https://www.wincanton.co.uk" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/wincanton-logo.jpg" alt="Wincaton - link to corporate site"/></div></a>
+                                                    <div class="partner-logo-wrapper"><a href="https://previ.se" target="_blank" ><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/previse-logo_1_orig.png" alt="Previse - link to corporate site"/></div></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            <?php endwhile; ?>
+
+                        <?php endif; ?>
+
+                        <!-- OUR INVESTORS SECTION -->
+
+                        <?php if( have_rows('our_investors_section') ): ?>
+
+                            <?php while( have_rows('our_investors_section') ): the_row();
+
+                                // vars
+                                $our_investors_heading = get_sub_field('our_investors_heading');
+                                $our_investors_bg_image = get_sub_field('our_investors_section_background_image');
+                                $our_investors_content = get_sub_field('our_investors_section_content');
+
+                                ?>
+
+                                <div class="row section-investors v-full-width">
+                                    <div class="col-md-6 image-holder" style="background-image: url('<?php echo $our_investors_bg_image ?>')" >
+                                    </div>
+                                    <div class="section-investors-content col-md-6">
+                                        <div class="section-investors-content-inside">
+                                            <h2> <?php echo $our_investors_heading; ?></h2>
+                                            <p> <?php echo $our_investors_content; ?></p>
+
+                                            <div class="images-partners">
+                                                <div class="investor-logo-holder">
+                                                    <div class="investor-logo-wrapper"><img src="<?php echo home_url() ?>/wp-content/uploads/2018/07/Notion_Capital_Logo_CMYK.jpg" alt=""/></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            <?php endwhile; ?>
+
+                        <?php endif; ?>
+
+                        <!-- CONTACT INFO SECTION -->
+
+                        <div class="row section-contact v-full-width">
+                            <div class="col-md-7 text-align-center">
+                                <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5913.035932674735!2d-0.973429797835869!3d51.455854771644425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4880b4de64a44765!2sVirtualstock!5e0!3m2!1sen!2smk!4v1531130351239"
+                                        width="600"
+                                        height="450"
+                                        frameborder="0"
+                                        style="border:0; max-width: 100%"
+                                        allowfullscreen>
+                                </iframe>
+                            </div>
+                            <div class="col-md-5">
+                                <h2> <?php _e('Our <span style="color:#E64097">Locations</span>', 'virtual') ?></h2>
+
+                                <?php if( have_rows('contact_section') ): ?>
+
+                                    <?php while( have_rows('contact_section') ): the_row(); ?>
+
+                                        <?php echo get_sub_field('contact_info'); ?>
+
+                                    <?php endwhile; ?>
+
+                                <?php endif; ?>
+
+
+                                <p> <?php _e('', 'virtual') ?></p>
+                            </div>
+                        </div>
+                </div>
+                <?php endif; ?>
+
+
+                        <?php
 
 									// PLAIN TEXT SECTION
-									elseif ( $section_type == 'v-plain' ):
+									if ( $section_type == 'v-plain' ):
 
 											while ( have_rows('section_with_plain_text') ) : the_row(); 
 										?>
@@ -428,29 +569,6 @@ global $post;
 
 </article><!-- #post-## -->
 
-<?php if(is_front_page()) { ?>
-
-	<script>
-	if(jQuery('.owl-carousel').length > 0) {
-		jQuery('.owl-carousel').owlCarousel({
-			loop		: true,
-			margin		: 10,
-			dots		: false,
-			nav    		: true,
-			smartSpeed 	: 900,
-			navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-			responsive	: {
-					0	: { items:1 },
-					768	: { items:3 },
-					1200: { items:5 }
-			}
-		})
-	}
-	
-</script>
-
-<?php } ?>
-
 <script>
 	if(jQuery('.v-testimonials').length > 0) {
 		jQuery('.v-testimonials').owlCarousel({
@@ -465,7 +583,7 @@ global $post;
 			}
 		})
 	}
-	
+
 </script>
 
 <script>
@@ -487,7 +605,7 @@ global $post;
 			}
 		})
 	}
-	
+
 </script>
 
 <script>
@@ -519,7 +637,7 @@ global $post;
 <script>
 	jQuery(document).ready(function($) {
 		if(jQuery('.counter').length > 0) {
-			
+
 			$('.counter').counterUp({
 				delay: 10,
 				time: 1000
@@ -530,5 +648,31 @@ global $post;
     window.addEventListener('load', (event) => {
         document.getElementById('movie-area').play();
     });
-
 </script>
+
+<?php if(is_front_page()) { ?>
+<script>
+    if(jQuery('#stats-slider-owl').length > 0) {
+        jQuery('#stats-slider-owl').owlCarousel({
+            loop		: true,
+            margin		: 10,
+            dots		: false,
+            <?php if(!wp_is_mobile()): ?>
+            nav    		: true,
+            <?php else: ?>
+            nav    		: false,
+            <?php endif; ?>
+            smartSpeed 	: 2000,
+            navText 	: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+            autoplay   	: true,
+            autoplayTimeout: 6000,
+            autoplayHoverPause:true,
+            responsive	: {
+                0	: { items:1 },
+                768	: { items:2 },
+                1200: { items:4 }
+            }
+        })
+    }
+</script>
+<?php } ?>
